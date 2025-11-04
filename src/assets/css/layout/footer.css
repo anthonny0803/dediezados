@@ -1,0 +1,21 @@
+/* FOOTER */
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 52px 5%;
+  text-align: center;
+}
+footer .logo {
+  color: var(--white);
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+}
+footer p {
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+footer p:last-child {
+  opacity: 0.6;
+  font-size: 0.9rem;
+  font-weight: 300;
+}

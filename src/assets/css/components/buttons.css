@@ -1,0 +1,163 @@
+/* ============================================
+   BUTTONS - Botones reutilizables
+   ============================================
+   Estilo cuadrado (sin border-radius) con efecto ripple
+*/
+
+.btn {
+  display: inline-block;
+  padding: 13px 34px;
+  background: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-teal);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+/* ==========================================
+   EFECTO RIPPLE (ondas al hacer hover)
+   ========================================== */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  border-radius: 50%;
+}
+
+.btn:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.btn:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================
+   BOTÓN OUTLINE (borde, fondo transparente)
+   ========================================== */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+/* ==========================================
+   BOTÓN DESHABILITADO
+   ========================================== */
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ==========================================
+   BOTONES DE FORMULARIO
+   ========================================== */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: var(--shadow-teal);
+  transition: all var(--transition-smooth);
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+button[type="submit"]:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(-1px);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==========================================
+   BOTÓN VER MÁS (para widgets)
+   ========================================== */
+.btn-ver-mas,
+.btn-ver-mas-reviews {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 28px;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-smooth);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-ver-mas:hover,
+.btn-ver-mas-reviews:hover {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: var(--shadow-teal);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 640px) {
+  .btn {
+    padding: 11px 24px;
+    font-size: 0.85rem;
+  }
+
+  button[type="submit"] {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}

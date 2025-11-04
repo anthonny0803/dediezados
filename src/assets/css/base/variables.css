@@ -1,0 +1,123 @@
+/* ============================================
+   VARIABLES CSS
+   ============================================
+   Define todas las variables de diseño para fácil personalización
+   Para cambiar tema, solo modifica estos valores
+*/
+
+:root {
+  /* ==========================================
+     COLORES PRINCIPALES (basados en el logo)
+     ========================================== */
+  --primary: #A8D5D5;           /* Turquesa pastel del logo */
+  --primary-dark: #7FB8B8;       /* Versión más oscura */
+  --primary-light: #C9E4E4;      /* Versión más clara */
+  --black: #000000;              /* Negro del logo */
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray: #666666;
+  --gray-dark: #333333;
+  
+  /* ==========================================
+     SOMBRAS MATERIAL DESIGN
+     ========================================== */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  --shadow-xl: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  --shadow-teal: 0 8px 16px rgba(127,199,199,0.3);
+  
+  /* ==========================================
+     BORDER RADIUS (TODO CUADRADO)
+     ========================================== */
+  --radius: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  
+  /* ==========================================
+     TRANSICIONES
+     ========================================== */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ==========================================
+     TIPOGRAFÍA
+     ========================================== */
+  --font-primary: 'Poppins', sans-serif;
+  --font-heading: 'Libre Baskerville', serif;
+  
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md: 1.125rem;    /* 18px */
+  --font-size-lg: 1.25rem;     /* 20px */
+  --font-size-xl: 1.5rem;      /* 24px */
+  --font-size-2xl: 2rem;       /* 32px */
+  --font-size-3xl: 2.5rem;     /* 40px */
+  --font-size-4xl: 3rem;       /* 48px */
+  --font-size-5xl: 4rem;       /* 64px */
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  
+  /* ==========================================
+     ESPACIADO
+     ========================================== */
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4rem;      /* 64px */
+  --space-4xl: 6rem;      /* 96px */
+  
+  /* ==========================================
+     BREAKPOINTS (para media queries)
+     ========================================== */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* ==========================================
+     Z-INDEX LAYERS
+     ========================================== */
+  --z-background: -2;
+  --z-clock: -1;
+  --z-content: 1;
+  --z-navbar: 1000;
+  --z-sidenav: 1001;
+  --z-overlay: 1000;
+  --z-modal: 2000;
+  
+  /* ==========================================
+     FONDO DE PÁGINA
+     ========================================== */
+  --bg-primary: #e2ebf3;
+  --bg-secondary: rgba(127, 199, 199, 0.06);
+}
+
+/* ==========================================
+   VARIABLES DINÁMICAS (cambian según contexto)
+   ========================================== */
+
+/* Modo oscuro (para futuro) */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --black: #ffffff;
+    --white: #000000;
+    --gray-light: #2a2a2a;
+    --gray: #b3b3b3;
+  }
+} */

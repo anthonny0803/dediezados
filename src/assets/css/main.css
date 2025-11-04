@@ -1,0 +1,29 @@
+/* ============================================
+   MAIN.CSS - Archivo Principal de Estilos
+   ============================================ */
+
+/* BASE */
+@import url('./base/reset.css');
+@import url('./base/variables.css');
+@import url('./base/animations.css');
+
+/* LAYOUT */
+@import url('./layout/navbar.css');
+@import url('./layout/footer.css');
+
+/* COMPONENTS */
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/forms.css');
+@import url('./components/modal.css');
+
+/* SECTIONS */
+@import url('./sections/common.css');
+@import url('./sections/hero.css');
+@import url('./sections/gallery.css');
+@import url('./sections/contact.css');
+@import url('./sections/location.css');
+@import url('./sections/reviews.css');
+
+/* WIDGETS */
+@import url('./widgets/maps.css');

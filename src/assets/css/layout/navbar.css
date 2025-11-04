@@ -1,0 +1,289 @@
+/* ============================================
+   NAVBAR - Navegación superior
+   ============================================
+   Menú fino y premium que se oculta al hacer scroll
+*/
+
+nav {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  padding: 8px 32px;
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  transition: all var(--transition-slow);
+  opacity: 1;
+}
+
+nav.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-20px);
+}
+
+/* ==========================================
+   LOGO
+   ========================================== */
+.logo {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.logo-accent {
+  color: var(--primary);
+}
+
+/* ==========================================
+   MENÚ DESKTOP
+   ========================================== */
+nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+nav a {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width var(--transition-smooth);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   SIDENAV - Menú lateral móvil
+   ============================================ */
+.sidenav {
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 340px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-xl);
+  padding: 28px 20px;
+  z-index: 1001;
+  transition: right var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sidenav.open {
+  right: 0;
+}
+
+.sidenav .logo {
+  margin-bottom: 40px;
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(168, 213, 213, 0.2);
+}
+
+.sidenav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+}
+
+.sidenav a {
+  padding: 16px 18px;
+  display: block;
+  border-left: 3px solid transparent;
+  transition: all var(--transition-fast);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.sidenav a:hover {
+  background: rgba(168, 213, 213, 0.08);
+  border-left-color: var(--primary);
+  color: var(--primary);
+  transform: translateX(6px);
+}
+
+/* ==========================================
+   OVERLAY - Fondo oscuro al abrir sidenav
+   ========================================== */
+.sidenav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-smooth);
+  backdrop-filter: blur(4px);
+}
+
+.sidenav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============================================
+   BOTÓN FLECHA - Aparece al hacer scroll
+   ============================================ */
+.menu-toggle {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  background: var(--primary);
+  color: var(--white);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: var(--shadow-teal);
+  font-size: 1.6rem;
+  transition: all var(--transition-smooth);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-toggle.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-toggle:hover {
+  background: var(--primary-dark);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablet y menores */
+@media (max-width: 968px) {
+  nav {
+    padding: 8px 24px;
+    gap: 32px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Solo móvil */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  nav {
+    padding: 10px 20px;
+    width: auto;
+    left: 20px;
+    transform: none;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    top: 12px;
+    left: 12px;
+    padding: 8px 16px;
+  }
+
+  .logo {
+    font-size: 0.95rem;
+  }
+
+  .menu-toggle {
+    width: 48px;
+    height: 48px;
+    right: 16px;
+    font-size: 1.4rem;
+  }
+
+  .sidenav {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 769px) and (max-width: 1200px) {
+  nav {
+    padding: 8px 28px;
+    gap: 32px;
+  }
+
+  nav ul {
+    gap: 24px;
+  }
+
+  nav a {
+    font-size: 0.82rem;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  nav {
+    max-width: 90%;
+  }
+}

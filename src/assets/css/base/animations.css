@@ -1,0 +1,80 @@
+/* ============================================
+   ANIMATIONS - Animaciones del sitio
+   ============================================
+   Todos los @keyframes en un solo lugar
+*/
+
+/* ==========================================
+   ANIMACIÓN DEL FONDO
+   ========================================== */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0) scale(1); 
+  }
+  50% { 
+    transform: translateY(-20px) scale(1.05); 
+  }
+}
+
+/* ==========================================
+   HERO - Fade in up
+   ========================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   MODAL - Zoom in
+   ========================================== */
+@keyframes modalZoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ==========================================
+   CAROUSEL DE RECUERDOS - Scroll infinito
+   ========================================== */
+@keyframes scroll-memories {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==========================================
+   SPINNER DE CARGA (para reviews widget)
+   ========================================== */
+@keyframes spin {
+  to { 
+    transform: rotate(360deg); 
+  }
+}
+
+/* ==========================================
+   SLIDE DOWN (para mensajes de formulario)
+   ========================================== */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
