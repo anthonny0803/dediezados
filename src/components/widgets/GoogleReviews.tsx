@@ -121,37 +121,42 @@ export const GoogleReviews = () => {
 
       <div className="reviews-container">
         {reviews.map((review, index) => (
-          <div key={index} className="review-card">
-            <div className="review-header">
-              {review.authorAttribution?.photoUri && (
-                <img
-                  src={review.authorAttribution.photoUri}
-                  alt={review.authorAttribution.displayName}
-                  className="review-avatar"
-                />
-              )}
-              <div className="review-info">
-                <div className="review-author">
-                  {review.authorAttribution?.displayName || "Usuario"}
-                </div>
-                <div className="review-rating">
-                  {renderStars(review.rating || 0)}
-                </div>
-                <div className="review-date">
-                  {review.relativePublishTimeDescription || ""}
-                </div>
-              </div>
-            </div>
-            <p className="review-text">{review.text?.text || ""}</p>
-          </div>
-        ))}
+  <div key={index} className="review-card">
+    <div className="review-header">
+      {review.authorAttribution?.photoUri && (
+        <img
+          src={review.authorAttribution.photoUri}
+          alt={review.authorAttribution.displayName}
+          className="review-avatar"
+        />
+      )}
+      <div className="review-info">
+        <div className="review-author">
+          {review.authorAttribution?.displayName || "Usuario"}
+        </div>
+        <div className="review-rating">
+          {renderStars(review.rating || 0)}
+        </div>
+        <div className="review-date">
+          {review.relativePublishTimeDescription || ""}
+        </div>
+      </div>
+    </div>
+
+    {/* NUEVO: logo de Google arriba a la derecha */}
+    <div className="google-badge" title="Publicado en Google">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/225px-Google_%22G%22_logo.svg.png" alt="Google" />
+    </div>
+
+    <p className="review-text">{review.text?.text || ""}</p>
+  </div>
+))}
+
       </div>
 
       <div style={{ textAlign: "center" }}>
         <a
-          href={`https://search.google.com/local/reviews?placeid=${
-            import.meta.env.VITE_GOOGLE_PLACE_ID
-          }`}
+          href={`https://www.google.com/maps/place/De+Diez+A+Dos+-+Sattua/@40.455601,-3.6904604,16z/data=!4m8!3m7!1s0xd42291ddc320085:0x1e02930724190242!8m2!3d40.455601!4d-3.6878855!9m1!1b1!16s%2Fg%2F1tfdfs6b?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-ver-mas-reviews"

@@ -1,21 +1,19 @@
-/* FOOTER */
 footer {
-  background: var(--black);
-  color: var(--white);
-  padding: 52px 5%;
+  background: var(--pure-black);
+  color: var(--black);
+  padding: 64px 5%;
   text-align: center;
+  border-top: 3px solid var(--primary);
 }
+
 footer .logo {
-  color: var(--white);
-  margin-bottom: 18px;
-  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 8px;
+  font-size: 1.8rem;
 }
+
 footer p {
   opacity: 0.8;
   margin-bottom: 10px;
-}
-footer p:last-child {
-  opacity: 0.6;
-  font-size: 0.9rem;
-  font-weight: 300;
+  line-height: 1.6;
 }

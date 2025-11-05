@@ -43,6 +43,7 @@ export interface SiteConfig {
     email: string;
     emailIonos: string;
     telefono: string;
+    telefono2: string;
     direccion: string;
     horario: string;
     ubicacion: {
@@ -75,28 +76,27 @@ export const SITE_CONFIG: SiteConfig = {
     },
   },
   contacto: {
-    email: "info@dediezados.com",
-    emailIonos: "contacto@dediezados.com",
-    telefono: "+34 XXX XXX XXX",
-    direccion: "Madrid, España",
-    horario: "Lun-Vie: 10:00-20:00",
-    ubicacion: {
-      lat: 40.455601,
-      lng: -3.6878855,
-      zoom: 20,
-    },
-  },
+  email: 'juancarlos@dediezados.com',
+  emailIonos: 'contacto@dediezados.com',
+  telefono: '+34 636 433 911',
+  telefono2: '+34 666 463 067',
+  direccion: 'Travesía Doctor Fleming 16, Madrid',
+  horario: 'Visitas con cita previa',
+  ubicacion: {
+    lat: 40.455601,
+    lng: -3.6878855,
+    zoom: 15
+  }
+},
   heroSlides: [
-    {
-      imagen:
-        "https://images.unsplash.com/photo-1519167758481-83f29da8c2b7?w=1920&h=1080&fit=crop",
-      titulo: "Salones para Eventos Únicos",
-      descripcion:
-        "Espacios elegantes y completamente equipados para bodas, cumpleaños, eventos corporativos y celebraciones especiales en Madrid",
-      botones: [
-        { texto: "Solicitar Información", link: "#contact", tipo: "primary" },
-        { texto: "Ver Salones", link: "#services", tipo: "outline" },
-      ],
+  {
+    imagen: 'https://images.unsplash.com/photo-1519167758481-83f29da8c2b7?w=1920&h=1080&fit=crop',
+    titulo: 'Tu espacio privado en el corazón de Madrid',
+    descripcion: 'En De Diez a Dos transformamos cada celebración en una experiencia única. Un lugar exclusivo con catering elaborado, barra libre, sonido profesional y un equipo que se encarga de todo. Tú celebras. Nosotros cuidamos cada detalle.',
+    botones: [
+      { texto: 'Solicitar Información', link: '#contact', tipo: 'primary' },
+      { texto: 'Ver Servicios', link: '#services', tipo: 'outline' }
+    ],
     },
     {
       imagen:
@@ -122,96 +122,93 @@ export const SITE_CONFIG: SiteConfig = {
     },
   ],
   servicios: [
-    {
-      icono: "🏛️",
-      titulo: "Alquiler de Salones",
-      descripcion:
-        "Espacios elegantes y versátiles para todo tipo de eventos. Salones totalmente equipados con capacidad desde 50 hasta 300 personas, con mobiliario de diseño incluido.",
-    },
-    {
-      icono: "🍽️",
-      titulo: "Catering Completo",
-      descripcion:
-        "Servicio gastronómico profesional con menús personalizados. Desde cócteles de bienvenida hasta banquetes de gala con chefs especializados.",
-    },
-    {
-      icono: "🎨",
-      titulo: "Decoración Personalizada",
-      descripcion:
-        "Diseño y montaje de decoración según tu estilo y temática. Centros de mesa, iluminación ambiental, flores y elementos decorativos a medida.",
-    },
-    {
-      icono: "🎵",
-      titulo: "Producción Audiovisual",
-      descripcion:
-        "Equipamiento completo de sonido profesional, proyectores, pantallas LED e iluminación escénica para presentaciones y entretenimiento.",
-    },
-    {
-      icono: "👔",
-      titulo: "Personal Profesional",
-      descripcion:
-        "Equipo completo de servicio: camareros, chefs, coordinadores de evento, personal de seguridad y valet parking según necesidades.",
-    },
-    {
-      icono: "🎭",
-      titulo: "Entretenimiento",
-      descripcion:
-        "DJs profesionales, bandas en vivo, animadores, fotomatón, shows personalizados y todo tipo de entretenimiento para hacer tu evento único.",
-    },
-  ],
+  {
+    icono: '🏢',
+    titulo: 'Espacio en Exclusiva',
+    descripcion: 'Local elegante en Travesía Doctor Fleming con acceso privado y ambiente totalmente reservado. Mobiliario cómodo, iluminación adaptable y decoración personalizable. Desde el primer contacto hasta el final del evento, nuestro equipo coordina cada detalle para que tú solo tengas que disfrutar.'
+  },
+  {
+    icono: '🎵',
+    titulo: 'Sistema Audiovisual',
+    descripcion: 'Equipo de sonido profesional, pantallas y proyector ideales para ambientar la fiesta o proyectar presentaciones. Calidad de audio e iluminación supervisada por personal técnico. Ambiente elegante, moderno o festivo según tu estilo.'
+  },
+  {
+    icono: '🍽️',
+    titulo: 'Catering De Diez a Dos',
+    descripcion: '14 años de experiencia perfeccionando cada menú. Paquetes equilibrados con tablas ibéricas, quesos, brochetas, canapés, empanadas, fondue, mini hamburguesas, perritos, tortillas y postres. Todo con ingredientes de primera y presentación cuidada.'
+  },
+  {
+    icono: '🍹',
+    titulo: 'Barra Libre',
+    descripcion: 'Bebidas seleccionadas que acompañan perfectamente el catering. Refrescos, cervezas, vinos, agua y zumos en el servicio base. Opción de bebidas premium y combinados de primeras marcas, servidos por personal profesional de barra.'
+  },
+  {
+    icono: '👥',
+    titulo: 'Personal Profesional',
+    descripcion: 'Personal de barra, camareros y control de acceso garantizando seguridad y comodidad. Equipo formado para atender con amabilidad, eficiencia y discreción. Siempre ofrecemos alternativas iguales o superiores ante cualquier imprevisto.'
+  },
+  {
+    icono: '✨',
+    titulo: 'Servicios Adicionales',
+    descripcion: 'Decoración personalizada con flores e iluminación ambiental. DJ profesional con música adaptada. Carro de chuches y mesa dulce. Fotomax 360 con vídeos espectaculares en boomerang y slow motion listos para compartir en redes.'
+  }
+],
   paquetes: [
-    {
-      nombre: "Salón Básico",
-      precio: "Desde 800",
-      moneda: "€",
-      periodo: "por evento",
-      destacado: false,
-      caracteristicas: [
-        "Alquiler de salón 6 horas",
-        "Capacidad hasta 100 personas",
-        "Mobiliario incluido",
-        "Personal de servicio básico",
-        "Montaje y desmontaje",
-        "Sistema de sonido básico",
-      ],
-    },
-    {
-      nombre: "Paquete Premium",
-      precio: "Desde 1,500",
-      moneda: "€",
-      periodo: "por evento",
-      destacado: true,
-      badge: "Más Popular",
-      caracteristicas: [
-        "Salón premium 8 horas",
-        "Capacidad hasta 200 personas",
-        "Catering menú 3 platos",
-        "Barra libre 5 horas",
-        "Decoración personalizada",
-        "DJ profesional",
-        "Coordinador de evento",
-        "Fotografía básica",
-      ],
-    },
-    {
-      nombre: "Paquete Deluxe",
-      precio: "Desde 3,000",
-      moneda: "€",
-      periodo: "por evento",
-      destacado: false,
-      caracteristicas: [
-        "Salón VIP 10 horas",
-        "Capacidad hasta 300 personas",
-        "Catering alta cocina",
-        "Barra libre premium ilimitada",
-        "Decoración luxury completa",
-        "Producción audiovisual",
-        "Show en vivo / DJ",
-        "Fotografía y vídeo profesional",
-        "Valet parking",
-      ],
-    },
-  ],
+  {
+    nombre: 'Salón Básico',
+    precio: 'Desde 800',
+    moneda: '€',
+    periodo: 'por evento',
+    destacado: false,
+    caracteristicas: [
+      'Alquiler de salón 6 horas',
+      'Capacidad hasta 100 personas',
+      'Mobiliario incluido',
+      'Personal de servicio básico',
+      'Montaje y desmontaje',
+      'Sistema de sonido básico'
+    ]
+  },
+  {
+    nombre: 'Paquete Premium',
+    precio: 'Desde 1,500',
+    moneda: '€',
+    periodo: 'por evento',
+    destacado: true,
+    badge: 'Más Popular',
+    caracteristicas: [
+      'Salón premium 8 horas',
+      'Capacidad hasta 200 personas',
+      'Catering menú completo',
+      'Barra libre 5 horas',
+      'Decoración personalizada',
+      'DJ profesional',
+      'Coordinador de evento',
+      'Fotografía básica',
+      'Sistema audiovisual completo'
+    ]
+  },
+  {
+    nombre: 'Paquete Deluxe',
+    precio: 'Desde 3,000',
+    moneda: '€',
+    periodo: 'por evento',
+    destacado: false,
+    caracteristicas: [
+      'Salón VIP 10 horas',
+      'Capacidad hasta 300 personas',
+      'Catering alta cocina',
+      'Barra libre premium ilimitada',
+      'Decoración luxury completa',
+      'Producción audiovisual',
+      'Show en vivo / DJ profesional',
+      'Fotografía y vídeo profesional',
+      'Fotomax 360 con atrezzo',
+      'Valet parking',
+      'Personal de seguridad'
+    ]
+  }
+],
   gallery: {
     photos: [
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&h=600&fit=crop",

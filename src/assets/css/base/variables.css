@@ -7,16 +7,35 @@
 
 :root {
   /* ==========================================
-     COLORES PRINCIPALES (basados en el logo)
+     COLORES - MÁS CONTRASTE
      ========================================== */
-  --primary: #A8D5D5;           /* Turquesa pastel del logo */
-  --primary-dark: #7FB8B8;       /* Versión más oscura */
-  --primary-light: #C9E4E4;      /* Versión más clara */
-  --black: #000000;              /* Negro del logo */
-  --white: #ffffff;
-  --gray-light: #f5f5f5;
-  --gray: #666666;
-  --gray-dark: #333333;
+  --primary: #8cd5d5;
+  --primary-dark: #68acac;
+  --primary-light: #C9E4E4;
+  
+  --black: #ffffff;              /* Blanco puro para texto */
+  --white: #0f0f0f;              /* Negro más profundo */
+  --gray-light: #1e1e1e;         /* Gris oscuro para cards */
+  --gray: #b8b8b8;               /* Gris más claro para texto secundario */
+  --gray-dark: #e8e8e8;          /* Casi blanco para énfasis */
+  
+  --pure-white: #ffffff;
+  --pure-black: #000000;
+  
+  /* Sombras más pronunciadas */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.7);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.8);
+  --shadow-lg: 0 12px 24px rgba(0,0,0,0.8), 0 6px 12px rgba(0,0,0,0.85);
+  --shadow-xl: 0 16px 32px rgba(0,0,0,0.9), 0 8px 16px rgba(0,0,0,0.95);
+  --shadow-teal: 0 8px 20px rgba(168, 213, 213, 0.4);
+  
+  --bg-primary: #0f0f0f;
+  --bg-secondary: rgba(168, 213, 213, 0.08);
+  /* ==========================================
+     FONDO DE PÁGINA - TEMA OSCURO
+     ========================================== */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: rgba(168, 213, 213, 0.05);
   
   /* ==========================================
      SOMBRAS MATERIAL DESIGN

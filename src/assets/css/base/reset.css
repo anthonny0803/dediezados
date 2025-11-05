@@ -24,9 +24,7 @@ body {
   position: relative;
 }
 
-/* ============================================
-   FONDO DE PÁGINA
-   ============================================ */
+/* Capa base: Negro profundo */
 body::before {
   content: '';
   position: fixed;
@@ -34,10 +32,12 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #e2ebf3;
-  z-index: -2;
+  background: 
+    linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 50%, #0a0a0a 100%);
+  z-index: -3;
 }
 
+/* Capa de textura: Gradientes celestes sutiles */
 body::after {
   content: '';
   position: fixed;
@@ -46,9 +46,22 @@ body::after {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 15% 20%, rgba(168, 213, 213, 0.06) 0%, transparent 40%),
-    radial-gradient(circle at 85% 80%, rgba(168, 213, 213, 0.05) 0%, transparent 35%),
-    radial-gradient(circle at 50% 50%, rgba(168, 213, 213, 0.04) 0%, transparent 50%);
+    radial-gradient(circle at 10% 20%, rgba(168, 213, 213, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(168, 213, 213, 0.10) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(168, 213, 213, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 60%, rgba(168, 213, 213, 0.06) 0%, transparent 50%);
   z-index: -2;
-  animation: float 20s ease-in-out infinite;
+  animation: float 25s ease-in-out infinite;
+}
+
+/* Textura de ruido sutil (opcional pero da profundidad) */
+body {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(168, 213, 213, 0.02) 2px,
+      rgba(168, 213, 213, 0.02) 4px
+    );
 }

@@ -9,6 +9,7 @@
 
 /* LAYOUT */
 @import url('./layout/navbar.css');
+@import url('./layout/sidenav.css');
 @import url('./layout/footer.css');
 
 /* COMPONENTS */

@@ -374,6 +374,9 @@ export const Contact = () => {
             <div>
               <strong>Teléfono</strong>
               <span>{SITE_CONFIG.contacto.telefono}</span>
+              <span style={{ display: "block", marginTop: "4px" }}>
+                {SITE_CONFIG.contacto.telefono2}
+              </span>
             </div>
           </div>
 
@@ -394,7 +397,7 @@ export const Contact = () => {
           </div>
 
           <div className="info-item card">
-            <div className="info-icon">🕐</div>
+            <div className="info-icon">📅</div>
             <div>
               <strong>Horario</strong>
               <span>{SITE_CONFIG.contacto.horario}</span>
