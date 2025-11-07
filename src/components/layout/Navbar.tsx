@@ -1,15 +1,12 @@
 import { useState, useEffect } from 'react';
+import logo from '../../assets/images/logo/logo.png';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -17,19 +14,24 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav id="navbar" className={isScrolled ? 'hide' : ''}>
-      <div className="logo">
-        De <span className="logo-accent">Diez</span> a <span className="logo-accent">Dos</span>
+    <>
+      {/* LOGO FIJO INDEPENDIENTE */}
+      <div className={`logo-fixed ${isScrolled ? 'hide' : ''}`}>
+        <img src={logo} alt="Logo De Diez a Dos" />
       </div>
-      <ul>
-        <li><a href="#hero">Inicio</a></li>
-        <li><a href="#services">Servicios</a></li>
-        <li><a href="#prices">Precios</a></li>
-        <li><a href="#memories">Recuerdos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-        <li><a href="#location">Ubicación</a></li>
-        <li><a href="#reviews">Reseñas</a></li>
-      </ul>
-    </nav>
+
+      {/* NAV CENTRADO */}
+      <nav id="navbar" className={isScrolled ? 'hide' : ''}>
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#prices">Precios</a></li>
+          <li><a href="#memories">Recuerdos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li><a href="#location">Ubicación</a></li>
+          <li><a href="#reviews">Reseñas</a></li>
+        </ul>
+      </nav>
+    </>
   );
 };

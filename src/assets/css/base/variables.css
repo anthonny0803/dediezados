@@ -1,142 +1,77 @@
-/* ============================================
-   VARIABLES CSS
-   ============================================
-   Define todas las variables de diseño para fácil personalización
-   Para cambiar tema, solo modifica estos valores
-*/
-
 :root {
-  /* ==========================================
-     COLORES - MÁS CONTRASTE
-     ========================================== */
-  --primary: #8cd5d5;
-  --primary-dark: #68acac;
+  /* Colors - Dark theme */
+  --primary: #3fb5a1;
+  --primary-dark: #52d5bd;
   --primary-light: #C9E4E4;
-  
-  --black: #ffffff;              /* Blanco puro para texto */
-  --white: #0f0f0f;              /* Negro más profundo */
-  --gray-light: #1e1e1e;         /* Gris oscuro para cards */
-  --gray: #b8b8b8;               /* Gris más claro para texto secundario */
-  --gray-dark: #e8e8e8;          /* Casi blanco para énfasis */
-  
+  --black: #ffffff;
+  --white: #0f0f0f;
+  --gray-light: #1e1e1e;
+  --gray: #b8b8b8;
+  --gray-dark: #e8e8e8;
   --pure-white: #ffffff;
   --pure-black: #000000;
   
-  /* Sombras más pronunciadas */
+  /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.7);
   --shadow-md: 0 4px 8px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.8);
   --shadow-lg: 0 12px 24px rgba(0,0,0,0.8), 0 6px 12px rgba(0,0,0,0.85);
   --shadow-xl: 0 16px 32px rgba(0,0,0,0.9), 0 8px 16px rgba(0,0,0,0.95);
   --shadow-teal: 0 8px 20px rgba(168, 213, 213, 0.4);
   
-  --bg-primary: #0f0f0f;
-  --bg-secondary: rgba(168, 213, 213, 0.08);
-  /* ==========================================
-     FONDO DE PÁGINA - TEMA OSCURO
-     ========================================== */
-  --bg-primary: #1a1a1a;
-  --bg-secondary: rgba(168, 213, 213, 0.05);
-  
-  /* ==========================================
-     SOMBRAS MATERIAL DESIGN
-     ========================================== */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  --shadow-md: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  --shadow-lg: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  --shadow-xl: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  --shadow-teal: 0 8px 16px rgba(127,199,199,0.3);
-  
-  /* ==========================================
-     BORDER RADIUS (TODO CUADRADO)
-     ========================================== */
+  /* Border radius */
   --radius: 0px;
   --radius-sm: 0px;
   --radius-md: 0px;
   --radius-lg: 0px;
   
-  /* ==========================================
-     TRANSICIONES
-     ========================================== */
+  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* ==========================================
-     TIPOGRAFÍA
-     ========================================== */
+  /* Typography - Fonts */
   --font-primary: 'Poppins', sans-serif;
   --font-heading: 'Libre Baskerville', serif;
   
-  --font-size-xs: 0.75rem;    /* 12px */
-  --font-size-sm: 0.875rem;   /* 14px */
-  --font-size-base: 1rem;      /* 16px */
-  --font-size-md: 1.125rem;    /* 18px */
-  --font-size-lg: 1.25rem;     /* 20px */
-  --font-size-xl: 1.5rem;      /* 24px */
-  --font-size-2xl: 2rem;       /* 32px */
-  --font-size-3xl: 2.5rem;     /* 40px */
-  --font-size-4xl: 3rem;       /* 48px */
-  --font-size-5xl: 4rem;       /* 64px */
+  /* Typography - Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3rem;
+  --font-size-5xl: 4rem;
   
+  /* Typography - Weights */
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   
+  /* Typography - Line heights */
   --line-height-tight: 1.2;
   --line-height-normal: 1.6;
   --line-height-relaxed: 1.8;
   
-  /* ==========================================
-     ESPACIADO
-     ========================================== */
-  --space-xs: 0.25rem;    /* 4px */
-  --space-sm: 0.5rem;     /* 8px */
-  --space-md: 1rem;       /* 16px */
-  --space-lg: 1.5rem;     /* 24px */
-  --space-xl: 2rem;       /* 32px */
-  --space-2xl: 3rem;      /* 48px */
-  --space-3xl: 4rem;      /* 64px */
-  --space-4xl: 6rem;      /* 96px */
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
   
-  /* ==========================================
-     BREAKPOINTS (para media queries)
-     ========================================== */
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-  
-  /* ==========================================
-     Z-INDEX LAYERS
-     ========================================== */
+  /* Z-index layers */
   --z-background: -2;
-  --z-clock: -1;
   --z-content: 1;
   --z-navbar: 1000;
   --z-sidenav: 1001;
   --z-overlay: 1000;
   --z-modal: 2000;
-  
-  /* ==========================================
-     FONDO DE PÁGINA
-     ========================================== */
-  --bg-primary: #e2ebf3;
-  --bg-secondary: rgba(127, 199, 199, 0.06);
 }
-
-/* ==========================================
-   VARIABLES DINÁMICAS (cambian según contexto)
-   ========================================== */
-
-/* Modo oscuro (para futuro) */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --black: #ffffff;
-    --white: #000000;
-    --gray-light: #2a2a2a;
-    --gray: #b3b3b3;
-  }
-} */

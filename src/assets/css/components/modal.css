@@ -1,7 +1,4 @@
-/* ============================================
-   MODAL - Modal para imágenes expandidas
-   ============================================ */
-
+/* Modal */
 .image-modal {
   position: fixed;
   top: 0;
@@ -31,6 +28,7 @@
   animation: modalZoomIn 0.4s ease-out;
 }
 
+/* Close button */
 .modal-close {
   position: absolute;
   top: 32px;
@@ -63,7 +61,6 @@
     right: 20px;
     font-size: 1.8rem;
   }
-
   .image-modal img {
     max-width: 95%;
     max-height: 85vh;

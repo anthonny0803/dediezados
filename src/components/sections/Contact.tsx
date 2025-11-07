@@ -28,7 +28,6 @@ export const Contact = () => {
       [e.target.name]: e.target.value,
     });
 
-    // Limpiar mensaje cuando el usuario empieza a escribir
     if (message.text) {
       setMessage({ type: "", text: "" });
     }
@@ -37,7 +36,6 @@ export const Contact = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    // Validar frontend
     const error = validateForm(formData);
     if (error) {
       setMessage({ type: "error", text: error });
@@ -48,7 +46,6 @@ export const Contact = () => {
     setMessage({ type: "", text: "" });
 
     try {
-      // Normalizar los datos antes de enviar
       const [year, month, day] = formData.fechaEvento.split("-");
       const fechaFormateada = `${day}/${month}/${year}`;
 
@@ -101,7 +98,6 @@ export const Contact = () => {
     }
   };
 
-  // Validadores visuales simples
   const isValidNombre = formData.nombre.trim().length >= 2;
   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
   const isValidTelefono = /^[+]{0,1}[0-9]{9,15}$/.test(formData.telefono);
@@ -110,7 +106,7 @@ export const Contact = () => {
   let isValidFechaEvento = false;
   if (formData.fechaEvento) {
     const hoy = new Date();
-    hoy.setHours(0, 0, 0, 0); // Ignorar horas
+    hoy.setHours(0, 0, 0, 0);
     const fechaEvento = new Date(formData.fechaEvento);
     isValidFechaEvento = fechaEvento > hoy;
   }
@@ -121,13 +117,17 @@ export const Contact = () => {
 
   return (
     <section id="contact">
-      <h2 className="section-title">Conversemos Sobre tu Evento</h2>
-      <p className="section-subtitle">
+      {/* ✅ AÑADIR data-aos AQUÍ */}
+      <h2 className="section-title" data-aos="fade-up">
+        Conversemos Sobre tu Evento
+      </h2>
+      <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
         Cuéntanos tu visión y te ayudamos a hacerla realidad
       </p>
 
       <div className="contact-container">
-        <div className="form-card">
+        {/* ✅ AÑADIR data-aos AQUÍ */}
+        <div className="form-card" data-aos="fade-up" data-aos-delay="200">
           <form onSubmit={handleSubmit}>
             <div className="input-group">
               <h4>
@@ -367,8 +367,8 @@ export const Contact = () => {
           </form>
         </div>
 
-        {/* Información de Contacto */}
-        <div className="contact-info-grid">
+        {/* ✅ AÑADIR data-aos AQUÍ */}
+        <div className="contact-info-grid" data-aos="fade-up" data-aos-delay="300">
           <div className="info-item card">
             <div className="info-icon">📞</div>
             <div>

@@ -1,5 +1,5 @@
 /* ============================================
-   HERO - Carrusel de imágenes con overlay
+   HERO - Carrusel de imÃ¡genes con overlay
    ============================================ */
 
 #hero {
@@ -90,17 +90,7 @@
   max-width: 900px;
   text-align: center;
   color: #fff;
-  animation: fadeInUp 1.2s ease-out, float-gentle 6s ease-in-out infinite;
-}
-
-@keyframes float-gentle {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  animation: fadeInUp 1.2s ease-out;
 }
 
 .hero-content h1 {
@@ -122,7 +112,7 @@
 }
 
 /* ==========================================
-   DOTS DE NAVEGACIÓN
+   DOTS DE NAVEGACIÃ“N
    ========================================== */
 .carousel-dots {
   position: absolute;

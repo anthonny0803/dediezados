@@ -1,14 +1,51 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const Sidenav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isInHero, setIsInHero] = useState(true);
+  const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('hero');
+      const isMobile = window.innerWidth <= 1024; // versión móvil
+      if (heroSection && !isMobile) {
+        const heroBottom = heroSection.offsetHeight;
+        const scrollPosition = window.scrollY;
+        // Oculta el botón en hero (solo escritorio)
+        setIsInHero(scrollPosition < heroBottom - 100);
+      } else {
+        // En móvil, el botón siempre visible
+        setIsInHero(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    // Recalcular cuando cambie el tamaño de pantalla
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
 
   const toggleSidenav = () => {
-    setIsOpen(!isOpen);
+    if (isOpen) {
+      handleClose();
+    } else {
+      setIsOpen(true);
+    }
   };
 
-  const closeSidenav = () => {
-    setIsOpen(false);
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOpen(false);
+      setIsClosing(false);
+    }, 400); // igual a la duración de la animación en el CSS
   };
 
   return (
@@ -16,34 +53,31 @@ export const Sidenav = () => {
       {/* Overlay */}
       <div 
         className={`sidenav-overlay ${isOpen ? 'active' : ''}`}
-        id="sidenavOverlay"
-        onClick={closeSidenav}
+        onClick={handleClose}
       />
 
       {/* Sidenav */}
-      <div className={`sidenav ${isOpen ? 'open' : ''}`} id="sidenav">
-        <div className="logo">
-          De <span className="logo-accent">Diez</span> a <span className="logo-accent">Dos</span>
-        </div>
+      <div className={`sidenav ${isOpen ? 'open' : ''} ${isClosing ? 'closing' : ''}`}>
+        <br /><br /><br />
         <ul>
-          <li><a href="#hero" className="sidenav-link" onClick={closeSidenav}>Inicio</a></li>
-          <li><a href="#services" className="sidenav-link" onClick={closeSidenav}>Servicios</a></li>
-          <li><a href="#prices" className="sidenav-link" onClick={closeSidenav}>Precios</a></li>
-          <li><a href="#memories" className="sidenav-link" onClick={closeSidenav}>Recuerdos</a></li>
-          <li><a href="#contact" className="sidenav-link" onClick={closeSidenav}>Contacto</a></li>
-          <li><a href="#location" className="sidenav-link" onClick={closeSidenav}>Ubicación</a></li>
-          <li><a href="#reviews" className="sidenav-link" onClick={closeSidenav}>Reseñas</a></li>
+          <li><a href="#hero" onClick={handleClose}>Inicio</a></li>
+          <li><a href="#services" onClick={handleClose}>Servicios</a></li>
+          <li><a href="#prices" onClick={handleClose}>Precios</a></li>
+          <li><a href="#memories" onClick={handleClose}>Recuerdos</a></li>
+          <li><a href="#contact" onClick={handleClose}>Contacto</a></li>
+          <li><a href="#location" onClick={handleClose}>Ubicación</a></li>
+          <li><a href="#reviews" onClick={handleClose}>Reseñas</a></li>
         </ul>
       </div>
 
-      {/* Botón toggle */}
-      <div 
-        className={`menu-toggle ${isOpen ? '' : 'show'}`}
-        id="menuToggle"
+      {/* Toggle button */}
+      <div
+        className={`menu-toggle ${isInHero ? 'hide' : 'show'} ${isOpen ? 'open' : ''}`}
         onClick={toggleSidenav}
-        style={{ display: 'flex' }}
       >
-        →
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </>
   );

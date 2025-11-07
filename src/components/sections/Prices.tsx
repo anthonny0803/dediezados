@@ -30,7 +30,7 @@ export const Prices = () => {
                 <li key={idx}>{item}</li>
               ))}
             </ul>
-            <a href="#contacto" className="btn">
+            <a href="#contact" className="btn">
               Solicitar
             </a>
           </div>

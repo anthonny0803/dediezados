@@ -1,12 +1,4 @@
-/* ============================================
-   BUTTONS - Botones reutilizables
-   ============================================
-   Estilo cuadrado con efectos premium
-*/
-
-/* ==========================================
-   BOTÓN BASE
-   ========================================== */
+/* Base button */
 .btn {
   display: inline-block;
   padding: 13px 34px;
@@ -16,208 +8,88 @@
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  box-shadow: var(--shadow-teal);
+  box-shadow: 0 4px 12px rgba(168, 213, 213, 0.3);
   transition: all var(--transition-smooth);
-  position: relative;
-  overflow: hidden;
   cursor: pointer;
   border: none;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  transform: translateZ(0);
-  will-change: transform;
-  z-index: 1;
-}
-
-/* Efecto onda expandida */
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-  z-index: -1;
-}
-
-.btn:hover::before {
-  width: 400px;
-  height: 400px;
-}
-
-/* Efecto brillo diagonal */
-.btn::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.3) 50%,
-    transparent 70%
-  );
-  transform: translateX(-100%) translateY(-100%) rotate(45deg);
-  transition: transform 0.6s;
-  z-index: -1;
-}
-
-.btn:hover::after {
-  transform: translateX(100%) translateY(100%) rotate(45deg);
 }
 
 .btn:hover {
-  box-shadow: var(--shadow-xl), 0 0 30px rgba(168, 213, 213, 0.5);
-  transform: translateY(-4px) scale(1.02);
-}
-
-.btn:active {
-  transform: translateY(-2px) scale(0.98);
-  box-shadow: var(--shadow-md);
-}
-
-/* ==========================================
-   BOTÓN OUTLINE (borde, fondo transparente)
-   ========================================== */
-.btn-outline {
-  background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-}
-
-.btn-outline:hover {
-  background: var(--primary);
-  color: var(--white);
-}
-
-/* ==========================================
-   BOTÓN DESHABILITADO
-   ========================================== */
-.btn:disabled,
-.btn.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-/* ==========================================
-   BOTONES DE FORMULARIO
-   ========================================== */
-button[type="submit"] {
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  color: var(--white);
-  border: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  box-shadow: var(--shadow-teal);
-  transition: all var(--transition-smooth);
-  font-size: 0.95rem;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  overflow: hidden;
-}
-
-button[type="submit"]::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
-
-button[type="submit"]:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-button[type="submit"]:hover {
-  box-shadow: var(--shadow-lg);
+  background: var(--primary-dark);
+  color: var(--pure-white) !important;
   transform: translateY(-3px);
 }
 
-button[type="submit"]:active {
+.btn:active {
   transform: translateY(-1px);
 }
 
-button[type="submit"]:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
+/* Outline variant - shared styles */
+.btn-outline,
+button[type="submit"],
+.btn-ver-mas-reviews {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-smooth);
+  cursor: pointer;
 }
 
-/* ==========================================
-   BOTÓN VER MÁS (para widgets)
-   ========================================== */
-.btn-ver-mas,
+.btn-outline:hover,
+button[type="submit"]:hover,
+.btn-ver-mas-reviews:hover {
+  background: var(--primary) !important;
+  color: var(--pure-white) !important;
+  transform: translateY(-2px);
+}
+
+/* Submit specific */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0 6px 16px rgba(168, 213, 213, 0.4);
+}
+
+/* Reviews button specific */
 .btn-ver-mas-reviews {
   display: inline-block;
   margin-top: 24px;
   padding: 12px 28px;
-  background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
   text-decoration: none;
-  font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: all var(--transition-smooth);
   font-size: 0.9rem;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
 }
 
-.btn-ver-mas::before,
-.btn-ver-mas-reviews::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: var(--primary);
-  transform: translate(-50%, -50%);
-  transition: width 0.4s, height 0.4s;
-  z-index: -1;
-}
-
-.btn-ver-mas:hover::before,
-.btn-ver-mas-reviews:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-.btn-ver-mas:hover,
 .btn-ver-mas-reviews:hover {
-  color: var(--white);
-  box-shadow: var(--shadow-teal);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.03);
 }
 
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
+/* Disabled states */
+.btn:disabled,
+.btn.disabled,
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}
+
+/* Responsive */
 @media (max-width: 640px) {
   .btn {
     padding: 11px 24px;
     font-size: 0.85rem;
   }
-
   button[type="submit"] {
     padding: 12px;
     font-size: 0.9rem;

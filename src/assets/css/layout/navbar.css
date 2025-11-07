@@ -1,25 +1,46 @@
-/* ============================================
-   NAVBAR - Navegación superior
-   ============================================
-   Menú fino y premium que se oculta al hacer scroll
-*/
+/* Logo fijo fuera del nav */
+.logo-fixed {
+  position: fixed;
+  top: 5px;
+  left: 32px;
+  z-index: 1100;
+  transition: all var(--transition-slow);
+}
 
+.logo-fixed img {
+  height: 90px;
+  width: auto;
+  transition: transform var(--transition-smooth);
+  filter: brightness(0) invert(1);
+}
+
+.logo-fixed:hover img {
+  transform: scale(1.05);
+}
+
+.logo-fixed.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+/* Navbar centrado (solo escritorio) */
 nav {
   position: fixed;
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(26, 26, 26, 0.95);  /* Negro con transparencia */
-  backdrop-filter: blur(12px);
+  background: transparent;
+  backdrop-filter: none;
   padding: 8px 32px;
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
   z-index: 1000;
   display: flex;
   gap: 40px;
   align-items: center;
   transition: all var(--transition-slow);
   opacity: 1;
-  border: 1px solid rgba(168, 213, 213, 0.2);  /* Borde celeste sutil */
+  border: none;
 }
 
 nav.hide {
@@ -28,25 +49,7 @@ nav.hide {
   transform: translateX(-50%) translateY(-20px);
 }
 
-/* ==========================================
-   LOGO
-   ========================================== */
-.logo {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--black);
-  letter-spacing: 1px;
-  white-space: nowrap;
-}
-
-.logo-accent {
-  color: var(--primary);
-}
-
-/* ==========================================
-   MENÚ DESKTOP
-   ========================================== */
+/* Navigation links */
 nav ul {
   display: flex;
   gap: 28px;
@@ -85,26 +88,20 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Logo con imagen */
-.logo-container {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
+/* Responsive */
+@media (max-width: 1024px) {
+  /* Desaparece el nav en tablet y móvil */
+  nav {
+    display: none;
+  }
 
-.logo-img {
-  height: 45px;
-  width: auto;
-  transition: all var(--transition-smooth);
-  filter: brightness(0) invert(1); /* Logo blanco en navbar oscuro */
-}
+  /* Centrar el logo */
+  .logo-fixed {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-nav:hover .logo-img {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .logo-img {
-    height: 35px;
+  .logo-fixed img {
+    height: 80px;
   }
 }

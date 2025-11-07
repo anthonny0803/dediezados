@@ -38,14 +38,12 @@ export const Gallery = () => {
 
       const timeSinceInteraction = Date.now() - lastInteractionRef.current;
       if (timeSinceInteraction > 3000) {
-        trackRef.current.scrollLeft += 1; // Ajusta la velocidad aquí
+        trackRef.current.scrollLeft += 1;
 
-        // Scroll infinito suave: cuando llega a 1/3, vuelve al inicio sin salto
         const scrollWidth = trackRef.current.scrollWidth;
         const clientWidth = trackRef.current.clientWidth;
         const oneThirdScroll = (scrollWidth - clientWidth) / 3;
 
-        // Si ha scrolleado más de 1/3 del contenido total, resetear suavemente
         if (trackRef.current.scrollLeft >= oneThirdScroll * 2) {
           trackRef.current.scrollLeft = oneThirdScroll;
         }
@@ -76,7 +74,7 @@ export const Gallery = () => {
     if (!isDragging || !trackRef.current) return;
     e.preventDefault();
     const x = e.pageX - trackRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Multiplicador de velocidad
+    const walk = (x - startX) * 2;
     trackRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -115,12 +113,21 @@ export const Gallery = () => {
     <>
       <section id="memories" className="memories-section">
         <div style={{ textAlign: "left", padding: "0 5% 48px" }}>
-          <h2 className="section-title">Momentos Inolvidables</h2>
-          <p className="section-subtitle">
+          {/* ✅ AÑADIR data-aos AQUÍ */}
+          <h2 className="section-title" data-aos="fade-up">
+            Momentos Inolvidables
+          </h2>
+          <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
             Algunos de los eventos que hemos tenido el honor de crear
           </p>
         </div>
-        <div className="memories-carousel" onMouseEnter={handleMouseEnter}>
+        {/* ✅ AÑADIR data-aos AQUÍ */}
+        <div 
+          className="memories-carousel" 
+          onMouseEnter={handleMouseEnter}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div
             ref={trackRef}
             className="memories-track"
@@ -132,7 +139,7 @@ export const Gallery = () => {
               scrollbarWidth: "none",
               cursor: isDragging ? "grabbing" : "grab",
               userSelect: "none",
-              animation: "none", // Desactivar animación CSS
+              animation: "none",
             }}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}

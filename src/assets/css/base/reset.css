@@ -1,10 +1,4 @@
-/* ============================================
-   RESET CSS - Normalización de estilos
-   ============================================
-   Elimina estilos por defecto del navegador
-   Asegura consistencia entre Chrome, Firefox, Safari
-*/
-
+/* Reset - Browser normalization */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +18,7 @@ body {
   position: relative;
 }
 
-/* Capa base: Negro profundo */
+/* Background - Base layer */
 body::before {
   content: '';
   position: fixed;
@@ -32,12 +26,11 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 50%, #0a0a0a 100%);
+  background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 50%, #0a0a0a 100%);
   z-index: -3;
 }
 
-/* Capa de textura: Gradientes celestes sutiles */
+/* Background - Texture layer */
 body::after {
   content: '';
   position: fixed;
@@ -54,7 +47,7 @@ body::after {
   animation: float 25s ease-in-out infinite;
 }
 
-/* Textura de ruido sutil (opcional pero da profundidad) */
+/* Background - Noise texture */
 body {
   background-image: 
     repeating-linear-gradient(
