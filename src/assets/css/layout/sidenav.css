@@ -8,7 +8,7 @@
   width: 220px;
   max-width: 100%;
   height: 100vh;
-  background: rgba(26, 26, 26, 0.462);
+  background: rgba(26, 26, 26, 0.100);
   backdrop-filter: blur(12px);
   box-shadow: -4px 0 16px rgba(0, 0, 0, 0.4);
   padding: 28px 20px;
@@ -136,7 +136,7 @@
     height: 100vh;
     top: 0;
     right: 0;
-    background: rgba(26, 26, 26, 0.462);
+    background: rgba(26, 26, 26, 0.100);
     backdrop-filter: blur(14px);
     border-left: none;
     border-bottom: 2px solid var(--primary);
@@ -188,7 +188,6 @@
   width: 46px;
   height: 46px;
   background: transparent;
-  border: 2px solid var(--pure-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,7 +236,6 @@
 }
 
 .menu-toggle:hover {
-  background: var(--primary);
   transform: scale(1.05);
 }
 .menu-toggle:hover span {
@@ -256,4 +254,9 @@
     visibility: visible;
     transform: none;
   }
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }

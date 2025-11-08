@@ -90,7 +90,7 @@ export const SITE_CONFIG: SiteConfig = {
 },
   heroSlides: [
   {
-    imagen: 'https://images.unsplash.com/photo-1519167758481-83f29da8c2b7?w=1920&h=1080&fit=crop',
+    imagen: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070',
     titulo: 'Tu espacio privado en el corazón de Madrid',
     descripcion: 'En De Diez a Dos transformamos cada celebración en una experiencia única. Un lugar exclusivo con catering elaborado, barra libre, sonido profesional y un equipo que se encarga de todo. Tú celebras. Nosotros cuidamos cada detalle.',
     botones: [

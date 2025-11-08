@@ -12,18 +12,14 @@ export const Sidenav = () => {
       if (heroSection && !isMobile) {
         const heroBottom = heroSection.offsetHeight;
         const scrollPosition = window.scrollY;
-        // Oculta el botón en hero (solo escritorio)
         setIsInHero(scrollPosition < heroBottom - 100);
       } else {
-        // En móvil, el botón siempre visible
         setIsInHero(false);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     handleScroll();
-
-    // Recalcular cuando cambie el tamaño de pantalla
     window.addEventListener('resize', handleScroll);
 
     return () => {
@@ -37,6 +33,7 @@ export const Sidenav = () => {
       handleClose();
     } else {
       setIsOpen(true);
+      document.body.classList.add('no-scroll'); // bloquear scroll al abrir
     }
   };
 
@@ -45,6 +42,7 @@ export const Sidenav = () => {
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
+      document.body.classList.remove('no-scroll'); // liberar scroll al cerrar
     }, 400); // igual a la duración de la animación en el CSS
   };
 
