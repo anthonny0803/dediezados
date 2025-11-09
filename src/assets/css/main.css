@@ -25,6 +25,3 @@
 @import url('./sections/contact.css');
 @import url('./sections/location.css');
 @import url('./sections/reviews.css');
-
-/* WIDGETS */
-@import url('./widgets/maps.css');

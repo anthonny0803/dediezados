@@ -125,7 +125,7 @@ export const GoogleMaps = () => {
       <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" 
          target="_blank" 
          rel="noopener noreferrer"
-         style="display: inline-block; padding: 5px 11px; background: #A8D5D5; color: white; text-decoration: none; font-size: 0.6rem; font-weight: 600; transition: all 0.3s;">
+         style="display: inline-block; padding: 5px 11px; background: #3fb5a1; color: white; text-decoration: none; font-size: 0.6rem; font-weight: 600; transition: all 0.3s;">
         Cómo llegar
       </a>
     </div>

@@ -30,6 +30,7 @@ export const Navbar = () => {
           <li><a href="#contact">Contacto</a></li>
           <li><a href="#location">Ubicación</a></li>
           <li><a href="#reviews">Reseñas</a></li>
+          <li><a href="#footer">Acerca de</a></li>
         </ul>
       </nav>
     </>

@@ -1,44 +1,44 @@
 import { SITE_CONFIG } from '../../config/siteConfig';
+import logo from '../../assets/images/logo/logo.png';
 
 export const Footer = () => {
   return (
-    <footer>
-      <div className="logo">
-        De <span style={{ color: 'var(--primary)' }}>Diez</span> a <span style={{ color: 'var(--primary)' }}>Dos</span>
+    <footer id="footer">
+      {/* Logo with fade-in animation */}
+      <div className="footer-logo" data-aos="fade-up">
+        {/* <img src={logo} alt="De Diez a Dos Logo" className="logo-original" /> */}
+        <img src={logo} alt="De Diez a Dos Logo" className="logo-white" />
+        <div className="logo-underline"></div>
       </div>
       
-      <p style={{ fontSize: '1rem', marginTop: '16px', marginBottom: '24px' }}>
+      <p className="footer-tagline" data-aos="fade-up" data-aos-delay="100">
         Tu espacio privado en el corazón de Madrid
       </p>
 
-      <div style={{ 
-        display: 'flex', 
-        gap: '32px', 
-        justifyContent: 'center', 
-        flexWrap: 'wrap',
-        marginBottom: '24px',
-        fontSize: '0.9rem'
-      }}>
-        <div>
-          📞 {SITE_CONFIG.contacto.telefono} | {SITE_CONFIG.contacto.telefono2}
+      <div className="footer-contact" data-aos="fade-up" data-aos-delay="200">
+        <div className="contact-item">
+          <span className="contact-icon">📞</span>
+          {SITE_CONFIG.contacto.telefono} | {SITE_CONFIG.contacto.telefono2}
         </div>
-        <div>
-          📧 {SITE_CONFIG.contacto.email}
+        <div className="contact-item">
+          <span className="contact-icon">📧</span>
+          {SITE_CONFIG.contacto.email}
         </div>
-        <div>
-          📍 {SITE_CONFIG.contacto.direccion}
+        <div className="contact-item">
+          <span className="contact-icon">📍</span>
+          {SITE_CONFIG.contacto.direccion}
         </div>
       </div>
 
-      <p style={{ fontSize: '0.85rem', opacity: 0.7 }}>
+      <p className="footer-legal" data-aos="fade-up" data-aos-delay="300">
         De Diez a Dos Private Event, S.L.U.
       </p>
 
-      <p style={{ fontSize: '0.85rem', opacity: 0.6, marginTop: '16px' }}>
+      <p className="footer-copyright" data-aos="fade-up" data-aos-delay="350">
         &copy; 2025 De Diez a Dos. Todos los derechos reservados.
       </p>
       
-      <p style={{ fontSize: '0.8rem', opacity: 0.5, marginTop: '8px' }}>
+      <p className="footer-slogan" data-aos="fade-up" data-aos-delay="400">
         Más de una década creando eventos que se recuerdan
       </p>
     </footer>

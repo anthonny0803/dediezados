@@ -155,7 +155,7 @@ export const SITE_CONFIG: SiteConfig = {
 ],
   paquetes: [
   {
-    nombre: 'Salón Básico',
+    nombre: 'Paquete Básico',
     precio: 'Desde 800',
     moneda: '€',
     periodo: 'por evento',

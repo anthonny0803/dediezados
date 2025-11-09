@@ -21,10 +21,6 @@ export const Prices = () => {
               <div className="pricing-badge">{paquete.badge}</div>
             )}
             <h3>{paquete.nombre}</h3>
-            <div className="pricing-amount">
-              {paquete.moneda}{paquete.precio}
-            </div>
-            <div className="pricing-period">{paquete.periodo}</div>
             <ul className="pricing-features">
               {paquete.caracteristicas.map((item, idx) => (
                 <li key={idx}>{item}</li>
