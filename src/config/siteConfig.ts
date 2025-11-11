@@ -90,7 +90,7 @@ export const SITE_CONFIG: SiteConfig = {
 },
   heroSlides: [
   {
-    imagen: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070',
+    imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786314/olas-01_qdrqnv.jpg',
     titulo: 'Tu espacio privado en el corazón de Madrid',
     descripcion: 'En De Diez a Dos transformamos cada celebración en una experiencia única. Un lugar exclusivo con catering elaborado, barra libre, sonido profesional y un equipo que se encarga de todo. Tú celebras. Nosotros cuidamos cada detalle.',
     botones: [
@@ -100,24 +100,24 @@ export const SITE_CONFIG: SiteConfig = {
     },
     {
       imagen:
-        "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&h=1080&fit=crop",
-      titulo: "Bodas Inolvidables",
+        "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762853895/hero-02_yfecic.avif",
+      titulo: "Momentos Inolvidables",
       descripcion:
-        "El salón perfecto para el día más importante de tu vida. Espacios únicos con servicios personalizados para hacer de tu boda un evento memorable",
+        "El salón perfecto para el día más importante de tu vida. Espacios únicos con servicios personalizados para hacer de tu evento un día memorable",
       botones: [
-        { texto: "Ver Salones para Bodas", link: "#contact", tipo: "primary" },
+        { texto: "Ver Salones", link: "#gallery", tipo: "primary" },
         { texto: "Ver Paquetes", link: "#prices", tipo: "outline" },
       ],
     },
     {
       imagen:
-        "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&h=1080&fit=crop",
+        "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762853895/hero-03_ji0tw1.jpg",
       titulo: "Eventos Corporativos",
       descripcion:
         "Salones profesionales para conferencias, presentaciones, team building y celebraciones empresariales con servicios completos de catering",
       botones: [
         { texto: "Reservar Salón", link: "#contact", tipo: "primary" },
-        { texto: "Conocer Más", link: "#services", tipo: "outline" },
+        { texto: "Conocer Más", link: "#footer", tipo: "outline" },
       ],
     },
   ],
@@ -211,14 +211,17 @@ export const SITE_CONFIG: SiteConfig = {
 ],
   gallery: {
     photos: [
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1555244162-803834f70033?w=600&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=600&fit=crop",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786317/olas-04_hysthh.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786316/olas-02_haxhsm.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-02_jbajcz.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786317/olas-06_nr52b9.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786316/olas-03_bxoopd.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786286/amazonias-03_kbbnmn.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-01_g50eji.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-06_btvnve.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-04_wzezty.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786286/amazonias-05_qctdqv.jpg",
+      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786287/amazonias-07_wxzmoe.jpg"
     ],
   },
 };

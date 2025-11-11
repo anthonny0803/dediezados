@@ -7,6 +7,13 @@
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
+
+.info-item.card span {
+  font-size: 0.7rem;
+  word-break: break-all; /* fuerza el salto si el email es muy largo */
+}
+
+
 @media (max-width: 640px) {
   .contact-container {
     max-width: 100%;

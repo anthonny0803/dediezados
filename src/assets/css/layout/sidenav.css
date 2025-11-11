@@ -37,6 +37,38 @@
 }
 
 /* ===========================
+   LOGO - Desktop & Mobile
+   =========================== */
+.sidenav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav-logo img {
+  height: 75px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: transform var(--transition-smooth);
+}
+
+.sidenav-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Desktop: Logo at bottom - hide top logo */
+.sidenav-logo-top {
+  display: none;
+}
+
+.sidenav-logo-bottom {
+  display: flex;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 2px solid var(--primary);
+}
+
+/* ===========================
    OVERLAY
    =========================== */
 .sidenav-overlay {
@@ -60,20 +92,18 @@
 /* ===========================
    CONTENIDO DEL SIDENAV
    =========================== */
-.sidenav .logo {
-  margin-bottom: 32px;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--primary);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-  padding-bottom: 20px;
+
+/* Spacer - only on desktop to separate from hamburger menu */
+.sidenav-spacer {
+  height: 60px;
+  flex-shrink: 0;
 }
 
 .sidenav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex: 1;
 }
 
 /* Enlaces con animación coherente */
@@ -126,6 +156,7 @@
 .sidenav.open a:nth-child(5) { transition-delay: 0.3s; }
 .sidenav.open a:nth-child(6) { transition-delay: 0.35s; }
 .sidenav.open a:nth-child(7) { transition-delay: 0.4s; }
+.sidenav.open a:nth-child(8) { transition-delay: 0.45s; }
 
 /* ===========================
    MODO MÓVIL
@@ -159,8 +190,30 @@
     visibility: hidden;
   }
 
+  /* Mobile: Logo at top - show top logo */
+  .sidenav-logo-top {
+    display: flex;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--primary);
+  }
+
+  /* Mobile: Hide bottom logo */
+  .sidenav-logo-bottom {
+    display: none;
+  }
+
+  /* Mobile: Hide spacer */
+  .sidenav-spacer {
+    display: none;
+  }
+
+  .sidenav-logo img {
+    height: 70px;
+  }
+
   .sidenav ul {
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .sidenav a {
@@ -174,7 +227,7 @@
   }
 
   .sidenav a:hover::after {
-    width: 25%; /* más corta en móvil */
+    width: 25%;
   }
 }
 

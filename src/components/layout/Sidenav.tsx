@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-{/*import logo from '../../assets/images/logo/logo.png';*/}
+import logo from '../../assets/images/logo/logo.png';
 
 export const Sidenav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,9 +61,14 @@ export const Sidenav = () => {
           isClosing ? "closing" : ""
         }`}
       >
-        <br />
-        <br />
-        <br />
+        {/* Logo mobile - top */}
+        <div className="sidenav-logo sidenav-logo-top">
+          <img src={logo} alt="De Diez a Dos Logo" />
+        </div>
+
+        {/* Spacer only for desktop */}
+        <div className="sidenav-spacer"></div>
+
         <ul>
           <li>
             <a href="#hero" onClick={handleClose}>
@@ -77,12 +82,12 @@ export const Sidenav = () => {
           </li>
           <li>
             <a href="#prices" onClick={handleClose}>
-              Precios
+              Paquetes
             </a>
           </li>
           <li>
-            <a href="#memories" onClick={handleClose}>
-              Recuerdos
+            <a href="#gallery" onClick={handleClose}>
+              Salones
             </a>
           </li>
           <li>
@@ -107,10 +112,10 @@ export const Sidenav = () => {
           </li>
         </ul>
 
-        {/* Logo only on desktop - appears at bottom */}
-        {/*<div className="sidenav-logo sidenav-logo-bottom">
+        {/* Logo desktop - bottom */}
+        <div className="sidenav-logo sidenav-logo-bottom">
           <img src={logo} alt="De Diez a Dos Logo" />
-        </div>*/}
+        </div>
       </div>
 
       {/* Toggle button */}

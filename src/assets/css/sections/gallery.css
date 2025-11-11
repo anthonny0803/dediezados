@@ -1,4 +1,4 @@
-.memories-section {
+.gallery-section {
   padding: 0;
   max-width: 100%;
   margin: 80px 0;
@@ -6,8 +6,8 @@
 
 
 
-.memories-carousel::before,
-.memories-carousel::after {
+.gallery-carousel::before,
+.gallery-carousel::after {
   content: "";
   position: absolute;
   top: 0;
@@ -18,7 +18,7 @@
 }
 
 /* Botones de desplazamiento */
-.memories-carousel-btn {
+.gallery-carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -36,34 +36,34 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.memories-carousel-btn:hover {
+.gallery-carousel-btn:hover {
   background: rgba(255, 255, 255, 0.299);
   transform: translateY(-50%) scale(1.1);
 }
 
-.memories-carousel-btn.left {
+.gallery-carousel-btn.left {
   left: 10px;
 }
 
-.memories-carousel-btn.right {
+.gallery-carousel-btn.right {
   right: 10px;
 }
 
-.memories-carousel-btn svg {
+.gallery-carousel-btn svg {
   width: 24px;
   height: 24px;
   fill: var(--black);
 }
 
 
-.memories-track {
+.gallery-track {
   display: flex;
   gap: 20px;
   padding: 32px;
   will-change: transform;
 }
 
-.memory-photo {
+.gallery-photo {
   width: 340px;
   height: 340px;
   flex-shrink: 0;
@@ -77,7 +77,7 @@
   overflow: hidden;
 }
 
-.memory-photo::before {
+.gallery-photo::before {
   content: "";
   position: absolute;
   top: 0;
@@ -88,13 +88,13 @@
   transition: left var(--transition-smooth);
 }
 
-.memory-photo:hover {
+.gallery-photo:hover {
   transform: scale(1.08);
   box-shadow: var(--shadow-xl);
   z-index: 10;
 }
 
-.memory-photo:hover::before {
+.gallery-photo:hover::before {
   left: 0;
 }
 
@@ -103,24 +103,24 @@
    =========================== */
 
 @media (max-width: 968px) {
-  .memory-photo {
+  .gallery-photo {
     width: 300px;
     height: 300px;
   }
 }
 
 @media (max-width: 640px) {
-  .memory-photo {
+  .gallery-photo {
     width: 260px;
     height: 260px;
   }
-  .memories-carousel {
+  .gallery-carousel {
     height: 380px;
   }
 }
 
 @media (max-width: 480px) {
-  .memory-photo {
+  .gallery-photo {
     width: 220px;
     height: 220px;
   }

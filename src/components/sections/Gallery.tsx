@@ -8,7 +8,6 @@ export const Gallery = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
-  const lastInteractionRef = useRef<number>(Date.now());
 
   const openModal = (imageUrl: string) => {
     setSelectedImage(imageUrl);
@@ -20,7 +19,7 @@ export const Gallery = () => {
     setSelectedImage("");
   };
 
-  // Bloquear scroll mientras el modal esté abierto
+  // Lock scroll while modal is open
   useEffect(() => {
     if (modalOpen) {
       document.body.style.overflow = "hidden";
@@ -33,20 +32,19 @@ export const Gallery = () => {
     };
   }, [modalOpen]);
 
-  // Triplicar fotos para scroll infinito visual
+  // Triple photos for infinite scroll visual effect
   const photos = [
     ...SITE_CONFIG.gallery.photos,
     ...SITE_CONFIG.gallery.photos,
     ...SITE_CONFIG.gallery.photos,
   ];
 
-  // --- Drag con mouse ---
+  // Mouse drag handlers
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!trackRef.current) return;
     setIsDragging(true);
     setStartX(e.pageX - trackRef.current.offsetLeft);
     setScrollLeft(trackRef.current.scrollLeft);
-    lastInteractionRef.current = Date.now();
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -59,16 +57,14 @@ export const Gallery = () => {
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    lastInteractionRef.current = Date.now();
   };
 
-  // --- Drag táctil ---
+  // Touch drag handlers
   const handleTouchStart = (e: React.TouchEvent) => {
     if (!trackRef.current) return;
     setIsDragging(true);
     setStartX(e.touches[0].pageX - trackRef.current.offsetLeft);
     setScrollLeft(trackRef.current.scrollLeft);
-    lastInteractionRef.current = Date.now();
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -80,11 +76,6 @@ export const Gallery = () => {
 
   const handleTouchEnd = () => {
     setIsDragging(false);
-    lastInteractionRef.current = Date.now();
-  };
-
-  const handleMouseEnter = () => {
-    lastInteractionRef.current = Date.now();
   };
 
   const scrollLeftBy = () => {
@@ -97,33 +88,32 @@ export const Gallery = () => {
 
   return (
     <>
-      <section id="memories" className="memories-section">
+      <section id="gallery" className="gallery-section">
         <div style={{ textAlign: "left", padding: "0 5% 48px" }}>
           <h2 className="section-title" data-aos="fade-up">
-            Momentos Inolvidables
+            Salones
           </h2>
           <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-            Algunos de los eventos que hemos tenido el honor de crear
+            Descubre nuestros elegantes salones, diseñados para crear el ambiente perfecto para tu evento especial.
           </p>
         </div>
 
         <div
-          className="memories-carousel"
-          onMouseEnter={handleMouseEnter}
+          className="gallery-carousel"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          {/* Botón izquierdo */}
-          <button className="memories-carousel-btn left" onClick={scrollLeftBy}>
+          {/* Left button */}
+          <button className="gallery-carousel-btn left" onClick={scrollLeftBy}>
             <svg viewBox="0 0 24 24">
               <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
             </svg>
           </button>
 
-          {/* Carrusel */}
+          {/* Carousel track */}
           <div
             ref={trackRef}
-            className="memories-track"
+            className="gallery-track"
             style={{
               display: "flex",
               gap: "20px",
@@ -145,16 +135,16 @@ export const Gallery = () => {
             {photos.map((photo, index) => (
               <div
                 key={index}
-                className="memory-photo"
+                className="gallery-photo"
                 style={{ backgroundImage: `url('${photo}')` }}
-                onClick={() => { if (!isDragging) openModal(photo.replace("w=600", "w=1200")); }}
+                onClick={() => { if (!isDragging) openModal(photo); }}
                 onDragStart={(e) => e.preventDefault()}
               />
             ))}
           </div>
 
-          {/* Botón derecho */}
-          <button className="memories-carousel-btn right" onClick={scrollRightBy}>
+          {/* Right button */}
+          <button className="gallery-carousel-btn right" onClick={scrollRightBy}>
             <svg viewBox="0 0 24 24">
               <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
             </svg>
@@ -173,7 +163,7 @@ export const Gallery = () => {
       )}
 
       <style>{`
-        .memories-track::-webkit-scrollbar {
+        .gallery-track::-webkit-scrollbar {
           display: none;
         }
       `}</style>

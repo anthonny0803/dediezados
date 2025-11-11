@@ -25,8 +25,8 @@ export const Navbar = () => {
         <ul>
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#services">Servicios</a></li>
-          <li><a href="#prices">Precios</a></li>
-          <li><a href="#memories">Recuerdos</a></li>
+          <li><a href="#prices">Paquetes</a></li>
+          <li><a href="#gallery">Salones</a></li>
           <li><a href="#contact">Contacto</a></li>
           <li><a href="#location">Ubicación</a></li>
           <li><a href="#reviews">Reseñas</a></li>

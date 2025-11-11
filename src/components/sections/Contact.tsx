@@ -160,6 +160,7 @@ export const Contact = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
+                placeholder="Juan Pérez"
                 style={{
                   textTransform: "capitalize",
                   borderColor:
@@ -184,6 +185,7 @@ export const Contact = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
+                placeholder="juan@example.com"
                 style={{
                   textTransform: "lowercase",
                   borderColor:
@@ -233,7 +235,7 @@ export const Contact = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                placeholder="Ej: Boda, Corporativo, Cumpleaños"
+                placeholder="Boda, Corporativo, Cumpleaños"
                 style={{
                   textTransform: "capitalize",
                   borderColor:
@@ -258,6 +260,7 @@ export const Contact = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
+                placeholder="DD/MM/AAAA"
                 style={{
                   borderColor:
                     formData.fechaEvento === ""
@@ -281,7 +284,7 @@ export const Contact = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                placeholder="Ej: 25-35 años"
+                placeholder="25-35 años"
                 style={{
                   borderColor:
                     formData.mediaEdad === ""
