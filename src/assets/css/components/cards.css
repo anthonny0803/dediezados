@@ -2,9 +2,9 @@
 .card {
   background: var(--gray-light);
   box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(168, 213, 213, 0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-  border: 1px solid rgba(168, 213, 213, 0.15);
   position: relative;
 }
 
@@ -30,7 +30,7 @@
   border-color: var(--primary);
 }
 
-/* Card grids */
+/* Card grid layouts */
 .services-grid,
 .pricing-grid {
   display: grid;
@@ -41,9 +41,9 @@
 /* Service card */
 .service-card {
   padding: 36px;
+  background: var(--gray-light);
   border-left: 3px solid transparent;
   position: relative;
-  background: var(--gray-light);
   overflow: hidden;
 }
 
@@ -72,8 +72,8 @@
   height: 200%;
   background: radial-gradient(circle, rgba(168, 213, 213, 0.1) 0%, transparent 70%);
   opacity: 0;
-  transition: opacity 0.6s, transform 0.6s;
   transform: scale(0);
+  transition: opacity 0.6s, transform 0.6s;
   z-index: 0;
 }
 
@@ -82,6 +82,7 @@
   transform: scale(1);
 }
 
+/* Service card icon */
 .service-icon {
   width: 64px;
   height: 64px;
@@ -103,6 +104,7 @@
   box-shadow: var(--shadow-lg);
 }
 
+/* Service card text */
 .service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 14px;
@@ -154,6 +156,7 @@
   transform: translateY(-16px) rotateX(2deg);
 }
 
+/* Featured pricing card */
 .pricing-card.featured {
   border-top-width: 6px;
   transform: scale(1.03);
@@ -165,6 +168,7 @@
   transform: scale(1.03) translateY(-16px) rotateX(2deg);
 }
 
+/* Featured glow animation */
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: var(--shadow-lg), 0 0 30px rgba(168, 213, 213, 0.3);
@@ -174,6 +178,7 @@
   }
 }
 
+/* Pricing badge */
 .pricing-badge {
   display: inline-block;
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -187,6 +192,7 @@
   box-shadow: var(--shadow-teal);
 }
 
+/* Pricing text */
 .pricing-card h3 {
   font-family: 'Libre Baskerville', serif;
   font-size: 2rem;
@@ -209,6 +215,7 @@
   font-size: 0.95rem;
 }
 
+/* Pricing features list */
 .pricing-features {
   list-style: none;
   margin-bottom: 36px;
@@ -219,8 +226,8 @@
   padding: 14px 0;
   border-bottom: 1px solid rgba(168, 213, 213, 0.12);
   color: var(--gray);
-  transition: all var(--transition-fast);
   font-size: 0.95rem;
+  transition: all var(--transition-fast);
 }
 
 .pricing-features li:hover {
@@ -241,11 +248,11 @@
   padding: 20px;
   background: var(--gray-light);
   box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(168, 213, 213, 0.1);
   display: flex;
   align-items: center;
   gap: 16px;
   transition: all var(--transition-smooth);
-  border: 1px solid rgba(168, 213, 213, 0.1);
 }
 
 .info-item:hover {
@@ -254,6 +261,7 @@
   border-color: var(--primary);
 }
 
+/* Info card icon */
 .info-icon {
   width: 52px;
   height: 52px;
@@ -267,6 +275,7 @@
   box-shadow: var(--shadow-teal);
 }
 
+/* Info text */
 .info-item strong {
   display: block;
   margin-bottom: 4px;
@@ -280,7 +289,7 @@
   font-size: 0.9rem;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 968px) {
   .pricing-card.featured {
     transform: scale(1);
@@ -292,12 +301,15 @@
   .pricing-grid {
     grid-template-columns: 1fr;
   }
+
   .pricing-amount {
     font-size: 2.6rem;
   }
+
   .service-card {
     padding: 28px;
   }
+
   .pricing-card {
     padding: 36px 24px;
   }
@@ -307,6 +319,7 @@
   .pricing-amount {
     font-size: 2.2rem;
   }
+
   .service-icon {
     width: 56px;
     height: 56px;

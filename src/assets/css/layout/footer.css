@@ -190,6 +190,19 @@ footer > * {
   transform: scale(1.02);
 }
 
+/* SEO Keywords - Discrete style */
+.footer-keywords {
+  font-size: 0.7rem;
+  color: var(--gray);
+  opacity: 0.4;
+  margin-top: 24px;
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   footer {

@@ -1,4 +1,4 @@
-/* Base button */
+/* Base button styles */
 .btn {
   display: inline-block;
   padding: 13px 34px;
@@ -8,12 +8,12 @@
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  box-shadow: 0 4px 12px rgba(168, 213, 213, 0.3);
-  transition: all var(--transition-smooth);
-  cursor: pointer;
-  border: none;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(168, 213, 213, 0.3);
+  transition: all var(--transition-smooth);
 }
 
 .btn:hover {
@@ -26,7 +26,7 @@
   transform: translateY(-1px);
 }
 
-/* Outline variant - shared styles */
+/* Outline and shared button variants */
 .btn-outline,
 button[type="submit"],
 .btn-ver-mas-reviews {
@@ -48,7 +48,7 @@ button[type="submit"]:hover,
   transform: translateY(-2px);
 }
 
-/* Submit specific */
+/* Submit button */
 button[type="submit"] {
   width: 100%;
   padding: 14px;
@@ -60,21 +60,21 @@ button[type="submit"]:hover {
   box-shadow: 0 6px 16px rgba(168, 213, 213, 0.4);
 }
 
-/* Reviews button specific */
+/* Reviews button */
 .btn-ver-mas-reviews {
   display: inline-block;
   margin-top: 24px;
   padding: 12px 28px;
   text-decoration: none;
-  letter-spacing: 0.5px;
   font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 .btn-ver-mas-reviews:hover {
   transform: translateY(-2px) scale(1.03);
 }
 
-/* Disabled states */
+/* Disabled state */
 .btn:disabled,
 .btn.disabled,
 button[type="submit"]:disabled {
@@ -84,12 +84,13 @@ button[type="submit"]:disabled {
   transform: none;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 640px) {
   .btn {
     padding: 11px 24px;
     font-size: 0.85rem;
   }
+
   button[type="submit"] {
     padding: 12px;
     font-size: 0.9rem;

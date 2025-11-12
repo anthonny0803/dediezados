@@ -1,6 +1,4 @@
-/* ===========================
-   SIDENAV (Escritorio)
-   =========================== */
+/* SIDENAV - Desktop */
 .sidenav {
   position: fixed;
   top: 0;
@@ -8,7 +6,7 @@
   width: 220px;
   max-width: 100%;
   height: 100vh;
-  background: rgba(26, 26, 26, 0.100);
+  background: rgba(26, 26, 26, 0.1);
   backdrop-filter: blur(12px);
   box-shadow: -4px 0 16px rgba(0, 0, 0, 0.4);
   padding: 28px 20px;
@@ -36,9 +34,7 @@
   visibility: hidden;
 }
 
-/* ===========================
-   LOGO - Desktop & Mobile
-   =========================== */
+/* SIDENAV Logo */
 .sidenav-logo {
   display: flex;
   justify-content: center;
@@ -56,7 +52,6 @@
   transform: scale(1.05);
 }
 
-/* Desktop: Logo at bottom - hide top logo */
 .sidenav-logo-top {
   display: none;
 }
@@ -68,9 +63,7 @@
   border-top: 2px solid var(--primary);
 }
 
-/* ===========================
-   OVERLAY
-   =========================== */
+/* Overlay for sidenav */
 .sidenav-overlay {
   position: fixed;
   inset: 0;
@@ -89,11 +82,7 @@
   visibility: visible;
 }
 
-/* ===========================
-   CONTENIDO DEL SIDENAV
-   =========================== */
-
-/* Spacer - only on desktop to separate from hamburger menu */
+/* SIDENAV Links */
 .sidenav-spacer {
   height: 60px;
   flex-shrink: 0;
@@ -106,7 +95,6 @@
   flex: 1;
 }
 
-/* Enlaces con animación coherente */
 .sidenav a {
   position: relative;
   display: block;
@@ -143,7 +131,6 @@
   width: 55%;
 }
 
-/* Animación secuencial */
 .sidenav.open a {
   opacity: 1;
   transform: translateX(0);
@@ -158,16 +145,14 @@
 .sidenav.open a:nth-child(7) { transition-delay: 0.4s; }
 .sidenav.open a:nth-child(8) { transition-delay: 0.45s; }
 
-/* ===========================
-   MODO MÓVIL
-   =========================== */
+/* MOBILE SIDENAV */
 @media (max-width: 768px) {
   .sidenav {
     width: 100%;
     height: 100vh;
     top: 0;
     right: 0;
-    background: rgba(26, 26, 26, 0.100);
+    background: rgba(26, 26, 26, 0.1);
     backdrop-filter: blur(14px);
     border-left: none;
     border-bottom: 2px solid var(--primary);
@@ -175,7 +160,6 @@
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
   }
 
   .sidenav.open {
@@ -190,7 +174,6 @@
     visibility: hidden;
   }
 
-  /* Mobile: Logo at top - show top logo */
   .sidenav-logo-top {
     display: flex;
     margin-bottom: 16px;
@@ -198,12 +181,10 @@
     border-bottom: 2px solid var(--primary);
   }
 
-  /* Mobile: Hide bottom logo */
   .sidenav-logo-bottom {
     display: none;
   }
 
-  /* Mobile: Hide spacer */
   .sidenav-spacer {
     display: none;
   }
@@ -231,9 +212,7 @@
   }
 }
 
-/* ===========================
-   BOTÓN HAMBURGUESA
-   =========================== */
+/* HAMBURGER BUTTON */
 .menu-toggle {
   position: fixed;
   top: 24px;
@@ -254,21 +233,19 @@
   transform: translateY(-10px);
 }
 
-/* Mostrar botón cuando debe aparecer */
 .menu-toggle.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* Ocultar con animación */
 .menu-toggle.hide {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
 }
 
-/* Animación "X" */
+/* Hamburger animation */
 .menu-toggle.open span:nth-child(1) {
   transform: rotate(45deg) translateY(7px);
 }
@@ -291,11 +268,11 @@
 .menu-toggle:hover {
   transform: scale(1.05);
 }
+
 .menu-toggle:hover span {
   background: var(--black);
 }
 
-/* Responsive botón */
 @media (max-width: 640px) {
   .menu-toggle {
     width: 42px;
@@ -309,6 +286,7 @@
   }
 }
 
+/* Prevent scrolling when sidenav is open */
 body.no-scroll {
   overflow: hidden;
   height: 100vh;

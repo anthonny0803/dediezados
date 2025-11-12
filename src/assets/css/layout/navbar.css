@@ -1,4 +1,4 @@
-/* Logo fijo fuera del nav */
+/* Fixed logo outside navbar */
 .logo-fixed {
   position: fixed;
   top: 5px;
@@ -18,13 +18,14 @@
   transform: scale(1.05);
 }
 
+/* Hide logo state */
 .logo-fixed.hide {
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
 }
 
-/* Navbar centrado (solo escritorio) */
+/* Centered navbar (desktop only) */
 nav {
   position: fixed;
   top: 16px;
@@ -43,6 +44,7 @@ nav {
   border: none;
 }
 
+/* Hide navbar state */
 nav.hide {
   opacity: 0;
   pointer-events: none;
@@ -88,14 +90,14 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-  /* Desaparece el nav en tablet y móvil */
+  /* Hide navbar on tablet and mobile */
   nav {
     display: none;
   }
 
-  /* Centrar el logo */
+  /* Center the logo */
   .logo-fixed {
     left: 50%;
     transform: translateX(-50%);

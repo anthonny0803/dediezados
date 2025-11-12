@@ -41,6 +41,11 @@ export const Footer = () => {
       <p className="footer-slogan" data-aos="fade-up" data-aos-delay="400">
         Más de una década creando eventos que se recuerdan
       </p>
+
+      {/* SEO Keywords */}
+      <p className="footer-keywords" data-aos="fade-up" data-aos-delay="450">
+        Salones para eventos Madrid | Alquiler salón cumpleaños Madrid | Eventos privados económicos | Fiestas cerca Santiago Bernabéu | Salón cumpleaños barato Madrid | Catering eventos económico | Celebraciones baratas Madrid | Alquiler local fiestas Madrid | Eventos junto al Bernabéu | Salones para bodas baratos | Fiestas privadas precio económico | Reservar salón Madrid centro | Espacios para celebraciones Madrid | Eventos cerca estadio Santiago Bernabéu | Alquiler salón con catering barato | Evento de cumpleaños Madrid económico | Fiestas de empresa Madrid | Salón eventos precios competitivos | Celebraciones inolvidables Madrid | Sala para eventos Madrid Centro | De Diez a Dos Madrid
+      </p>
     </footer>
   );
 };
