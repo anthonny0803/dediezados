@@ -12,7 +12,7 @@ export const Logo = ({
   height = 80,
   className = '' 
 }: LogoProps) => {
-  const logoUrl = 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png';
+  const logoUrl = 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_150,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png';
   
   return (
     <img 
