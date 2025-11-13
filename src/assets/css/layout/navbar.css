@@ -11,7 +11,7 @@
   height: 90px;
   width: auto;
   transition: transform var(--transition-smooth);
-  filter: brightness(0) invert(1);
+  
 }
 
 .logo-fixed:hover img {

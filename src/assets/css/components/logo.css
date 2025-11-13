@@ -1,0 +1,14 @@
+/* Logo styles - single definition */
+.logo-img {
+  display: block;
+  transition: transform var(--transition-smooth);
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* White variant for navbar/sidenav */
+.logo-img.logo-white {
+  filter: brightness(0) invert(1);
+}

@@ -43,7 +43,6 @@
 .sidenav-logo img {
   height: 75px;
   width: auto;
-  filter: brightness(0) invert(1);
   transition: transform var(--transition-smooth);
 }
 
