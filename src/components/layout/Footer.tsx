@@ -1,5 +1,4 @@
 import { SITE_CONFIG } from '../../config/siteConfig';
-import logo from '../../assets/images/logo/logo.png';
 
 export const Footer = () => {
   return (
@@ -7,7 +6,7 @@ export const Footer = () => {
       {/* Logo with fade-in animation */}
       <div className="footer-logo" data-aos="fade-up">
         {/* <img src={logo} alt="De Diez a Dos Logo" className="logo-original" /> */}
-        <img src={logo} alt="De Diez a Dos Logo" className="logo-white" />
+        <img src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_150,h_95,c_fit/v1763036736/logo_nkxrbw.png" alt="De Diez a Dos Logo" className="logo-white" />
         <div className="logo-underline"></div>
       </div>
       

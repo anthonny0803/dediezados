@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import logo from '../../assets/images/logo/logo.png';
 
 export const Sidenav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +62,7 @@ export const Sidenav = () => {
       >
         {/* Logo mobile - top */}
         <div className="sidenav-logo sidenav-logo-top">
-          <img src={logo} alt="De Diez a Dos Logo" />
+          <img src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_150,h_95,c_fit/v1763036736/logo_nkxrbw.png" alt="De Diez a Dos Logo" />
         </div>
 
         {/* Spacer only for desktop */}
@@ -114,7 +113,7 @@ export const Sidenav = () => {
 
         {/* Logo desktop - bottom */}
         <div className="sidenav-logo sidenav-logo-bottom">
-          <img src={logo} alt="De Diez a Dos Logo" />
+          <img src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_150,h_95,c_fit/v1763036736/logo_nkxrbw.png" alt="De Diez a Dos Logo" />
         </div>
       </div>
 

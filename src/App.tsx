@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { Sidenav } from './components/layout/Sidenav';
 import { Hero } from './components/sections/Hero';
@@ -32,6 +32,33 @@ const SectionLoader = () => (
 );
 
 function App() {
+  // Initialize AOS after component mount
+  useEffect(() => {
+    const loadAOS = async () => {
+      try {
+        const AOS = await import('aos');
+        await import('aos/dist/aos.css');
+        
+        AOS.init({
+          duration: 800,
+          easing: 'ease-out-cubic',
+          once: true,
+          offset: 100,
+        });
+      } catch (error) {
+        console.warn('AOS failed to load:', error);
+      }
+    };
+
+    // Wait for DOM to be ready
+    if (document.readyState === 'complete') {
+      loadAOS();
+    } else {
+      window.addEventListener('load', loadAOS);
+      return () => window.removeEventListener('load', loadAOS);
+    }
+  }, []);
+
   return (
     <>
       <Navbar />
