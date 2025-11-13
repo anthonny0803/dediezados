@@ -1,5 +1,7 @@
-import { GoogleMaps } from '../widgets/GoogleMaps';
+import { lazy, Suspense } from "react";
 import '../../assets/css/sections/location.css';
+
+const GoogleMapsLazy = lazy(() => import('../widgets/GoogleMaps').then(m => ({ default: m.GoogleMaps })));
 
 export const Location = () => {
   return (
@@ -10,9 +12,11 @@ export const Location = () => {
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
         Encuéntranos en el corazón de Madrid
       </p>
-      <div data-aos="fade-up" data-aos-delay="200">
-        <GoogleMaps />
-      </div>
+      <Suspense fallback={<div style={{ minHeight: "300px" }}>Cargando mapa...</div>}>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <GoogleMapsLazy />
+        </div>
+      </Suspense>
     </section>
   );
 };

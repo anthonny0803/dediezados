@@ -8,7 +8,6 @@
   height: 100vh;
   background: rgba(26, 26, 26, 0.1);
   backdrop-filter: blur(12px);
-  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.4);
   padding: 28px 20px;
   z-index: 1400;
   display: flex;

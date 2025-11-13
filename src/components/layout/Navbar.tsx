@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import logo from '../../assets/images/logo/logo.png';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,7 +16,7 @@ export const Navbar = () => {
     <>
       {/* LOGO FIJO INDEPENDIENTE */}
       <div className={`logo-fixed ${isScrolled ? 'hide' : ''}`}>
-        <img src={logo} alt="Logo De Diez a Dos" />
+        <img src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763036736/logo_nkxrbw.png" alt="Logo De Diez a Dos" />
       </div>
 
       {/* NAV CENTRADO */}

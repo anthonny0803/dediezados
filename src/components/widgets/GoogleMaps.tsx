@@ -23,11 +23,17 @@ export const GoogleMaps = () => {
 
     let mounted = true;
 
-    loadGoogleMaps(apiKey)
-      .then(() => {
-        if (mounted) initializeMap(placeId);
-      })
-      .catch((err) => console.error(err));
+    // Lazy + dynamic import del script de Google Maps
+    const loadMap = async () => {
+      try {
+        await loadGoogleMaps(apiKey); // carga script
+        if (mounted) await initializeMap(placeId); // inicializa mapa
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    loadMap();
 
     return () => {
       mounted = false;
@@ -38,19 +44,17 @@ export const GoogleMaps = () => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
     try {
-      // Importar librerías necesarias
       const { Map } = (await google.maps.importLibrary(
         "maps"
       )) as google.maps.MapsLibrary;
       const { AdvancedMarkerElement } = (await google.maps.importLibrary(
         "marker"
       )) as google.maps.MarkerLibrary;
-      // @ts-expect-error - Places es una librería válida
+      // @ts-expect-error 'Place' no está en los tipos de google.maps, pero sí existe en runtime
       const { Place } = await google.maps.importLibrary("places");
 
       const { lat, lng, zoom } = SITE_CONFIG.contacto.ubicacion;
 
-      // Crear el mapa
       const map = new Map(mapRef.current, {
         center: { lat, lng },
         zoom,
@@ -64,16 +68,13 @@ export const GoogleMaps = () => {
         ],
       });
 
-      // Crear el marker
       const marker = new AdvancedMarkerElement({
         position: { lat, lng },
         map,
         title: SITE_CONFIG.empresa.nombre,
       });
 
-      // Cargar información del Place
       const place = new Place({ id: placeId });
-
       await place.fetchFields({
         fields: [
           "displayName",
@@ -85,65 +86,44 @@ export const GoogleMaps = () => {
         ],
       });
 
-      // Crear contenido del InfoWindow
       const contentString = `
-  <div style="padding: 6px 8px; max-width: 196px; font-family: 'Poppins', sans-serif;">
-    <h3 style="margin: 0 0 4px 0; font-size: 0.77rem; color: #000; font-weight: 600; line-height: 1.2;">
-      ${place.displayName?.text || SITE_CONFIG.empresa.nombre}
-    </h3>
-    
-    ${
-      place.formattedAddress
-        ? `<p style="margin: 4px 0; color: #666; font-size: 0.63rem; line-height: 1.2;">
-        📍 ${place.formattedAddress}
-      </p>`
-        : ""
-    }
-    
-    ${
-      place.rating
-        ? `<div style="margin: 4px 0; font-size: 0.63rem;">
-        <span style="color: #FFC107; font-weight: 600;">★ ${place.rating.toFixed(
-          1
-        )}</span>
-        <span style="color: #666;"> (${
-          place.userRatingCount || 0
-        } reseñas)</span>
-      </div>`
-        : ""
-    }
-    
-    ${
-      place.nationalPhoneNumber
-        ? `<p style="margin: 4px 0; color: #666; font-size: 0.63rem;">
-        📞 ${place.nationalPhoneNumber}
-      </p>`
-        : ""
-    }
-    
-    <div style="margin-top: 6px;">
-      <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" 
-         target="_blank" 
-         rel="noopener noreferrer"
-         style="display: inline-block; padding: 5px 11px; background: #3fb5a1; color: white; text-decoration: none; font-size: 0.6rem; font-weight: 600; transition: all 0.3s;">
-        Cómo llegar
-      </a>
-    </div>
-  </div>
-`;
+        <div style="padding: 6px 8px; max-width: 196px; font-family: 'Poppins', sans-serif;">
+          <h3 style="margin:0 0 4px 0;font-size:0.77rem;color:#000;font-weight:600;line-height:1.2;">
+            ${place.displayName?.text || SITE_CONFIG.empresa.nombre}
+          </h3>
+          ${
+            place.formattedAddress
+              ? `<p style="margin:4px 0;color:#666;font-size:0.63rem;">📍 ${place.formattedAddress}</p>`
+              : ""
+          }
+          ${
+            place.rating
+              ? `<div style="margin:4px 0;font-size:0.63rem;"><span style="color:#FFC107;font-weight:600;">★ ${place.rating.toFixed(
+                  1
+                )}</span><span style="color:#666;"> (${
+                  place.userRatingCount || 0
+                } reseñas)</span></div>`
+              : ""
+          }
+          ${
+            place.nationalPhoneNumber
+              ? `<p style="margin:4px 0;color:#666;font-size:0.63rem;">📞 ${place.nationalPhoneNumber}</p>`
+              : ""
+          }
+          <div style="margin-top:6px;">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               style="display:inline-block;padding:5px 11px;background:#3fb5a1;color:white;text-decoration:none;font-size:0.6rem;font-weight:600;transition:all 0.3s;">
+              Cómo llegar
+            </a>
+          </div>
+        </div>
+      `;
 
-      // Crear InfoWindow
-      const infoWindow = new google.maps.InfoWindow({
-        content: contentString,
-      });
-
-      // Abrir automáticamente al cargar
+      const infoWindow = new google.maps.InfoWindow({ content: contentString });
       infoWindow.open(map, marker);
-
-      // También abrirlo al hacer clic en el marker
-      marker.addListener("click", () => {
-        infoWindow.open(map, marker);
-      });
+      marker.addListener("click", () => infoWindow.open(map, marker));
 
       mapInstanceRef.current = map;
     } catch (error) {

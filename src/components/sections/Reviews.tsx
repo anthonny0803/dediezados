@@ -1,5 +1,7 @@
-import { GoogleReviews } from '../widgets/GoogleReviews';
+import { lazy, Suspense } from "react";
 import '../../assets/css/sections/reviews.css';
+
+const GoogleReviewsLazy = lazy(() => import('../widgets/GoogleReviews').then(m => ({ default: m.GoogleReviews })));
 
 export const Reviews = () => {
   return (
@@ -10,9 +12,11 @@ export const Reviews = () => {
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
         Experiencias reales de eventos inolvidables
       </p>
-      <div data-aos="fade-up" data-aos-delay="200">
-        <GoogleReviews />
-      </div>
+      <Suspense fallback={<div style={{ minHeight: "300px" }}>Cargando reseñas...</div>}>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <GoogleReviewsLazy />
+        </div>
+      </Suspense>
     </section>
   );
 };

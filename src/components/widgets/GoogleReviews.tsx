@@ -113,6 +113,24 @@ export const GoogleReviews = () => {
       </div>
     );
 
+  // Handle image load errors with retry
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    const retryCount = parseInt(img.getAttribute('data-retry') || '0');
+    
+    if (retryCount < 3) {
+      const originalSrc = img.src;
+      setTimeout(() => {
+        img.setAttribute('data-retry', (retryCount + 1).toString());
+        img.src = originalSrc + (originalSrc.includes('?') ? '&' : '?') + 'retry=' + Date.now();
+      }, 1000 * (retryCount + 1)); // Increasing delay: 1s, 2s, 3s
+    } else {
+      // After 3 retries, show placeholder
+      img.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56"><circle cx="28" cy="28" r="28" fill="%23A8D5D5"/><text x="28" y="36" text-anchor="middle" fill="white" font-size="24" font-family="Arial">👤</text></svg>';
+      img.removeAttribute('data-retry');
+    }
+  };
+
   return (
     <div className="reviews-widget">
       {placeInfo?.rating && (
@@ -128,6 +146,8 @@ export const GoogleReviews = () => {
           src={review.authorAttribution.photoUri}
           alt={review.authorAttribution.displayName}
           className="review-avatar"
+          onError={handleImageError}
+          data-retry="0"
         />
       )}
       <div className="review-info">
@@ -143,7 +163,7 @@ export const GoogleReviews = () => {
       </div>
     </div>
 
-    {/* NUEVO: logo de Google arriba a la derecha */}
+    {/* Logo de Google */}
     <div className="google-badge" title="Publicado en Google">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/225px-Google_%22G%22_logo.svg.png" alt="Google" />
     </div>
