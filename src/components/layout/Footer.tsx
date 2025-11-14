@@ -5,8 +5,14 @@ export const Footer = () => {
     <footer id="footer">
       {/* Logo with fade-in animation */}
       <div className="footer-logo" data-aos="fade-up">
-        {/* <img src={logo} alt="De Diez a Dos Logo" className="logo-original" /> */}
-        <img src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_150,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png" alt="De Diez a Dos Logo" className="logo-white" />
+        <img 
+          src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_150,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png" 
+          alt="De Diez a Dos Logo" 
+          className="logo-white"
+          width="150"
+          height="95"
+          loading="lazy"
+        />
         <div className="logo-underline"></div>
       </div>
       
