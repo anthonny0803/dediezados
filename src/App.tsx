@@ -32,9 +32,14 @@ const SectionLoader = () => (
 );
 
 function App() {
-  // Initialize AOS after component mount
+  // OPTIMIZACIÓN 2: AOS lazy loading on scroll (reduce reflows)
   useEffect(() => {
+    let loaded = false;
+    
     const loadAOS = async () => {
+      if (loaded) return;
+      loaded = true;
+      
       try {
         const AOS = await import('aos');
         await import('aos/dist/aos.css');
@@ -44,19 +49,28 @@ function App() {
           easing: 'ease-out-cubic',
           once: true,
           offset: 100,
+          disable: 'mobile' // Disable on mobile to reduce reflows
         });
       } catch (error) {
         console.warn('AOS failed to load:', error);
       }
     };
 
-    // Wait for DOM to be ready
-    if (document.readyState === 'complete') {
+    // Load AOS on first scroll
+    const handleScroll = () => {
       loadAOS();
-    } else {
-      window.addEventListener('load', loadAOS);
-      return () => window.removeEventListener('load', loadAOS);
-    }
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Fallback: load after 3 seconds if no scroll
+    const timeout = setTimeout(loadAOS, 3000);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeout);
+    };
   }, []);
 
   return (

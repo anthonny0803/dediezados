@@ -209,17 +209,16 @@ export const SITE_CONFIG: SiteConfig = {
   ],
   gallery: {
     photos: [
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786317/olas-04_hysthh.jpg", sala: "Sala Olas" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786316/olas-02_haxhsm.jpg", sala: "Sala Olas" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786317/olas-06_nr52b9.jpg", sala: "Sala Olas" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786316/olas-03_bxoopd.jpg", sala: "Sala Olas" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-02_jbajcz.jpg", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786286/amazonias-03_kbbnmn.jpg", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-01_g50eji.jpg", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-06_btvnve.jpg", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-04_wzezty.jpg", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786286/amazonias-05_qctdqv.jpg", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786287/amazonias-07_wxzmoe.jpg", sala: "Sala Amazonias" }
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239541/olas-04_phqoqx.webp", sala: "Sala Olas" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239537/olas-02_rr6p4s.webp", sala: "Sala Olas" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239542/olas-06_bmubuf.webp", sala: "Sala Olas" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239538/olas-03_n4aotk.webp", sala: "Sala Olas" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239529/amazonias-02_wuhjwa.webp", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239529/amazonias-03_a07qc0.webp", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239528/amazonias-01_yadqyg.webp", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239530/amazonias-06_mqwezx.webp", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239529/amazonias-05_lnzwjl.webp", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239530/amazonias-07_sadnid.webp", sala: "Sala Amazonias" }
     ],
   },
 };

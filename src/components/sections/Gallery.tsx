@@ -106,8 +106,12 @@ export const Gallery = () => {
           data-aos-delay="200"
         >
           {/* Left button */}
-          <button className="gallery-carousel-btn left" onClick={scrollLeftBy}>
-            <svg viewBox="0 0 24 24">
+          <button 
+            className="gallery-carousel-btn left" 
+            onClick={scrollLeftBy}
+            aria-label="Desplazar galería a la izquierda"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
             </svg>
           </button>
@@ -148,8 +152,12 @@ export const Gallery = () => {
           </div>
 
           {/* Right button */}
-          <button className="gallery-carousel-btn right" onClick={scrollRightBy}>
-            <svg viewBox="0 0 24 24">
+          <button 
+            className="gallery-carousel-btn right" 
+            onClick={scrollRightBy}
+            aria-label="Desplazar galería a la derecha"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
             </svg>
           </button>
