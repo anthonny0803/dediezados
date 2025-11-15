@@ -88,16 +88,18 @@ export const Gallery = () => {
 
   return (
     <>
-      <section id="gallery" className="gallery-section">
-        <div style={{ textAlign: "left", padding: "0 5% 48px" }}>
-          <h2 className="section-title" data-aos="fade-up">
-            Salones
-          </h2>
-          <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-            Descubre nuestros elegantes salones, diseñados para crear el ambiente perfecto para tu evento especial.
-          </p>
-        </div>
+      {/* Title and subtitle in centered section */}
+      <section id="gallery">
+        <h2 className="section-title" data-aos="fade-up">
+          Salas
+        </h2>
+        <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Descubre nuestras elegantes salas, diseñadas para crear el ambiente perfecto para tu evento especial
+        </p>
+      </section>
 
+      {/* Carousel full-width outside section */}
+      <div className="gallery-section">
         <div
           className="gallery-carousel"
           data-aos="fade-up"
@@ -136,10 +138,12 @@ export const Gallery = () => {
               <div
                 key={index}
                 className="gallery-photo"
-                style={{ backgroundImage: `url('${photo}')` }}
-                onClick={() => { if (!isDragging) openModal(photo); }}
+                style={{ backgroundImage: `url('${photo.url}')` }}
+                onClick={() => { if (!isDragging) openModal(photo.url); }}
                 onDragStart={(e) => e.preventDefault()}
-              />
+              >
+                <div className="gallery-photo-label">{photo.sala}</div>
+              </div>
             ))}
           </div>
 
@@ -150,7 +154,7 @@ export const Gallery = () => {
             </svg>
           </button>
         </div>
-      </section>
+      </div>
 
       {/* Modal */}
       {modalOpen && (

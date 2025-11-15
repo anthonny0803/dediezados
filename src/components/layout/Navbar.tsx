@@ -35,10 +35,10 @@ export const Navbar = () => {
             <a href="#services">Servicios</a>
           </li>
           <li>
-            <a href="#prices">Paquetes</a>
+            <a href="#extras">Extras</a>
           </li>
           <li>
-            <a href="#gallery">Salones</a>
+            <a href="#gallery">Salas</a>
           </li>
           <li>
             <a href="#contact">Contacto</a>

@@ -15,14 +15,16 @@ export interface Servicio {
   descripcion: string;
 }
 
-export interface Paquete {
-  nombre: string;
-  precio: string;
-  moneda: string;
-  periodo: string;
-  destacado: boolean;
-  badge?: string;
-  caracteristicas: string[];
+export interface GastronomiaItem {
+  titulo: string;
+  descripcion: string;
+  imagen: string;
+  destacado?: boolean;
+}
+
+export interface GalleryPhoto {
+  url: string;
+  sala: string;
 }
 
 export interface SiteConfig {
@@ -63,9 +65,9 @@ export interface SiteConfig {
   };
   heroSlides: HeroSlide[];
   servicios: Servicio[];
-  paquetes: Paquete[];
+  gastronomia: GastronomiaItem[];
   gallery: {
-    photos: string[];
+    photos: GalleryPhoto[];
   };
 }
 
@@ -73,9 +75,9 @@ export const SITE_CONFIG: SiteConfig = {
   empresa: {
     nombre: "De Diez a Dos",
     nombreCorto: "De Diez a Dos",
-    slogan: "Madrid Events - Salones para Eventos",
+    slogan: "Madrid Events - Salas para Eventos",
     descripcion:
-      "Alquiler de salones elegantes y servicios integrales para todo tipo de eventos",
+      "Alquiler de salas elegantes y servicios integrales para todo tipo de eventos",
     colores: {
       primary: "#A8D5D5",
       primaryDark: "#7FB8B8",
@@ -88,8 +90,8 @@ export const SITE_CONFIG: SiteConfig = {
     email: 'juancarlos@dediezados.com',
     emailIonos: 'contacto@dediezados.com',
     telefono: '+34 636 433 911',
-    telefono2: '+34 666 463 067',
-    direccion: 'Travesía Doctor Fleming 16, Madrid',
+    telefono2: '+34 660 221 267',
+    direccion: 'Travesía Doctor Fleming 16 Local 12, 28036 Madrid',
     horario: 'Visitas con cita previa',
     ubicacion: {
       lat: 40.455601,
@@ -117,20 +119,20 @@ export const SITE_CONFIG: SiteConfig = {
       ],
     },
     {
-      imagen: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762853895/hero-02_yfecic.avif",
+      imagen: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763214977/hero-2_cvdxyg.avif",
       titulo: "Momentos Inolvidables",
-      descripcion: "El salón perfecto para el día más importante de tu vida. Espacios únicos con servicios personalizados para hacer de tu evento un día memorable",
+      descripcion: "La sala perfecta para el día más importante de tu vida. Espacios únicos con servicios personalizados para hacer de tu evento un día memorable",
       botones: [
-        { texto: "Ver Salones", link: "#gallery", tipo: "primary" },
-        { texto: "Ver Paquetes", link: "#prices", tipo: "outline" },
+        { texto: "Ver Salas", link: "#gallery", tipo: "primary" },
+        { texto: "Ver Extras", link: "#extras", tipo: "outline" },
       ],
     },
     {
-      imagen: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762853895/hero-03_ji0tw1.jpg",
+      imagen: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763214977/hero-3_my3xwu.jpg",
       titulo: "Eventos Corporativos",
-      descripcion: "Salones profesionales para conferencias, presentaciones, team building y celebraciones empresariales con servicios completos de catering",
+      descripcion: "Salas profesionales para conferencias, presentaciones, team building y celebraciones empresariales con servicios completos de catering",
       botones: [
-        { texto: "Reservar Salón", link: "#contact", tipo: "primary" },
+        { texto: "Reservar Sala", link: "#contact", tipo: "primary" },
         { texto: "Conocer Más", link: "#footer", tipo: "outline" },
       ],
     },
@@ -167,75 +169,57 @@ export const SITE_CONFIG: SiteConfig = {
       descripcion: 'Decoración personalizada con flores e iluminación ambiental. DJ profesional con música adaptada. Carro de chuches y mesa dulce. Fotomax 360 con vídeos espectaculares en boomerang y slow motion listos para compartir en redes.'
     }
   ],
-  paquetes: [
+  gastronomia: [
     {
-      nombre: 'Paquete Básico',
-      precio: 'Desde 800',
-      moneda: '€',
-      periodo: 'por evento',
-      destacado: false,
-      caracteristicas: [
-        'Alquiler de salón 6 horas',
-        'Capacidad hasta 100 personas',
-        'Mobiliario incluido',
-        'Personal de servicio básico',
-        'Montaje y desmontaje',
-        'Sistema de sonido básico'
-      ]
+      titulo: 'Tablas Ibéricas Premium',
+      descripcion: 'Selección de jamón ibérico de bellota, lomo, chorizo y quesos artesanales curados. Presentación elegante con frutos secos y mermeladas.',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229850/jamon_qlgzng.webp',
+      destacado: false
     },
     {
-      nombre: 'Paquete Premium',
-      precio: 'Desde 1,500',
-      moneda: '€',
-      periodo: 'por evento',
-      destacado: true,
-      badge: 'Más Popular',
-      caracteristicas: [
-        'Salón premium 8 horas',
-        'Capacidad hasta 200 personas',
-        'Catering menú completo',
-        'Barra libre 5 horas',
-        'Decoración personalizada',
-        'DJ profesional',
-        'Coordinador de evento',
-        'Fotografía básica',
-        'Sistema audiovisual completo'
-      ]
+      titulo: 'Canapés Gourmet',
+      descripcion: 'Variedad de canapés con salmón ahumado, foie, tartar de atún, mousse de pimientos y creaciones del chef. Presentación impecable.',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229716/pimientos_o4aq70.webp',
+      destacado: false
     },
     {
-      nombre: 'Paquete Deluxe',
-      precio: 'Desde 3,000',
-      moneda: '€',
-      periodo: 'por evento',
-      destacado: false,
-      caracteristicas: [
-        'Salón VIP 10 horas',
-        'Capacidad hasta 300 personas',
-        'Catering alta cocina',
-        'Barra libre premium ilimitada',
-        'Decoración luxury completa',
-        'Producción audiovisual',
-        'Show en vivo / DJ profesional',
-        'Fotografía y vídeo profesional',
-        'Fotomax 360 con atrezzo',
-        'Valet parking',
-        'Personal de seguridad'
-      ]
+      titulo: 'Brochetas y Pinchos',
+      descripcion: 'Brochetas de pollo teriyaki, cerdo agridulce, verduras asadas. Pinchos de tortilla, croquetas caseras y mini hamburguesas gourmet.',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229285/brochetas_ffvlf4.webp',
+      destacado: false
+    },
+    {
+      titulo: 'Fondue y Especialidades',
+      descripcion: 'Fondue de quesos suizos con pan artesano. Empanadas caseras de carne y verduras. Mini perritos gourmet con salsas premium.',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763226696/fondue_hqrcrj.jpg',
+      destacado: false
+    },
+    {
+      titulo: 'Postres y Dulces',
+      descripcion: 'Mesa dulce con tartas artesanales, mini pasteles, macarons franceses, frutas frescas y chocolate belga. Todo elaborado por nuestro pastelero.',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229025/fruta_p1p8xj.jpg',
+      destacado: false
+    },
+    {
+      titulo: 'Estaciones Temáticas',
+      descripcion: 'Estaciones en vivo: sushi, pasta fresca, tacos mexicanos, o paella valenciana. El chef prepara al momento según tu elección.',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229477/atun_hu4kol.webp',
+      destacado: false
     }
   ],
   gallery: {
     photos: [
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786317/olas-04_hysthh.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786316/olas-02_haxhsm.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-02_jbajcz.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786317/olas-06_nr52b9.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786316/olas-03_bxoopd.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786286/amazonias-03_kbbnmn.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-01_g50eji.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-06_btvnve.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-04_wzezty.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786286/amazonias-05_qctdqv.jpg",
-      "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786287/amazonias-07_wxzmoe.jpg"
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786317/olas-04_hysthh.jpg", sala: "Sala Olas" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786316/olas-02_haxhsm.jpg", sala: "Sala Olas" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786317/olas-06_nr52b9.jpg", sala: "Sala Olas" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786316/olas-03_bxoopd.jpg", sala: "Sala Olas" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-02_jbajcz.jpg", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786286/amazonias-03_kbbnmn.jpg", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-01_g50eji.jpg", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-06_btvnve.jpg", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-04_wzezty.jpg", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786286/amazonias-05_qctdqv.jpg", sala: "Sala Amazonias" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786287/amazonias-07_wxzmoe.jpg", sala: "Sala Amazonias" }
     ],
   },
 };

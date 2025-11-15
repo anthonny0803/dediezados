@@ -284,7 +284,7 @@ export const Contact = () => {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                placeholder="25-35 años"
+                placeholder="0-75 años"
                 style={{
                   borderColor:
                     formData.mediaEdad === ""

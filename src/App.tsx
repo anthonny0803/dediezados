@@ -3,9 +3,9 @@ import { Navbar } from './components/layout/Navbar';
 import { Sidenav } from './components/layout/Sidenav';
 import { Hero } from './components/sections/Hero';
 import { Services } from './components/sections/Services';
-import { Prices } from './components/sections/Prices';
 
 // Lazy load heavy sections
+const Extras = lazy(() => import('./components/sections/Extras').then(m => ({ default: m.Extras })));
 const Gallery = lazy(() => import('./components/sections/Gallery').then(m => ({ default: m.Gallery })));
 const Contact = lazy(() => import('./components/sections/Contact').then(m => ({ default: m.Contact })));
 const Location = lazy(() => import('./components/sections/Location').then(m => ({ default: m.Location })));
@@ -65,9 +65,9 @@ function App() {
       <Sidenav />
       <Hero />
       <Services />
-      <Prices />
       
       <Suspense fallback={<SectionLoader />}>
+        <Extras />
         <Gallery />
         <Contact />
         <Location />
