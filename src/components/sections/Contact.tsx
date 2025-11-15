@@ -387,7 +387,7 @@ export const Contact = () => {
             <div className="info-icon">📧</div>
             <div>
               <strong>Email</strong>
-              <span>{SITE_CONFIG.contacto.email}</span>
+              <span>{SITE_CONFIG.contacto.email}{SITE_CONFIG.contacto.email2}</span>
             </div>
           </div>
 

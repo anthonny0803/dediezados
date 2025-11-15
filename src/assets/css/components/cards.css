@@ -252,8 +252,8 @@
 
 /* Info card icon */
 .info-icon {
-  width: 52px;
-  height: 52px;
+  width: 35px;
+  height: 35px;
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: var(--white);
   display: flex;

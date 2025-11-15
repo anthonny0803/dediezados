@@ -27,7 +27,7 @@ export const Footer = () => {
         </div>
         <div className="contact-item">
           <span className="contact-icon">📧</span>
-          {SITE_CONFIG.contacto.email}
+          {SITE_CONFIG.contacto.email} | {SITE_CONFIG.contacto.email2}
         </div>
         <div className="contact-item">
           <span className="contact-icon">📍</span>

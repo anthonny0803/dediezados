@@ -43,7 +43,7 @@ export interface SiteConfig {
   };
   contacto: {
     email: string;
-    emailIonos: string;
+    email2: string;
     telefono: string;
     telefono2: string;
     direccion: string;
@@ -88,7 +88,7 @@ export const SITE_CONFIG: SiteConfig = {
   },
   contacto: {
     email: 'juancarlos@dediezados.com',
-    emailIonos: 'contacto@dediezados.com',
+    email2: 'rafael@dediezados.com',
     telefono: '+34 636 433 911',
     telefono2: '+34 660 221 267',
     direccion: 'Travesía Doctor Fleming 16 Local 12, 28036 Madrid',
