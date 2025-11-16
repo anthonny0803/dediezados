@@ -1,3 +1,4 @@
+/* Base section */
 section {
   padding: 120px 5%;
   max-width: 1400px;
@@ -6,15 +7,16 @@ section {
   z-index: 1;
 }
 
-/* Hero NO debe tener estos estilos */
+/* Hero exception */
 #hero {
   padding: 0 !important;
   max-width: none !important;
   margin: 0 !important;
 }
 
+/* Section title */
 .section-title {
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-heading);
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 20px;
@@ -34,6 +36,7 @@ section {
   background: var(--primary);
 }
 
+/* Section subtitle */
 .section-subtitle {
   font-size: 1.2rem;
   color: var(--gray);
@@ -43,6 +46,7 @@ section {
   font-weight: 300;
 }
 
+/* Responsive */
 @media (max-width: 968px) {
   .section-title {
     font-size: 3rem;

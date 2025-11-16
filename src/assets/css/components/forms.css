@@ -4,7 +4,7 @@
   padding: 40px;
   box-shadow: var(--shadow-sm);
   margin-bottom: 48px;
-  border: 1px solid rgba(127, 199, 199, 0.1);
+  border: var(--border-subtle);
   transition: all var(--transition-smooth);
 }
 
@@ -14,7 +14,7 @@
   transform: scale(1.01);
 }
 
-/* Input groups */
+/* Input group */
 .input-group {
   margin-bottom: 24px;
 }
@@ -29,14 +29,14 @@
   letter-spacing: 0.5px;
 }
 
-/* Input fields and textareas */
+/* Input fields */
 .input-group input,
 .input-group textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 2px solid rgba(168, 213, 213, 0.2);
+  border: var(--border-input);
   background: var(--gray-light);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-primary);
   font-size: 0.95rem;
   color: var(--black);
   transition: all var(--transition-smooth);
@@ -51,13 +51,13 @@
   box-shadow: var(--shadow-teal);
 }
 
-/* Textarea specific */
+/* Textarea */
 textarea {
   resize: vertical;
   min-height: 110px;
 }
 
-/* Date input calendar icon */
+/* Date input */
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
@@ -92,7 +92,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   color: #C62828;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 640px) {
   .form-card {
     padding: 28px 20px;

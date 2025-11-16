@@ -91,7 +91,7 @@
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-  color: var(--black); /* más legible sobre fondo oscuro */
+  color: var(--black); /* mÃ¡s legible sobre fondo oscuro */
   padding: 20px 16px 16px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -108,7 +108,7 @@
 }
 
 /* ===========================
-   MEDIA QUERIES MÓVIL
+   MEDIA QUERIES MÃ“VIL
    =========================== */
 
 @media (max-width: 968px) {

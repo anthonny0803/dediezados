@@ -1,4 +1,4 @@
-/* Base button styles */
+/* Base button */
 .btn {
   display: inline-block;
   padding: 13px 34px;
@@ -8,11 +8,11 @@
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-primary);
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(168, 213, 213, 0.3);
+  box-shadow: var(--shadow-teal);
   transition: all var(--transition-smooth);
 }
 
@@ -20,13 +20,14 @@
   background: var(--primary-dark);
   color: var(--pure-white) !important;
   transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 .btn:active {
   transform: translateY(-1px);
 }
 
-/* Outline and shared button variants */
+/* Outline button */
 .btn-outline,
 button[type="submit"],
 .btn-ver-mas-reviews {
@@ -46,6 +47,7 @@ button[type="submit"]:hover,
   background: var(--primary) !important;
   color: var(--pure-white) !important;
   transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 /* Submit button */
@@ -53,11 +55,7 @@ button[type="submit"] {
   width: 100%;
   padding: 14px;
   font-size: 0.95rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-button[type="submit"]:hover {
-  box-shadow: 0 6px 16px rgba(168, 213, 213, 0.4);
+  font-family: var(--font-primary);
 }
 
 /* Reviews button */
@@ -74,6 +72,63 @@ button[type="submit"]:hover {
   transform: translateY(-2px) scale(1.03);
 }
 
+/* Gallery carousel buttons */
+.gallery-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg-btn-gallery);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-carousel-btn:hover {
+  background: var(--bg-btn-gallery-hover);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-carousel-btn.left {
+  left: 10px;
+}
+
+.gallery-carousel-btn.right {
+  right: 10px;
+}
+
+.gallery-carousel-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--black);
+}
+
+/* Hero carousel dots */
+.dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.dot.active {
+  background: var(--primary);
+  width: 32px;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
 /* Disabled state */
 .btn:disabled,
 .btn.disabled,
@@ -84,7 +139,7 @@ button[type="submit"]:disabled {
   transform: none;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 640px) {
   .btn {
     padding: 11px 24px;

@@ -1,4 +1,4 @@
-/* SIDENAV - Desktop */
+/* Sidenav */
 .sidenav {
   position: fixed;
   top: 0;
@@ -6,7 +6,7 @@
   width: 220px;
   max-width: 100%;
   height: 100vh;
-  background: rgba(26, 26, 26, 0.1);
+  background: var(--bg-sidenav);
   backdrop-filter: blur(12px);
   padding: 28px 20px;
   z-index: 1400;
@@ -16,7 +16,7 @@
   border-left: 2px solid var(--primary);
   overflow-y: auto;
   transform: translateX(100%);
-  transition: transform 0.4s ease, opacity 0.3s ease;
+  transition: transform var(--transition-smooth), opacity var(--transition-fast);
   opacity: 0;
   pointer-events: none;
 }
@@ -33,7 +33,7 @@
   pointer-events: none;
 }
 
-/* SIDENAV Logo */
+/* Sidenav logo */
 .sidenav-logo {
   display: flex;
   justify-content: center;
@@ -61,18 +61,16 @@
   border-top: 2px solid var(--primary);
 }
 
-/* Overlay for sidenav */
+/* Overlay */
 .sidenav-overlay {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--bg-overlay);
   z-index: 1300;
   opacity: 0;
   pointer-events: none;
   backdrop-filter: blur(4px);
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-fast);
 }
 
 .sidenav-overlay.active {
@@ -80,7 +78,7 @@
   pointer-events: auto;
 }
 
-/* SIDENAV Links */
+/* Links */
 .sidenav-spacer {
   height: 60px;
   flex-shrink: 0;
@@ -104,7 +102,7 @@
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.5px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color var(--transition-fast), transform var(--transition-fast);
   opacity: 0;
   transform: translateX(15px);
 }
@@ -118,7 +116,7 @@
   height: 2px;
   background: var(--primary);
   transform: translateX(-50%);
-  transition: width 0.3s ease;
+  transition: width var(--transition-fast);
 }
 
 .sidenav a:hover {
@@ -143,33 +141,25 @@
 .sidenav.open a:nth-child(7) { transition-delay: 0.4s; }
 .sidenav.open a:nth-child(8) { transition-delay: 0.45s; }
 
-/* MOBILE SIDENAV */
+/* Mobile sidenav */
 @media (max-width: 768px) {
   .sidenav {
     width: 100%;
     height: 100vh;
-    top: 0;
-    right: 0;
-    background: rgba(26, 26, 26, 0.1);
+    background: var(--bg-sidenav);
     backdrop-filter: blur(14px);
     border-left: none;
     border-bottom: 2px solid var(--primary);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    box-shadow: var(--shadow-lg);
     transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
   }
 
   .sidenav.open {
     transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
   }
 
   .sidenav.closing {
     transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
   }
 
   .sidenav-logo-top {
@@ -210,7 +200,7 @@
   }
 }
 
-/* HAMBURGER BUTTON */
+/* Hamburger button */
 .menu-toggle {
   position: fixed;
   top: 24px;
@@ -225,7 +215,7 @@
   gap: 6px;
   cursor: pointer;
   z-index: 1500;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
@@ -260,7 +250,7 @@
   height: 2px;
   background: var(--pure-white);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+  transition: transform var(--transition-fast), opacity var(--transition-fast), background-color var(--transition-fast);
   will-change: transform, opacity;
 }
 
@@ -285,7 +275,7 @@
   }
 }
 
-/* Prevent scrolling when sidenav is open */
+/* No scroll */
 body.no-scroll {
   overflow: hidden;
   height: 100vh;

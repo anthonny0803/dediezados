@@ -1,5 +1,5 @@
 :root {
-  /* Colors - Dark theme */
+  /* Colors */
   --primary: #3fb5a1;
   --primary-dark: #52d5bd;
   --primary-light: #C9E4E4;
@@ -18,60 +18,27 @@
   --shadow-xl: 0 16px 32px rgba(0,0,0,0.9), 0 8px 16px rgba(0,0,0,0.95);
   --shadow-teal: 0 8px 20px rgba(168, 213, 213, 0.4);
   
-  /* Border radius */
-  --radius: 0px;
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
+  /* Text shadows */
+  --text-shadow-glow: 0 0 20px rgba(168, 213, 213, 0.3);
+  --text-shadow-glow-hover: 0 0 30px rgba(168, 213, 213, 0.5);
+  --text-shadow-subtle: 0 0 15px rgba(168, 213, 213, 0.2);
+  
+  /* Borders */
+  --border-subtle: 1px solid rgba(168, 213, 213, 0.1);
+  --border-input: 2px solid rgba(168, 213, 213, 0.2);
+  
+  /* Backgrounds */
+  --bg-btn-gallery: rgba(11, 11, 11, 0.25);
+  --bg-btn-gallery-hover: rgba(255, 255, 255, 0.3);
+  --bg-sidenav: rgba(26, 26, 26, 0.1);
+  --bg-overlay: rgba(0, 0, 0, 0.6);
   
   /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.3s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Typography - Fonts */
+  /* Typography */
   --font-primary: 'Poppins', sans-serif;
   --font-heading: 'Libre Baskerville', serif;
-  
-  /* Typography - Sizes */
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-md: 1.125rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
-  --font-size-3xl: 2.5rem;
-  --font-size-4xl: 3rem;
-  --font-size-5xl: 4rem;
-  
-  /* Typography - Weights */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  
-  /* Typography - Line heights */
-  --line-height-tight: 1.2;
-  --line-height-normal: 1.6;
-  --line-height-relaxed: 1.8;
-  
-  /* Spacing */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  --space-2xl: 3rem;
-  --space-3xl: 4rem;
-  --space-4xl: 6rem;
-  
-  /* Z-index layers */
-  --z-background: -2;
-  --z-content: 1;
-  --z-navbar: 1000;
-  --z-sidenav: 1001;
-  --z-overlay: 1000;
-  --z-modal: 2000;
 }

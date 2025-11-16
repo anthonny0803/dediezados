@@ -1,4 +1,4 @@
-/* Fixed logo outside navbar */
+/* Fixed logo */
 .logo-fixed {
   position: fixed;
   top: 5px;
@@ -11,21 +11,19 @@
   height: 90px;
   width: auto;
   transition: transform var(--transition-smooth);
-  
 }
 
 .logo-fixed:hover img {
   transform: scale(1.05);
 }
 
-/* Hide logo state */
 .logo-fixed.hide {
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
 }
 
-/* Centered navbar (desktop only) */
+/* Navbar */
 nav {
   position: fixed;
   top: 16px;
@@ -44,14 +42,13 @@ nav {
   border: none;
 }
 
-/* Hide navbar state */
 nav.hide {
   opacity: 0;
   pointer-events: none;
   transform: translateX(-50%) translateY(-20px);
 }
 
-/* Navigation links */
+/* Nav links */
 nav ul {
   display: flex;
   gap: 28px;
@@ -90,14 +87,12 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 1024px) {
-  /* Hide navbar on tablet and mobile */
   nav {
     display: none;
   }
 
-  /* Center the logo */
   .logo-fixed {
     left: 50%;
     transform: translateX(-50%);

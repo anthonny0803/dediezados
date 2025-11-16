@@ -1,26 +1,28 @@
+/* Contact container */
 .contact-container {
   max-width: 500px;
   margin: 0 auto;
 }
 
-/* En vez de grid, columna simple */
+/* Contact info grid */
 .contact-info-grid {
   display: flex;
-  flex-direction: column; /* uno debajo de otro */
-  gap: 20px;              /* separación entre cards */
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Los cards ocupan todo el ancho del contenedor */
+/* Info cards full width */
 .info-item.card {
   width: 100%;
 }
 
-/* Si quieres que el contenido interno no se rompa demasiado feo */
+/* Text wrapping */
 .info-item.card span {
   font-size: 0.9rem;
-  word-break: break-word; /* mejor que break-all para textos largos (emails, etc.) */
+  word-break: break-word;
 }
 
+/* Responsive */
 @media (max-width: 640px) {
   .contact-container {
     max-width: 100%;

@@ -1,4 +1,4 @@
-/* Hero section */
+/* Hero */
 #hero {
   height: 100vh;
   width: 100vw;
@@ -7,7 +7,7 @@
   background: #000;
 }
 
-/* Carousel wrapper */
+/* Carousel */
 .carousel {
   position: relative;
   width: 100%;
@@ -18,10 +18,7 @@
 /* Carousel items */
 .carousel-item {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   opacity: 0;
   pointer-events: none;
   transition: opacity 1s ease-in-out 1s;
@@ -39,32 +36,29 @@
 /* Overlay */
 .carousel-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5%;
   z-index: 2;
   background: rgba(0, 0, 0, 0.35);
-  pointer-events: none; /* overlay itself does not block clicks */
+  pointer-events: none;
 }
 
 /* Hero content */
 .hero-content {
-  position: relative; /* ensure it sits above overlay */
+  position: relative;
   max-width: 900px;
   text-align: center;
   color: #fff;
   animation: fadeInUp 1.2s ease-out;
   will-change: transform, opacity;
-  pointer-events: auto; /* enable clicks inside overlay */
+  pointer-events: auto;
 }
 
 .hero-content h1 {
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-heading);
   font-size: 4.5rem;
   font-weight: 700;
   margin-bottom: 24px;
@@ -97,7 +91,7 @@
   height: 8px;
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition-fast);
   border: none;
 }
 

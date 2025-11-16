@@ -1,4 +1,4 @@
-/* Reset - Browser normalization */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
   background: var(--white);
   color: var(--black);
   overflow-x: hidden;
@@ -18,51 +18,30 @@ body {
   position: relative;
 }
 
-/* Background - Base layer */
+/* Background base */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 50%, #0a0a0a 100%);
   z-index: -3;
 }
 
-/* Background - Texture layer */
+/* Background texture */
 body::after {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-      circle at 10% 20%,
-      rgba(168, 213, 213, 0.12) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 90% 80%,
-      rgba(168, 213, 213, 0.1) 0%,
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(168, 213, 213, 0.08) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse at 30% 60%,
-      rgba(168, 213, 213, 0.06) 0%,
-      transparent 50%
-    );
+  inset: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(168, 213, 213, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(168, 213, 213, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(168, 213, 213, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 60%, rgba(168, 213, 213, 0.06) 0%, transparent 50%);
   z-index: -2;
   animation: float 25s ease-in-out infinite;
 }
 
-/* Background - Noise texture */
+/* Background noise */
 body {
   background-image: repeating-linear-gradient(
     0deg,

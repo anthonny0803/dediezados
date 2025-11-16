@@ -1,4 +1,4 @@
-/* Footer - Premium design */
+/* Footer */
 footer {
   background: var(--gray-light);
   padding: 64px 5%;
@@ -8,30 +8,21 @@ footer {
   overflow: hidden;
 }
 
-/* Subtle background gradient */
 footer::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(168, 213, 213, 0.08) 0%,
-    transparent 60%
-  );
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(168, 213, 213, 0.08) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Keep content above background */
 footer > * {
   position: relative;
   z-index: 1;
 }
 
-/* Logo container */
+/* Logo */
 .footer-logo {
   margin-bottom: 24px;
   display: inline-block;
@@ -43,7 +34,6 @@ footer > * {
   transform: scale(1.05);
 }
 
-/* Animated underline below logo */
 .logo-underline {
   position: absolute;
   bottom: -12px;
@@ -52,28 +42,21 @@ footer > * {
   width: 0;
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--primary), transparent);
-  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width var(--transition-slow);
 }
 
 .footer-logo:hover .logo-underline {
   width: 100%;
 }
 
-/* Logo with original colors */
-.footer-logo .logo-original {
-  height: 120px;
-  width: auto;
-  transition: all var(--transition-smooth);
-}
-
-/* Logo white version */
+.footer-logo .logo-original,
 .footer-logo .logo-white {
   height: 120px;
   width: auto;
   transition: all var(--transition-smooth);
 }
 
-/* Tagline - Main highlight */
+/* Tagline */
 .footer-tagline {
   font-size: 1.4rem;
   margin-top: 28px;
@@ -81,16 +64,16 @@ footer > * {
   color: var(--primary);
   font-weight: 500;
   letter-spacing: 0.8px;
-  text-shadow: 0 0 20px rgba(168, 213, 213, 0.3);
+  text-shadow: var(--text-shadow-glow);
   transition: all var(--transition-smooth);
 }
 
 .footer-tagline:hover {
-  text-shadow: 0 0 30px rgba(168, 213, 213, 0.5);
+  text-shadow: var(--text-shadow-glow-hover);
   transform: scale(1.02);
 }
 
-/* Contact info grid */
+/* Contact grid */
 .footer-contact {
   display: flex;
   gap: 40px;
@@ -98,8 +81,8 @@ footer > * {
   flex-wrap: wrap;
   margin-bottom: 32px;
   padding: 24px 0;
-  border-top: 1px solid rgba(168, 213, 213, 0.1);
-  border-bottom: 1px solid rgba(168, 213, 213, 0.1);
+  border-top: var(--border-subtle);
+  border-bottom: var(--border-subtle);
 }
 
 .contact-item {
@@ -119,12 +102,12 @@ footer > * {
   transform: translateY(-2px);
 }
 
-/* Icon micro-animations */
+/* Contact icon */
 .contact-icon {
   font-size: 1.1rem;
   filter: grayscale(0.3);
   display: inline-block;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all var(--transition-fast);
 }
 
 .contact-item:hover .contact-icon {
@@ -133,16 +116,7 @@ footer > * {
   animation: icon-bounce 0.6s ease;
 }
 
-@keyframes icon-bounce {
-  0%, 100% {
-    transform: scale(1.2) rotate(5deg) translateY(0);
-  }
-  50% {
-    transform: scale(1.3) rotate(-5deg) translateY(-4px);
-  }
-}
-
-/* Legal text */
+/* Legal */
 .footer-legal {
   font-size: 0.85rem;
   color: var(--gray);
@@ -159,17 +133,17 @@ footer > * {
   font-weight: 300;
 }
 
-/* Slogan - Signature style */
+/* Slogan */
 .footer-slogan {
   font-size: 1rem;
   color: var(--primary);
   opacity: 0.85;
   margin-top: 16px;
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-heading);
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0.3px;
-  text-shadow: 0 0 15px rgba(168, 213, 213, 0.2);
+  text-shadow: var(--text-shadow-subtle);
   transition: all var(--transition-smooth);
   position: relative;
 }
@@ -191,7 +165,7 @@ footer > * {
   transform: scale(1.02);
 }
 
-/* SEO Keywords - Discrete style */
+/* SEO keywords */
 .footer-keywords {
   font-size: 0.7rem;
   color: var(--gray);

@@ -6,29 +6,7 @@
   z-index: 1;
 }
 
-.map-widget {
-  margin: 0 auto;
-  background: var(--gray-light);
-  padding: 32px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(127, 199, 199, 0.1);
-  transition: all var(--transition-smooth);
-}
-
-.map-widget:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary);
-}
-
-.widget-title {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: var(--black);
-  text-align: center;
-}
-
+/* Map container */
 .map-container {
   width: 100%;
   height: 550px;
@@ -39,7 +17,7 @@
 
 /* Loading state */
 .map-container::before {
-  content: '🗺️ Cargando mapa...';
+  content: '🗺️ Loading map...';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -54,16 +32,8 @@
     padding: 80px 5%;
   }
 
-  .map-widget {
-    padding: 24px 20px;
-  }
-
   .map-container {
     height: 400px;
-  }
-
-  .widget-title {
-    font-size: 1.5rem;
   }
 }
 
