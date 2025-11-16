@@ -104,12 +104,14 @@ footer > * {
 
 .contact-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 8px;
   font-size: 0.9rem;
   color: var(--gray-dark);
   transition: all var(--transition-fast);
   cursor: default;
+  text-align: center;
 }
 
 .contact-item:hover {

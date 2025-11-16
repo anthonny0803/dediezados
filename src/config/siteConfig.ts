@@ -171,38 +171,38 @@ export const SITE_CONFIG: SiteConfig = {
   ],
   gastronomia: [
     {
-      titulo: 'Tablas Ibéricas Premium',
-      descripcion: 'Selección de jamón ibérico de bellota, lomo, chorizo y quesos artesanales curados. Presentación elegante con frutos secos y mermeladas.',
+      titulo: 'Nos adaptamos a ti',
+      descripcion: 'Diseñamos cada evento según tus gustos y necesidades, para que sientas que el espacio está hecho a tu medida.',
       imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229850/jamon_qlgzng.webp',
       destacado: false
     },
     {
-      titulo: 'Canapés Gourmet',
-      descripcion: 'Variedad de canapés con salmón ahumado, foie, tartar de atún, mousse de pimientos y creaciones del chef. Presentación impecable.',
+      titulo: 'Acompañamiento en todo momento',
+      descripcion: 'Te guiamos antes, durante y después del evento, resolviendo dudas y ocupándonos de los detalles para que solo te preocupes de disfrutar.',
       imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229716/pimientos_o4aq70.webp',
       destacado: false
     },
     {
-      titulo: 'Brochetas y Pinchos',
-      descripcion: 'Brochetas de pollo teriyaki, cerdo agridulce, verduras asadas. Pinchos de tortilla, croquetas caseras y mini hamburguesas gourmet.',
+      titulo: 'Cercanía y profesionalidad',
+      descripcion: 'Te atendemos con la confianza de siempre y la seriedad que merece tu celebración, combinando calidez y organización.',
       imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229285/brochetas_ffvlf4.webp',
       destacado: false
     },
     {
-      titulo: 'Fondue y Especialidades',
-      descripcion: 'Fondue de quesos suizos con pan artesano. Empanadas caseras de carne y verduras. Mini perritos gourmet con salsas premium.',
-      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763226696/fondue_hqrcrj.jpg',
+      titulo: 'Detalles que marcan la diferencia',
+      descripcion: 'Desde la recepción de tus invitados hasta el cierre del evento, cada pequeño gesto está pensado para sorprender y agradar.',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763298364/fondue_v8hnw6.webp',
       destacado: false
     },
     {
-      titulo: 'Postres y Dulces',
-      descripcion: 'Mesa dulce con tartas artesanales, mini pasteles, macarons franceses, frutas frescas y chocolate belga. Todo elaborado por nuestro pastelero.',
-      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229025/fruta_p1p8xj.jpg',
+      titulo: 'Ambiente cómodo y acogedor',
+      descripcion: 'Creamos una atmósfera íntima y agradable donde tus invitados se sienten relajados, bienvenidos y atendidos en todo momento.',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763298364/fruta_sxbbbk.webp',
       destacado: false
     },
     {
-      titulo: 'Estaciones Temáticas',
-      descripcion: 'Estaciones en vivo: sushi, pasta fresca, tacos mexicanos, o paella valenciana. El chef prepara al momento según tu elección.',
+      titulo: 'Atención proactiva, no reactiva',
+      descripcion: 'Nos adelantamos a las necesidades de tu evento para que todo fluya de forma natural, sin improvisaciones ni sobresaltos.',
       imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229477/atun_hu4kol.webp',
       destacado: false
     }

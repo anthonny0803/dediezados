@@ -4,10 +4,10 @@ export const Extras = () => {
   return (
     <section id="extras">
       <h2 className="section-title" data-aos="fade-up">
-        Gastronomía De Diez a Dos
+        Catering De Diez a Dos
       </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-        14 años perfeccionando cada receta. Catering elaborado con ingredientes premium y presentación impecable
+        Disfruta de la maravillosa atención y trato personalizado que ofrecemos en cada evento. Nuestro equipo se dedica a hacer de tu ocasión especial un momento inolvidable, cuidando cada detalle para que tú y tus invitados se sientan como en casa.
       </p>
       <div className="gastronomia-grid">
         {SITE_CONFIG.gastronomia.map((item, index) => (

@@ -2,17 +2,24 @@
   max-width: 500px;
   margin: 0 auto;
 }
+
+/* En vez de grid, columna simple */
 .contact-info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column; /* uno debajo de otro */
+  gap: 20px;              /* separación entre cards */
 }
 
+/* Los cards ocupan todo el ancho del contenedor */
+.info-item.card {
+  width: 100%;
+}
+
+/* Si quieres que el contenido interno no se rompa demasiado feo */
 .info-item.card span {
-  font-size: 0.7rem;
-  word-break: break-all; /* fuerza el salto si el email es muy largo */
+  font-size: 0.9rem;
+  word-break: break-word; /* mejor que break-all para textos largos (emails, etc.) */
 }
-
 
 @media (max-width: 640px) {
   .contact-container {

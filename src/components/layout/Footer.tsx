@@ -23,11 +23,11 @@ export const Footer = () => {
       <div className="footer-contact" data-aos="fade-up" data-aos-delay="200">
         <div className="contact-item">
           <span className="contact-icon">📞</span>
-          {SITE_CONFIG.contacto.telefono} | {SITE_CONFIG.contacto.telefono2}
+          {SITE_CONFIG.contacto.telefono}<br />{SITE_CONFIG.contacto.telefono2}
         </div>
         <div className="contact-item">
           <span className="contact-icon">📧</span>
-          {SITE_CONFIG.contacto.email} | {SITE_CONFIG.contacto.email2}
+          {SITE_CONFIG.contacto.email}<br />{SITE_CONFIG.contacto.email2}
         </div>
         <div className="contact-item">
           <span className="contact-icon">📍</span>
