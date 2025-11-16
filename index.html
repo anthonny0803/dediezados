@@ -91,6 +91,30 @@
         nav { display: none; }
         .logo-fixed { left: 50%; transform: translateX(-50%); }
       }
+
+      [data-aos] {
+        opacity: 1 !important;
+      }
+      
+      .aos-init[data-aos] {
+        opacity: 0;
+      }
+      
+      .aos-animate[data-aos] {
+        opacity: 1;
+      }
+      
+      body.no-aos [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      
+      .gastro-card,
+      .gallery-photo,
+      .section-title,
+      .section-subtitle {
+        opacity: 1 !important;
+      }
     </style>
 
     <!-- Primary Meta Tags -->

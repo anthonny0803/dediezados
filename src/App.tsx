@@ -32,7 +32,6 @@ const SectionLoader = () => (
 );
 
 function App() {
-  // OPTIMIZACIÓN 2: AOS lazy loading on scroll (reduce reflows)
   useEffect(() => {
     let loaded = false;
     
