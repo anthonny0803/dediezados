@@ -48,7 +48,6 @@ function App() {
           easing: 'ease-out-cubic',
           once: true,
           offset: 100,
-          disable: 'mobile' // Disable on mobile to reduce reflows
         });
       } catch (error) {
         console.warn('AOS failed to load:', error);
