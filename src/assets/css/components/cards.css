@@ -1,27 +1,15 @@
-/* Base card */
+/* ================================================
+   CARDS.CSS - Sistema unificado con hover SUAVE
+   ================================================ */
+
+/* Base card - comportamiento suave */
 .card {
   background: var(--gray-light);
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(168, 213, 213, 0.15);
-  transition: all var(--transition-smooth);
+  border: var(--border-card);
+  transition: all var(--transition-slow);
   overflow: hidden;
   position: relative;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(168, 213, 213, 0.2), transparent);
-  transition: left var(--transition-slow);
-  z-index: 0;
-}
-
-.card:hover::before {
-  left: 100%;
 }
 
 .card:hover {
@@ -42,44 +30,16 @@
 .service-card {
   padding: 36px;
   background: var(--gray-light);
-  border-left: 3px solid transparent;
+  border: var(--border-card);
   position: relative;
   overflow: hidden;
+  transition: all var(--transition-slow);
 }
 
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 0;
-  background: var(--primary);
-  transition: height var(--transition-smooth);
-  z-index: 1;
-}
-
-.service-card:hover::before {
-  height: 100%;
-}
-
-.service-card::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(168, 213, 213, 0.1) 0%, transparent 70%);
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
-  z-index: 0;
-}
-
-.service-card:hover::after {
-  opacity: 1;
-  transform: scale(1);
+.service-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--primary);
 }
 
 /* Service icon */
@@ -133,8 +93,9 @@
 .gastro-card {
   background: #1a1a1a;
   overflow: hidden;
+  border: var(--border-card);
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-smooth);
+  transition: all var(--transition-slow);
   position: relative;
   cursor: pointer;
 }
@@ -142,6 +103,7 @@
 .gastro-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: var(--primary);
 }
 
 /* Gastronomía image */
@@ -231,16 +193,16 @@
   z-index: 3;
 }
 
-/* Info card */
+/* Info card - mini cards de contacto */
 .info-item {
   padding: 20px;
   background: var(--gray-light);
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(168, 213, 213, 0.1);
+  border: var(--border-card);
   display: flex;
   align-items: center;
   gap: 16px;
-  transition: all var(--transition-smooth);
+  transition: all var(--transition-slow);
 }
 
 .info-item:hover {
@@ -283,8 +245,8 @@
   padding: 40px;
   box-shadow: var(--shadow-sm);
   margin-bottom: 48px;
-  border: var(--border-subtle);
-  transition: all var(--transition-smooth);
+  border: var(--border-card);
+  transition: all var(--transition-slow);
 }
 
 .form-card:hover {
@@ -299,8 +261,8 @@
   padding: 40px;
   box-shadow: var(--shadow-sm);
   margin-bottom: 48px;
-  border: var(--border-subtle);
-  transition: all var(--transition-smooth);
+  border: var(--border-card);
+  transition: all var(--transition-slow);
 }
 
 .reviews-widget:hover {
@@ -315,8 +277,8 @@
   background: var(--gray-light);
   padding: 32px;
   box-shadow: var(--shadow-sm);
-  border: var(--border-subtle);
-  transition: all var(--transition-smooth);
+  border: var(--border-card);
+  transition: all var(--transition-slow);
 }
 
 .map-widget:hover {
