@@ -16,7 +16,7 @@ export interface ContactResponse {
 
 // Servicio para enviar formulario de contacto
 // https://dediezados.com/api/contact.php
-const API_URL = "https://s369313429.mialojamiento.es/api/contact.php";
+const API_URL = "https://api.dediezados.com/contact.php";
 
 export const sendContactForm = async (
   formData: ContactFormData
