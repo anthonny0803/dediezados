@@ -87,7 +87,7 @@ export const Sidenav = () => {
           </li>
           <li>
             <a href="#extras" onClick={handleClose}>
-              Extras
+              Catering
             </a>
           </li>
           <li>
