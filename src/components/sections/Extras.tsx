@@ -11,20 +11,19 @@ export const Extras = () => {
       </p>
       <div className="gastronomia-grid">
         {SITE_CONFIG.gastronomia.map((item, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`gastro-card ${item.destacado ? 'destacado' : ''}`}
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            <div className="gastro-image" style={{ backgroundImage: `url('${item.imagen}')` }}>
+            <div
+              className="gastro-image"
+              style={{ backgroundImage: `url('${item.imagen}')` }}
+            >
               {item.destacado && (
                 <div className="gastro-badge">Especialidad</div>
               )}
-            </div>
-            <div className="gastro-content">
-              <h3>{item.titulo}</h3>
-              <p>{item.descripcion}</p>
             </div>
           </div>
         ))}
