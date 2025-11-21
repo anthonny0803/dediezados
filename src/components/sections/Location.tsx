@@ -1,9 +1,14 @@
 import { lazy, Suspense } from "react";
 import '../../assets/css/sections/location.css';
+import { PlaceData } from "../../hooks/useGooglePlace";
 
 const GoogleMapsLazy = lazy(() => import('../widgets/GoogleMaps').then(m => ({ default: m.GoogleMaps })));
 
-export const Location = () => {
+interface LocationProps {
+  placeData: PlaceData | null;
+}
+
+export const Location = ({ placeData }: LocationProps) => {
   return (
     <section id="location">
       <h2 className="section-title" data-aos="fade-up">
@@ -14,7 +19,8 @@ export const Location = () => {
       </p>
       <Suspense fallback={<div style={{ minHeight: "300px" }}>Cargando mapa...</div>}>
         <div data-aos="fade-up" data-aos-delay="200">
-          <GoogleMapsLazy />
+          {/* Pasamos la data al widget */}
+          <GoogleMapsLazy placeData={placeData} />
         </div>
       </Suspense>
     </section>

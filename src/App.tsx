@@ -4,7 +4,10 @@ import { Sidenav } from './components/layout/Sidenav';
 import { Hero } from './components/sections/Hero';
 import { Services } from './components/sections/Services';
 
-// Lazy load heavy sections
+// Importamos el nuevo hook
+import { useGooglePlace } from './hooks/useGooglePlace';
+
+// Lazy load de secciones
 const Extras = lazy(() => import('./components/sections/Extras').then(m => ({ default: m.Extras })));
 const Gallery = lazy(() => import('./components/sections/Gallery').then(m => ({ default: m.Gallery })));
 const Contact = lazy(() => import('./components/sections/Contact').then(m => ({ default: m.Contact })));
@@ -12,7 +15,7 @@ const Location = lazy(() => import('./components/sections/Location').then(m => (
 const Reviews = lazy(() => import('./components/sections/Reviews').then(m => ({ default: m.Reviews })));
 const Footer = lazy(() => import('./components/layout/Footer').then(m => ({ default: m.Footer })));
 
-// Simple loading fallback
+// Loader simple
 const SectionLoader = () => (
   <div style={{ 
     minHeight: '300px', 
@@ -32,6 +35,13 @@ const SectionLoader = () => (
 );
 
 function App() {
+  // 1. CARGA DE DATOS CENTRALIZADA
+  // Pedimos los datos aquí para que estén listos cuando el usuario haga scroll
+  const { placeData, loading } = useGooglePlace({
+    apiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+    placeId: import.meta.env.VITE_GOOGLE_PLACE_ID
+  });
+
   useEffect(() => {
     let loaded = false;
     
@@ -54,15 +64,12 @@ function App() {
       }
     };
 
-    // Load AOS on first scroll
     const handleScroll = () => {
       loadAOS();
       window.removeEventListener('scroll', handleScroll);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Fallback: load after 3 seconds if no scroll
     const timeout = setTimeout(loadAOS, 3000);
     
     return () => {
@@ -82,8 +89,11 @@ function App() {
         <Extras />
         <Gallery />
         <Contact />
-        <Location />
-        <Reviews />
+        
+        {/* 2. PASAMOS LOS DATOS A LOS HIJOS */}
+        <Location placeData={placeData} />
+        <Reviews placeData={placeData} loading={loading} />
+        
         <Footer />
       </Suspense>
     </>

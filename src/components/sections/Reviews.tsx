@@ -1,9 +1,15 @@
 import { lazy, Suspense } from "react";
 import '../../assets/css/sections/reviews.css';
+import { PlaceData } from "../../hooks/useGooglePlace";
 
 const GoogleReviewsLazy = lazy(() => import('../widgets/GoogleReviews').then(m => ({ default: m.GoogleReviews })));
 
-export const Reviews = () => {
+interface ReviewsProps {
+  placeData: PlaceData | null;
+  loading: boolean;
+}
+
+export const Reviews = ({ placeData, loading }: ReviewsProps) => {
   return (
     <section id="reviews">
       <h2 className="section-title" data-aos="fade-up">
@@ -14,7 +20,7 @@ export const Reviews = () => {
       </p>
       <Suspense fallback={<div style={{ minHeight: "300px" }}>Cargando reseñas...</div>}>
         <div data-aos="fade-up" data-aos-delay="200">
-          <GoogleReviewsLazy />
+          <GoogleReviewsLazy placeData={placeData} loading={loading} />
         </div>
       </Suspense>
     </section>
