@@ -63,13 +63,15 @@
   color: var(--black);
   padding: 20px;
   box-shadow: var(--shadow-md);
-  border: 1px dashed var(--primary-light);
   transition: all var(--transition-smooth);
   position: relative;
   overflow: hidden;
   min-width: 280px;
   max-width: 280px;
   flex-shrink: 0;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
 }
 
 .review-card::before {
@@ -85,7 +87,6 @@
 .review-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary);
 }
 
 /* Review header */
@@ -139,12 +140,17 @@
 
 /* Review text */
 .review-text {
+  /* Estilos visuales básicos */
   color: #232222;
   line-height: 1.6;
-  font-size: 0.85rem;
+  font-size: 0.80rem;
   font-weight: 400;
   position: relative;
   z-index: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
 }
 
 /* Google badge */
@@ -153,7 +159,8 @@
   top: 12px;
   right: 12px;
   padding: 5px 7px;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .google-badge img {
@@ -220,6 +227,11 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Número máx de líneas antes de cortar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .review-rating {
     gap: 1px;
