@@ -1,0 +1,106 @@
+/* Extras grid */
+.extras-grid {
+  display: grid;
+  gap: 32px;
+  margin-top: 64px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Extra card */
+.extra-card {
+  background: #1a1a1a;
+  overflow: hidden;
+  border: var(--border-card);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-slow);
+  position: relative;
+}
+
+.extra-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+/* Extra image */
+.extra-image {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-image: var(--extra-image);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.extra-card:hover .extra-image {
+  transform: scale(1.08);
+}
+
+.extra-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(26, 26, 26, 0.7) 100%);
+  transition: opacity var(--transition-fast);
+}
+
+.extra-card:hover .extra-image::after {
+  opacity: 0.9;
+}
+
+/* Extra badge */
+.extra-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+  box-shadow: var(--shadow-teal);
+}
+
+/* Destacado card */
+.extra-card.destacado {
+  border: 2px solid var(--primary);
+}
+
+.extra-card.destacado::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  z-index: 3;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .extras-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .extra-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .extras-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .extra-image {
+    height: 220px;
+  }
+}

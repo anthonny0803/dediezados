@@ -22,18 +22,18 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
   if (loading) {
     return (
       <div className="reviews-widget">
-        <div className="reviews-loader" style={{textAlign: 'center', padding: '40px'}}>
-          <div className="loader-spinner" style={{margin: '0 auto 20px'}}></div>
+        <div className="reviews-loader">
+          <div className="loader-spinner"></div>
           <p>Cargando reseñas...</p>
         </div>
       </div>
     );
-  }
+  };
 
   if (!placeData?.reviews?.length) {
     return (
         <div className="reviews-widget">
-            <p style={{textAlign: "center", color: "#666"}}>No hay reseñas disponibles.</p>
+            <p className="reviews-empty">No hay reseñas disponibles.</p>
         </div>
     );
   }
@@ -41,7 +41,7 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
   const reviewsToShow = placeData.reviews.slice(0, 5);
 
   return (
-    <div className="reviews-widget">
+    <div>
       <div className="reviews-container">
         {reviewsToShow.map((review, index) => (
           <div key={index} className="review-card">
@@ -79,14 +79,13 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
             </div>
 
             <p className="review-text">
-              {/* Aquí ya es seguro porque lo normalizamos en el hook */}
               {typeof review.text === 'string' ? review.text : ''}
             </p>
           </div>
         ))}
       </div>
 
-      <div style={{ textAlign: "center" }}>
+      <div className="reviews-button-wrapper">
         <a
           href={placeData.googleMapsUrl}
           target="_blank"

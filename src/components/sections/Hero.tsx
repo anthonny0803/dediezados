@@ -30,7 +30,7 @@ export const Hero = () => {
               <div className="hero-content">
                 <h1>{slide.titulo}</h1>
                 <p>{slide.descripcion}</p>
-                <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                <div className="hero-buttons">
                   {slide.botones.map((btn, btnIndex) => (
                     <a
                       key={btnIndex}
@@ -47,7 +47,6 @@ export const Hero = () => {
         ))}
       </div>
 
-      {/* Dots de navegación */}
       <div className="carousel-dots" id="carouselDots">
         {slides.map((_, index) => (
           <div

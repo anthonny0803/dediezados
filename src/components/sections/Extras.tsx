@@ -9,20 +9,20 @@ export const Extras = () => {
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
         Disfruta de la maravillosa atención y trato personalizado que ofrecemos en cada evento. Nuestro equipo se dedica a hacer de tu ocasión especial un momento inolvidable, cuidando cada detalle para que tú y tus invitados se sientan como en casa.
       </p>
-      <div className="gastronomia-grid">
+      <div className="extras-grid">
         {SITE_CONFIG.gastronomia.map((item, index) => (
           <div
             key={index}
-            className={`gastro-card ${item.destacado ? 'destacado' : ''}`}
+            className={`extra-card ${item.destacado ? 'destacado' : ''}`}
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
             <div
-              className="gastro-image"
-              style={{ backgroundImage: `url('${item.imagen}')` }}
+              className="extra-image"
+              style={{ '--extra-image': `url('${item.imagen}')` } as React.CSSProperties}
             >
               {item.destacado && (
-                <div className="gastro-badge">Especialidad</div>
+                <div className="extra-badge">Especialidad</div>
               )}
             </div>
           </div>

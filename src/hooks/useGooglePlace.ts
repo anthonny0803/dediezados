@@ -27,9 +27,10 @@ export interface PlaceData {
 interface UseGooglePlaceProps {
   apiKey: string;
   placeId: string;
+  enabled?: boolean; // Control para activar/desactivar el fetch
 }
 
-export const useGooglePlace = ({ apiKey, placeId }: UseGooglePlaceProps) => {
+export const useGooglePlace = ({ apiKey, placeId, enabled = true }: UseGooglePlaceProps) => {
   const [placeData, setPlaceData] = useState<PlaceData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -37,6 +38,11 @@ export const useGooglePlace = ({ apiKey, placeId }: UseGooglePlaceProps) => {
   const fetchedRef = useRef(false);
 
   useEffect(() => {
+    // Si enabled es false, no hacer nada
+    if (!enabled) {
+      return;
+    }
+
     if (!apiKey || !placeId) {
       setLoading(false);
       return;
@@ -108,7 +114,7 @@ export const useGooglePlace = ({ apiKey, placeId }: UseGooglePlaceProps) => {
     };
 
     fetchPlaceData();
-  }, [apiKey, placeId]);
+  }, [apiKey, placeId, enabled]);
 
   return { placeData, loading, error };
 };

@@ -45,7 +45,6 @@ export const GoogleMaps = ({ placeData }: GoogleMapsProps) => {
           title: placeData?.displayName || SITE_CONFIG.empresa.nombre,
         });
 
-        // --- DISEÑO COMPACTO DE LA TARJETA ---
         const nombre = placeData?.displayName || SITE_CONFIG.empresa.nombre;
         const direccion = placeData?.formattedAddress || SITE_CONFIG.contacto.direccion;
         const telefono = placeData?.nationalPhoneNumber || SITE_CONFIG.contacto.telefono;
@@ -83,14 +82,13 @@ export const GoogleMaps = ({ placeData }: GoogleMapsProps) => {
         const infoWindow = new google.maps.InfoWindow({ 
             content: contentString,
             ariaLabel: nombre,
-            maxWidth: 230 // Limite máximo del contenedor de Google
+            maxWidth: 230
         });
         
         infoWindowRef.current = infoWindow;
 
         marker.addListener("click", () => infoWindow.open(map, marker));
 
-        // Abrir automáticamente (simulación de click inicial)
         setTimeout(() => {
             infoWindow.open(map, marker);
         }, 800);
@@ -104,8 +102,6 @@ export const GoogleMaps = ({ placeData }: GoogleMapsProps) => {
   }, [placeData]);
 
   return (
-    <div className="map-widget">
-      <div ref={mapRef} className="map-container" style={{ height: '500px', width: '100%' }} />
-    </div>
+      <div ref={mapRef} className="map-container" />
   );
 };

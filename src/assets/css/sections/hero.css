@@ -1,5 +1,8 @@
 /* Hero */
 #hero {
+  padding: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -73,6 +76,13 @@
   line-height: 1.7;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   font-weight: 300;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Navigation dots */

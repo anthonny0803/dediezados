@@ -7,13 +7,6 @@ section {
   z-index: 1;
 }
 
-/* Hero exception */
-#hero {
-  padding: 0 !important;
-  max-width: none !important;
-  margin: 0 !important;
-}
-
 /* Section title */
 .section-title {
   font-family: var(--font-heading);

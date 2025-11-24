@@ -1,29 +1,4 @@
-/* Fixed logo */
-.logo-fixed {
-  position: fixed;
-  top: 5px;
-  left: 32px;
-  z-index: 1100;
-  transition: all var(--transition-slow);
-}
-
-.logo-fixed img {
-  height: 90px;
-  width: auto;
-  transition: transform var(--transition-smooth);
-}
-
-.logo-fixed:hover img {
-  transform: scale(1.05);
-}
-
-.logo-fixed.hide {
-  opacity: 0;
-  transform: translateY(-20px);
-  pointer-events: none;
-}
-
-/* Navbar */
+/* Navbar centered */
 nav {
   position: fixed;
   top: 16px;
@@ -91,14 +66,5 @@ nav a:hover::after {
 @media (max-width: 1024px) {
   nav {
     display: none;
-  }
-
-  .logo-fixed {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .logo-fixed img {
-    height: 80px;
   }
 }

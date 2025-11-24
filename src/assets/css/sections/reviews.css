@@ -6,6 +6,22 @@
   z-index: 1;
 }
 
+/* Reviews widget */
+.reviews-widget {
+  background: var(--gray-light);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 48px;
+  border: var(--border-card);
+  transition: all var(--transition-slow);
+}
+
+.reviews-widget:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
 /* Rating summary */
 .reviews-rating-summary {
   text-align: center;
@@ -27,6 +43,35 @@
 .reviews-rating-summary .rating-count {
   color: var(--gray);
   font-size: 0.9rem;
+}
+
+/* Loader */
+.reviews-loader {
+  text-align: center;
+  padding: 40px;
+}
+
+.loader-spinner {
+  margin: 0 auto 20px;
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--gray-light);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Empty state */
+.reviews-empty {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+}
+
+/* Button wrapper */
+.reviews-button-wrapper {
+  text-align: center;
+  margin-top: 24px;
 }
 
 /* Reviews container */
@@ -140,7 +185,6 @@
 
 /* Review text */
 .review-text {
-  /* Estilos visuales básicos */
   color: #232222;
   line-height: 1.6;
   font-size: 0.80rem;
@@ -170,33 +214,51 @@
   filter: none;
 }
 
+/* Suspense fallback */
+.reviews-suspense-loader {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 1rem;
+}
+
 /* Responsive */
+@media (max-width: 968px) {
+  .reviews-widget {
+    padding: 24px 20px;
+  }
+}
+
 @media (max-width: 768px) {
   #reviews {
     padding: 80px 5%;
   }
+  
   .review-card {
     min-width: 220px;
     max-width: 220px;
     padding: 14px;
   }
+  
   .review-header {
     gap: 10px;
     margin-bottom: 10px;
   }
+  
   .review-avatar {
     width: 36px;
     height: 36px;
   }
+  
   .review-author {
     font-size: 0.85rem;
   }
+  
   .review-text {
     font-size: 0.78rem;
     line-height: 1.5;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 }
 
@@ -204,42 +266,43 @@
   #reviews {
     padding: 64px 5%;
   }
+  
   .review-card {
     min-width: 200px;
     max-width: 200px;
     padding: 12px;
   }
+  
   .review-header {
     gap: 8px;
     margin-bottom: 8px;
   }
+  
   .review-avatar {
     width: 32px;
     height: 32px;
   }
+  
   .review-author {
     font-size: 0.8rem;
     margin-bottom: 2px;
   }
+  
   .review-text {
     font-size: 0.72rem;
     line-height: 1.4;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 5; /* Número máx de líneas antes de cortar */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
   }
+  
   .review-rating {
     gap: 1px;
     margin-bottom: 2px;
   }
+  
   .star {
     font-size: 0.9rem;
   }
+  
   .review-date {
     font-size: 0.7rem;
   }

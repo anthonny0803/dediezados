@@ -19,7 +19,6 @@ export const Gallery = () => {
     setSelectedImage("");
   };
 
-  // Lock scroll while modal is open
   useEffect(() => {
     if (modalOpen) {
       document.body.style.overflow = "hidden";
@@ -32,14 +31,12 @@ export const Gallery = () => {
     };
   }, [modalOpen]);
 
-  // Triple photos for infinite scroll visual effect
   const photos = [
     ...SITE_CONFIG.gallery.photos,
     ...SITE_CONFIG.gallery.photos,
     ...SITE_CONFIG.gallery.photos,
   ];
 
-  // Mouse drag handlers
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!trackRef.current) return;
     setIsDragging(true);
@@ -59,7 +56,6 @@ export const Gallery = () => {
     setIsDragging(false);
   };
 
-  // Touch drag handlers
   const handleTouchStart = (e: React.TouchEvent) => {
     if (!trackRef.current) return;
     setIsDragging(true);
@@ -88,7 +84,6 @@ export const Gallery = () => {
 
   return (
     <>
-      {/* Title and subtitle in centered section */}
       <section id="gallery">
         <h2 className="section-title" data-aos="fade-up">
           Salas
@@ -98,14 +93,12 @@ export const Gallery = () => {
         </p>
       </section>
 
-      {/* Carousel full-width outside section */}
       <div className="gallery-section">
         <div
           className="gallery-carousel"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          {/* Left button */}
           <button 
             className="gallery-carousel-btn left" 
             onClick={scrollLeftBy}
@@ -116,20 +109,9 @@ export const Gallery = () => {
             </svg>
           </button>
 
-          {/* Carousel track */}
           <div
             ref={trackRef}
-            className="gallery-track"
-            style={{
-              display: "flex",
-              gap: "20px",
-              padding: "32px",
-              overflowX: "scroll",
-              scrollbarWidth: "none",
-              cursor: isDragging ? "grabbing" : "grab",
-              userSelect: "none",
-              animation: "none",
-            }}
+            className={`gallery-track ${isDragging ? 'dragging' : ''}`}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -142,7 +124,7 @@ export const Gallery = () => {
               <div
                 key={index}
                 className="gallery-photo"
-                style={{ backgroundImage: `url('${photo.url}')` }}
+                style={{ '--gallery-image': `url('${photo.url}')` } as React.CSSProperties}
                 onClick={() => { if (!isDragging) openModal(photo.url); }}
                 onDragStart={(e) => e.preventDefault()}
               >
@@ -151,7 +133,6 @@ export const Gallery = () => {
             ))}
           </div>
 
-          {/* Right button */}
           <button 
             className="gallery-carousel-btn right" 
             onClick={scrollRightBy}
@@ -164,7 +145,6 @@ export const Gallery = () => {
         </div>
       </div>
 
-      {/* Modal */}
       {modalOpen && (
         <div className="image-modal active" onClick={closeModal}>
           <div className="modal-close" onClick={closeModal}>
@@ -173,12 +153,6 @@ export const Gallery = () => {
           <img src={selectedImage} alt="Imagen expandida" />
         </div>
       )}
-
-      <style>{`
-        .gallery-track::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </>
   );
 };

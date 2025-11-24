@@ -1,0 +1,126 @@
+/* Navbar logo */
+.logo-fixed {
+  position: fixed;
+  top: 5px;
+  left: 32px;
+  z-index: 1100;
+  transition: all var(--transition-slow);
+}
+
+.logo-fixed img {
+  height: 90px;
+  width: auto;
+  transition: transform var(--transition-smooth);
+}
+
+.logo-fixed:hover img {
+  transform: scale(1.05);
+}
+
+.logo-fixed.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+/* Sidenav logo */
+.sidenav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav-logo img {
+  height: 75px;
+  width: auto;
+  transition: transform var(--transition-smooth);
+}
+
+.sidenav-logo img:hover {
+  transform: scale(1.05);
+}
+
+.sidenav-logo-top {
+  display: none;
+}
+
+.sidenav-logo-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 2px solid var(--primary);
+}
+
+/* Footer logo */
+.footer-logo {
+  margin-bottom: 24px;
+  display: inline-block;
+  transition: transform var(--transition-smooth);
+  position: relative;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-underline {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  transition: width var(--transition-slow);
+}
+
+.footer-logo:hover .logo-underline {
+  width: 100%;
+}
+
+.footer-logo .logo-white {
+  height: 120px;
+  width: auto;
+  transition: all var(--transition-smooth);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .logo-fixed {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo-fixed img {
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo .logo-white {
+    height: 100px;
+  }
+
+  .sidenav-logo-top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--primary);
+  }
+
+  .sidenav-logo-bottom {
+    display: none;
+  }
+
+  .sidenav-logo img {
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo .logo-white {
+    height: 80px;
+  }
+}

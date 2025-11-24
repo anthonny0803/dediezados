@@ -18,7 +18,7 @@ export const Reviews = ({ placeData, loading }: ReviewsProps) => {
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
         Experiencias reales de eventos inolvidables
       </p>
-      <Suspense fallback={<div style={{ minHeight: "300px" }}>Cargando reseñas...</div>}>
+      <Suspense fallback={<div className="reviews-suspense-loader">Cargando reseñas...</div>}>
         <div data-aos="fade-up" data-aos-delay="200">
           <GoogleReviewsLazy placeData={placeData} loading={loading} />
         </div>

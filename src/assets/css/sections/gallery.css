@@ -1,4 +1,4 @@
-/* Gallery section - title and subtitle container */
+/* Gallery section */
 #gallery {
   padding: 120px 5%;
   max-width: 1400px;
@@ -14,6 +14,10 @@
   margin: 0;
 }
 
+.gallery-carousel {
+  position: relative;
+}
+
 .gallery-carousel::before,
 .gallery-carousel::after {
   content: "";
@@ -25,57 +29,34 @@
   pointer-events: none;
 }
 
-/* Botones de desplazamiento */
-.gallery-carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(11, 11, 11, 0.253);
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 20;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.gallery-carousel-btn:hover {
-  background: rgba(255, 255, 255, 0.299);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.gallery-carousel-btn.left {
-  left: 10px;
-}
-
-.gallery-carousel-btn.right {
-  right: 10px;
-}
-
-.gallery-carousel-btn svg {
-  width: 24px;
-  height: 24px;
-  fill: var(--black);
-}
-
+/* Gallery track */
 .gallery-track {
   display: flex;
   gap: 20px;
   padding: 32px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
   will-change: transform;
 }
 
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-track.dragging {
+  cursor: grabbing;
+}
+
+/* Gallery photo */
 .gallery-photo {
   width: 340px;
   height: 340px;
   flex-shrink: 0;
   background-size: cover;
   background-position: center;
+  background-image: var(--gallery-image);
   box-shadow: var(--shadow-md);
   border: 6px solid var(--white);
   cursor: pointer;
@@ -84,18 +65,17 @@
   overflow: hidden;
 }
 
-/* Gallery photo label */
 .gallery-photo-label {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-  color: var(--black); /* mÃ¡s legible sobre fondo oscuro */
+  color: var(--black);
   padding: 20px 16px 16px;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-heading);
   letter-spacing: 0.5px;
   transform: translateY(0);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,10 +87,62 @@
   z-index: 10;
 }
 
-/* ===========================
-   MEDIA QUERIES MÃ“VIL
-   =========================== */
+/* ============================================ */
+/* MODAL (from modal.css) */
+/* ============================================ */
 
+/* Modal container */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+  backdrop-filter: blur(8px);
+}
+
+.image-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Modal image */
+.image-modal img {
+  max-width: 92%;
+  max-height: 92vh;
+  object-fit: contain;
+  box-shadow: var(--shadow-xl);
+  animation: modalZoomIn 0.4s ease-out;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-close:hover {
+  background: var(--black);
+  color: var(--white);
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Responsive */
 @media (max-width: 968px) {
   .gallery-photo {
     width: 300px;
@@ -136,6 +168,19 @@
   .gallery-photo-label {
     font-size: 0.9rem;
     padding: 14px 10px 10px;
+  }
+
+  .modal-close {
+    width: 48px;
+    height: 48px;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+  }
+
+  .image-modal img {
+    max-width: 95%;
+    max-height: 85vh;
   }
 }
 

@@ -1,10 +1,10 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { Sidenav } from './components/layout/Sidenav';
 import { Hero } from './components/sections/Hero';
 import { Services } from './components/sections/Services';
 
-// Importamos el nuevo hook
+// Importamos el hook
 import { useGooglePlace } from './hooks/useGooglePlace';
 
 // Lazy load de secciones
@@ -35,13 +35,47 @@ const SectionLoader = () => (
 );
 
 function App() {
-  // 1. CARGA DE DATOS CENTRALIZADA
-  // Pedimos los datos aquí para que estén listos cuando el usuario haga scroll
+  // Control para activar la carga de Google Place
+  const [shouldLoadGooglePlace, setShouldLoadGooglePlace] = useState(false);
+
+  // Hook con control de activación
   const { placeData, loading } = useGooglePlace({
     apiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
-    placeId: import.meta.env.VITE_GOOGLE_PLACE_ID
+    placeId: import.meta.env.VITE_GOOGLE_PLACE_ID,
+    enabled: shouldLoadGooglePlace, // Solo ejecuta cuando sea true
   });
 
+  // Intersection Observer para detectar cuando Location está cerca
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoadGooglePlace(true);
+            observer.disconnect(); // Ya no necesitamos observar más
+          }
+        });
+      },
+      {
+        rootMargin: '300px', // Activa 300px antes de que Location entre al viewport
+      }
+    );
+
+    // Esperar a que el DOM esté listo
+    const timer = setTimeout(() => {
+      const locationSection = document.getElementById('location');
+      if (locationSection) {
+        observer.observe(locationSection);
+      }
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, []);
+
+  // Lazy load de AOS
   useEffect(() => {
     let loaded = false;
     
@@ -84,13 +118,10 @@ function App() {
       <Sidenav />
       <Hero />
       <Services />
-      
       <Suspense fallback={<SectionLoader />}>
         <Extras />
         <Gallery />
         <Contact />
-        
-        {/* 2. PASAMOS LOS DATOS A LOS HIJOS */}
         <Location placeData={placeData} />
         <Reviews placeData={placeData} loading={loading} />
         

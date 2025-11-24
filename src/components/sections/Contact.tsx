@@ -115,9 +115,18 @@ export const Contact = () => {
   const isValidMensaje =
     formData.mensaje.length >= 10 && formData.mensaje.length <= 200;
 
+  const getBorderClass = (value: string, isValid: boolean) => {
+    if (value === "") return "neutral";
+    return isValid ? "valid" : "invalid";
+  };
+
+  const getCounterClass = (length: number, isValid: boolean) => {
+    if (length === 0) return "neutral";
+    return isValid ? "valid" : "invalid";
+  };
+
   return (
     <section id="contact">
-      {/* ✅ AÑADIR data-aos AQUÍ */}
       <h2 className="section-title" data-aos="fade-up">
         Conversemos Sobre tu Evento
       </h2>
@@ -126,22 +135,13 @@ export const Contact = () => {
       </p>
 
       <div className="contact-container">
-        {/* ✅ AÑADIR data-aos AQUÍ */}
         <div className="form-card" data-aos="fade-up" data-aos-delay="200">
           <form onSubmit={handleSubmit}>
             <div className="input-group">
               <h4>
-                Datos de contacto{" "}
-                <small
-                  style={{
-                    display: "block",
-                    fontSize: "0.75rem",
-                    fontWeight: 400,
-                    color: "#666",
-                    marginTop: "4px",
-                  }}
-                >
-                  Campos obligatorios <span style={{ color: "red" }}>*</span>
+                Datos de contacto
+                <small className="form-helper">
+                  Campos obligatorios <span className="required">*</span>
                 </small>
               </h4>
             </div>
@@ -150,7 +150,7 @@ export const Contact = () => {
 
             <div className="input-group">
               <label htmlFor="nombre">
-                Nombre <span style={{ color: "red" }}>*</span>
+                Nombre <span className="required">*</span>
               </label>
               <input
                 type="text"
@@ -161,21 +161,13 @@ export const Contact = () => {
                 required
                 disabled={isSubmitting}
                 placeholder="Juan Pérez"
-                style={{
-                  textTransform: "capitalize",
-                  borderColor:
-                    formData.nombre === ""
-                      ? "#ccc"
-                      : isValidNombre
-                      ? "green"
-                      : "red",
-                }}
+                className={`input-capitalize ${getBorderClass(formData.nombre, isValidNombre)}`}
               />
             </div>
 
             <div className="input-group">
               <label htmlFor="email">
-                Correo <span style={{ color: "red" }}>*</span>
+                Correo <span className="required">*</span>
               </label>
               <input
                 type="email"
@@ -184,23 +176,16 @@ export const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                autoComplete="true"
                 disabled={isSubmitting}
                 placeholder="juan@example.com"
-                style={{
-                  textTransform: "lowercase",
-                  borderColor:
-                    formData.email === ""
-                      ? "#ccc"
-                      : isValidEmail
-                      ? "green"
-                      : "red",
-                }}
+                className={`input-lowercase ${getBorderClass(formData.email, isValidEmail)}`}
               />
             </div>
 
             <div className="input-group">
               <label htmlFor="telefono">
-                Teléfono <span style={{ color: "red" }}>*</span>
+                Teléfono <span className="required">*</span>
               </label>
               <input
                 type="tel"
@@ -212,20 +197,13 @@ export const Contact = () => {
                 disabled={isSubmitting}
                 placeholder="+34 *** *** ***"
                 pattern="[+]{0,1}[0-9]{9,15}"
-                style={{
-                  borderColor:
-                    formData.telefono === ""
-                      ? "#ccc"
-                      : isValidTelefono
-                      ? "green"
-                      : "red",
-                }}
+                className={getBorderClass(formData.telefono, isValidTelefono)}
               />
             </div>
 
             <div className="input-group">
               <label htmlFor="evento">
-                Tipo de Evento <span style={{ color: "red" }}>*</span>
+                Tipo de Evento <span className="required">*</span>
               </label>
               <input
                 type="text"
@@ -236,21 +214,13 @@ export const Contact = () => {
                 required
                 disabled={isSubmitting}
                 placeholder="Boda, Corporativo, Cumpleaños"
-                style={{
-                  textTransform: "capitalize",
-                  borderColor:
-                    formData.evento === ""
-                      ? "#ccc"
-                      : isValidEvento
-                      ? "green"
-                      : "red",
-                }}
+                className={`input-capitalize ${getBorderClass(formData.evento, isValidEvento)}`}
               />
             </div>
 
             <div className="input-group">
               <label htmlFor="fechaEvento">
-                Fecha de Evento <span style={{ color: "red" }}>*</span>
+                Fecha de Evento <span className="required">*</span>
               </label>
               <input
                 type="date"
@@ -261,20 +231,13 @@ export const Contact = () => {
                 required
                 disabled={isSubmitting}
                 placeholder="DD/MM/AAAA"
-                style={{
-                  borderColor:
-                    formData.fechaEvento === ""
-                      ? "#ccc"
-                      : isValidFechaEvento
-                      ? "green"
-                      : "red",
-                }}
+                className={getBorderClass(formData.fechaEvento, isValidFechaEvento)}
               />
             </div>
 
             <div className="input-group">
               <label htmlFor="mediaEdad">
-                Media de edad <span style={{ color: "red" }}>*</span>
+                Media de edad <span className="required">*</span>
               </label>
               <input
                 type="text"
@@ -285,14 +248,7 @@ export const Contact = () => {
                 required
                 disabled={isSubmitting}
                 placeholder="0-75 años"
-                style={{
-                  borderColor:
-                    formData.mediaEdad === ""
-                      ? "#ccc"
-                      : isValidMediaEdad
-                      ? "green"
-                      : "red",
-                }}
+                className={getBorderClass(formData.mediaEdad, isValidMediaEdad)}
               />
             </div>
 
@@ -311,48 +267,27 @@ export const Contact = () => {
               />
             </div>
 
-            <div className="input-group" style={{ position: "relative" }}>
-              <label htmlFor="mensaje">
-                Mensaje <span style={{ color: "red" }}>*</span>
-              </label>
-
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                value={formData.mensaje}
-                onChange={handleChange}
-                required
-                minLength={10}
-                maxLength={200}
-                disabled={isSubmitting}
-                placeholder="Cuéntanos sobre tu evento..."
-                style={{
-                  borderColor:
-                    formData.mensaje.length > 0 && !isValidMensaje
-                      ? "red"
-                      : formData.mensaje.length === 0
-                      ? "#ccc"
-                      : "green",
-                  resize: "vertical",
-                }}
-              />
-
-              <small
-                style={{
-                  display: "block",
-                  textAlign: "right",
-                  marginTop: "4px",
-                  fontSize: "0.8rem",
-                  color:
-                    formData.mensaje.length === 0
-                      ? "#888"
-                      : isValidMensaje
-                      ? "green"
-                      : "red",
-                }}
-              >
-                Min:10 {formData.mensaje.length}/200
-              </small>
+            <div className="input-group">
+              <div className="textarea-wrapper">
+                <label htmlFor="mensaje">
+                  Mensaje <span className="required">*</span>
+                </label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  value={formData.mensaje}
+                  onChange={handleChange}
+                  required
+                  minLength={10}
+                  maxLength={200}
+                  disabled={isSubmitting}
+                  placeholder="Cuéntanos sobre tu evento..."
+                  className={getBorderClass(formData.mensaje, isValidMensaje)}
+                />
+                <small className={`char-counter ${getCounterClass(formData.mensaje.length, isValidMensaje)}`}>
+                  Min:10 {formData.mensaje.length}/200
+                </small>
+              </div>
             </div>
 
             <button type="submit" disabled={isSubmitting}>
@@ -360,41 +295,37 @@ export const Contact = () => {
             </button>
 
             {message.text && (
-              <div
-                className={`form-message ${message.type}`}
-                style={{ display: "block" }}
-              >
+              <div className={`form-message ${message.type} visible`}>
                 {message.text}
               </div>
             )}
           </form>
         </div>
 
-        {/* ✅ AÑADIR data-aos AQUÍ */}
         <div className="contact-info-grid" data-aos="fade-up" data-aos-delay="300">
-          <div className="info-item card">
+          <div className="info-item">
             <div className="info-icon">📞</div>
             <div>
               <strong>Teléfono</strong>
               <span>{SITE_CONFIG.contacto.telefono}</span>
-              <span style={{ display: "block", marginTop: "4px" }}>
+              <span className="contact-info-text">
                 {SITE_CONFIG.contacto.telefono2}
               </span>
             </div>
           </div>
 
-          <div className="info-item card">
+          <div className="info-item">
             <div className="info-icon">📧</div>
             <div>
               <strong>Correo</strong>
               <span>{SITE_CONFIG.contacto.email}</span>
-              <span style={{ display: "block", marginTop: "4px" }}>
+              <span className="contact-info-text">
                 {SITE_CONFIG.contacto.email2}
               </span>
             </div>
           </div>
 
-          <div className="info-item card">
+          <div className="info-item">
             <div className="info-icon">📍</div>
             <div>
               <strong>Ubicación</strong>
@@ -402,7 +333,7 @@ export const Contact = () => {
             </div>
           </div>
 
-          <div className="info-item card">
+          <div className="info-item">
             <div className="info-icon">📅</div>
             <div>
               <strong>Horario</strong>

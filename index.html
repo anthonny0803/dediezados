@@ -2,21 +2,13 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- OPTIMIZACIÓN 1: Preconnect to Cloudinary (critical for LCP) -->
+    <!-- Preconnect (critical for LCP) -->
     <link rel="preconnect" href="https://res.cloudinary.com" />
     <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://places.googleapis.com" />
-    <link rel="preconnect" href="https://maps.googleapis.com" />
-    <link rel="dns-prefetch" href="https://places.googleapis.com" />
-    <link rel="dns-prefetch" href="https://maps.googleapis.com" />
-
-    <!-- Preload logo with correct dimensions -->
+    <!-- Preload critical logo -->
     <link
       rel="preload"
       as="image"
@@ -29,6 +21,8 @@
       body {
         margin: 0;
         font-family: "Poppins", sans-serif;
+        background: #0f0f0f;
+        color: #ffffff;
       }
 
       #root {
@@ -41,13 +35,14 @@
         background: #000;
       }
 
-      /* OPTIMIZACIÓN 1: Critical navbar CSS */
+      /* Critical logo CSS */
       .logo-fixed {
         position: fixed;
         top: 5px;
         left: 32px;
         z-index: 1100;
         opacity: 1;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .logo-fixed img {
@@ -55,6 +50,13 @@
         width: auto;
       }
 
+      .logo-fixed.hide {
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+      }
+
+      /* Critical navbar CSS */
       nav {
         position: fixed;
         top: 16px;
@@ -63,6 +65,14 @@
         z-index: 1000;
         display: flex;
         gap: 40px;
+        opacity: 1;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      nav.hide {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(-50%) translateY(-20px);
       }
 
       nav ul {
@@ -73,7 +83,7 @@
         padding: 0;
       }
 
-      /* OPTIMIZACIÓN 1: Critical sidenav CSS */
+      /* Critical menu toggle CSS */
       .menu-toggle {
         position: fixed;
         top: 24px;
@@ -85,54 +95,55 @@
         flex-direction: column;
         gap: 6px;
         cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
       }
 
-      @media (max-width: 1024px) {
-        nav { display: none; }
-        .logo-fixed { left: 50%; transform: translateX(-50%); }
+      .menu-toggle.show {
+        opacity: 1;
+        pointer-events: auto;
       }
 
+      /* AOS fallback */
       [data-aos] {
-        opacity: 1 !important;
-      }
-      
-      .aos-init[data-aos] {
         opacity: 0;
       }
-      
-      .aos-animate[data-aos] {
+
+      [data-aos].aos-animate {
         opacity: 1;
       }
-      
-      body.no-aos [data-aos] {
-        opacity: 1 !important;
-        transform: none !important;
-      }
-      
-      .gastro-card,
-      .gallery-photo,
-      .section-title,
-      .section-subtitle {
-        opacity: 1 !important;
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        nav {
+          display: none;
+        }
+        .logo-fixed {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .logo-fixed img {
+          height: 80px;
+        }
       }
     </style>
 
     <!-- Primary Meta Tags -->
     <title>
-      De Diez a Dos - Alquiler Sala Eventos Madrid | Precios Económicos Cerca de
-      Santiago Bernabéu
+      De Diez a Dos - Alquiler Sala Eventos Madrid | Precios EconÃ³micos Cerca de
+      Santiago BernabÃ©u
     </title>
     <meta
       name="title"
-      content="De Diez a Dos - Alquiler Salas Eventos Madrid | Precios Económicos Cerca del Santiago Bernabéu"
+      content="De Diez a Dos - Alquiler Salas Eventos Madrid | Precios EconÃ³micos Cerca del Santiago BernabÃ©u"
     />
     <meta
       name="description"
-      content="Alquiler de salas para eventos en Madrid cerca del Santiago Bernabéu. Fiestas privadas, cumpleaños, bodas y eventos corporativos con catering incluido. Precios económicos y competitivos. +200 reseñas de 5 estrellas. Visitas con cita previa."
+      content="Alquiler de salas para eventos en Madrid cerca del Santiago BernabÃ©u. Fiestas privadas, cumpleaÃ±os, bodas y eventos corporativos con catering incluido. Precios econÃ³micos y competitivos. +200 reseÃ±as de 5 estrellas. Visitas con cita previa."
     />
     <meta
       name="keywords"
-      content="salas para eventos madrid, alquiler de sala para cumpleaños madrid, eventos privados económicos, fiestas cerca santiago bernabéu, salas para cumpleaños baratas en madrid, catering eventos económico, celebraciones baratas madrid, alquiler local fiestas madrid, eventos junto al bernabéu, salas para bodas baratas, fiestas privadas precio económico, reservar salas en madrid centro, espacios para celebraciones madrid, eventos cerca estadio santiago bernabéu, alquiler sala con catering barato, cumpleaños adultos madrid económico, fiestas de empresa madrid, sala eventos precios competitivos, celebraciones inolvidables madrid, de diez a dos madrid"
+      content="salas para eventos madrid, alquiler de sala para cumpleaÃ±os madrid, eventos privados econÃ³micos, fiestas cerca santiago bernabÃ©u, salas para cumpleaÃ±os baratas en madrid, catering eventos econÃ³mico, celebraciones baratas madrid, alquiler local fiestas madrid, eventos junto al bernabÃ©u, salas para bodas baratas, fiestas privadas precio econÃ³mico, reservar salas en madrid centro, espacios para celebraciones madrid, eventos cerca estadio santiago bernabÃ©u, alquiler sala con catering barato, cumpleaÃ±os adultos madrid econÃ³mico, fiestas de empresa madrid, sala eventos precios competitivos, celebraciones inolvidables madrid, de diez a dos madrid"
     />
     <meta name="author" content="De Diez a Dos Private Event, S.L.U." />
     <meta name="robots" content="index, follow" />
@@ -150,11 +161,11 @@
     <meta property="og:url" content="https://dediezados.com/" />
     <meta
       property="og:title"
-      content="De Diez a Dos - Salas para Eventos en Madrid | Santiago Bernabéu | Precios Económicos"
+      content="De Diez a Dos - Salas para Eventos en Madrid | Santiago BernabÃ©u | Precios EconÃ³micos"
     />
     <meta
       property="og:description"
-      content="Alquiler de salas para eventos en Madrid cerca del Santiago Bernabéu. Fiestas privadas, cumpleaños, bodas y eventos corporativos con catering incluido. Precios económicos y competitivos. +200 reseñas de 5 estrellas."
+      content="Alquiler de salas para eventos en Madrid cerca del Santiago BernabÃ©u. Fiestas privadas, cumpleaÃ±os, bodas y eventos corporativos con catering incluido. Precios econÃ³micos y competitivos. +200 reseÃ±as de 5 estrellas."
     />
     <meta
       property="og:image"
@@ -166,11 +177,11 @@
     <meta property="og:site_name" content="De Diez a Dos" />
     <meta
       property="business:contact_data:street_address"
-      content="Travesía Doctor Fleming 16"
+      content="TravesÃ­a Doctor Fleming 16"
     />
     <meta property="business:contact_data:locality" content="Madrid" />
     <meta property="business:contact_data:postal_code" content="28036" />
-    <meta property="business:contact_data:country_name" content="España" />
+    <meta property="business:contact_data:country_name" content="EspaÃ±a" />
     <meta
       property="business:contact_data:email"
       content="juancarlos@dediezados.com"
@@ -189,11 +200,11 @@
     <meta name="twitter:url" content="https://dediezados.com/" />
     <meta
       name="twitter:title"
-      content="De Diez a Dos - Salas para Eventos en Madrid | Santiago Bernabéu | Precios Económicos"
+      content="De Diez a Dos - Salas para Eventos en Madrid | Santiago BernabÃ©u | Precios EconÃ³micos"
     />
     <meta
       name="twitter:description"
-      content="Alquiler de salas para eventos en Madrid cerca del Santiago Bernabéu. Precios económicos y competitivos. +200 reseñas de 5 estrellas."
+      content="Alquiler de salas para eventos en Madrid cerca del Santiago BernabÃ©u. Precios econÃ³micos y competitivos. +200 reseÃ±as de 5 estrellas."
     />
     <meta
       name="twitter:image"
@@ -216,16 +227,16 @@
         "@type": "EventVenue",
         "name": "De Diez a Dos",
         "alternateName": "De Diez a Dos Private Event",
-        "description": "Alquiler de salas para eventos privados en Madrid con más de una década de experiencia. Servicios integrales para fiestas, cumpleaños, bodas y eventos corporativos con catering, barra libre y producción audiovisual.",
+        "description": "Alquiler de salas para eventos privados en Madrid con mÃ¡s de una dÃ©cada de experiencia. Servicios integrales para fiestas, cumpleaÃ±os, bodas y eventos corporativos con catering, barra libre y producciÃ³n audiovisual.",
         "url": "https://dediezados.com",
         "telephone": "+34636433911",
         "email": "juancarlos@dediezados.com",
-        "priceRange": "€€",
+        "priceRange": "â‚¬â‚¬",
         "image": "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1762786285/amazonias-02_jbajcz.jpg",
         "logo": "https://dediezados.com/logo.png",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Travesía Doctor Fleming 16",
+          "streetAddress": "TravesÃ­a Doctor Fleming 16",
           "addressLocality": "Madrid",
           "postalCode": "28036",
           "addressCountry": "ES"
@@ -279,7 +290,7 @@
           },
           {
             "@type": "LocationFeatureSpecification",
-            "name": "Decoración personalizada",
+            "name": "DecoraciÃ³n personalizada",
             "value": true
           },
           {
@@ -302,7 +313,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Catering completo",
-              "description": "Menús personalizados con más de 14 años de experiencia"
+              "description": "MenÃºs personalizados con mÃ¡s de 14 aÃ±os de experiencia"
             }
           },
           {
@@ -318,7 +329,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Bodas y celebraciones",
-              "description": "Organización completa de bodas y eventos especiales"
+              "description": "OrganizaciÃ³n completa de bodas y eventos especiales"
             }
           }
         ]
@@ -328,5 +339,25 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Preconnect diferido para Google APIs (se necesitan solo para Location/Reviews) -->
+    <script>
+      // Hacer preconnect a Google APIs después de 2 segundos
+      setTimeout(() => {
+        const links = [
+          { rel: 'preconnect', href: 'https://places.googleapis.com' },
+          { rel: 'preconnect', href: 'https://maps.googleapis.com' },
+          { rel: 'dns-prefetch', href: 'https://places.googleapis.com' },
+          { rel: 'dns-prefetch', href: 'https://maps.googleapis.com' }
+        ];
+        
+        links.forEach(linkData => {
+          const link = document.createElement('link');
+          link.rel = linkData.rel;
+          link.href = linkData.href;
+          document.head.appendChild(link);
+        });
+      }, 2000);
+    </script>
   </body>
 </html>

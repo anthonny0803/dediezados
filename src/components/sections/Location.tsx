@@ -17,9 +17,8 @@ export const Location = ({ placeData }: LocationProps) => {
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
         Encuéntranos en el corazón de Madrid
       </p>
-      <Suspense fallback={<div style={{ minHeight: "300px" }}>Cargando mapa...</div>}>
+      <Suspense fallback={<div className="location-loader">Cargando mapa...</div>}>
         <div data-aos="fade-up" data-aos-delay="200">
-          {/* Pasamos la data al widget */}
           <GoogleMapsLazy placeData={placeData} />
         </div>
       </Suspense>
