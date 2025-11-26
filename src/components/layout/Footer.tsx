@@ -60,6 +60,72 @@ export const Footer = () => {
         Madrid | Salón eventos precios competitivos | Celebraciones inolvidables
         Madrid | Sala para eventos Madrid Centro | De Diez a Dos Madrid
       </p>
+
+      <div 
+        className="footer-credits" 
+        style={{ marginTop: '20px', fontSize: '0.8rem', opacity: 0.7 }}
+        data-aos="fade-up" 
+        data-aos-delay="380"
+      >
+        {/* Enlace al Socio (Capifix) */}
+        <p style={{ marginBottom: '8px' }}>
+          Aliados estratégicos:{" "}
+          <a
+            href="https://www.capifixlogistica.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#52d5bd', textDecoration: 'none', fontWeight: 'bold' }}
+          >
+            Capifix | Logística Integral
+          </a>
+        </p>
+
+        {/* Tu Firma (Developer) con SVG corregido para JSX */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px' }}>
+          <span style={{ fontSize: '0.75rem' }}>Dev:</span>
+          <a
+            href="https://www.ybanez.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ 
+              color: '#fff', 
+              textDecoration: 'none', 
+              fontFamily: 'monospace', 
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              gap: '6px', 
+              fontWeight: 600 
+            }}
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ borderRadius: '4px' }}
+            >
+              <defs>
+                <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#22d3ee" />
+                  <stop offset="100%" stopColor="#3b82f6" />
+                </linearGradient>
+              </defs>
+              <rect width="200" height="200" rx="16" fill="#000" />
+              <rect x="2" y="2" width="196" height="196" rx="14" fill="none" stroke="#1e293b" strokeWidth="2" />
+              <path d="M 38 40 L 26 40 L 26 88 L 16 100 L 26 112 L 26 160 L 38 160" stroke="#4ade80" strokeWidth="4" fill="none" strokeLinecap="square" />
+              <path d="M 162 40 L 174 40 L 174 88 L 184 100 L 174 112 L 174 160 L 162 160" stroke="#4ade80" strokeWidth="4" fill="none" strokeLinecap="square" />
+              <line x1="75" y1="55" x2="100" y2="95" stroke="url(#footerLogoGrad)" strokeWidth="5" strokeLinecap="round" />
+              <path d="M 130 42 Q 118 75 100 95" stroke="url(#footerLogoGrad)" strokeWidth="5" fill="none" strokeLinecap="round" />
+              <line x1="100" y1="95" x2="75" y2="158" stroke="url(#footerLogoGrad)" strokeWidth="5" strokeLinecap="round" />
+              <rect x="67" y="47" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" strokeWidth="2.5" />
+              <rect x="122" y="34" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" strokeWidth="2.5" />
+              <rect x="91" y="86" width="18" height="18" rx="3" fill="url(#footerLogoGrad)" />
+              <rect x="67" y="150" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" strokeWidth="2.5" />
+            </svg>
+            Anthonny Ybañez
+          </a>
+        </div>
+      </div>
     </footer>
   );
 };
