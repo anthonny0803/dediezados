@@ -4,6 +4,7 @@ export interface ContactFormData {
   telefono: string;
   evento: string;
   fechaEvento: string;
+  numInvitados: string;
   mediaEdad: string;
   observaciones: string;
   mensaje: string;
@@ -14,8 +15,6 @@ export interface ContactResponse {
   message: string;
 }
 
-// Servicio para enviar formulario de contacto
-// https://dediezados.com/api/contact.php
 const API_URL = "https://api.dediezados.com/contact.php";
 
 export const sendContactForm = async (
@@ -27,7 +26,10 @@ export const sendContactForm = async (
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({
+        ...formData,
+        numInvitados: Number(formData.numInvitados),
+      }),
     });
 
     let data: ContactResponse;
@@ -37,14 +39,12 @@ export const sendContactForm = async (
       throw new Error("Error al procesar respuesta del servidor");
     }
 
-    // Si el servidor devuelve error HTTP
     if (!response.ok) {
       throw new Error(data.message || `Error HTTP: ${response.status}`);
     }
 
     return data;
   } catch (error) {
-    // Manejar errores de red o del servidor
     if (error instanceof Error) {
       throw new Error(error.message);
     }
@@ -52,17 +52,11 @@ export const sendContactForm = async (
   }
 };
 
-/**
- * Validar email en el frontend
- */
 export const validateEmail = (email: string): boolean => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 };
 
-/**
- * Validar formulario completo
- */
 export const validateForm = (formData: ContactFormData): string | null => {
   if (!formData.nombre || formData.nombre.trim().length < 2) {
     return "El nombre debe tener al menos 2 caracteres";
@@ -84,21 +78,31 @@ export const validateForm = (formData: ContactFormData): string | null => {
     return "Debe seleccionar una fecha para el evento";
   }
 
-  if (!formData.mediaEdad || formData.mediaEdad.trim().length < 2) {
-    return "La media de edad debe tener al menos 2 caracteres";
-  }
-
-  // Validar que la fecha sea al menos un día después de hoy
   const hoy = new Date();
-  hoy.setHours(0, 0, 0, 0); // eliminar hora para comparar solo fecha
+  hoy.setHours(0, 0, 0, 0);
   const fechaEvento = new Date(formData.fechaEvento);
 
   if (fechaEvento <= hoy) {
     return "La fecha del evento debe ser posterior a hoy";
   }
 
-  if (!formData.mediaEdad || formData.mediaEdad.trim().length < 3) {
-    return "La media de edad debe tener al menos 3 caracteres";
+  const invitados = formData.numInvitados.trim();
+  const invitadosNum = Number(invitados);
+
+  if (!invitados) {
+    return "El número de invitados es obligatorio";
+  }
+
+  if (Number.isNaN(invitadosNum) || invitadosNum <= 0) {
+    return "El número de invitados debe ser un número válido";
+  }
+
+  if (invitados.length < 2) {
+    return "El número de invitados debe tener al menos 2 caracteres";
+  }
+
+  if (!formData.mediaEdad || formData.mediaEdad.trim().length < 2) {
+    return "La media de edad debe tener al menos 2 caracteres";
   }
 
   if (!formData.observaciones.trim()) {
@@ -109,5 +113,5 @@ export const validateForm = (formData: ContactFormData): string | null => {
     return "El mensaje debe tener al menos 10 caracteres";
   }
 
-  return null; // Campo válido
+  return null;
 };

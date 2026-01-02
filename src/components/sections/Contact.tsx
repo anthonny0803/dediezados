@@ -13,6 +13,7 @@ export const Contact = () => {
     telefono: "",
     evento: "",
     fechaEvento: "",
+    numInvitados: "",
     mediaEdad: "",
     observaciones: "",
     mensaje: "",
@@ -74,6 +75,7 @@ export const Contact = () => {
           telefono: "",
           evento: "",
           fechaEvento: "",
+          numInvitados: "",
           mediaEdad: "",
           observaciones: "",
           mensaje: "",
@@ -112,6 +114,17 @@ export const Contact = () => {
   }
 
   const isValidMediaEdad = formData.mediaEdad.trim().length >= 2;
+  const numInvitadosTrimmed = formData.numInvitados.trim();
+  const numInvitadosNumber = Number(numInvitadosTrimmed);
+
+  const isValidNumInvitados =
+    numInvitadosTrimmed.length >= 2 && // mínimo 2 caracteres
+    numInvitadosTrimmed.length <= 3 && // máximo 3 caracteres
+    /^\d+$/.test(numInvitadosTrimmed) && // solo dígitos
+    !Number.isNaN(numInvitadosNumber) && // es un número
+    numInvitadosNumber >= 10 && // mínimo 10
+    numInvitadosNumber <= 100; // máximo 100
+
   const isValidMensaje =
     formData.mensaje.length >= 10 && formData.mensaje.length <= 200;
 
@@ -161,7 +174,10 @@ export const Contact = () => {
                 required
                 disabled={isSubmitting}
                 placeholder="Juan Pérez"
-                className={`input-capitalize ${getBorderClass(formData.nombre, isValidNombre)}`}
+                className={`input-capitalize ${getBorderClass(
+                  formData.nombre,
+                  isValidNombre
+                )}`}
               />
             </div>
 
@@ -179,7 +195,10 @@ export const Contact = () => {
                 autoComplete="true"
                 disabled={isSubmitting}
                 placeholder="juan@example.com"
-                className={`input-lowercase ${getBorderClass(formData.email, isValidEmail)}`}
+                className={`input-lowercase ${getBorderClass(
+                  formData.email,
+                  isValidEmail
+                )}`}
               />
             </div>
 
@@ -214,7 +233,10 @@ export const Contact = () => {
                 required
                 disabled={isSubmitting}
                 placeholder="Boda, Corporativo, Cumpleaños"
-                className={`input-capitalize ${getBorderClass(formData.evento, isValidEvento)}`}
+                className={`input-capitalize ${getBorderClass(
+                  formData.evento,
+                  isValidEvento
+                )}`}
               />
             </div>
 
@@ -231,7 +253,30 @@ export const Contact = () => {
                 required
                 disabled={isSubmitting}
                 placeholder="DD/MM/AAAA"
-                className={getBorderClass(formData.fechaEvento, isValidFechaEvento)}
+                className={getBorderClass(
+                  formData.fechaEvento,
+                  isValidFechaEvento
+                )}
+              />
+            </div>
+
+            <div className="input-group">
+              <label htmlFor="numInvitados">
+                Número de Invitados <span className="required">*</span>
+              </label>
+              <input
+                type="number"
+                id="numInvitados"
+                name="numInvitados"
+                value={formData.numInvitados}
+                onChange={handleChange}
+                required
+                disabled={isSubmitting}
+                placeholder="50"
+                className={getBorderClass(
+                  formData.numInvitados,
+                  isValidNumInvitados
+                )}
               />
             </div>
 
@@ -284,7 +329,12 @@ export const Contact = () => {
                   placeholder="Cuéntanos sobre tu evento..."
                   className={getBorderClass(formData.mensaje, isValidMensaje)}
                 />
-                <small className={`char-counter ${getCounterClass(formData.mensaje.length, isValidMensaje)}`}>
+                <small
+                  className={`char-counter ${getCounterClass(
+                    formData.mensaje.length,
+                    isValidMensaje
+                  )}`}
+                >
                   Min:10 {formData.mensaje.length}/200
                 </small>
               </div>
@@ -302,7 +352,11 @@ export const Contact = () => {
           </form>
         </div>
 
-        <div className="contact-info-grid" data-aos="fade-up" data-aos-delay="300">
+        <div
+          className="contact-info-grid"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <div className="info-item">
             <div className="info-icon">📞</div>
             <div>
