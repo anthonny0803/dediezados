@@ -141,7 +141,7 @@ export const Contact = () => {
   return (
     <section id="contact">
       <h2 className="section-title" data-aos="fade-up">
-        Conversemos Sobre tu Evento
+        Sin Compromiso hablemos de tu Evento
       </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
         Cuéntanos tu visión y te ayudamos a hacerla realidad
