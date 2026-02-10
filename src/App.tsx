@@ -8,6 +8,7 @@ import { Services } from './components/sections/Services';
 import { useGooglePlace } from './hooks/useGooglePlace';
 
 // Lazy load de secciones
+const Catering = lazy(() => import('./components/sections/Catering').then(m => ({ default: m.Catering })));
 const Extras = lazy(() => import('./components/sections/Extras').then(m => ({ default: m.Extras })));
 const Gallery = lazy(() => import('./components/sections/Gallery').then(m => ({ default: m.Gallery })));
 const Contact = lazy(() => import('./components/sections/Contact').then(m => ({ default: m.Contact })));
@@ -88,10 +89,10 @@ function App() {
         await import('aos/dist/aos.css');
         
         AOS.init({
-          duration: 800,
+          duration: 500,
           easing: 'ease-out-cubic',
           once: true,
-          offset: 100,
+          offset: 50,
         });
       } catch (error) {
         console.warn('AOS failed to load:', error);
@@ -119,6 +120,7 @@ function App() {
       <Hero />
       <Services />
       <Suspense fallback={<SectionLoader />}>
+        <Catering />
         <Extras />
         <Gallery />
         <Contact />

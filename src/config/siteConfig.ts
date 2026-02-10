@@ -15,7 +15,7 @@ export interface Servicio {
   descripcion: string;
 }
 
-export interface GastronomiaItem {
+export interface CateringItem {
   titulo: string;
   descripcion: string;
   imagen: string;
@@ -25,6 +25,15 @@ export interface GastronomiaItem {
 export interface GalleryPhoto {
   url: string;
   sala: string;
+}
+
+export interface ExtraDisponible {
+  icono: string;
+  titulo: string;
+  descripcion: string;
+  caracteristicas: string[];
+  recomendadoPara: string;
+  imagen: string;
 }
 
 export interface SiteConfig {
@@ -65,10 +74,11 @@ export interface SiteConfig {
   };
   heroSlides: HeroSlide[];
   servicios: Servicio[];
-  gastronomia: GastronomiaItem[];
+  catering: CateringItem[];
   gallery: {
     photos: GalleryPhoto[];
   };
+  extrasDisponibles: ExtraDisponible[];
 }
 
 export const SITE_CONFIG: SiteConfig = {
@@ -169,7 +179,7 @@ export const SITE_CONFIG: SiteConfig = {
       descripcion: 'Disponemos de extras opcionales para completar tu evento: decoración personalizada, DJ, mesa dulce, carro de chuches y Fotomax 360. Tú eliges qué añadir según lo que quieras para ese día, siempre con precios claros y sin sorpresas.'
     }
   ],
-  gastronomia: [
+  catering: [
     {
       titulo: 'Nos adaptamos a ti',
       descripcion: 'Diseñamos cada evento según tus gustos y necesidades, para que sientas que el espacio está hecho a tu medida.',
@@ -221,4 +231,71 @@ export const SITE_CONFIG: SiteConfig = {
       { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239530/amazonias-07_sadnid.webp", sala: "Sala Amazonias" }
     ],
   },
+  extrasDisponibles: [
+    {
+      icono: '🎤',
+      titulo: 'Karaoke',
+      descripcion: 'Si quieres un evento divertido y participativo, el karaoke es perfecto para grupos de amigos, cumpleaños y celebraciones familiares.',
+      caracteristicas: [
+        'Micrófonos y sistema de sonido',
+        'Conexión a pantalla / TV para letras',
+        'Ambiente tipo "concierto"',
+        'Ideal para todas las edades'
+      ],
+      recomendadoPara: 'Cumpleaños, fiestas de adolescentes, despedidas y celebraciones mixtas',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769767945/Karaoke2_vwfooo.jpg'
+    },
+    {
+      icono: '🎥',
+      titulo: 'PhotoMaster 360',
+      descripcion: 'El PhotoMaster 360 es uno de los extras más buscados: te subes a la plataforma y se graban vídeos con efecto espectacular, perfectos para redes sociales.',
+      caracteristicas: [
+        'Vídeos súper llamativos (slow motion / efecto 360)',
+        'Ideal para grupos grandes',
+        'Se convierte en "la atracción" del evento',
+        'Recuerdo top para invitados'
+      ],
+      recomendadoPara: 'Cumpleaños, fiestas privadas, eventos juveniles y celebraciones donde quieres "nivelazo"',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769763410/PhotoMaster_360_11zon_r4a9c6.jpg'
+    },
+    {
+      icono: '🎧',
+      titulo: 'DJ Profesional',
+      descripcion: 'Si quieres que tu evento suene como una discoteca pero a tu estilo, puedes añadir DJ profesional con música adaptada a tu público.',
+      caracteristicas: [
+        'Música adaptada al tipo de fiesta',
+        'Control de volumen y ambiente',
+        'Opciones de animación si lo deseas',
+        'Entrada, subida y cierre del evento con temazos'
+      ],
+      recomendadoPara: 'Fiestas grandes, cumpleaños adultos, despedidas y eventos con baile',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769766951/Dj1_11zon_vjxw1y.jpg'
+    },
+    {
+      icono: '🍭',
+      titulo: 'Mesa Dulce / Candy Bar',
+      descripcion: 'La mesa dulce es ideal si quieres una presentación bonita, cuidada y lista para disfrutar. Da un toque elegante y queda genial en fotos.',
+      caracteristicas: [
+        'Decoración temática',
+        'Chucherías variadas',
+        'Presentación tipo buffet',
+        'Opciones para niños o adultos'
+      ],
+      recomendadoPara: 'Cumpleaños infantiles, comuniones y eventos familiares',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769763102/Decoraciones6_11zon_gju7xg.jpg'
+    },
+    {
+      icono: '🎈',
+      titulo: 'Decoración Personalizada',
+      descripcion: 'La decoración marca la diferencia. Puedes hacer tu evento más bonito y más "tuyo" con decoración personalizada: temática, colores, nombres, globos y más.',
+      caracteristicas: [
+        'Globos (arcos, columnas, guirnaldas)',
+        'Fondo para fotos / photocall',
+        'Carteles personalizados',
+        'Decoración por temática'
+      ],
+      recomendadoPara: 'Cumpleaños, despedidas, baby showers y todo tipo de celebraciones',
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769765788/Decoraciones2_11zon_c7rlxx.jpg'
+    }
+  ]
 };

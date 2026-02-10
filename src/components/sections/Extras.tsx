@@ -4,28 +4,42 @@ export const Extras = () => {
   return (
     <section id="extras">
       <h2 className="section-title" data-aos="fade-up">
-        Catering De Diez a Dos
+        Extras Disponibles
       </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-        Disfruta de la maravillosa atención y trato personalizado que ofrecemos en cada evento. Nuestro equipo se dedica a hacer de tu ocasión especial un momento inolvidable, cuidando cada detalle para que tú y tus invitados se sientan como en casa.
+        Completa tu evento con servicios adicionales que marcan la diferencia
       </p>
-      <div className="extras-grid">
-        {SITE_CONFIG.gastronomia.map((item, index) => (
-          <div
-            key={index}
-            className={`extra-card ${item.destacado ? 'destacado' : ''}`}
+      
+      <div className="extras-disponibles-grid">
+        {SITE_CONFIG.extrasDisponibles.map((extra, index) => (
+          <article 
+            key={index} 
+            className="extra-disponible-card"
             data-aos="fade-up"
-            data-aos-delay={index * 100}
+            data-aos-delay={index * 80}
           >
-            <div
-              className="extra-image"
-              style={{ '--extra-image': `url('${item.imagen}')` } as React.CSSProperties}
+            <div 
+              className="extra-disponible-image"
+              style={{ backgroundImage: `url('${extra.imagen}')` }}
             >
-              {item.destacado && (
-                <div className="extra-badge">Especialidad</div>
-              )}
+              <span className="extra-disponible-icon">{extra.icono}</span>
             </div>
-          </div>
+            
+            <div className="extra-disponible-content">
+              <h3>{extra.titulo}</h3>
+              <p className="extra-disponible-desc">{extra.descripcion}</p>
+              
+              <ul className="extra-disponible-features">
+                {extra.caracteristicas.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+              
+              <p className="extra-disponible-recommended">
+                <strong>Recomendado para:</strong> {extra.recomendadoPara}
+              </p>
+            </div>
+          </article>
         ))}
       </div>
     </section>
