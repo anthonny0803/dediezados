@@ -247,8 +247,8 @@ export const SITE_CONFIG: SiteConfig = {
     },
     {
       icono: '🎥',
-      titulo: 'PhotoMaster 360',
-      descripcion: 'El PhotoMaster 360 es uno de los extras más buscados: te subes a la plataforma y se graban vídeos con efecto espectacular, perfectos para redes sociales.',
+      titulo: 'PhotoMax 360',
+      descripcion: 'El PhotoMax 360 es uno de los extras más buscados: te subes a la plataforma y se graban vídeos con efecto espectacular, perfectos para redes sociales.',
       caracteristicas: [
         'Vídeos súper llamativos (slow motion / efecto 360)',
         'Ideal para grupos grandes',
@@ -295,7 +295,7 @@ export const SITE_CONFIG: SiteConfig = {
         'Decoración por temática'
       ],
       recomendadoPara: 'Cumpleaños, despedidas, baby showers y todo tipo de celebraciones',
-      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769765788/Decoraciones2_11zon_c7rlxx.jpg'
+      imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1770884340/Decoraciones8_rrjaho.jpg'
     }
   ]
 };
