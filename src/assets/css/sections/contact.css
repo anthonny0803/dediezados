@@ -108,6 +108,24 @@
   letter-spacing: 0.5px;
 }
 
+/* Form section title */
+.form-section-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--black);
+}
+
+/* Form optional label */
+.form-optional {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #888;
+  margin-left: 4px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 /* Form helper text */
 .form-helper {
   display: block;

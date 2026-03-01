@@ -25,6 +25,7 @@ export interface CateringItem {
 export interface GalleryPhoto {
   url: string;
   sala: string;
+  alt: string;
 }
 
 export interface ExtraDisponible {
@@ -219,16 +220,16 @@ export const SITE_CONFIG: SiteConfig = {
   ],
   gallery: {
     photos: [
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239541/olas-04_phqoqx.webp", sala: "Sala Olas" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239537/olas-02_rr6p4s.webp", sala: "Sala Olas" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239542/olas-06_bmubuf.webp", sala: "Sala Olas" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239538/olas-03_n4aotk.webp", sala: "Sala Olas" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239529/amazonias-02_wuhjwa.webp", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239529/amazonias-03_a07qc0.webp", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239528/amazonias-01_yadqyg.webp", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239530/amazonias-06_mqwezx.webp", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239529/amazonias-05_lnzwjl.webp", sala: "Sala Amazonias" },
-      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239530/amazonias-07_sadnid.webp", sala: "Sala Amazonias" }
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239541/olas-04_phqoqx.webp", sala: "Sala Olas", alt: "Sala Olas para eventos privados en Madrid - vista principal" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239537/olas-02_rr6p4s.webp", sala: "Sala Olas", alt: "Sala Olas - espacio para celebraciones y fiestas en Madrid" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239542/olas-06_bmubuf.webp", sala: "Sala Olas", alt: "Sala Olas - ambiente elegante para eventos cerca del Bernabeu" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239538/olas-03_n4aotk.webp", sala: "Sala Olas", alt: "Sala Olas - decoracion y mobiliario para eventos en Madrid" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239529/amazonias-02_wuhjwa.webp", sala: "Sala Amazonias", alt: "Sala Amazonias para eventos exclusivos en Madrid - vista principal" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239529/amazonias-03_a07qc0.webp", sala: "Sala Amazonias", alt: "Sala Amazonias - espacio para bodas y celebraciones en Madrid" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239528/amazonias-01_yadqyg.webp", sala: "Sala Amazonias", alt: "Sala Amazonias - alquiler de sala para cumpleanos y fiestas" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239530/amazonias-06_mqwezx.webp", sala: "Sala Amazonias", alt: "Sala Amazonias - ambiente premium para eventos corporativos" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239529/amazonias-05_lnzwjl.webp", sala: "Sala Amazonias", alt: "Sala Amazonias - iluminacion y decoracion para eventos privados" },
+      { url: "https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763239530/amazonias-07_sadnid.webp", sala: "Sala Amazonias", alt: "Sala Amazonias - espacio completo para celebraciones en Madrid" }
     ],
   },
   extrasDisponibles: [

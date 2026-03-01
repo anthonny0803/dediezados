@@ -124,10 +124,17 @@ export const Gallery = () => {
               <div
                 key={index}
                 className="gallery-photo"
-                style={{ '--gallery-image': `url('${photo.url}')` } as React.CSSProperties}
                 onClick={() => { if (!isDragging) openModal(photo.url); }}
                 onDragStart={(e) => e.preventDefault()}
               >
+                <img
+                  src={photo.url}
+                  alt={photo.alt}
+                  width="340"
+                  height="340"
+                  loading="lazy"
+                  draggable="false"
+                />
                 <div className="gallery-photo-label">{photo.sala}</div>
               </div>
             ))}

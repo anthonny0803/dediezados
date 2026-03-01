@@ -151,12 +151,12 @@ export const Contact = () => {
         <div className="form-card" data-aos="fade-up" data-aos-delay="200">
           <form onSubmit={handleSubmit}>
             <div className="input-group">
-              <h4>
+              <span className="form-section-title">
                 Datos de contacto
                 <small className="form-helper">
                   Campos obligatorios <span className="required">*</span>
                 </small>
-              </h4>
+              </span>
             </div>
             <hr />
             <br />
@@ -299,7 +299,7 @@ export const Contact = () => {
 
             <div className="input-group">
               <label htmlFor="observaciones">
-                Observaciones <h5>Opcional</h5>
+                Observaciones <span className="form-optional">Opcional</span>
               </label>
               <input
                 type="text"

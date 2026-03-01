@@ -47,12 +47,15 @@ export const Hero = () => {
         ))}
       </div>
 
-      <div className="carousel-dots" id="carouselDots">
+      <div className="carousel-dots" id="carouselDots" role="tablist" aria-label="Slides del carrusel">
         {slides.map((_, index) => (
-          <div
+          <button
             key={index}
+            type="button"
             className={`dot ${index === currentIndex ? 'active' : ''}`}
             onClick={() => goToSlide(index)}
+            aria-label={`Ir al slide ${index + 1}`}
+            aria-current={index === currentIndex ? 'true' : undefined}
           />
         ))}
       </div>

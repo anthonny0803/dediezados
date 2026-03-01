@@ -54,15 +54,19 @@
   width: 340px;
   height: 340px;
   flex-shrink: 0;
-  background-size: cover;
-  background-position: center;
-  background-image: var(--gallery-image);
   box-shadow: var(--shadow-md);
   border: 6px solid var(--white);
   cursor: pointer;
   transition: all var(--transition-smooth);
   position: relative;
   overflow: hidden;
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .gallery-photo-label {
