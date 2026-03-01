@@ -10,7 +10,6 @@ export interface HeroSlide {
 }
 
 export interface Servicio {
-  icono: string;
   titulo: string;
   descripcion: string;
 }
@@ -29,7 +28,6 @@ export interface GalleryPhoto {
 }
 
 export interface ExtraDisponible {
-  icono: string;
   titulo: string;
   descripcion: string;
   caracteristicas: string[];
@@ -150,32 +148,26 @@ export const SITE_CONFIG: SiteConfig = {
   ],
   servicios: [
     {
-      icono: '🏢',
       titulo: 'Espacio en Exclusiva',
       descripcion: 'Local con dos espacios exclusivos, acceso privado y un ambiente totalmente reservado. Mobiliario, cómodo e iluminación adaptable. Trabajamos con seriedad y cercanía, coordinando cada detalle para que tu evento salga perfecto.'
     },
     {
-      icono: '🎵',
       titulo: 'Sistema Audiovisual',
       descripcion: 'Sonido profesional y pantallas de alta calidad ya instalados en el local. Nuestro equipo técnico supervisa que todo funcione correctamente durante el evento. Iluminación adaptable y ambientes configurados según tu estilo: elegante, moderno o festivo. Calidad y comodidad, sin montajes ni complicaciones.'
     },
     {
-      icono: '🍽️',
       titulo: 'Catering De Diez a Dos',
       descripcion: 'Más de 14 años escuchando a nuestros clientes y afinando cada propuesta. El resultado: menús equilibrados y versátiles, pensados para funcionar en cualquier ocasión. Calidad, buena presentación y opciones que encajan con todo tipo de eventos.'
     },
     {
-      icono: '🍹',
       titulo: 'Barra Libre',
       descripcion: 'Nuestra barra se adapta a cada evento. Ofrecemos diferentes opciones según el paquete contratado, para que elijas el formato que mejor encaje con tu celebración. Flexibilidad y servicio profesional en todo momento.'
     },
     {
-      icono: '👥',
       titulo: 'Personal Profesional',
       descripcion: 'Personal de barra, camareros y control de acceso que aseguran seguridad y comodidad. Un equipo eficaz y discreto. Ante cualquier imprevisto, damos soluciones rápidas y de calidad. Servicio sencillo y resolutivo.'
     },
     {
-      icono: '✨',
       titulo: 'Servicios Adicionales',
       descripcion: 'Disponemos de extras opcionales para completar tu evento: decoración personalizada, DJ, mesa dulce, carro de chuches y Fotomax 360. Tú eliges qué añadir según lo que quieras para ese día, siempre con precios claros y sin sorpresas.'
     }
@@ -212,7 +204,7 @@ export const SITE_CONFIG: SiteConfig = {
       destacado: false
     },
     {
-      titulo: 'Atención proactiva, no reactiva',
+      titulo: 'Atención proactiva',
       descripcion: 'Nos adelantamos a las necesidades de tu evento para que todo fluya de forma natural, sin improvisaciones ni sobresaltos.',
       imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1763229477/atun_hu4kol.webp',
       destacado: false
@@ -234,7 +226,6 @@ export const SITE_CONFIG: SiteConfig = {
   },
   extrasDisponibles: [
     {
-      icono: '🎤',
       titulo: 'Karaoke',
       descripcion: 'Si quieres un evento divertido y participativo, el karaoke es perfecto para grupos de amigos, cumpleaños y celebraciones familiares.',
       caracteristicas: [
@@ -247,7 +238,6 @@ export const SITE_CONFIG: SiteConfig = {
       imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769767945/Karaoke2_vwfooo.jpg'
     },
     {
-      icono: '🎥',
       titulo: 'PhotoMax 360',
       descripcion: 'El PhotoMax 360 es uno de los extras más buscados: te subes a la plataforma y se graban vídeos con efecto espectacular, perfectos para redes sociales.',
       caracteristicas: [
@@ -260,7 +250,6 @@ export const SITE_CONFIG: SiteConfig = {
       imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769763410/PhotoMaster_360_11zon_r4a9c6.jpg'
     },
     {
-      icono: '🎧',
       titulo: 'DJ Profesional',
       descripcion: 'Si quieres que tu evento suene como una discoteca pero a tu estilo, puedes añadir DJ profesional con música adaptada a tu público.',
       caracteristicas: [
@@ -273,7 +262,6 @@ export const SITE_CONFIG: SiteConfig = {
       imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769766951/Dj1_11zon_vjxw1y.jpg'
     },
     {
-      icono: '🍭',
       titulo: 'Mesa Dulce / Candy Bar',
       descripcion: 'La mesa dulce es ideal si quieres una presentación bonita, cuidada y lista para disfrutar. Da un toque elegante y queda genial en fotos.',
       caracteristicas: [
@@ -286,7 +274,6 @@ export const SITE_CONFIG: SiteConfig = {
       imagen: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769763102/Decoraciones6_11zon_gju7xg.jpg'
     },
     {
-      icono: '🎈',
       titulo: 'Decoración Personalizada',
       descripcion: 'La decoración marca la diferencia. Puedes hacer tu evento más bonito y más "tuyo" con decoración personalizada: temática, colores, nombres, globos y más.',
       caracteristicas: [

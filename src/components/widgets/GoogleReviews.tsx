@@ -1,6 +1,6 @@
 import { PlaceData } from "../../hooks/useGooglePlace";
 
-const AVATAR_PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="56" height="56"%3E%3Ccircle cx="28" cy="28" r="28" fill="%23A8D5D5"/%3E%3Ctext x="28" y="36" text-anchor="middle" fill="white" font-size="24" font-family="Arial"%3E👤%3C/text%3E%3C/svg%3E';
+const AVATAR_PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="56" height="56"%3E%3Ccircle cx="28" cy="28" r="28" fill="%233fb5a1"/%3E%3Cpath d="M28 16a8 8 0 110 16 8 8 0 010-16zM14 44c0-7.7 6.3-14 14-14s14 6.3 14 14" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/%3E%3C/svg%3E';
 
 interface GoogleReviewsProps {
   placeData: PlaceData | null;

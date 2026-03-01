@@ -6,14 +6,15 @@
   width: 220px;
   max-width: 100%;
   height: 100vh;
-  background: var(--bg-sidenav);
-  backdrop-filter: blur(12px);
+  background: rgba(10, 10, 10, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 28px 20px;
   z-index: 1400;
   display: flex;
   flex-direction: column;
   gap: 0;
-  border-left: 2px solid var(--primary);
+  border-left: 1px solid rgba(63, 181, 161, 0.15);
   overflow-y: auto;
   transform: translateX(100%);
   transition: transform var(--transition-smooth), opacity var(--transition-fast);
@@ -186,10 +187,11 @@ body.no-scroll {
   .sidenav {
     width: 100%;
     height: 100vh;
-    background: var(--bg-sidenav);
-    backdrop-filter: blur(14px);
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-left: none;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 1px solid rgba(63, 181, 161, 0.2);
     box-shadow: var(--shadow-lg);
     transform: translateY(-100%);
   }

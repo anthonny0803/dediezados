@@ -1,5 +1,5 @@
 #location {
-  padding: 120px 5%;
+  padding: 90px 5%;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
@@ -10,20 +10,22 @@
 .map-container {
   width: 100%;
   height: 550px;
-  background: var(--gray-light);
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  border: var(--border-card);
   position: relative;
   overflow: hidden;
 }
 
 /* Loading state */
 .map-container::before {
-  content: '🗺️ Loading map...';
+  content: 'Loading map...';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--gray);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Suspense fallback */
@@ -39,7 +41,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   #location {
-    padding: 80px 5%;
+    padding: 70px 5%;
   }
 
   .map-container {
@@ -49,7 +51,7 @@
 
 @media (max-width: 480px) {
   #location {
-    padding: 64px 5%;
+    padding: 56px 5%;
   }
 
   .map-container {

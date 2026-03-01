@@ -161,155 +161,163 @@ export const Contact = () => {
             <hr />
             <br />
 
-            <div className="input-group">
-              <label htmlFor="nombre">
-                Nombre <span className="required">*</span>
-              </label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                value={formData.nombre}
-                onChange={handleChange}
-                required
-                disabled={isSubmitting}
-                placeholder="Juan Pérez"
-                className={`input-capitalize ${getBorderClass(
-                  formData.nombre,
-                  isValidNombre
-                )}`}
-              />
+            <div className="form-row">
+              <div className="input-group">
+                <label htmlFor="nombre">
+                  Nombre <span className="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  placeholder="Juan Pérez"
+                  className={`input-capitalize ${getBorderClass(
+                    formData.nombre,
+                    isValidNombre
+                  )}`}
+                />
+              </div>
+
+              <div className="input-group">
+                <label htmlFor="email">
+                  Correo <span className="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  autoComplete="true"
+                  disabled={isSubmitting}
+                  placeholder="juan@example.com"
+                  className={`input-lowercase ${getBorderClass(
+                    formData.email,
+                    isValidEmail
+                  )}`}
+                />
+              </div>
             </div>
 
-            <div className="input-group">
-              <label htmlFor="email">
-                Correo <span className="required">*</span>
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                autoComplete="true"
-                disabled={isSubmitting}
-                placeholder="juan@example.com"
-                className={`input-lowercase ${getBorderClass(
-                  formData.email,
-                  isValidEmail
-                )}`}
-              />
+            <div className="form-row">
+              <div className="input-group">
+                <label htmlFor="telefono">
+                  Teléfono <span className="required">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  value={formData.telefono}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  placeholder="+34 *** *** ***"
+                  pattern="[+]{0,1}[0-9]{9,15}"
+                  className={getBorderClass(formData.telefono, isValidTelefono)}
+                />
+              </div>
+
+              <div className="input-group">
+                <label htmlFor="evento">
+                  Tipo de Evento <span className="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="evento"
+                  name="evento"
+                  value={formData.evento}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  placeholder="Boda, Corporativo, Cumpleaños"
+                  className={`input-capitalize ${getBorderClass(
+                    formData.evento,
+                    isValidEvento
+                  )}`}
+                />
+              </div>
             </div>
 
-            <div className="input-group">
-              <label htmlFor="telefono">
-                Teléfono <span className="required">*</span>
-              </label>
-              <input
-                type="tel"
-                id="telefono"
-                name="telefono"
-                value={formData.telefono}
-                onChange={handleChange}
-                required
-                disabled={isSubmitting}
-                placeholder="+34 *** *** ***"
-                pattern="[+]{0,1}[0-9]{9,15}"
-                className={getBorderClass(formData.telefono, isValidTelefono)}
-              />
+            <div className="form-row">
+              <div className="input-group">
+                <label htmlFor="fechaEvento">
+                  Fecha de Evento <span className="required">*</span>
+                </label>
+                <input
+                  type="date"
+                  id="fechaEvento"
+                  name="fechaEvento"
+                  value={formData.fechaEvento}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  placeholder="DD/MM/AAAA"
+                  className={getBorderClass(
+                    formData.fechaEvento,
+                    isValidFechaEvento
+                  )}
+                />
+              </div>
+
+              <div className="input-group">
+                <label htmlFor="numInvitados">
+                  Número de Invitados <span className="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  id="numInvitados"
+                  name="numInvitados"
+                  value={formData.numInvitados}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  placeholder="50"
+                  className={getBorderClass(
+                    formData.numInvitados,
+                    isValidNumInvitados
+                  )}
+                />
+              </div>
             </div>
 
-            <div className="input-group">
-              <label htmlFor="evento">
-                Tipo de Evento <span className="required">*</span>
-              </label>
-              <input
-                type="text"
-                id="evento"
-                name="evento"
-                value={formData.evento}
-                onChange={handleChange}
-                required
-                disabled={isSubmitting}
-                placeholder="Boda, Corporativo, Cumpleaños"
-                className={`input-capitalize ${getBorderClass(
-                  formData.evento,
-                  isValidEvento
-                )}`}
-              />
-            </div>
+            <div className="form-row">
+              <div className="input-group">
+                <label htmlFor="mediaEdad">
+                  Media de edad <span className="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="mediaEdad"
+                  name="mediaEdad"
+                  value={formData.mediaEdad}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  placeholder="0-75 años"
+                  className={getBorderClass(formData.mediaEdad, isValidMediaEdad)}
+                />
+              </div>
 
-            <div className="input-group">
-              <label htmlFor="fechaEvento">
-                Fecha de Evento <span className="required">*</span>
-              </label>
-              <input
-                type="date"
-                id="fechaEvento"
-                name="fechaEvento"
-                value={formData.fechaEvento}
-                onChange={handleChange}
-                required
-                disabled={isSubmitting}
-                placeholder="DD/MM/AAAA"
-                className={getBorderClass(
-                  formData.fechaEvento,
-                  isValidFechaEvento
-                )}
-              />
-            </div>
-
-            <div className="input-group">
-              <label htmlFor="numInvitados">
-                Número de Invitados <span className="required">*</span>
-              </label>
-              <input
-                type="number"
-                id="numInvitados"
-                name="numInvitados"
-                value={formData.numInvitados}
-                onChange={handleChange}
-                required
-                disabled={isSubmitting}
-                placeholder="50"
-                className={getBorderClass(
-                  formData.numInvitados,
-                  isValidNumInvitados
-                )}
-              />
-            </div>
-
-            <div className="input-group">
-              <label htmlFor="mediaEdad">
-                Media de edad <span className="required">*</span>
-              </label>
-              <input
-                type="text"
-                id="mediaEdad"
-                name="mediaEdad"
-                value={formData.mediaEdad}
-                onChange={handleChange}
-                required
-                disabled={isSubmitting}
-                placeholder="0-75 años"
-                className={getBorderClass(formData.mediaEdad, isValidMediaEdad)}
-              />
-            </div>
-
-            <div className="input-group">
-              <label htmlFor="observaciones">
-                Observaciones <span className="form-optional">Opcional</span>
-              </label>
-              <input
-                type="text"
-                id="observaciones"
-                name="observaciones"
-                value={formData.observaciones}
-                onChange={handleChange}
-                disabled={isSubmitting}
-                placeholder="Detalles adicionales sobre el evento"
-              />
+              <div className="input-group">
+                <label htmlFor="observaciones">
+                  Observaciones <span className="form-optional">Opcional</span>
+                </label>
+                <input
+                  type="text"
+                  id="observaciones"
+                  name="observaciones"
+                  value={formData.observaciones}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                  placeholder="Detalles adicionales sobre el evento"
+                />
+              </div>
             </div>
 
             <div className="input-group">
@@ -358,7 +366,9 @@ export const Contact = () => {
           data-aos-delay="300"
         >
           <div className="info-item">
-            <div className="info-icon">📞</div>
+            <div className="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" /></svg>
+            </div>
             <div>
               <strong>Teléfono</strong>
               <span>{SITE_CONFIG.contacto.telefono}</span>
@@ -369,7 +379,9 @@ export const Contact = () => {
           </div>
 
           <div className="info-item">
-            <div className="info-icon">📧</div>
+            <div className="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+            </div>
             <div>
               <strong>Correo</strong>
               <span>{SITE_CONFIG.contacto.email}</span>
@@ -380,7 +392,9 @@ export const Contact = () => {
           </div>
 
           <div className="info-item">
-            <div className="info-icon">📍</div>
+            <div className="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+            </div>
             <div>
               <strong>Ubicación</strong>
               <span>{SITE_CONFIG.contacto.direccion}</span>
@@ -388,7 +402,9 @@ export const Contact = () => {
           </div>
 
           <div className="info-item">
-            <div className="info-icon">📅</div>
+            <div className="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+            </div>
             <div>
               <strong>Horario</strong>
               <span>{SITE_CONFIG.contacto.horario}</span>

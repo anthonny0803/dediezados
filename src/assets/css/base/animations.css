@@ -1,13 +1,3 @@
-/* Background float */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.05);
-  }
-}
-
 /* Fade in up */
 @keyframes fadeInUp {
   from {
@@ -41,16 +31,6 @@
   to {
     transform: scale(1);
     opacity: 1;
-  }
-}
-
-/* Icon bounce */
-@keyframes icon-bounce {
-  0%, 100% {
-    transform: scale(1.2) rotate(5deg) translateY(0);
-  }
-  50% {
-    transform: scale(1.3) rotate(-5deg) translateY(-4px);
   }
 }
 
