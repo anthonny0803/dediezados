@@ -1,9 +1,7 @@
 export function loadGoogleMaps(apiKey: string): Promise<void> {
   return new Promise((resolve, reject) => {
-    // Ya cargado
     if (window.google?.maps) return resolve();
 
-    // Evitar duplicado
     const existingScript = document.querySelector<HTMLScriptElement>(
       'script[src*="maps.googleapis.com/maps/api/js"]'
     );
@@ -17,7 +15,6 @@ export function loadGoogleMaps(apiKey: string): Promise<void> {
       return;
     }
 
-    // Crear script con librería marker
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places,marker`;
     script.async = true;
