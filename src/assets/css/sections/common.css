@@ -1,6 +1,6 @@
 /* Base section */
 section {
-  padding: 120px 5%;
+  padding: 90px 5%;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
@@ -10,10 +10,10 @@ section {
 /* Section title */
 .section-title {
   font-family: var(--font-heading);
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: var(--black);
+  color: var(--pure-white);
   text-align: left;
   position: relative;
   display: inline-block;
@@ -24,28 +24,28 @@ section {
   position: absolute;
   bottom: -12px;
   left: 0;
-  width: 80px;
-  height: 3px;
-  background: var(--primary);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), transparent);
 }
 
 /* Section subtitle */
 .section-subtitle {
-  font-size: 1.2rem;
-  color: var(--gray);
-  margin-bottom: 72px;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 64px;
   max-width: 650px;
-  line-height: 1.8;
+  line-height: 1.7;
   font-weight: 300;
 }
 
 /* Responsive */
 @media (max-width: 968px) {
   .section-title {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
   section {
-    padding: 80px 5%;
+    padding: 70px 5%;
   }
 }
 
@@ -55,9 +55,10 @@ section {
   }
   .section-subtitle {
     font-size: 1rem;
+    margin-bottom: 48px;
   }
   section {
-    padding: 64px 5%;
+    padding: 56px 5%;
   }
 }
 

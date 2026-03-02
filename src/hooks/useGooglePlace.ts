@@ -27,7 +27,7 @@ export interface PlaceData {
 interface UseGooglePlaceProps {
   apiKey: string;
   placeId: string;
-  enabled?: boolean; // Control para activar/desactivar el fetch
+  enabled?: boolean;
 }
 
 export const useGooglePlace = ({ apiKey, placeId, enabled = true }: UseGooglePlaceProps) => {
@@ -38,7 +38,6 @@ export const useGooglePlace = ({ apiKey, placeId, enabled = true }: UseGooglePla
   const fetchedRef = useRef(false);
 
   useEffect(() => {
-    // Si enabled es false, no hacer nada
     if (!enabled) {
       return;
     }
@@ -72,18 +71,16 @@ export const useGooglePlace = ({ apiKey, placeId, enabled = true }: UseGooglePla
           ],
         });
 
-        // Mapeo manual para evitar errores de tipos y inconsistencias de la API
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const rawReviews = (place.reviews as any[]) || [];
-        
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const cleanReviews: Review[] = rawReviews.map((r: any) => {
-            // La API de JS a veces devuelve 'photoURI' y la REST 'photoUri'
             const auth = r.authorAttribution || {};
+            const photo = auth.photoURI || auth.photoUri || "";
             return {
                 authorAttribution: {
                     displayName: auth.displayName || "Usuario",
-                    photoUri: auth.photoURI || auth.photoUri || "", 
+                    photoUri: photo,
                 },
                 rating: r.rating,
                 relativePublishTimeDescription: r.relativePublishTimeDescription,

@@ -15,7 +15,6 @@ export default defineConfig({
           vendor: [
             'react',
             'react-dom',
-            'react-router-dom',
           ],
           // AOS separado (se carga lazy)
           aos: ['aos'],
@@ -51,10 +50,8 @@ export default defineConfig({
     include: [
       'react',
       'react-dom',
-      'react-router-dom',
       'aos',
       '@googlemaps/js-api-loader',
-      '@supabase/supabase-js',
     ],
   },
   

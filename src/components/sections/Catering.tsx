@@ -11,21 +11,28 @@ export const Catering = () => {
       </p>
       <div className="catering-grid">
         {SITE_CONFIG.catering.map((item, index) => (
-          <div
+          <article
             key={index}
             className={`catering-card ${item.destacado ? 'destacado' : ''}`}
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            <div
-              className="catering-image"
-              style={{ '--catering-image': `url('${item.imagen}')` } as React.CSSProperties}
-            >
+            <div className="catering-image">
+              <img
+                src={item.imagen}
+                alt={item.titulo}
+                width="600"
+                height="240"
+                loading="lazy"
+              />
               {item.destacado && (
                 <div className="catering-badge">Especialidad</div>
               )}
             </div>
-          </div>
+            <div className="catering-content">
+              <h3>{item.titulo}</h3>
+            </div>
+          </article>
         ))}
       </div>
     </section>

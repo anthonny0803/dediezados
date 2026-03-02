@@ -4,10 +4,8 @@ import { Sidenav } from './components/layout/Sidenav';
 import { Hero } from './components/sections/Hero';
 import { Services } from './components/sections/Services';
 
-// Importamos el hook
 import { useGooglePlace } from './hooks/useGooglePlace';
 
-// Lazy load de secciones
 const Catering = lazy(() => import('./components/sections/Catering').then(m => ({ default: m.Catering })));
 const Extras = lazy(() => import('./components/sections/Extras').then(m => ({ default: m.Extras })));
 const Gallery = lazy(() => import('./components/sections/Gallery').then(m => ({ default: m.Gallery })));
@@ -16,7 +14,6 @@ const Location = lazy(() => import('./components/sections/Location').then(m => (
 const Reviews = lazy(() => import('./components/sections/Reviews').then(m => ({ default: m.Reviews })));
 const Footer = lazy(() => import('./components/layout/Footer').then(m => ({ default: m.Footer })));
 
-// Loader simple
 const SectionLoader = () => (
   <div style={{ 
     minHeight: '300px', 
@@ -36,17 +33,14 @@ const SectionLoader = () => (
 );
 
 function App() {
-  // Control para activar la carga de Google Place
   const [shouldLoadGooglePlace, setShouldLoadGooglePlace] = useState(false);
 
-  // Hook con control de activación
   const { placeData, loading } = useGooglePlace({
     apiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
     placeId: import.meta.env.VITE_GOOGLE_PLACE_ID,
     enabled: shouldLoadGooglePlace, // Solo ejecuta cuando sea true
   });
 
-  // Intersection Observer para detectar cuando Location está cerca
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -58,11 +52,10 @@ function App() {
         });
       },
       {
-        rootMargin: '300px', // Activa 300px antes de que Location entre al viewport
+        rootMargin: '300px',
       }
     );
 
-    // Esperar a que el DOM esté listo
     const timer = setTimeout(() => {
       const locationSection = document.getElementById('location');
       if (locationSection) {
@@ -76,7 +69,6 @@ function App() {
     };
   }, []);
 
-  // Lazy load de AOS
   useEffect(() => {
     let loaded = false;
     
