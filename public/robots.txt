@@ -1,8 +1,37 @@
-# Robots.txt para De Diez a Dos
+# Robots.txt - De Diez a Dos
 # https://dediezados.com
 
 User-agent: *
 Allow: /
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.avif$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.svg$
+
+# Verificación Google Search Console
+Allow: /google39aec0de089fa458.html
+
+# Bloquear rutas técnicas
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.json$
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
 
 # Sitemap
 Sitemap: https://dediezados.com/sitemap.xml
+
+# Host preferido
+Host: dediezados.com
