@@ -1,8 +1,7 @@
-import { lazy, Suspense } from "react";
-import '../../assets/css/sections/location.css';
-import { PlaceData } from "../../hooks/useGooglePlace";
+'use client';
 
-const GoogleMapsLazy = lazy(() => import('../widgets/GoogleMaps').then(m => ({ default: m.GoogleMaps })));
+import { GoogleMaps } from '@/components/widgets/GoogleMaps';
+import type { PlaceData } from '@/hooks/useGooglePlace';
 
 interface LocationProps {
   placeData: PlaceData | null;
@@ -17,11 +16,9 @@ export const Location = ({ placeData }: LocationProps) => {
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
         Encuéntranos en el corazón de Madrid
       </p>
-      <Suspense fallback={<div className="location-loader">Cargando mapa...</div>}>
-        <div data-aos="fade-up" data-aos-delay="200">
-          <GoogleMapsLazy placeData={placeData} />
-        </div>
-      </Suspense>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <GoogleMaps placeData={placeData} />
+      </div>
     </section>
   );
 };

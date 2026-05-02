@@ -1,10 +1,12 @@
+'use client';
+
 import { useState, type FormEvent } from "react";
-import { SITE_CONFIG } from "../../config/siteConfig";
+import { siteConfig } from "@/config/site.config";
 import {
   sendContactForm,
   validateForm,
   type ContactFormData,
-} from "../../services/contactService";
+} from "@/services/contact.service";
 
 export const Contact = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -371,9 +373,9 @@ export const Contact = () => {
             </div>
             <div>
               <strong>Teléfono</strong>
-              <span>{SITE_CONFIG.contacto.telefono}</span>
+              <span>{siteConfig.contact.phone}</span>
               <span className="contact-info-text">
-                {SITE_CONFIG.contacto.telefono2}
+                {siteConfig.contact.secondaryPhone}
               </span>
             </div>
           </div>
@@ -384,9 +386,9 @@ export const Contact = () => {
             </div>
             <div>
               <strong>Correo</strong>
-              <span>{SITE_CONFIG.contacto.email}</span>
+              <span>{siteConfig.contact.email}</span>
               <span className="contact-info-text">
-                {SITE_CONFIG.contacto.email2}
+                {siteConfig.contact.secondaryEmail}
               </span>
             </div>
           </div>
@@ -397,7 +399,7 @@ export const Contact = () => {
             </div>
             <div>
               <strong>Ubicación</strong>
-              <span>{SITE_CONFIG.contacto.direccion}</span>
+              <span>{siteConfig.contact.address}</span>
             </div>
           </div>
 
@@ -407,7 +409,7 @@ export const Contact = () => {
             </div>
             <div>
               <strong>Horario</strong>
-              <span>{SITE_CONFIG.contacto.horario}</span>
+              <span>{siteConfig.contact.schedule}</span>
             </div>
           </div>
         </div>

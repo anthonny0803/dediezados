@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from "react";
 
 export const Navbar = () => {
@@ -16,6 +18,7 @@ export const Navbar = () => {
     <>
       {/* LOGO FIJO INDEPENDIENTE */}
       <div className={`logo-fixed ${isScrolled ? "hide" : ""}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png"
           alt="Logo De Diez a Dos"

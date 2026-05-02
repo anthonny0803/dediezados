@@ -1,6 +1,8 @@
-import { useEffect, useRef } from "react";
-import { SITE_CONFIG } from "../../config/siteConfig";
-import { PlaceData } from "../../hooks/useGooglePlace";
+'use client';
+
+import { useEffect, useRef } from 'react';
+import { siteConfig } from '@/config/site.config';
+import type { PlaceData } from '@/hooks/useGooglePlace';
 
 interface GoogleMapsProps {
   placeData: PlaceData | null;
@@ -16,25 +18,24 @@ export const GoogleMaps = ({ placeData }: GoogleMapsProps) => {
 
     const initMap = async () => {
       if (!mapRef.current) return;
-
       if (mapInstanceRef.current) return;
 
       try {
-        const { Map } = (await google.maps.importLibrary("maps")) as google.maps.MapsLibrary;
-        const { AdvancedMarkerElement } = (await google.maps.importLibrary("marker")) as google.maps.MarkerLibrary;
+        const { Map } = (await google.maps.importLibrary('maps')) as google.maps.MapsLibrary;
+        const { AdvancedMarkerElement } = (await google.maps.importLibrary('marker')) as google.maps.MarkerLibrary;
 
-        const location = placeData?.location 
+        const location = placeData?.location
           ? { lat: placeData.location.lat, lng: placeData.location.lng }
-          : SITE_CONFIG.contacto.ubicacion;
+          : siteConfig.contact.location;
 
         const map = new Map(mapRef.current, {
           center: location,
-          zoom: SITE_CONFIG.contacto.ubicacion.zoom,
-          mapId: "DEMO_MAP_ID",
+          zoom: siteConfig.contact.location.zoom,
+          mapId: 'DEMO_MAP_ID',
           disableDefaultUI: false,
           streetViewControl: false,
           mapTypeControl: false,
-          gestureHandling: "cooperative"
+          gestureHandling: 'cooperative',
         });
 
         mapInstanceRef.current = map;
@@ -42,21 +43,21 @@ export const GoogleMaps = ({ placeData }: GoogleMapsProps) => {
         const marker = new AdvancedMarkerElement({
           position: location,
           map,
-          title: placeData?.displayName || SITE_CONFIG.empresa.nombre,
+          title: placeData?.displayName || siteConfig.brand.name,
         });
 
-        const nombre = placeData?.displayName || SITE_CONFIG.empresa.nombre;
-        const direccion = placeData?.formattedAddress || SITE_CONFIG.contacto.direccion;
-        const telefono = placeData?.nationalPhoneNumber || SITE_CONFIG.contacto.telefono;
-        
+        const name = placeData?.displayName || siteConfig.brand.name;
+        const address = placeData?.formattedAddress || siteConfig.contact.address;
+        const phone = placeData?.nationalPhoneNumber || siteConfig.contact.phone;
+
         const contentString = `
           <div style="padding: 6px; max-width: 210px; font-family: 'Poppins', sans-serif; color: #333;">
             <h3 style="margin:0 0 4px 0; font-size: 0.9rem; font-weight: 700; color: #000; line-height: 1.2;">
-              ${nombre}
+              ${name}
             </h3>
-            
+
             <p style="margin: 0 0 6px 0; font-size: 0.75rem; color: #555; line-height: 1.3;">
-              📍 ${direccion}
+              📍 ${address}
             </p>
 
             ${placeData?.rating ? `
@@ -68,40 +69,37 @@ export const GoogleMaps = ({ placeData }: GoogleMapsProps) => {
             ` : ''}
 
             <p style="margin: 0 0 8px 0; font-size: 0.8rem; color: #333; font-weight: 500;">
-              📞 ${telefono}
+              📞 ${phone}
             </p>
 
-            <a href="${placeData?.googleMapsUrl || `https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}" 
-               target="_blank" 
+            <a href="${placeData?.googleMapsUrl || `https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}"
+               target="_blank"
                style="display: block; width: 100%; text-align: center; padding: 6px 0; background: #3fb5a1; color: white; text-decoration: none; font-size: 0.8rem; font-weight: 600; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
               Cómo llegar
             </a>
           </div>
         `;
 
-        const infoWindow = new google.maps.InfoWindow({ 
-            content: contentString,
-            ariaLabel: nombre,
-            maxWidth: 230
+        const infoWindow = new google.maps.InfoWindow({
+          content: contentString,
+          ariaLabel: name,
+          maxWidth: 230,
         });
-        
+
         infoWindowRef.current = infoWindow;
 
-        marker.addListener("click", () => infoWindow.open(map, marker));
+        marker.addListener('click', () => infoWindow.open(map, marker));
 
         setTimeout(() => {
-            infoWindow.open(map, marker);
+          infoWindow.open(map, marker);
         }, 800);
-
       } catch (error) {
-        console.error("Error inicializando el mapa:", error);
+        console.error('Error inicializando el mapa:', error);
       }
     };
 
     initMap();
   }, [placeData]);
 
-  return (
-      <div ref={mapRef} className="map-container" />
-  );
+  return <div ref={mapRef} className="map-container" />;
 };

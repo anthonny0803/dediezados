@@ -1,9 +1,11 @@
+'use client';
+
 import { useState, useEffect } from 'react';
-import { SITE_CONFIG } from '../../config/siteConfig';
+import { siteConfig } from '@/config/site.config';
 
 export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slides = SITE_CONFIG.heroSlides;
+  const slides = siteConfig.heroSlides;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,20 +26,20 @@ export const Hero = () => {
           <div
             key={index}
             className={`carousel-item ${index === currentIndex ? 'active' : ''}`}
-            style={{ '--bg-image': `url('${slide.imagen}')` } as React.CSSProperties}
+            style={{ '--bg-image': `url('${slide.image}')` } as React.CSSProperties}
           >
             <div className="carousel-overlay">
               <div className="hero-content">
-                <h1>{slide.titulo}</h1>
-                <p>{slide.descripcion}</p>
+                <h1>{slide.title}</h1>
+                <p>{slide.description}</p>
                 <div className="hero-buttons">
-                  {slide.botones.map((btn, btnIndex) => (
+                  {slide.buttons.map((btn, btnIndex) => (
                     <a
                       key={btnIndex}
                       href={btn.link}
-                      className={`btn ${btn.tipo === 'outline' ? 'btn-outline' : ''}`}
+                      className={`btn ${btn.variant === 'outline' ? 'btn-outline' : ''}`}
                     >
-                      {btn.texto}
+                      {btn.text}
                     </a>
                   ))}
                 </div>

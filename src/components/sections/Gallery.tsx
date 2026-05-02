@@ -1,9 +1,11 @@
-import { useState, useRef, useEffect } from "react";
-import { SITE_CONFIG } from "../../config/siteConfig";
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
+import { siteConfig } from '@/config/site.config';
 
 export const Gallery = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
+  const [selectedImage, setSelectedImage] = useState('');
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -16,25 +18,25 @@ export const Gallery = () => {
 
   const closeModal = () => {
     setModalOpen(false);
-    setSelectedImage("");
+    setSelectedImage('');
   };
 
   useEffect(() => {
     if (modalOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     }
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
   }, [modalOpen]);
 
   const photos = [
-    ...SITE_CONFIG.gallery.photos,
-    ...SITE_CONFIG.gallery.photos,
-    ...SITE_CONFIG.gallery.photos,
+    ...siteConfig.gallery.photos,
+    ...siteConfig.gallery.photos,
+    ...siteConfig.gallery.photos,
   ];
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -75,11 +77,11 @@ export const Gallery = () => {
   };
 
   const scrollLeftBy = () => {
-    trackRef.current?.scrollBy({ left: -340, behavior: "smooth" });
+    trackRef.current?.scrollBy({ left: -340, behavior: 'smooth' });
   };
 
   const scrollRightBy = () => {
-    trackRef.current?.scrollBy({ left: 340, behavior: "smooth" });
+    trackRef.current?.scrollBy({ left: 340, behavior: 'smooth' });
   };
 
   return (
@@ -99,13 +101,13 @@ export const Gallery = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <button 
-            className="gallery-carousel-btn left" 
+          <button
+            className="gallery-carousel-btn left"
             onClick={scrollLeftBy}
             aria-label="Desplazar galería a la izquierda"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+              <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
             </svg>
           </button>
 
@@ -127,6 +129,7 @@ export const Gallery = () => {
                 onClick={() => { if (!isDragging) openModal(photo.url); }}
                 onDragStart={(e) => e.preventDefault()}
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={photo.url}
                   alt={photo.alt}
@@ -135,18 +138,18 @@ export const Gallery = () => {
                   loading="lazy"
                   draggable="false"
                 />
-                <div className="gallery-photo-label">{photo.sala}</div>
+                <div className="gallery-photo-label">{photo.room}</div>
               </div>
             ))}
           </div>
 
-          <button 
-            className="gallery-carousel-btn right" 
+          <button
+            className="gallery-carousel-btn right"
             onClick={scrollRightBy}
             aria-label="Desplazar galería a la derecha"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+              <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
             </svg>
           </button>
         </div>
@@ -157,6 +160,7 @@ export const Gallery = () => {
           <div className="modal-close" onClick={closeModal}>
             ×
           </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={selectedImage} alt="Imagen expandida" />
         </div>
       )}

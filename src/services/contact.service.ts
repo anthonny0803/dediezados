@@ -15,7 +15,7 @@ export interface ContactResponse {
   message: string;
 }
 
-const API_URL = "https://api.dediezados.com/contact.php";
+const API_URL = "/api/contact";
 
 export const sendContactForm = async (
   formData: ContactFormData

@@ -1,4 +1,4 @@
-import { SITE_CONFIG } from '../../config/siteConfig';
+import { siteConfig } from '@/config/site.config';
 
 export const Catering = () => {
   return (
@@ -10,27 +10,28 @@ export const Catering = () => {
         Disfruta de la maravillosa atención y trato personalizado que ofrecemos en cada evento. Nuestro equipo se dedica a hacer de tu ocasión especial un momento inolvidable, cuidando cada detalle para que tú y tus invitados se sientan como en casa.
       </p>
       <div className="catering-grid">
-        {SITE_CONFIG.catering.map((item, index) => (
+        {siteConfig.catering.map((item, index) => (
           <article
             key={index}
-            className={`catering-card ${item.destacado ? 'destacado' : ''}`}
+            className={`catering-card ${item.featured ? 'destacado' : ''}`}
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
             <div className="catering-image">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={item.imagen}
-                alt={item.titulo}
+                src={item.image}
+                alt={item.title}
                 width="600"
                 height="240"
                 loading="lazy"
               />
-              {item.destacado && (
+              {item.featured && (
                 <div className="catering-badge">Especialidad</div>
               )}
             </div>
             <div className="catering-content">
-              <h3>{item.titulo}</h3>
+              <h3>{item.title}</h3>
             </div>
           </article>
         ))}
