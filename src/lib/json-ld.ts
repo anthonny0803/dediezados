@@ -3,6 +3,14 @@ import { siteConfig } from '@/config/site.config';
 
 const localeToBcp47: Record<string, string> = {
   es: 'es-ES',
+  en: 'en-GB',
+  fr: 'fr-FR',
+  de: 'de-DE',
+  it: 'it-IT',
+  pt: 'pt-PT',
+  nl: 'nl-NL',
+  pl: 'pl-PL',
+  ru: 'ru-RU',
 };
 
 export function buildJsonLdGraph(locale: string) {
