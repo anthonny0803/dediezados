@@ -1,0 +1,108 @@
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+}
+
+.theme-toggle-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(var(--neutral-0-rgb), 0.12);
+  border-radius: var(--radius-pill);
+  color: var(--black);
+  cursor: pointer;
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+[data-theme='light'] .theme-toggle-trigger {
+  border: 1px solid rgba(var(--neutral-1000-rgb), 0.14);
+}
+
+.theme-toggle-trigger:hover {
+  background: var(--glass-card-hover);
+  border-color: rgba(var(--brand-teal-500-rgb), 0.4);
+  color: var(--primary);
+}
+
+.theme-toggle-trigger svg {
+  display: block;
+}
+
+.theme-toggle-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  background: var(--surface-1);
+  border: var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 4px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.theme-toggle-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--black);
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.theme-toggle-option:hover {
+  background: var(--glass-card-hover);
+  color: var(--primary);
+}
+
+.theme-toggle-option.is-active {
+  background: rgba(var(--brand-teal-500-rgb), 0.12);
+  color: var(--primary);
+}
+
+.theme-toggle-option-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.theme-toggle-option-label {
+  font-weight: 500;
+}
+
+/* Sidenav variant: opens upward to avoid clipping */
+.theme-toggle--sidenav .theme-toggle-menu {
+  top: auto;
+  bottom: calc(100% + 8px);
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* Side-by-side layout when theme toggle and locale switcher share a row */
+.sidenav-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+}

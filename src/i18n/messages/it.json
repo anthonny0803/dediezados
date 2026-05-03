@@ -15,6 +15,12 @@
     "reviews": "Recensioni",
     "about": "Chi siamo"
   },
+  "theme": {
+    "toggleLabel": "Cambia tema",
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "system": "Sistema"
+  },
   "hero": {
     "carouselLabel": "Diapositive del carosello",
     "slideLabel": "Vai alla diapositiva {index}",

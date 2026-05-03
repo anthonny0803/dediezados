@@ -15,6 +15,12 @@
     "reviews": "Bewertungen",
     "about": "Über uns"
   },
+  "theme": {
+    "toggleLabel": "Theme wechseln",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
   "hero": {
     "carouselLabel": "Karussell-Folien",
     "slideLabel": "Zu Folie {index} gehen",

@@ -15,6 +15,12 @@
     "reviews": "Reseñas",
     "about": "Acerca de"
   },
+  "theme": {
+    "toggleLabel": "Cambiar tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
   "hero": {
     "carouselLabel": "Slides del carrusel",
     "slideLabel": "Ir al slide {index}",

@@ -15,6 +15,12 @@
     "reviews": "Recensies",
     "about": "Over ons"
   },
+  "theme": {
+    "toggleLabel": "Thema wisselen",
+    "light": "Licht",
+    "dark": "Donker",
+    "system": "Systeem"
+  },
   "hero": {
     "carouselLabel": "Carrouseldia's",
     "slideLabel": "Ga naar dia {index}",

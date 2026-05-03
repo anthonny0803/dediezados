@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 import { LocaleSwitcher } from '@/components/ui/LocaleSwitcher';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export const Sidenav = () => {
   const t = useTranslations('nav');
@@ -94,7 +95,8 @@ export const Sidenav = () => {
           <li><a href="#footer" onClick={handleClose}>{t('about')}</a></li>
         </ul>
 
-        <div className="sidenav-locale-switcher">
+        <div className="sidenav-controls">
+          <ThemeToggle variant="sidenav" />
           <LocaleSwitcher variant="sidenav" />
         </div>
 

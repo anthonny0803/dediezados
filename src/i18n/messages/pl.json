@@ -15,6 +15,12 @@
     "reviews": "Opinie",
     "about": "O nas"
   },
+  "theme": {
+    "toggleLabel": "Zmień motyw",
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "system": "Systemowy"
+  },
   "hero": {
     "carouselLabel": "Slajdy karuzeli",
     "slideLabel": "Przejdź do slajdu {index}",

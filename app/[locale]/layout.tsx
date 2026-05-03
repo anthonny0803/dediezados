@@ -10,6 +10,7 @@ import { seoConfig } from '@/config/seo.config';
 import { buildMetadata } from '@/lib/metadata';
 import { JsonLd } from '@/components/providers/JsonLd';
 import { AosProvider } from '@/components/providers/AosProvider';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import '@/styles/main.css';
 
 const playfair = Playfair_Display({
@@ -53,7 +54,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={playfair.variable}>
+    <html lang={locale} className={playfair.variable} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
@@ -66,23 +67,25 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         <JsonLd locale={locale} />
       </head>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-        <AosProvider />
-        <SpeedInsights />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${seoConfig.analytics.gaId}`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${seoConfig.analytics.gaId}');
-          `}
-        </Script>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+          <AosProvider />
+          <SpeedInsights />
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${seoConfig.analytics.gaId}`}
+            strategy="afterInteractive"
+          />
+          <Script id="ga-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${seoConfig.analytics.gaId}');
+            `}
+          </Script>
+        </ThemeProvider>
       </body>
     </html>
   );

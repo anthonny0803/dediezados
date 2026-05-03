@@ -15,6 +15,12 @@
     "reviews": "Reviews",
     "about": "About"
   },
+  "theme": {
+    "toggleLabel": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
   "hero": {
     "carouselLabel": "Carousel slides",
     "slideLabel": "Go to slide {index}",
