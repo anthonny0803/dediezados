@@ -5,6 +5,7 @@
 
 /* COMPONENTS */
 @import url('./components/buttons.css');
+@import url('./components/locale-switcher.css');
 
 /* LAYOUT */
 @import url('./layout/navbar.css');

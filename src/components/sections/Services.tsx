@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 
 const SERVICE_ICONS = [
@@ -9,17 +10,26 @@ const SERVICE_ICONS = [
   <svg key="sparkles" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3Z" /></svg>,
 ];
 
+interface ServiceItem {
+  title: string;
+  description: string;
+}
+
 export const Services = () => {
+  const t = useTranslations('services');
+  const items = t.raw('items') as ServiceItem[];
+  const services = items.slice(0, siteConfig.servicesCount);
+
   return (
     <section id="services">
       <h2 className="section-title" data-aos="fade-up">
-        Servicios Profesionales
+        {t('title')}
       </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-        Paquetes completos que incluyen todo lo necesario para tu evento
+        {t('subtitle')}
       </p>
       <div className="services-grid">
-        {siteConfig.services.map((service, index) => (
+        {services.map((service, index) => (
           <div
             key={index}
             className="card service-card"

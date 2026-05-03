@@ -1,27 +1,34 @@
 'use client';
 
-import { useState, type FormEvent } from "react";
-import { siteConfig } from "@/config/site.config";
+import { useState, type FormEvent } from 'react';
+import { useTranslations } from 'next-intl';
+import { siteConfig } from '@/config/site.config';
 import {
   sendContactForm,
   validateForm,
   type ContactFormData,
-} from "@/services/contact.service";
+} from '@/services/contact.service';
 
 export const Contact = () => {
+  const t = useTranslations('contact');
+  const tForm = useTranslations('contact.form');
+  const tValidation = useTranslations('contact.validation');
+  const tFields = useTranslations('contact.form.fields');
+  const tInfo = useTranslations('contact.info');
+
   const [formData, setFormData] = useState<ContactFormData>({
-    nombre: "",
-    email: "",
-    telefono: "",
-    evento: "",
-    fechaEvento: "",
-    numInvitados: "",
-    mediaEdad: "",
-    observaciones: "",
-    mensaje: "",
+    nombre: '',
+    email: '',
+    telefono: '',
+    evento: '',
+    fechaEvento: '',
+    numInvitados: '',
+    mediaEdad: '',
+    observaciones: '',
+    mensaje: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState({ type: "", text: "" });
+  const [message, setMessage] = useState({ type: '', text: '' });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -32,24 +39,24 @@ export const Contact = () => {
     });
 
     if (message.text) {
-      setMessage({ type: "", text: "" });
+      setMessage({ type: '', text: '' });
     }
   };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    const error = validateForm(formData);
-    if (error) {
-      setMessage({ type: "error", text: error });
+    const errorKey = validateForm(formData);
+    if (errorKey) {
+      setMessage({ type: 'error', text: tValidation(errorKey) });
       return;
     }
 
     setIsSubmitting(true);
-    setMessage({ type: "", text: "" });
+    setMessage({ type: '', text: '' });
 
     try {
-      const [year, month, day] = formData.fechaEvento.split("-");
+      const [year, month, day] = formData.fechaEvento.split('-');
       const fechaFormateada = `${day}/${month}/${year}`;
 
       const normalizedData: ContactFormData = {
@@ -64,38 +71,35 @@ export const Contact = () => {
         email: formData.email.toLowerCase(),
       };
 
-      const response = await sendContactForm(normalizedData);
+      const response = await sendContactForm(
+        normalizedData,
+        tValidation('noObservations')
+      );
 
       if (response.success) {
-        setMessage({
-          type: "success",
-          text: "¡Mensaje enviado! En breve nos pondremos en contacto contigo.",
-        });
+        setMessage({ type: 'success', text: tForm('success') });
         setFormData({
-          nombre: "",
-          email: "",
-          telefono: "",
-          evento: "",
-          fechaEvento: "",
-          numInvitados: "",
-          mediaEdad: "",
-          observaciones: "",
-          mensaje: "",
+          nombre: '',
+          email: '',
+          telefono: '',
+          evento: '',
+          fechaEvento: '',
+          numInvitados: '',
+          mediaEdad: '',
+          observaciones: '',
+          mensaje: '',
         });
       } else {
         setMessage({
-          type: "error",
-          text: response.message || "Error al enviar el mensaje.",
+          type: 'error',
+          text: response.message || tForm('errorDefault'),
         });
       }
     } catch (error) {
-      console.error("Error al enviar formulario:", error);
+      console.error('Error al enviar formulario:', error);
       setMessage({
-        type: "error",
-        text:
-          error instanceof Error
-            ? error.message
-            : "Error de conexión. Por favor, verifica tu conexión e intenta de nuevo.",
+        type: 'error',
+        text: error instanceof Error ? error.message : tForm('errorConnection'),
       });
     } finally {
       setIsSubmitting(false);
@@ -120,33 +124,33 @@ export const Contact = () => {
   const numInvitadosNumber = Number(numInvitadosTrimmed);
 
   const isValidNumInvitados =
-    numInvitadosTrimmed.length >= 2 && // mínimo 2 caracteres
-    numInvitadosTrimmed.length <= 3 && // máximo 3 caracteres
-    /^\d+$/.test(numInvitadosTrimmed) && // solo dígitos
-    !Number.isNaN(numInvitadosNumber) && // es un número
-    numInvitadosNumber >= 10 && // mínimo 10
-    numInvitadosNumber <= 100; // máximo 100
+    numInvitadosTrimmed.length >= 2 &&
+    numInvitadosTrimmed.length <= 3 &&
+    /^\d+$/.test(numInvitadosTrimmed) &&
+    !Number.isNaN(numInvitadosNumber) &&
+    numInvitadosNumber >= 10 &&
+    numInvitadosNumber <= 100;
 
   const isValidMensaje =
     formData.mensaje.length >= 10 && formData.mensaje.length <= 200;
 
   const getBorderClass = (value: string, isValid: boolean) => {
-    if (value === "") return "neutral";
-    return isValid ? "valid" : "invalid";
+    if (value === '') return 'neutral';
+    return isValid ? 'valid' : 'invalid';
   };
 
   const getCounterClass = (length: number, isValid: boolean) => {
-    if (length === 0) return "neutral";
-    return isValid ? "valid" : "invalid";
+    if (length === 0) return 'neutral';
+    return isValid ? 'valid' : 'invalid';
   };
 
   return (
     <section id="contact">
       <h2 className="section-title" data-aos="fade-up">
-        Sin Compromiso hablemos de tu Evento
+        {t('title')}
       </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-        Cuéntanos tu visión y te ayudamos a hacerla realidad
+        {t('subtitle')}
       </p>
 
       <div className="contact-container">
@@ -154,9 +158,9 @@ export const Contact = () => {
           <form onSubmit={handleSubmit}>
             <div className="input-group">
               <span className="form-section-title">
-                Datos de contacto
+                {tForm('sectionTitle')}
                 <small className="form-helper">
-                  Campos obligatorios <span className="required">*</span>
+                  {tForm('helperRequired')} <span className="required">*</span>
                 </small>
               </span>
             </div>
@@ -166,7 +170,7 @@ export const Contact = () => {
             <div className="form-row">
               <div className="input-group">
                 <label htmlFor="nombre">
-                  Nombre <span className="required">*</span>
+                  {tFields('nombre.label')} <span className="required">*</span>
                 </label>
                 <input
                   type="text"
@@ -176,7 +180,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  placeholder="Juan Pérez"
+                  placeholder={tFields('nombre.placeholder')}
                   className={`input-capitalize ${getBorderClass(
                     formData.nombre,
                     isValidNombre
@@ -186,7 +190,7 @@ export const Contact = () => {
 
               <div className="input-group">
                 <label htmlFor="email">
-                  Correo <span className="required">*</span>
+                  {tFields('email.label')} <span className="required">*</span>
                 </label>
                 <input
                   type="email"
@@ -197,7 +201,7 @@ export const Contact = () => {
                   required
                   autoComplete="true"
                   disabled={isSubmitting}
-                  placeholder="juan@example.com"
+                  placeholder={tFields('email.placeholder')}
                   className={`input-lowercase ${getBorderClass(
                     formData.email,
                     isValidEmail
@@ -209,7 +213,7 @@ export const Contact = () => {
             <div className="form-row">
               <div className="input-group">
                 <label htmlFor="telefono">
-                  Teléfono <span className="required">*</span>
+                  {tFields('telefono.label')} <span className="required">*</span>
                 </label>
                 <input
                   type="tel"
@@ -219,7 +223,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  placeholder="+34 *** *** ***"
+                  placeholder={tFields('telefono.placeholder')}
                   pattern="[+]{0,1}[0-9]{9,15}"
                   className={getBorderClass(formData.telefono, isValidTelefono)}
                 />
@@ -227,7 +231,7 @@ export const Contact = () => {
 
               <div className="input-group">
                 <label htmlFor="evento">
-                  Tipo de Evento <span className="required">*</span>
+                  {tFields('evento.label')} <span className="required">*</span>
                 </label>
                 <input
                   type="text"
@@ -237,7 +241,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  placeholder="Boda, Corporativo, Cumpleaños"
+                  placeholder={tFields('evento.placeholder')}
                   className={`input-capitalize ${getBorderClass(
                     formData.evento,
                     isValidEvento
@@ -249,7 +253,7 @@ export const Contact = () => {
             <div className="form-row">
               <div className="input-group">
                 <label htmlFor="fechaEvento">
-                  Fecha de Evento <span className="required">*</span>
+                  {tFields('fechaEvento.label')} <span className="required">*</span>
                 </label>
                 <input
                   type="date"
@@ -259,7 +263,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  placeholder="DD/MM/AAAA"
+                  placeholder={tFields('fechaEvento.placeholder')}
                   className={getBorderClass(
                     formData.fechaEvento,
                     isValidFechaEvento
@@ -269,7 +273,7 @@ export const Contact = () => {
 
               <div className="input-group">
                 <label htmlFor="numInvitados">
-                  Número de Invitados <span className="required">*</span>
+                  {tFields('numInvitados.label')} <span className="required">*</span>
                 </label>
                 <input
                   type="number"
@@ -279,7 +283,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  placeholder="50"
+                  placeholder={tFields('numInvitados.placeholder')}
                   className={getBorderClass(
                     formData.numInvitados,
                     isValidNumInvitados
@@ -291,7 +295,7 @@ export const Contact = () => {
             <div className="form-row">
               <div className="input-group">
                 <label htmlFor="mediaEdad">
-                  Media de edad <span className="required">*</span>
+                  {tFields('mediaEdad.label')} <span className="required">*</span>
                 </label>
                 <input
                   type="text"
@@ -301,14 +305,15 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  placeholder="0-75 años"
+                  placeholder={tFields('mediaEdad.placeholder')}
                   className={getBorderClass(formData.mediaEdad, isValidMediaEdad)}
                 />
               </div>
 
               <div className="input-group">
                 <label htmlFor="observaciones">
-                  Observaciones <span className="form-optional">Opcional</span>
+                  {tFields('observaciones.label')}{' '}
+                  <span className="form-optional">{tForm('optional')}</span>
                 </label>
                 <input
                   type="text"
@@ -317,7 +322,7 @@ export const Contact = () => {
                   value={formData.observaciones}
                   onChange={handleChange}
                   disabled={isSubmitting}
-                  placeholder="Detalles adicionales sobre el evento"
+                  placeholder={tFields('observaciones.placeholder')}
                 />
               </div>
             </div>
@@ -325,7 +330,7 @@ export const Contact = () => {
             <div className="input-group">
               <div className="textarea-wrapper">
                 <label htmlFor="mensaje">
-                  Mensaje <span className="required">*</span>
+                  {tFields('mensaje.label')} <span className="required">*</span>
                 </label>
                 <textarea
                   id="mensaje"
@@ -336,7 +341,7 @@ export const Contact = () => {
                   minLength={10}
                   maxLength={200}
                   disabled={isSubmitting}
-                  placeholder="Cuéntanos sobre tu evento..."
+                  placeholder={tFields('mensaje.placeholder')}
                   className={getBorderClass(formData.mensaje, isValidMensaje)}
                 />
                 <small
@@ -345,13 +350,13 @@ export const Contact = () => {
                     isValidMensaje
                   )}`}
                 >
-                  Min:10 {formData.mensaje.length}/200
+                  {tForm('charCounter', { current: formData.mensaje.length })}
                 </small>
               </div>
             </div>
 
             <button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Enviando..." : "Enviar Solicitud"}
+              {isSubmitting ? tForm('submitting') : tForm('submit')}
             </button>
 
             {message.text && (
@@ -372,7 +377,7 @@ export const Contact = () => {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" /></svg>
             </div>
             <div>
-              <strong>Teléfono</strong>
+              <strong>{tInfo('phoneLabel')}</strong>
               <span>{siteConfig.contact.phone}</span>
               <span className="contact-info-text">
                 {siteConfig.contact.secondaryPhone}
@@ -385,7 +390,7 @@ export const Contact = () => {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
             </div>
             <div>
-              <strong>Correo</strong>
+              <strong>{tInfo('emailLabel')}</strong>
               <span>{siteConfig.contact.email}</span>
               <span className="contact-info-text">
                 {siteConfig.contact.secondaryEmail}
@@ -398,7 +403,7 @@ export const Contact = () => {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
             </div>
             <div>
-              <strong>Ubicación</strong>
+              <strong>{tInfo('addressLabel')}</strong>
               <span>{siteConfig.contact.address}</span>
             </div>
           </div>
@@ -408,8 +413,8 @@ export const Contact = () => {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
             </div>
             <div>
-              <strong>Horario</strong>
-              <span>{siteConfig.contact.schedule}</span>
+              <strong>{tInfo('scheduleLabel')}</strong>
+              <span>{tInfo('schedule')}</span>
             </div>
           </div>
         </div>

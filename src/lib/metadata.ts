@@ -5,6 +5,14 @@ import { routing } from '@/i18n/routing';
 
 const localeToOgLocale: Record<string, string> = {
   es: 'es_ES',
+  en: 'en_GB',
+  fr: 'fr_FR',
+  de: 'de_DE',
+  it: 'it_IT',
+  pt: 'pt_PT',
+  nl: 'nl_NL',
+  pl: 'pl_PL',
+  ru: 'ru_RU',
 };
 
 export function buildMetadata(locale: string): Metadata {
@@ -15,9 +23,15 @@ export function buildMetadata(locale: string): Metadata {
   const siteUrl = seoConfig.siteUrl;
   const canonical = `${siteUrl}/${locale}`;
 
-  const languages = Object.fromEntries(
+  const languages: Record<string, string> = Object.fromEntries(
     routing.locales.map((loc) => [loc, `${siteUrl}/${loc}`])
   );
+  languages['x-default'] = `${siteUrl}/${routing.defaultLocale}`;
+
+  const currentOgLocale = localeToOgLocale[locale] ?? locale;
+  const alternateOgLocales = routing.locales
+    .filter((loc) => loc !== locale)
+    .map((loc) => localeToOgLocale[loc] ?? loc);
 
   return {
     metadataBase: new URL(siteUrl),
@@ -45,7 +59,8 @@ export function buildMetadata(locale: string): Metadata {
       siteName: seoConfig.organization.name,
       title: localeData.ogTitle,
       description: localeData.ogDescription,
-      locale: localeToOgLocale[locale] ?? locale,
+      locale: currentOgLocale,
+      alternateLocale: alternateOgLocales,
       images: [
         {
           url: seoConfig.assets.defaultOgImage.url,

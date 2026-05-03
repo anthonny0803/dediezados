@@ -1,15 +1,20 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
+import { siteConfig } from '@/config/site.config';
+import { LocaleSwitcher } from '@/components/ui/LocaleSwitcher';
 
 export const Sidenav = () => {
+  const t = useTranslations('nav');
+  const tRoot = useTranslations();
   const [isOpen, setIsOpen] = useState(false);
   const [isInHero, setIsInHero] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById("hero");
+      const heroSection = document.getElementById('hero');
       const isMobile = window.innerWidth <= 1024;
       if (heroSection && !isMobile) {
         const heroBottom = heroSection.offsetHeight;
@@ -20,13 +25,13 @@ export const Sidenav = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     handleScroll();
-    window.addEventListener("resize", handleScroll);
+    window.addEventListener('resize', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
     };
   }, []);
 
@@ -35,7 +40,7 @@ export const Sidenav = () => {
       handleClose();
     } else {
       setIsOpen(true);
-      document.body.classList.add("no-scroll");
+      document.body.classList.add('no-scroll');
     }
   };
 
@@ -44,7 +49,7 @@ export const Sidenav = () => {
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
-      document.body.classList.remove("no-scroll");
+      document.body.classList.remove('no-scroll');
     }, 400);
   };
 
@@ -52,24 +57,24 @@ export const Sidenav = () => {
     <>
       {/* Overlay */}
       <div
-        className={`sidenav-overlay ${isOpen ? "active" : ""}`}
+        className={`sidenav-overlay ${isOpen ? 'active' : ''}`}
         onClick={handleClose}
       />
 
       {/* Sidenav */}
       <div
-        className={`sidenav ${isOpen ? "open" : ""} ${
-          isClosing ? "closing" : ""
+        className={`sidenav ${isOpen ? 'open' : ''} ${
+          isClosing ? 'closing' : ''
         }`}
       >
         {/* Logo mobile - top */}
         <div className="sidenav-logo sidenav-logo-top">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png"
-            alt="De Diez a Dos Logo"
-            width="143"
-            height="95"
+            src={siteConfig.logo.url}
+            alt={tRoot('logoAlt')}
+            width={siteConfig.logo.width}
+            height={siteConfig.logo.height}
             loading="lazy"
           />
         </div>
@@ -78,61 +83,29 @@ export const Sidenav = () => {
         <div className="sidenav-spacer"></div>
 
         <ul>
-          <li>
-            <a href="#hero" onClick={handleClose}>
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a href="#services" onClick={handleClose}>
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a href="#catering" onClick={handleClose}>
-              Catering
-            </a>
-          </li>
-          <li>
-            <a href="#extras" onClick={handleClose}>
-              Extras
-            </a>
-          </li>
-          <li>
-            <a href="#gallery" onClick={handleClose}>
-              Salas
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={handleClose}>
-              Contacto
-            </a>
-          </li>
-          <li>
-            <a href="#location" onClick={handleClose}>
-              Ubicación
-            </a>
-          </li>
-          <li>
-            <a href="#reviews" onClick={handleClose}>
-              Reseñas
-            </a>
-          </li>
-          <li>
-            <a href="#footer" onClick={handleClose}>
-              Acerca de
-            </a>
-          </li>
+          <li><a href="#hero" onClick={handleClose}>{t('home')}</a></li>
+          <li><a href="#services" onClick={handleClose}>{t('services')}</a></li>
+          <li><a href="#catering" onClick={handleClose}>{t('catering')}</a></li>
+          <li><a href="#extras" onClick={handleClose}>{t('extras')}</a></li>
+          <li><a href="#gallery" onClick={handleClose}>{t('gallery')}</a></li>
+          <li><a href="#contact" onClick={handleClose}>{t('contact')}</a></li>
+          <li><a href="#location" onClick={handleClose}>{t('location')}</a></li>
+          <li><a href="#reviews" onClick={handleClose}>{t('reviews')}</a></li>
+          <li><a href="#footer" onClick={handleClose}>{t('about')}</a></li>
         </ul>
+
+        <div className="sidenav-locale-switcher">
+          <LocaleSwitcher variant="sidenav" />
+        </div>
 
         {/* Logo desktop - bottom */}
         <div className="sidenav-logo sidenav-logo-bottom">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png"
-            alt="De Diez a Dos Logo"
-            width="143"
-            height="95"
+            src={siteConfig.logo.url}
+            alt={tRoot('logoAlt')}
+            width={siteConfig.logo.width}
+            height={siteConfig.logo.height}
             loading="lazy"
           />
         </div>
@@ -140,8 +113,8 @@ export const Sidenav = () => {
 
       {/* Toggle button */}
       <div
-        className={`menu-toggle ${isInHero ? "hide" : "show"} ${
-          isOpen ? "open" : ""
+        className={`menu-toggle ${isInHero ? 'hide' : 'show'} ${
+          isOpen ? 'open' : ''
         }`}
         onClick={toggleSidenav}
       >

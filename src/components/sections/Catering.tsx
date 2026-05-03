@@ -1,16 +1,29 @@
+import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 
+interface CateringItemContent {
+  title: string;
+  description: string;
+}
+
 export const Catering = () => {
+  const t = useTranslations('catering');
+  const itemsContent = t.raw('items') as CateringItemContent[];
+  const items = siteConfig.catering.map((config, index) => ({
+    ...config,
+    ...itemsContent[index],
+  }));
+
   return (
     <section id="catering">
       <h2 className="section-title" data-aos="fade-up">
-        Catering De Diez a Dos
+        {t('title')}
       </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-        Disfruta de la maravillosa atención y trato personalizado que ofrecemos en cada evento. Nuestro equipo se dedica a hacer de tu ocasión especial un momento inolvidable, cuidando cada detalle para que tú y tus invitados se sientan como en casa.
+        {t('subtitle')}
       </p>
       <div className="catering-grid">
-        {siteConfig.catering.map((item, index) => (
+        {items.map((item, index) => (
           <article
             key={index}
             className={`catering-card ${item.featured ? 'destacado' : ''}`}
@@ -27,7 +40,7 @@ export const Catering = () => {
                 loading="lazy"
               />
               {item.featured && (
-                <div className="catering-badge">Especialidad</div>
+                <div className="catering-badge">{t('badge')}</div>
               )}
             </div>
             <div className="catering-content">

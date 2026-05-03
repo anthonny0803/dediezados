@@ -1,9 +1,25 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 
+interface GalleryPhotoContent {
+  room: 'olas' | 'amazonias';
+  alt: string;
+}
+
 export const Gallery = () => {
+  const t = useTranslations('gallery');
+  const photosContent = t.raw('photos') as GalleryPhotoContent[];
+  const rooms = t.raw('rooms') as Record<string, string>;
+
+  const photosBase = siteConfig.gallery.photos.map((config, index) => ({
+    url: config.url,
+    room: rooms[photosContent[index].room],
+    alt: photosContent[index].alt,
+  }));
+
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
   const [isDragging, setIsDragging] = useState(false);
@@ -33,11 +49,7 @@ export const Gallery = () => {
     };
   }, [modalOpen]);
 
-  const photos = [
-    ...siteConfig.gallery.photos,
-    ...siteConfig.gallery.photos,
-    ...siteConfig.gallery.photos,
-  ];
+  const photos = [...photosBase, ...photosBase, ...photosBase];
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!trackRef.current) return;
@@ -88,10 +100,10 @@ export const Gallery = () => {
     <>
       <section id="gallery">
         <h2 className="section-title" data-aos="fade-up">
-          Salas
+          {t('title')}
         </h2>
         <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-          Descubre nuestras elegantes salas, diseñadas para crear el ambiente perfecto para tu evento especial
+          {t('subtitle')}
         </p>
       </section>
 
@@ -104,7 +116,7 @@ export const Gallery = () => {
           <button
             className="gallery-carousel-btn left"
             onClick={scrollLeftBy}
-            aria-label="Desplazar galería a la izquierda"
+            aria-label={t('scrollLeftLabel')}
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
@@ -146,7 +158,7 @@ export const Gallery = () => {
           <button
             className="gallery-carousel-btn right"
             onClick={scrollRightBy}
-            aria-label="Desplazar galería a la derecha"
+            aria-label={t('scrollRightLabel')}
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
@@ -161,7 +173,7 @@ export const Gallery = () => {
             ×
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={selectedImage} alt="Imagen expandida" />
+          <img src={selectedImage} alt={t('expandedAlt')} />
         </div>
       )}
     </>

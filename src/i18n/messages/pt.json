@@ -1,0 +1,265 @@
+{
+  "brand": {
+    "name": "De Diez a Dos",
+    "slogan": "Madrid Events - Salas para Eventos",
+    "description": "Aluguer de salas elegantes e serviços integrais para todo o tipo de eventos"
+  },
+  "nav": {
+    "home": "Início",
+    "services": "Serviços",
+    "catering": "Catering",
+    "extras": "Extras",
+    "gallery": "Salas",
+    "contact": "Contacto",
+    "location": "Localização",
+    "reviews": "Avaliações",
+    "about": "Sobre"
+  },
+  "hero": {
+    "carouselLabel": "Slides do carrossel",
+    "slideLabel": "Ir para o slide {index}",
+    "slides": [
+      {
+        "title": "O seu espaço privado no coração de Madrid",
+        "description": "Em De Diez a Dos transformamos cada celebração numa experiência única. Um lugar exclusivo com catering elaborado, open bar, som profissional e uma equipa que se encarrega de tudo. Você celebra. Nós cuidamos de cada detalhe.",
+        "primaryCta": "Solicitar Informação",
+        "outlineCta": "Ver Serviços"
+      },
+      {
+        "title": "Momentos Inesquecíveis",
+        "description": "A sala perfeita para o dia mais importante da sua vida. Espaços únicos com serviços personalizados para fazer do seu evento um dia memorável",
+        "primaryCta": "Ver Salas",
+        "outlineCta": "Ver Extras"
+      },
+      {
+        "title": "Eventos Corporativos",
+        "description": "Salas profissionais para conferências, apresentações, team building e celebrações empresariais com serviços completos de catering",
+        "primaryCta": "Reservar Sala",
+        "outlineCta": "Saber Mais"
+      }
+    ]
+  },
+  "services": {
+    "title": "Serviços Profissionais",
+    "subtitle": "Pacotes completos que incluem tudo o necessário para o seu evento",
+    "items": [
+      {
+        "title": "Espaço em Exclusividade",
+        "description": "Local com dois espaços exclusivos, acesso privado e um ambiente totalmente reservado. Mobiliário confortável e iluminação adaptável. Trabalhamos com seriedade e proximidade, coordenando cada detalhe para que o seu evento corra perfeitamente."
+      },
+      {
+        "title": "Sistema Audiovisual",
+        "description": "Som profissional e ecrãs de alta qualidade já instalados no local. A nossa equipa técnica supervisiona que tudo funcione corretamente durante o evento. Iluminação adaptável e ambientes configurados conforme o seu estilo: elegante, moderno ou festivo. Qualidade e comodidade, sem montagens nem complicações."
+      },
+      {
+        "title": "Catering De Diez a Dos",
+        "description": "Mais de 14 anos a ouvir os nossos clientes e a aperfeiçoar cada proposta. O resultado: menus equilibrados e versáteis, pensados para funcionar em qualquer ocasião. Qualidade, boa apresentação e opções que se adaptam a todo o tipo de eventos."
+      },
+      {
+        "title": "Open Bar",
+        "description": "O nosso bar adapta-se a cada evento. Oferecemos diferentes opções conforme o pacote contratado, para que escolha o formato que melhor se adapte à sua celebração. Flexibilidade e serviço profissional em todos os momentos."
+      },
+      {
+        "title": "Pessoal Profissional",
+        "description": "Pessoal de bar, empregados de mesa e controlo de acesso que garantem segurança e comodidade. Uma equipa eficaz e discreta. Perante qualquer imprevisto, damos soluções rápidas e de qualidade. Serviço simples e resolutivo."
+      },
+      {
+        "title": "Serviços Adicionais",
+        "description": "Dispomos de extras opcionais para completar o seu evento: decoração personalizada, DJ, mesa de doces, carrinho de guloseimas e Photomax 360. Você escolhe o que adicionar conforme o que quiser para esse dia, sempre com preços claros e sem surpresas."
+      }
+    ]
+  },
+  "catering": {
+    "title": "Catering De Diez a Dos",
+    "subtitle": "Desfrute da maravilhosa atenção e tratamento personalizado que oferecemos em cada evento. A nossa equipa dedica-se a fazer da sua ocasião especial um momento inesquecível, cuidando de cada detalhe para que você e os seus convidados se sintam como em casa.",
+    "badge": "Especialidade",
+    "items": [
+      {
+        "title": "Adaptamo-nos a si",
+        "description": "Desenhamos cada evento conforme os seus gostos e necessidades, para que sinta que o espaço foi feito à sua medida."
+      },
+      {
+        "title": "Acompanhamento em todos os momentos",
+        "description": "Guiamo-lo antes, durante e depois do evento, esclarecendo dúvidas e ocupando-nos dos detalhes para que apenas se preocupe em desfrutar."
+      },
+      {
+        "title": "Proximidade e profissionalismo",
+        "description": "Atendemo-lo com a confiança de sempre e a seriedade que a sua celebração merece, combinando calor humano e organização."
+      },
+      {
+        "title": "Detalhes que fazem a diferença",
+        "description": "Desde a receção dos seus convidados até ao encerramento do evento, cada pequeno gesto está pensado para surpreender e agradar."
+      },
+      {
+        "title": "Ambiente confortável e acolhedor",
+        "description": "Criamos uma atmosfera íntima e agradável onde os seus convidados se sentem relaxados, bem-vindos e atendidos a todo o momento."
+      },
+      {
+        "title": "Atenção proativa",
+        "description": "Antecipamo-nos às necessidades do seu evento para que tudo flua de forma natural, sem improvisações nem sobressaltos."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Salas",
+    "subtitle": "Descubra as nossas elegantes salas, desenhadas para criar o ambiente perfeito para o seu evento especial",
+    "scrollLeftLabel": "Deslocar galeria para a esquerda",
+    "scrollRightLabel": "Deslocar galeria para a direita",
+    "expandedAlt": "Imagem expandida",
+    "rooms": {
+      "olas": "Sala Olas",
+      "amazonias": "Sala Amazonias"
+    },
+    "photos": [
+      { "room": "olas", "alt": "Sala Olas para eventos privados em Madrid - vista principal" },
+      { "room": "olas", "alt": "Sala Olas - espaço para celebrações e festas em Madrid" },
+      { "room": "olas", "alt": "Sala Olas - ambiente elegante para eventos perto do Bernabéu" },
+      { "room": "olas", "alt": "Sala Olas - decoração e mobiliário para eventos em Madrid" },
+      { "room": "amazonias", "alt": "Sala Amazonias para eventos exclusivos em Madrid - vista principal" },
+      { "room": "amazonias", "alt": "Sala Amazonias - espaço para casamentos e celebrações em Madrid" },
+      { "room": "amazonias", "alt": "Sala Amazonias - aluguer de sala para aniversários e festas" },
+      { "room": "amazonias", "alt": "Sala Amazonias - ambiente premium para eventos corporativos" },
+      { "room": "amazonias", "alt": "Sala Amazonias - iluminação e decoração para eventos privados" },
+      { "room": "amazonias", "alt": "Sala Amazonias - espaço completo para celebrações em Madrid" }
+    ]
+  },
+  "extras": {
+    "title": "Extras Disponíveis",
+    "subtitle": "Complete o seu evento com serviços adicionais que fazem a diferença",
+    "recommendedForLabel": "Recomendado para:",
+    "items": [
+      {
+        "title": "Karaoke",
+        "description": "Se quer um evento divertido e participativo, o karaoke é perfeito para grupos de amigos, aniversários e celebrações familiares.",
+        "features": [
+          "Microfones e sistema de som",
+          "Ligação a ecrã / TV para letras",
+          "Ambiente tipo \"concerto\"",
+          "Ideal para todas as idades"
+        ],
+        "recommendedFor": "Aniversários, festas de adolescentes, despedidas de solteira e celebrações mistas"
+      },
+      {
+        "title": "PhotoMax 360",
+        "description": "O PhotoMax 360 é um dos extras mais procurados: sobe à plataforma e gravam-se vídeos com efeito espetacular, perfeitos para redes sociais.",
+        "features": [
+          "Vídeos super chamativos (slow motion / efeito 360)",
+          "Ideal para grupos grandes",
+          "Torna-se \"a atração\" do evento",
+          "Lembrança de topo para os convidados"
+        ],
+        "recommendedFor": "Aniversários, festas privadas, eventos juvenis e celebrações onde quer o nível mais alto"
+      },
+      {
+        "title": "DJ Profissional",
+        "description": "Se quer que o seu evento soe como uma discoteca mas ao seu estilo, pode adicionar um DJ profissional com música adaptada ao seu público.",
+        "features": [
+          "Música adaptada ao tipo de festa",
+          "Controlo de volume e ambiente",
+          "Opções de animação se desejar",
+          "Entrada, subida e encerramento do evento com grandes êxitos"
+        ],
+        "recommendedFor": "Festas grandes, aniversários de adultos, despedidas de solteira e eventos com dança"
+      },
+      {
+        "title": "Mesa de Doces / Candy Bar",
+        "description": "A mesa de doces é ideal se quer uma apresentação bonita, cuidada e pronta para desfrutar. Dá um toque elegante e fica ótima em fotografias.",
+        "features": [
+          "Decoração temática",
+          "Doces variados",
+          "Apresentação tipo bufete",
+          "Opções para crianças ou adultos"
+        ],
+        "recommendedFor": "Aniversários infantis, comunhões e eventos familiares"
+      },
+      {
+        "title": "Decoração Personalizada",
+        "description": "A decoração marca a diferença. Pode tornar o seu evento mais bonito e mais \"seu\" com decoração personalizada: temática, cores, nomes, balões e mais.",
+        "features": [
+          "Balões (arcos, colunas, grinaldas)",
+          "Fundo para fotografias / photocall",
+          "Cartazes personalizados",
+          "Decoração temática"
+        ],
+        "recommendedFor": "Aniversários, despedidas, baby showers e todo o tipo de celebrações"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Sem Compromisso - Falemos do Seu Evento",
+    "subtitle": "Conte-nos a sua visão e ajudamo-lo a torná-la realidade",
+    "form": {
+      "sectionTitle": "Dados de contacto",
+      "helperRequired": "Campos obrigatórios",
+      "optional": "Opcional",
+      "fields": {
+        "nombre": { "label": "Nome", "placeholder": "João Silva" },
+        "email": { "label": "Email", "placeholder": "joao@example.com" },
+        "telefono": { "label": "Telefone", "placeholder": "+34 *** *** ***" },
+        "evento": { "label": "Tipo de Evento", "placeholder": "Casamento, Empresa, Aniversário" },
+        "fechaEvento": { "label": "Data do Evento", "placeholder": "DD/MM/AAAA" },
+        "numInvitados": { "label": "Número de Convidados", "placeholder": "50" },
+        "mediaEdad": { "label": "Média de idade", "placeholder": "0-75 anos" },
+        "observaciones": { "label": "Observações", "placeholder": "Detalhes adicionais sobre o evento" },
+        "mensaje": { "label": "Mensagem", "placeholder": "Conte-nos sobre o seu evento..." }
+      },
+      "charCounter": "Min:10 {current}/200",
+      "submit": "Enviar Pedido",
+      "submitting": "A enviar...",
+      "success": "Mensagem enviada! Em breve entraremos em contacto consigo.",
+      "errorDefault": "Erro ao enviar a mensagem.",
+      "errorConnection": "Erro de ligação. Verifique a sua ligação e tente novamente."
+    },
+    "validation": {
+      "nombre": "O nome deve ter pelo menos 2 caracteres",
+      "email": "Email inválido",
+      "telefono": "O telefone deve ter entre 9 e 15 dígitos",
+      "evento": "O tipo de evento deve ter pelo menos 4 caracteres",
+      "fechaEventoRequired": "Deve selecionar uma data para o evento",
+      "fechaEventoPast": "A data do evento deve ser posterior a hoje",
+      "numInvitadosRequired": "O número de convidados é obrigatório",
+      "numInvitadosInvalid": "O número de convidados deve ser um número válido",
+      "numInvitadosLength": "O número de convidados deve ter pelo menos 2 caracteres",
+      "mediaEdad": "A média de idade deve ter pelo menos 2 caracteres",
+      "mensaje": "A mensagem deve ter pelo menos 10 caracteres",
+      "noObservations": "Sem observações",
+      "responseProcessError": "Erro ao processar resposta do servidor",
+      "unknownError": "Erro desconhecido ao enviar formulário"
+    },
+    "info": {
+      "phoneLabel": "Telefone",
+      "emailLabel": "Email",
+      "addressLabel": "Morada",
+      "scheduleLabel": "Horário",
+      "schedule": "Visitas com marcação prévia"
+    }
+  },
+  "location": {
+    "title": "A Nossa Localização",
+    "subtitle": "Encontre-nos no coração de Madrid",
+    "map": {
+      "reviewsCount": "({count} avaliações)",
+      "directions": "Como chegar"
+    }
+  },
+  "reviews": {
+    "title": "O que dizem os nossos clientes",
+    "subtitle": "Experiências reais de eventos inesquecíveis",
+    "loading": "A carregar avaliações...",
+    "empty": "Não há avaliações disponíveis.",
+    "viewAll": "Ver todas as avaliações no Google",
+    "googleBadgeTitle": "Publicado no Google",
+    "defaultUser": "Utilizador do Google"
+  },
+  "footer": {
+    "tagline": "O seu espaço privado no coração de Madrid",
+    "legal": "De Diez a Dos Private Event, S.L.U.",
+    "copyright": "© {year} De Diez a Dos. Todos os direitos reservados.",
+    "slogan": "Mais de uma década a criar eventos memoráveis",
+    "keywords": "Salas para eventos Madrid | Aluguer de sala aniversário Madrid | Eventos privados económicos | Festas perto do Santiago Bernabéu | Sala aniversário barata Madrid | Catering eventos económico | Celebrações baratas Madrid | Aluguer de local festas Madrid | Eventos junto ao Bernabéu | Salas para casamentos baratas | Festas privadas preço económico | Reservar sala Madrid centro | Espaços para celebrações Madrid | Eventos perto do estádio Santiago Bernabéu | Aluguer sala com catering barato | Evento de aniversário Madrid económico | Festas de empresa Madrid | Sala eventos preços competitivos | Celebrações inesquecíveis Madrid | Sala para eventos Madrid Centro | De Diez a Dos Madrid",
+    "partnersIntro": "Parceiros estratégicos:",
+    "partnerCapifix": "Capifix | Logística Integral",
+    "devLabel": "Dev:"
+  },
+  "logoAlt": "Logótipo De Diez a Dos"
+}

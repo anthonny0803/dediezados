@@ -357,6 +357,22 @@ export const seoConfig = {
       businessDescriptionSchema:
         'Alquiler de salas para eventos privados en Madrid, junto al estadio Santiago Bernabéu, con precios económicos y competitivos. Espacio exclusivo para cumpleaños, bodas, fiestas privadas, despedidas, comuniones, baby showers y eventos de empresa, con catering propio, barra libre, sistema audiovisual y DJ profesional. Más de 14 años de experiencia.',
     } satisfies LocaleMetadata,
+    en: {
+      title:
+        'De Diez a Dos - Event Venue Rental Madrid | Affordable Pricing Near Santiago Bernabéu',
+      description:
+        'Event venue rental in Madrid near Santiago Bernabéu. Birthdays, weddings, private parties and corporate events with in-house catering, open bar and DJ. Affordable, competitive pricing. 200+ five-star reviews.',
+      ogTitle:
+        'De Diez a Dos - Event Venues in Madrid | Santiago Bernabéu | Affordable Pricing',
+      ogDescription:
+        'Event venue rental in Madrid near Santiago Bernabéu. Private parties, birthdays, weddings and corporate events with included catering. Affordable, competitive pricing. 200+ five-star reviews.',
+      twitterTitle:
+        'De Diez a Dos - Event Venues in Madrid | Santiago Bernabéu | Affordable Pricing',
+      twitterDescription:
+        'Event venue rental in Madrid near Santiago Bernabéu. Affordable, competitive pricing. 200+ five-star reviews.',
+      businessDescriptionSchema:
+        'Affordable private event venue for hire in Madrid, next to Santiago Bernabéu stadium, with competitive pricing. Exclusive space for birthdays, weddings, private parties, bachelorette/bachelor parties, communions, baby showers and corporate events, with in-house catering, open bar, professional AV system and DJ. Over 14 years of experience.',
+    } satisfies LocaleMetadata,
   },
 
   // Descripción de negocio multilingüe que ya existía en Schema.org

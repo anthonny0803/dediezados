@@ -1,0 +1,265 @@
+{
+  "brand": {
+    "name": "De Diez a Dos",
+    "slogan": "Madrid Events - Sale na Wydarzenia",
+    "description": "Wynajem eleganckich sal i kompleksowe usługi dla wszelkiego rodzaju wydarzeń"
+  },
+  "nav": {
+    "home": "Start",
+    "services": "Usługi",
+    "catering": "Catering",
+    "extras": "Dodatki",
+    "gallery": "Sale",
+    "contact": "Kontakt",
+    "location": "Lokalizacja",
+    "reviews": "Opinie",
+    "about": "O nas"
+  },
+  "hero": {
+    "carouselLabel": "Slajdy karuzeli",
+    "slideLabel": "Przejdź do slajdu {index}",
+    "slides": [
+      {
+        "title": "Twoja prywatna przestrzeń w sercu Madrytu",
+        "description": "W De Diez a Dos zmieniamy każde świętowanie w wyjątkowe doświadczenie. Ekskluzywne miejsce z dopracowanym cateringiem, otwartym barem, profesjonalnym nagłośnieniem i zespołem, który zajmie się wszystkim. Ty świętujesz. My dbamy o każdy szczegół.",
+        "primaryCta": "Poproś o Informacje",
+        "outlineCta": "Zobacz Usługi"
+      },
+      {
+        "title": "Niezapomniane Chwile",
+        "description": "Idealna sala na najważniejszy dzień Twojego życia. Wyjątkowe przestrzenie z dopasowanymi usługami, aby Twoje wydarzenie było dniem do zapamiętania",
+        "primaryCta": "Zobacz Sale",
+        "outlineCta": "Zobacz Dodatki"
+      },
+      {
+        "title": "Wydarzenia Firmowe",
+        "description": "Profesjonalne sale na konferencje, prezentacje, team building i firmowe uroczystości z pełną obsługą cateringową",
+        "primaryCta": "Zarezerwuj Salę",
+        "outlineCta": "Dowiedz się Więcej"
+      }
+    ]
+  },
+  "services": {
+    "title": "Profesjonalne Usługi",
+    "subtitle": "Kompleksowe pakiety zawierające wszystko, czego potrzebujesz na swoje wydarzenie",
+    "items": [
+      {
+        "title": "Przestrzeń na Wyłączność",
+        "description": "Lokal z dwiema ekskluzywnymi przestrzeniami, prywatnym wejściem i całkowicie zarezerwowaną atmosferą. Wygodne meble i regulowane oświetlenie. Pracujemy z powagą i bliskością, koordynując każdy szczegół, aby Twoje wydarzenie przebiegło idealnie."
+      },
+      {
+        "title": "System Audiowizualny",
+        "description": "Profesjonalne nagłośnienie i wysokiej jakości ekrany już zainstalowane w lokalu. Nasz zespół techniczny dba o to, aby wszystko działało prawidłowo podczas wydarzenia. Regulowane oświetlenie i atmosfery dopasowane do Twojego stylu: elegancka, nowoczesna lub świąteczna. Jakość i komfort, bez montażu i komplikacji."
+      },
+      {
+        "title": "Catering De Diez a Dos",
+        "description": "Ponad 14 lat słuchania naszych klientów i dopracowywania każdej propozycji. Efekt: zrównoważone i wszechstronne menu, zaprojektowane tak, aby sprawdzało się przy każdej okazji. Jakość, dobra prezentacja i opcje pasujące do każdego rodzaju wydarzenia."
+      },
+      {
+        "title": "Otwarty Bar",
+        "description": "Nasz bar dostosowuje się do każdego wydarzenia. Oferujemy różne opcje w zależności od wybranego pakietu, abyś mógł wybrać format najlepiej pasujący do Twojej uroczystości. Elastyczność i profesjonalna obsługa w każdej chwili."
+      },
+      {
+        "title": "Profesjonalny Personel",
+        "description": "Personel barowy, kelnerzy i kontrola wstępu, którzy zapewniają bezpieczeństwo i komfort. Skuteczny i dyskretny zespół. W obliczu nieprzewidzianych sytuacji oferujemy szybkie i jakościowe rozwiązania. Prosta i sprawcza obsługa."
+      },
+      {
+        "title": "Usługi Dodatkowe",
+        "description": "Mamy opcjonalne dodatki, aby uzupełnić Twoje wydarzenie: spersonalizowana dekoracja, DJ, słodki stół, wózek ze słodyczami i Photomax 360. Sam wybierasz, co dodać zgodnie z tym, czego chcesz na ten dzień, zawsze z jasnymi cenami i bez niespodzianek."
+      }
+    ]
+  },
+  "catering": {
+    "title": "Catering De Diez a Dos",
+    "subtitle": "Ciesz się wspaniałą uwagą i indywidualnym traktowaniem, które oferujemy podczas każdego wydarzenia. Nasz zespół poświęca się temu, aby Twoja wyjątkowa okazja była niezapomnianą chwilą, dbając o każdy szczegół, abyś Ty i Twoi goście czuli się jak w domu.",
+    "badge": "Specjalność",
+    "items": [
+      {
+        "title": "Dostosowujemy się do Ciebie",
+        "description": "Projektujemy każde wydarzenie zgodnie z Twoim gustem i potrzebami, abyś czuł, że przestrzeń jest stworzona na Twoją miarę."
+      },
+      {
+        "title": "Wsparcie w każdej chwili",
+        "description": "Prowadzimy Cię przed, w trakcie i po wydarzeniu, rozwiewając wątpliwości i zajmując się szczegółami, abyś martwił się tylko jednym: dobrą zabawą."
+      },
+      {
+        "title": "Bliskość i profesjonalizm",
+        "description": "Obsługujemy Cię z zaufaniem jak zawsze i powagą, na jaką zasługuje Twoja uroczystość, łącząc ciepło i organizację."
+      },
+      {
+        "title": "Szczegóły, które robią różnicę",
+        "description": "Od powitania Twoich gości aż po zakończenie wydarzenia, każdy mały gest zaprojektowany jest tak, by zaskakiwać i sprawiać przyjemność."
+      },
+      {
+        "title": "Komfortowa i przytulna atmosfera",
+        "description": "Tworzymy intymną i przyjemną atmosferę, w której Twoi goście czują się zrelaksowani, mile widziani i zaopiekowani w każdej chwili."
+      },
+      {
+        "title": "Proaktywna obsługa",
+        "description": "Wyprzedzamy potrzeby Twojego wydarzenia, aby wszystko płynęło naturalnie, bez improwizacji ani niespodzianek."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Sale",
+    "subtitle": "Odkryj nasze eleganckie sale, zaprojektowane tak, aby tworzyć idealną atmosferę dla Twojego wyjątkowego wydarzenia",
+    "scrollLeftLabel": "Przewiń galerię w lewo",
+    "scrollRightLabel": "Przewiń galerię w prawo",
+    "expandedAlt": "Powiększony obraz",
+    "rooms": {
+      "olas": "Sala Olas",
+      "amazonias": "Sala Amazonias"
+    },
+    "photos": [
+      { "room": "olas", "alt": "Sala Olas na prywatne wydarzenia w Madrycie - widok główny" },
+      { "room": "olas", "alt": "Sala Olas - przestrzeń na uroczystości i imprezy w Madrycie" },
+      { "room": "olas", "alt": "Sala Olas - elegancka atmosfera dla wydarzeń w pobliżu Bernabéu" },
+      { "room": "olas", "alt": "Sala Olas - dekoracja i meble na wydarzenia w Madrycie" },
+      { "room": "amazonias", "alt": "Sala Amazonias na ekskluzywne wydarzenia w Madrycie - widok główny" },
+      { "room": "amazonias", "alt": "Sala Amazonias - przestrzeń na śluby i uroczystości w Madrycie" },
+      { "room": "amazonias", "alt": "Sala Amazonias - wynajem sali na urodziny i imprezy" },
+      { "room": "amazonias", "alt": "Sala Amazonias - atmosfera premium dla wydarzeń firmowych" },
+      { "room": "amazonias", "alt": "Sala Amazonias - oświetlenie i dekoracja na prywatne wydarzenia" },
+      { "room": "amazonias", "alt": "Sala Amazonias - kompletna przestrzeń na uroczystości w Madrycie" }
+    ]
+  },
+  "extras": {
+    "title": "Dostępne Dodatki",
+    "subtitle": "Uzupełnij swoje wydarzenie dodatkowymi usługami, które robią różnicę",
+    "recommendedForLabel": "Polecane dla:",
+    "items": [
+      {
+        "title": "Karaoke",
+        "description": "Jeśli chcesz zabawnego i angażującego wydarzenia, karaoke jest idealne dla grup przyjaciół, urodzin i uroczystości rodzinnych.",
+        "features": [
+          "Mikrofony i system nagłośnienia",
+          "Połączenie z ekranem / TV dla tekstów",
+          "Atmosfera typu \"koncert\"",
+          "Idealne dla wszystkich grup wiekowych"
+        ],
+        "recommendedFor": "Urodziny, imprezy nastolatków, wieczory panieńskie i uroczystości mieszane"
+      },
+      {
+        "title": "PhotoMax 360",
+        "description": "PhotoMax 360 to jeden z najbardziej poszukiwanych dodatków: wchodzisz na platformę i nagrywane są filmy ze spektakularnym efektem, idealne na social media.",
+        "features": [
+          "Bardzo efektowne filmy (slow motion / efekt 360)",
+          "Idealne dla dużych grup",
+          "Staje się \"atrakcją\" wydarzenia",
+          "Najlepsza pamiątka dla gości"
+        ],
+        "recommendedFor": "Urodziny, prywatne imprezy, wydarzenia młodzieżowe i uroczystości, gdzie chcesz najwyższego poziomu"
+      },
+      {
+        "title": "Profesjonalny DJ",
+        "description": "Jeśli chcesz, aby Twoje wydarzenie brzmiało jak dyskoteka, ale w Twoim stylu, możesz dodać profesjonalnego DJ-a z muzyką dopasowaną do Twojej publiczności.",
+        "features": [
+          "Muzyka dopasowana do typu imprezy",
+          "Kontrola głośności i atmosfery",
+          "Opcje animacji, jeśli chcesz",
+          "Wejście, narastanie i zakończenie wydarzenia z hitami"
+        ],
+        "recommendedFor": "Duże imprezy, urodziny dorosłych, wieczory panieńskie i wydarzenia z tańcem"
+      },
+      {
+        "title": "Słodki Stół / Candy Bar",
+        "description": "Słodki stół jest idealny, jeśli chcesz pięknej, dopracowanej i gotowej do degustacji prezentacji. Daje elegancki akcent i świetnie wygląda na zdjęciach.",
+        "features": [
+          "Tematyczna dekoracja",
+          "Różnorodne słodycze",
+          "Prezentacja w stylu bufetu",
+          "Opcje dla dzieci lub dorosłych"
+        ],
+        "recommendedFor": "Urodziny dla dzieci, komunie i wydarzenia rodzinne"
+      },
+      {
+        "title": "Spersonalizowana Dekoracja",
+        "description": "Dekoracja robi różnicę. Możesz uczynić swoje wydarzenie piękniejszym i bardziej \"swoim\" z personalizowaną dekoracją: tematyka, kolory, imiona, balony i więcej.",
+        "features": [
+          "Balony (łuki, kolumny, girlandy)",
+          "Tło do zdjęć / photocall",
+          "Spersonalizowane plakaty",
+          "Tematyczna dekoracja"
+        ],
+        "recommendedFor": "Urodziny, wieczory panieńskie, baby showers i wszelkiego rodzaju uroczystości"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Bez Zobowiązań - Porozmawiajmy o Twoim Wydarzeniu",
+    "subtitle": "Opowiedz nam o swojej wizji, a pomożemy Ci ją zrealizować",
+    "form": {
+      "sectionTitle": "Dane kontaktowe",
+      "helperRequired": "Pola obowiązkowe",
+      "optional": "Opcjonalne",
+      "fields": {
+        "nombre": { "label": "Imię i nazwisko", "placeholder": "Jan Kowalski" },
+        "email": { "label": "E-mail", "placeholder": "jan@example.com" },
+        "telefono": { "label": "Telefon", "placeholder": "+34 *** *** ***" },
+        "evento": { "label": "Typ Wydarzenia", "placeholder": "Wesele, Firmowe, Urodziny" },
+        "fechaEvento": { "label": "Data Wydarzenia", "placeholder": "DD/MM/RRRR" },
+        "numInvitados": { "label": "Liczba Gości", "placeholder": "50" },
+        "mediaEdad": { "label": "Średni wiek", "placeholder": "0-75 lat" },
+        "observaciones": { "label": "Uwagi", "placeholder": "Dodatkowe szczegóły dotyczące wydarzenia" },
+        "mensaje": { "label": "Wiadomość", "placeholder": "Opowiedz nam o swoim wydarzeniu..." }
+      },
+      "charCounter": "Min:10 {current}/200",
+      "submit": "Wyślij Zapytanie",
+      "submitting": "Wysyłanie...",
+      "success": "Wiadomość wysłana! Wkrótce się z Tobą skontaktujemy.",
+      "errorDefault": "Błąd podczas wysyłania wiadomości.",
+      "errorConnection": "Błąd połączenia. Sprawdź swoje połączenie i spróbuj ponownie."
+    },
+    "validation": {
+      "nombre": "Imię musi zawierać co najmniej 2 znaki",
+      "email": "Nieprawidłowy e-mail",
+      "telefono": "Telefon musi mieć od 9 do 15 cyfr",
+      "evento": "Typ wydarzenia musi zawierać co najmniej 4 znaki",
+      "fechaEventoRequired": "Musisz wybrać datę wydarzenia",
+      "fechaEventoPast": "Data wydarzenia musi być późniejsza niż dzisiaj",
+      "numInvitadosRequired": "Liczba gości jest wymagana",
+      "numInvitadosInvalid": "Liczba gości musi być prawidłową liczbą",
+      "numInvitadosLength": "Liczba gości musi zawierać co najmniej 2 znaki",
+      "mediaEdad": "Średni wiek musi zawierać co najmniej 2 znaki",
+      "mensaje": "Wiadomość musi zawierać co najmniej 10 znaków",
+      "noObservations": "Brak uwag",
+      "responseProcessError": "Błąd podczas przetwarzania odpowiedzi serwera",
+      "unknownError": "Nieznany błąd podczas wysyłania formularza"
+    },
+    "info": {
+      "phoneLabel": "Telefon",
+      "emailLabel": "E-mail",
+      "addressLabel": "Adres",
+      "scheduleLabel": "Godziny",
+      "schedule": "Wizyty po wcześniejszym umówieniu"
+    }
+  },
+  "location": {
+    "title": "Nasza Lokalizacja",
+    "subtitle": "Znajdź nas w sercu Madrytu",
+    "map": {
+      "reviewsCount": "({count} opinii)",
+      "directions": "Trasa dojazdu"
+    }
+  },
+  "reviews": {
+    "title": "Co mówią nasi klienci",
+    "subtitle": "Prawdziwe doświadczenia z niezapomnianych wydarzeń",
+    "loading": "Ładowanie opinii...",
+    "empty": "Brak dostępnych opinii.",
+    "viewAll": "Zobacz wszystkie opinie w Google",
+    "googleBadgeTitle": "Opublikowane w Google",
+    "defaultUser": "Użytkownik Google"
+  },
+  "footer": {
+    "tagline": "Twoja prywatna przestrzeń w sercu Madrytu",
+    "legal": "De Diez a Dos Private Event, S.L.U.",
+    "copyright": "© {year} De Diez a Dos. Wszelkie prawa zastrzeżone.",
+    "slogan": "Ponad dekada tworzenia niezapomnianych wydarzeń",
+    "keywords": "Sale na wydarzenia Madryt | Wynajem sali urodzinowej Madryt | Tanie wydarzenia prywatne | Imprezy w pobliżu Santiago Bernabéu | Tania sala urodzinowa Madryt | Tani catering eventowy | Tanie uroczystości Madryt | Wynajem lokalu na imprezy Madryt | Wydarzenia obok Bernabéu | Tanie sale weselne | Imprezy prywatne tania cena | Zarezerwuj salę centrum Madrytu | Przestrzenie na uroczystości Madryt | Wydarzenia w pobliżu stadionu Santiago Bernabéu | Tanie wynajęcie sali z cateringiem | Tanie urodziny Madryt | Imprezy firmowe Madryt | Sala eventowa konkurencyjne ceny | Niezapomniane uroczystości Madryt | Sala na wydarzenia Centrum Madrytu | De Diez a Dos Madryt",
+    "partnersIntro": "Partnerzy strategiczni:",
+    "partnerCapifix": "Capifix | Logistyka Integralna",
+    "devLabel": "Dev:"
+  },
+  "logoAlt": "Logo De Diez a Dos"
+}

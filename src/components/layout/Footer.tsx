@@ -1,23 +1,28 @@
-import { siteConfig } from "@/config/site.config";
+import { useTranslations } from 'next-intl';
+import { siteConfig } from '@/config/site.config';
 
 export const Footer = () => {
+  const t = useTranslations('footer');
+  const tRoot = useTranslations();
+  const year = new Date().getFullYear();
+
   return (
     <footer id="footer">
       <div className="footer-logo" data-aos="fade-up">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png"
-          alt="De Diez a Dos Logo"
+          src={siteConfig.logo.url}
+          alt={tRoot('logoAlt')}
           className="logo-white"
-          width="143"
-          height="95"
+          width={siteConfig.logo.width}
+          height={siteConfig.logo.height}
           loading="lazy"
         />
         <div className="logo-underline"></div>
       </div>
 
       <p className="footer-tagline" data-aos="fade-up" data-aos-delay="100">
-        Tu espacio privado en el corazón de Madrid
+        {t('tagline')}
       </p>
 
       <div className="footer-contact" data-aos="fade-up" data-aos-delay="200">
@@ -42,65 +47,54 @@ export const Footer = () => {
       </div>
 
       <p className="footer-legal" data-aos="fade-up" data-aos-delay="300">
-        De Diez a Dos Private Event, S.L.U.
+        {t('legal')}
       </p>
 
       <p className="footer-copyright" data-aos="fade-up" data-aos-delay="350">
-        &copy; 2025 De Diez a Dos. Todos los derechos reservados.
+        {t('copyright', { year })}
       </p>
 
       <p className="footer-slogan" data-aos="fade-up" data-aos-delay="400">
-        Más de una década creando eventos que se recuerdan
+        {t('slogan')}
       </p>
 
       {/* SEO Keywords */}
       <p className="footer-keywords" data-aos="fade-up" data-aos-delay="450">
-        Salones para eventos Madrid | Alquiler salón cumpleaños Madrid | Eventos
-        privados económicos | Fiestas cerca Santiago Bernabéu | Salón cumpleaños
-        barato Madrid | Catering eventos económico | Celebraciones baratas
-        Madrid | Alquiler local fiestas Madrid | Eventos junto al Bernabéu |
-        Salones para bodas baratos | Fiestas privadas precio económico |
-        Reservar salón Madrid centro | Espacios para celebraciones Madrid |
-        Eventos cerca estadio Santiago Bernabéu | Alquiler salón con catering
-        barato | Evento de cumpleaños Madrid económico | Fiestas de empresa
-        Madrid | Salón eventos precios competitivos | Celebraciones inolvidables
-        Madrid | Sala para eventos Madrid Centro | De Diez a Dos Madrid
+        {t('keywords')}
       </p>
 
-      <div 
-        className="footer-credits" 
+      <div
+        className="footer-credits"
         style={{ marginTop: '20px', fontSize: '0.8rem', opacity: 0.7 }}
-        data-aos="fade-up" 
+        data-aos="fade-up"
         data-aos-delay="380"
       >
-        {/* Enlace al Socio (Capifix) */}
         <p style={{ marginBottom: '8px' }}>
-          Aliados estratégicos:{" "}
+          {t('partnersIntro')}{' '}
           <a
-            href="https://www.capifixlogistica.com"
+            href={siteConfig.partners.capifix}
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: '#52d5bd', textDecoration: 'none', fontWeight: 'bold' }}
           >
-            Capifix | Logística Integral
+            {t('partnerCapifix')}
           </a>
         </p>
 
-        {/* Tu Firma (Developer) con SVG corregido para JSX */}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px' }}>
-          <span style={{ fontSize: '0.75rem' }}>Dev:</span>
+          <span style={{ fontSize: '0.75rem' }}>{t('devLabel')}</span>
           <a
-            href="https://www.ybanez.dev"
+            href={siteConfig.developer.url}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ 
-              color: '#fff', 
-              textDecoration: 'none', 
-              fontFamily: 'monospace', 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              gap: '6px', 
-              fontWeight: 600 
+            style={{
+              color: '#fff',
+              textDecoration: 'none',
+              fontFamily: 'monospace',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              fontWeight: 600,
             }}
           >
             <svg
@@ -128,7 +122,7 @@ export const Footer = () => {
               <rect x="91" y="86" width="18" height="18" rx="3" fill="url(#footerLogoGrad)" />
               <rect x="67" y="150" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" strokeWidth="2.5" />
             </svg>
-            Anthonny Ybañez
+            {siteConfig.developer.name}
           </a>
         </div>
       </div>

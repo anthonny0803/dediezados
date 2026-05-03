@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 
 const EXTRA_ICONS = [
@@ -8,18 +9,32 @@ const EXTRA_ICONS = [
   <svg key="palette" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a10 10 0 0 1 0 20 2 2 0 0 1-1.92-2.56l.44-1.32A2 2 0 0 0 8.62 16H6a2 2 0 0 1-2-2 10 10 0 0 1 8-12Z" /><circle cx="14" cy="8" r="1" /><circle cx="8" cy="10" r="1" /><circle cx="16" cy="12" r="1" /><circle cx="10" cy="6" r="1" /></svg>,
 ];
 
+interface ExtraItemContent {
+  title: string;
+  description: string;
+  features: string[];
+  recommendedFor: string;
+}
+
 export const Extras = () => {
+  const t = useTranslations('extras');
+  const itemsContent = t.raw('items') as ExtraItemContent[];
+  const extras = siteConfig.extras.map((config, index) => ({
+    ...config,
+    ...itemsContent[index],
+  }));
+
   return (
     <section id="extras">
       <h2 className="section-title" data-aos="fade-up">
-        Extras Disponibles
+        {t('title')}
       </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-        Completa tu evento con servicios adicionales que marcan la diferencia
+        {t('subtitle')}
       </p>
 
       <div className="extras-disponibles-grid">
-        {siteConfig.extras.map((extra, index) => (
+        {extras.map((extra, index) => (
           <article
             key={index}
             className="extra-disponible-card"
@@ -44,7 +59,7 @@ export const Extras = () => {
               </ul>
 
               <p className="extra-disponible-recommended">
-                <strong>Recomendado para:</strong> {extra.recommendedFor}
+                <strong>{t('recommendedForLabel')}</strong> {extra.recommendedFor}
               </p>
             </div>
           </article>

@@ -1,6 +1,7 @@
 'use client';
 
-import type { PlaceData } from "@/hooks/useGooglePlace";
+import { useTranslations } from 'next-intl';
+import type { PlaceData } from '@/hooks/useGooglePlace';
 
 const AVATAR_PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="56" height="56"%3E%3Ccircle cx="28" cy="28" r="28" fill="%233fb5a1"/%3E%3Cpath d="M28 16a8 8 0 110 16 8 8 0 010-16zM14 44c0-7.7 6.3-14 14-14s14 6.3 14 14" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/%3E%3C/svg%3E';
 
@@ -10,10 +11,11 @@ interface GoogleReviewsProps {
 }
 
 export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
-  
+  const t = useTranslations('reviews');
+
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
-      <span key={i} className={`star ${i < rating ? "filled" : ""}`}>★</span>
+      <span key={i} className={`star ${i < rating ? 'filled' : ''}`}>★</span>
     ));
   };
 
@@ -26,17 +28,17 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
       <div className="reviews-widget">
         <div className="reviews-loader">
           <div className="loader-spinner"></div>
-          <p>Cargando reseñas...</p>
+          <p>{t('loading')}</p>
         </div>
       </div>
     );
-  };
+  }
 
   if (!placeData?.reviews?.length) {
     return (
-        <div className="reviews-widget">
-            <p className="reviews-empty">No hay reseñas disponibles.</p>
-        </div>
+      <div className="reviews-widget">
+        <p className="reviews-empty">{t('empty')}</p>
+      </div>
     );
   }
 
@@ -59,20 +61,20 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
               />
               <div className="review-info">
                 <div className="review-author">
-                  {review.authorAttribution?.displayName || "Usuario de Google"}
+                  {review.authorAttribution?.displayName || t('defaultUser')}
                 </div>
                 <div className="review-rating">
                   {renderStars(review.rating || 0)}
                 </div>
                 <div className="review-date">
-                  {review.relativePublishTimeDescription || ""}
+                  {review.relativePublishTimeDescription || ''}
                 </div>
               </div>
             </div>
 
-            <div className="google-badge" title="Publicado en Google">
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/225px-Google_%22G%22_logo.svg.png" 
+            <div className="google-badge" title={t('googleBadgeTitle')}>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/225px-Google_%22G%22_logo.svg.png"
                 alt="Google"
                 width="22"
                 height="22"
@@ -94,7 +96,7 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
           rel="noopener noreferrer"
           className="btn-ver-mas-reviews"
         >
-          Ver todas las reseñas en Google
+          {t('viewAll')}
         </a>
       </div>
     </div>
