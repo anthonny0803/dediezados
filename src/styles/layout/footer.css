@@ -2,7 +2,7 @@ footer {
   background: var(--surface-1);
   padding: 64px 5%;
   text-align: center;
-  border-top: 1px solid rgba(63, 181, 161, 0.15);
+  border-top: 1px solid rgba(var(--brand-teal-500-rgb), 0.15);
   position: relative;
   overflow: hidden;
 }
@@ -11,7 +11,7 @@ footer::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(63, 181, 161, 0.06) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(var(--brand-teal-500-rgb), 0.06) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -43,8 +43,8 @@ footer > * {
   flex-wrap: wrap;
   margin-bottom: 32px;
   padding: 24px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: var(--border-subtle);
+  border-bottom: var(--border-subtle);
 }
 
 .contact-item {
@@ -53,7 +53,7 @@ footer > * {
   align-items: center;
   gap: 8px;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-subtle);
   transition: all var(--transition-fast);
   cursor: default;
   text-align: center;
@@ -78,14 +78,14 @@ footer > * {
 
 .footer-legal {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-muted);
   margin-top: 24px;
   font-weight: 400;
 }
 
 .footer-copyright {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--text-faint);
   margin-top: 16px;
   font-weight: 300;
 }
@@ -110,7 +110,7 @@ footer > * {
 
 .footer-keywords {
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--text-faint);
   margin-top: 24px;
   line-height: 1.6;
   font-weight: 300;

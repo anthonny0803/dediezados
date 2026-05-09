@@ -18,7 +18,7 @@
 
 .reviews-widget:hover {
   box-shadow: var(--shadow-teal);
-  border-color: rgba(63, 181, 161, 0.3);
+  border-color: rgba(var(--brand-teal-500-rgb), 0.3);
 }
 
 /* Rating summary */
@@ -29,18 +29,18 @@
 
 .reviews-rating-summary .stars {
   font-size: 2rem;
-  color: #f0b429;
+  color: var(--color-warning);
   margin-bottom: 8px;
 }
 
 .reviews-rating-summary .rating-score {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--black);
+  color: var(--text-primary);
 }
 
 .reviews-rating-summary .rating-count {
-  color: var(--gray);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
@@ -54,7 +54,7 @@
   margin: 0 auto 20px;
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(255, 255, 255, 0.08);
+  border: 3px solid rgba(var(--neutral-0-rgb), 0.08);
   border-top-color: var(--primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -63,7 +63,7 @@
 /* Empty state */
 .reviews-empty {
   text-align: center;
-  color: var(--gray);
+  color: var(--text-secondary);
   padding: 40px;
 }
 
@@ -82,7 +82,7 @@
   padding: 16px 0;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: rgba(63, 181, 161, 0.3) transparent;
+  scrollbar-color: rgba(var(--brand-teal-500-rgb), 0.3) transparent;
 }
 
 .reviews-container::-webkit-scrollbar {
@@ -95,18 +95,18 @@
 }
 
 .reviews-container::-webkit-scrollbar-thumb {
-  background: rgba(63, 181, 161, 0.3);
+  background: rgba(var(--brand-teal-500-rgb), 0.3);
   border-radius: 3px;
 }
 
 .reviews-container::-webkit-scrollbar-thumb:hover {
-  background: rgba(63, 181, 161, 0.5);
+  background: rgba(var(--brand-teal-500-rgb), 0.5);
 }
 
 /* Review card */
 .review-card {
   background: var(--pure-white);
-  color: var(--black);
+  color: var(--neutral-1000);
   padding: 20px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
@@ -127,7 +127,7 @@
   top: -10px;
   left: 16px;
   font-size: 6rem;
-  color: rgba(63, 181, 161, 0.08);
+  color: rgba(var(--brand-teal-500-rgb), 0.08);
   line-height: 1;
   font-family: var(--font-heading);
 }
@@ -160,7 +160,7 @@
 .review-author {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--neutral-880);
   margin-bottom: 4px;
 }
 
@@ -172,23 +172,23 @@
 }
 
 .star {
-  color: #ddd;
+  color: var(--neutral-300);
   font-size: 1.2rem;
 }
 
 .star.filled {
-  color: #f0b429;
+  color: var(--color-warning);
 }
 
 /* Review date */
 .review-date {
   font-size: 0.75rem;
-  color: #666;
+  color: var(--neutral-600);
 }
 
 /* Review text */
 .review-text {
-  color: #333;
+  color: var(--neutral-700);
   line-height: 1.6;
   font-size: 0.80rem;
   font-weight: 400;
@@ -210,20 +210,13 @@
     box-shadow var(--transition-fast);
 }
 
-.google-badge img {
-  height: 22px;
-  width: auto;
-  display: block;
-  filter: none;
-}
-
 /* Suspense fallback */
 .reviews-suspense-loader {
   min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gray);
+  color: var(--text-secondary);
   font-size: 1rem;
 }
 

@@ -13,7 +13,7 @@ section {
   font-size: 3.2rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: var(--pure-white);
+  color: var(--text-primary);
   text-align: left;
   position: relative;
   display: inline-block;
@@ -32,7 +32,7 @@ section {
 /* Section subtitle */
 .section-subtitle {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-muted);
   margin-bottom: 64px;
   max-width: 650px;
   line-height: 1.7;

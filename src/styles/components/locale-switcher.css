@@ -11,7 +11,7 @@
   background: transparent;
   border: var(--border-subtle);
   border-radius: var(--radius-pill);
-  color: var(--pure-white);
+  color: var(--text-primary);
   font-family: var(--font-primary);
   font-size: 0.8rem;
   font-weight: 500;
@@ -68,7 +68,7 @@
   background: transparent;
   border: 0;
   border-radius: var(--radius-sm);
-  color: var(--pure-white);
+  color: var(--text-primary);
   font-family: var(--font-primary);
   font-size: 0.85rem;
   text-align: left;
@@ -82,7 +82,7 @@
 
 .locale-option.active {
   background: var(--primary);
-  color: var(--surface-0);
+  color: var(--pure-white);
   font-weight: 600;
 }
 
@@ -90,14 +90,36 @@
   margin-left: 8px;
 }
 
+/* ============================================================
+ * NAVBAR VARIANT
+ * Lives on top of the hero (always-dark zone). Trigger forced
+ * white. The opened menu floats over the body so it keeps
+ * theme-aware colors.
+ * ============================================================ */
+.locale-switcher-navbar .locale-switcher-trigger {
+  color: var(--pure-white);
+  border-color: rgba(var(--neutral-0-rgb), 0.25);
+}
+
+.locale-switcher-navbar .locale-switcher-trigger:hover {
+  background: rgba(var(--neutral-0-rgb), 0.08);
+  border-color: var(--primary);
+}
+
+/* ============================================================
+ * SIDENAV VARIANT
+ * Centered horizontally; menu opens upward to avoid clipping
+ * by the sidenav bottom edge.
+ * ============================================================ */
 .locale-switcher-sidenav {
   display: flex;
   justify-content: center;
-  margin: 16px 0;
 }
 
 .locale-switcher-sidenav .locale-switcher-menu {
-  right: auto;
-  left: 50%;
-  transform: translateX(-50%);
+  top: auto;
+  bottom: calc(100% + 8px);
+  right: 0;
+  left: auto;
+  transform: none;
 }

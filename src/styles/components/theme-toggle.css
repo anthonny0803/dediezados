@@ -13,7 +13,7 @@
   background: transparent;
   border: 1px solid rgba(var(--neutral-0-rgb), 0.12);
   border-radius: var(--radius-pill);
-  color: var(--black);
+  color: var(--text-primary);
   cursor: pointer;
   transition: background-color var(--transition-fast),
               border-color var(--transition-fast),
@@ -59,7 +59,7 @@
   background: transparent;
   border: none;
   border-radius: var(--radius-sm);
-  color: var(--black);
+  color: var(--text-primary);
   font-family: var(--font-primary);
   font-size: 0.875rem;
   cursor: pointer;
@@ -90,12 +90,34 @@
   font-weight: 500;
 }
 
-/* Sidenav variant: opens upward to avoid clipping */
+/* ============================================================
+ * NAVBAR VARIANT
+ * Lives on top of the hero (always-dark zone). Trigger forced
+ * white; menu (which floats over the body) keeps theme colors.
+ * ============================================================ */
+.theme-toggle--navbar .theme-toggle-trigger {
+  color: var(--pure-white);
+  border-color: rgba(var(--neutral-0-rgb), 0.25);
+}
+
+.theme-toggle--navbar .theme-toggle-trigger:hover {
+  color: var(--primary);
+  border-color: rgba(var(--brand-teal-500-rgb), 0.5);
+  background: rgba(var(--neutral-0-rgb), 0.08);
+}
+
+/* ============================================================
+ * SIDENAV VARIANT
+ * Opens upward and is centered relative to the trigger so it
+ * stays inside the 220px-wide sidenav.
+ * ============================================================ */
 .theme-toggle--sidenav .theme-toggle-menu {
   top: auto;
   bottom: calc(100% + 8px);
-  right: 50%;
-  transform: translateX(50%);
+  left: 0;
+  right: auto;
+  transform: none;
+  min-width: 150px;
 }
 
 /* Side-by-side layout when theme toggle and locale switcher share a row */
