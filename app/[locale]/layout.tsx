@@ -10,6 +10,7 @@ import { seoConfig } from '@/config/seo.config';
 import { buildMetadata } from '@/lib/metadata';
 import { JsonLd } from '@/components/providers/JsonLd';
 import { AosProvider } from '@/components/providers/AosProvider';
+import { ScrollResetOnLoad } from '@/components/providers/ScrollResetOnLoad';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import '@/styles/main.css';
 
@@ -72,6 +73,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             {children}
           </NextIntlClientProvider>
           <AosProvider />
+          <ScrollResetOnLoad />
           <SpeedInsights />
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${seoConfig.analytics.gaId}`}
