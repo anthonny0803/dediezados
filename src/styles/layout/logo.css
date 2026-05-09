@@ -85,6 +85,11 @@
   transition: all var(--transition-smooth);
 }
 
+[data-theme='light'] .footer-logo .logo-white,
+[data-theme='light'] .sidenav-logo img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .logo-fixed {
