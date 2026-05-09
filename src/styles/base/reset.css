@@ -1,0 +1,30 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--surface-0);
+  color: var(--black);
+  overflow-x: hidden;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--bg-page-gradient);
+  z-index: -3;
+  pointer-events: none;
+  transition: background 0.3s ease;
+}

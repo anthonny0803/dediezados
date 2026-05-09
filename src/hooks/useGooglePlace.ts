@@ -1,5 +1,7 @@
+'use client';
+
 import { useState, useEffect, useRef } from "react";
-import { loadGoogleMaps } from "../utils/loadGoogleMaps";
+import { loadGoogleMaps } from "@/utils/loadGoogleMaps";
 
 export interface Review {
   authorAttribution?: {

@@ -1,0 +1,271 @@
+{
+  "brand": {
+    "name": "De Diez a Dos",
+    "slogan": "Madrid Events - Evenementenzalen",
+    "description": "Verhuur van elegante zalen en complete diensten voor allerlei evenementen"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Diensten",
+    "catering": "Catering",
+    "extras": "Extra's",
+    "gallery": "Zalen",
+    "contact": "Contact",
+    "location": "Locatie",
+    "reviews": "Recensies",
+    "about": "Over ons"
+  },
+  "theme": {
+    "toggleLabel": "Thema wisselen",
+    "light": "Licht",
+    "dark": "Donker",
+    "system": "Systeem"
+  },
+  "hero": {
+    "carouselLabel": "Carrouseldia's",
+    "slideLabel": "Ga naar dia {index}",
+    "slides": [
+      {
+        "title": "Uw privéruimte in het hart van Madrid",
+        "description": "Bij De Diez a Dos maken we van elke viering een unieke ervaring. Een exclusieve plek met uitgebreide catering, open bar, professioneel geluid en een team dat alles regelt. U viert. Wij verzorgen elk detail.",
+        "primaryCta": "Informatie Aanvragen",
+        "outlineCta": "Bekijk Diensten"
+      },
+      {
+        "title": "Onvergetelijke Momenten",
+        "description": "De perfecte zaal voor de belangrijkste dag van uw leven. Unieke ruimtes met persoonlijke diensten om van uw evenement een gedenkwaardige dag te maken",
+        "primaryCta": "Bekijk Zalen",
+        "outlineCta": "Bekijk Extra's"
+      },
+      {
+        "title": "Bedrijfsevenementen",
+        "description": "Professionele zalen voor conferenties, presentaties, teambuilding en bedrijfsfeesten met complete cateringdiensten",
+        "primaryCta": "Reserveer Zaal",
+        "outlineCta": "Meer Weten"
+      }
+    ]
+  },
+  "services": {
+    "title": "Professionele Diensten",
+    "subtitle": "Complete pakketten met alles wat u nodig heeft voor uw evenement",
+    "items": [
+      {
+        "title": "Exclusieve Ruimte",
+        "description": "Locatie met twee exclusieve ruimtes, privétoegang en een volledig gereserveerde sfeer. Comfortabel meubilair en aanpasbare verlichting. We werken met zorgvuldigheid en betrokkenheid en coördineren elk detail zodat uw evenement perfect verloopt."
+      },
+      {
+        "title": "Audiovisueel Systeem",
+        "description": "Professioneel geluid en hoogwaardige schermen al ter plaatse geïnstalleerd. Ons technische team zorgt ervoor dat alles tijdens het evenement correct werkt. Aanpasbare verlichting en sferen ingesteld op uw stijl: elegant, modern of feestelijk. Kwaliteit en comfort, zonder gedoe of complicaties."
+      },
+      {
+        "title": "Catering De Diez a Dos",
+        "description": "Meer dan 14 jaar luisteren naar onze klanten en elk voorstel verfijnen. Het resultaat: gebalanceerde en veelzijdige menu's, ontworpen voor elke gelegenheid. Kwaliteit, mooie presentatie en opties die bij elk type evenement passen."
+      },
+      {
+        "title": "Open Bar",
+        "description": "Onze bar past zich aan elk evenement aan. We bieden verschillende opties afhankelijk van het gekozen pakket, zodat u het formaat kunt kiezen dat het beste bij uw viering past. Flexibiliteit en professionele service op elk moment."
+      },
+      {
+        "title": "Professioneel Personeel",
+        "description": "Barpersoneel, obers en toegangscontrole die zorgen voor veiligheid en comfort. Een efficiënt en discreet team. Bij onverwachte situaties bieden wij snelle en kwalitatieve oplossingen. Eenvoudige en oplossingsgerichte service."
+      },
+      {
+        "title": "Aanvullende Diensten",
+        "description": "We hebben optionele extra's om uw evenement compleet te maken: aangepaste decoratie, DJ, dessertbuffet, snoepkar en Photomax 360. U kiest wat u wilt toevoegen aan de hand van wat u die dag wenst, altijd met duidelijke prijzen en zonder verrassingen."
+      }
+    ]
+  },
+  "catering": {
+    "title": "Catering De Diez a Dos",
+    "subtitle": "Geniet van de prachtige aandacht en persoonlijke behandeling die wij bij elk evenement bieden. Ons team zet zich in om van uw speciale gelegenheid een onvergetelijk moment te maken, met aandacht voor elk detail zodat u en uw gasten zich thuis voelen.",
+    "badge": "Specialiteit",
+    "items": [
+      {
+        "title": "We passen ons aan u aan",
+        "description": "We ontwerpen elk evenement naar uw smaak en behoeften, zodat u voelt dat de ruimte op maat is gemaakt."
+      },
+      {
+        "title": "Begeleiding op elk moment",
+        "description": "We begeleiden u voor, tijdens en na het evenement, beantwoorden vragen en regelen de details zodat u zich alleen hoeft bezig te houden met genieten."
+      },
+      {
+        "title": "Nabijheid en professionaliteit",
+        "description": "We helpen u met het vertrouwen van altijd en de ernst die uw viering verdient, met een combinatie van warmte en organisatie."
+      },
+      {
+        "title": "Details die het verschil maken",
+        "description": "Van de ontvangst van uw gasten tot het einde van het evenement, elk klein gebaar is bedoeld om te verrassen en te plezieren."
+      },
+      {
+        "title": "Comfortabele en gastvrije sfeer",
+        "description": "We creëren een intieme en aangename sfeer waarin uw gasten zich te allen tijde ontspannen, welkom en verzorgd voelen."
+      },
+      {
+        "title": "Proactieve service",
+        "description": "We anticiperen op de behoeften van uw evenement zodat alles vanzelfsprekend verloopt, zonder improvisatie of verrassingen."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Zalen",
+    "subtitle": "Ontdek onze elegante zalen, ontworpen om de perfecte sfeer te creëren voor uw speciale evenement",
+    "scrollLeftLabel": "Galerij naar links scrollen",
+    "scrollRightLabel": "Galerij naar rechts scrollen",
+    "expandedAlt": "Vergrote afbeelding",
+    "rooms": {
+      "olas": "Zaal Olas",
+      "amazonias": "Zaal Amazonias"
+    },
+    "photos": [
+      { "room": "olas", "alt": "Zaal Olas voor privéevenementen in Madrid - hoofdaanzicht" },
+      { "room": "olas", "alt": "Zaal Olas - ruimte voor vieringen en feesten in Madrid" },
+      { "room": "olas", "alt": "Zaal Olas - elegante sfeer voor evenementen nabij het Bernabéu" },
+      { "room": "olas", "alt": "Zaal Olas - decoratie en meubilair voor evenementen in Madrid" },
+      { "room": "amazonias", "alt": "Zaal Amazonias voor exclusieve evenementen in Madrid - hoofdaanzicht" },
+      { "room": "amazonias", "alt": "Zaal Amazonias - ruimte voor bruiloften en vieringen in Madrid" },
+      { "room": "amazonias", "alt": "Zaal Amazonias - zaalverhuur voor verjaardagen en feesten" },
+      { "room": "amazonias", "alt": "Zaal Amazonias - premium sfeer voor bedrijfsevenementen" },
+      { "room": "amazonias", "alt": "Zaal Amazonias - verlichting en decoratie voor privéevenementen" },
+      { "room": "amazonias", "alt": "Zaal Amazonias - complete ruimte voor vieringen in Madrid" }
+    ]
+  },
+  "extras": {
+    "title": "Beschikbare Extra's",
+    "subtitle": "Maak uw evenement compleet met aanvullende diensten die het verschil maken",
+    "recommendedForLabel": "Aanbevolen voor:",
+    "items": [
+      {
+        "title": "Karaoke",
+        "description": "Als u een leuk en interactief evenement wilt, is karaoke perfect voor groepen vrienden, verjaardagen en familievieringen.",
+        "features": [
+          "Microfoons en geluidsinstallatie",
+          "Verbinding met scherm / TV voor de teksten",
+          "\"Concert-achtige\" sfeer",
+          "Ideaal voor alle leeftijden"
+        ],
+        "recommendedFor": "Verjaardagen, tienerfeesten, vrijgezellenfeesten en gemengde vieringen"
+      },
+      {
+        "title": "PhotoMax 360",
+        "description": "De PhotoMax 360 is een van de meest gevraagde extra's: u stapt op het platform en er worden video's opgenomen met spectaculair effect, perfect voor sociale media.",
+        "features": [
+          "Zeer opvallende video's (slow motion / 360-effect)",
+          "Ideaal voor grote groepen",
+          "Wordt \"de attractie\" van het evenement",
+          "Top herinnering voor gasten"
+        ],
+        "recommendedFor": "Verjaardagen, privéfeesten, jeugdevenementen en vieringen waar u topkwaliteit wilt"
+      },
+      {
+        "title": "Professionele DJ",
+        "description": "Als u wilt dat uw evenement klinkt als een discotheek maar in uw stijl, kunt u een professionele DJ toevoegen met muziek die past bij uw publiek.",
+        "features": [
+          "Muziek aangepast aan het type feest",
+          "Volume- en sfeercontrole",
+          "Animatieopties als u dat wenst",
+          "Ingang, opbouw en afsluiting van het evenement met grote hits"
+        ],
+        "recommendedFor": "Grote feesten, verjaardagen voor volwassenen, vrijgezellenfeesten en dansevenementen"
+      },
+      {
+        "title": "Dessertbuffet / Candy Bar",
+        "description": "Het dessertbuffet is ideaal als u een mooie, verzorgde en klaar-om-van-te-genieten presentatie wilt. Het geeft een elegante touch en staat geweldig op foto's.",
+        "features": [
+          "Thematische decoratie",
+          "Diverse snoepjes",
+          "Buffetpresentatie",
+          "Opties voor kinderen of volwassenen"
+        ],
+        "recommendedFor": "Kinderverjaardagen, communies en familie-evenementen"
+      },
+      {
+        "title": "Aangepaste Decoratie",
+        "description": "Decoratie maakt het verschil. U kunt uw evenement mooier en meer \"van uzelf\" maken met aangepaste decoratie: thematisch, kleuren, namen, ballonnen en meer.",
+        "features": [
+          "Ballonnen (bogen, kolommen, slingers)",
+          "Achtergrond voor foto's / photocall",
+          "Aangepaste borden",
+          "Thematische decoratie"
+        ],
+        "recommendedFor": "Verjaardagen, vrijgezellenfeesten, baby showers en allerlei vieringen"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Vrijblijvend - Laten We Praten Over Uw Evenement",
+    "subtitle": "Vertel ons uw visie en wij helpen u die werkelijkheid te maken",
+    "form": {
+      "sectionTitle": "Contactgegevens",
+      "helperRequired": "Verplichte velden",
+      "optional": "Optioneel",
+      "fields": {
+        "nombre": { "label": "Naam", "placeholder": "Jan Jansen" },
+        "email": { "label": "E-mail", "placeholder": "jan@example.com" },
+        "telefono": { "label": "Telefoon", "placeholder": "+34 *** *** ***" },
+        "evento": { "label": "Type Evenement", "placeholder": "Bruiloft, Bedrijf, Verjaardag" },
+        "fechaEvento": { "label": "Datum van het Evenement", "placeholder": "DD/MM/JJJJ" },
+        "numInvitados": { "label": "Aantal Gasten", "placeholder": "50" },
+        "mediaEdad": { "label": "Gemiddelde leeftijd", "placeholder": "0-75 jaar" },
+        "observaciones": { "label": "Opmerkingen", "placeholder": "Aanvullende details over het evenement" },
+        "mensaje": { "label": "Bericht", "placeholder": "Vertel ons over uw evenement..." }
+      },
+      "charCounter": "Min:10 {current}/200",
+      "submit": "Aanvraag Versturen",
+      "submitting": "Versturen...",
+      "success": "Bericht verzonden! We nemen binnenkort contact met u op.",
+      "errorDefault": "Fout bij het verzenden van het bericht.",
+      "errorConnection": "Verbindingsfout. Controleer uw verbinding en probeer het opnieuw."
+    },
+    "validation": {
+      "nombre": "De naam moet ten minste 2 tekens bevatten",
+      "email": "Ongeldig e-mailadres",
+      "telefono": "Het telefoonnummer moet tussen 9 en 15 cijfers bevatten",
+      "evento": "Het type evenement moet ten minste 4 tekens bevatten",
+      "fechaEventoRequired": "U moet een datum voor het evenement selecteren",
+      "fechaEventoPast": "De datum van het evenement moet na vandaag zijn",
+      "numInvitadosRequired": "Het aantal gasten is verplicht",
+      "numInvitadosInvalid": "Het aantal gasten moet een geldig getal zijn",
+      "numInvitadosLength": "Het aantal gasten moet ten minste 2 tekens bevatten",
+      "mediaEdad": "De gemiddelde leeftijd moet ten minste 2 tekens bevatten",
+      "mensaje": "Het bericht moet ten minste 10 tekens bevatten",
+      "noObservations": "Geen opmerkingen",
+      "responseProcessError": "Fout bij verwerken serverantwoord",
+      "unknownError": "Onbekende fout bij verzenden formulier"
+    },
+    "info": {
+      "phoneLabel": "Telefoon",
+      "emailLabel": "E-mail",
+      "addressLabel": "Adres",
+      "scheduleLabel": "Openingstijden",
+      "schedule": "Bezoek op afspraak"
+    }
+  },
+  "location": {
+    "title": "Onze Locatie",
+    "subtitle": "Vind ons in het hart van Madrid",
+    "map": {
+      "reviewsCount": "({count} recensies)",
+      "directions": "Routebeschrijving"
+    }
+  },
+  "reviews": {
+    "title": "Wat onze klanten zeggen",
+    "subtitle": "Echte ervaringen van onvergetelijke evenementen",
+    "loading": "Recensies laden...",
+    "empty": "Geen recensies beschikbaar.",
+    "viewAll": "Bekijk alle recensies op Google",
+    "googleBadgeTitle": "Gepubliceerd op Google",
+    "defaultUser": "Google-gebruiker"
+  },
+  "footer": {
+    "tagline": "Uw privéruimte in het hart van Madrid",
+    "legal": "De Diez a Dos Private Event, S.L.U.",
+    "copyright": "© {year} De Diez a Dos. Alle rechten voorbehouden.",
+    "slogan": "Meer dan een decennium evenementen creëren die je bijblijven",
+    "keywords": "Evenementenzalen Madrid | Verjaardagszaal verhuren Madrid | Betaalbare privéevenementen | Feesten nabij Santiago Bernabéu | Goedkope verjaardagszaal Madrid | Betaalbare eventcatering | Goedkope vieringen Madrid | Verhuur feestlocatie Madrid | Evenementen naast Bernabéu | Goedkope bruiloftszalen | Privéfeesten betaalbare prijs | Zaal reserveren Madrid centrum | Ruimtes voor vieringen Madrid | Evenementen nabij Santiago Bernabéu stadion | Goedkope zaalverhuur met catering | Goedkoop verjaardagsevenement Madrid | Bedrijfsfeesten Madrid | Eventzaal concurrerende prijzen | Onvergetelijke vieringen Madrid | Eventruimte Madrid Centrum | De Diez a Dos Madrid",
+    "partnersIntro": "Strategische partners:",
+    "partnerCapifix": "Capifix | Integrale Logistiek",
+    "devLabel": "Dev:"
+  },
+  "logoAlt": "De Diez a Dos Logo"
+}

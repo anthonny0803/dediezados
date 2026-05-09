@@ -1,0 +1,71 @@
+/*
+ * Design tokens — primitive layer.
+ * Raw color palette without semantic meaning. Components must NOT consume
+ * these directly; they consume the semantic layer in variables.css.
+ * The -rgb triplets enable rgba() composition that adapts per theme.
+ */
+
+:root {
+  /* ============================================================
+   * BRAND
+   * Theme-stable. Same in light and dark.
+   * ============================================================ */
+  --brand-teal-50:  #c9e4e4;
+  --brand-teal-300: #52d5bd;
+  --brand-teal-500: #3fb5a1;
+  --brand-teal-700: #2a8275;
+  --brand-teal-900: #1a4d45;
+
+  --brand-teal-500-rgb: 63, 181, 161;
+  --brand-teal-300-rgb: 82, 213, 189;
+
+  /* Glow accent used in title shimmers and text shadows */
+  --brand-glow:     #a8d5d5;
+  --brand-glow-rgb: 168, 213, 213;
+
+  /* ============================================================
+   * NEUTRALS
+   * Full grayscale ramp. Light theme picks the lighter half;
+   * dark theme picks the darker half.
+   * ============================================================ */
+  --neutral-0:    #ffffff;
+  --neutral-50:   #f8f8f8;
+  --neutral-100:  #ededed;
+  --neutral-200:  #e8e8e8;
+  --neutral-300:  #dddddd;
+  --neutral-400:  #b8b8b8;
+  --neutral-500:  #888888;
+  --neutral-600:  #666666;
+  --neutral-700:  #333333;
+  --neutral-800:  #242424;
+  --neutral-850:  #1e1e1e;
+  --neutral-870:  #1c1c1c;
+  --neutral-880:  #1a1a1a;
+  --neutral-890:  #161616;
+  --neutral-900:  #111111;
+  --neutral-910:  #101010;
+  --neutral-920:  #0f0f0f;
+  --neutral-940:  #0c0c0c;
+  --neutral-950:  #0a0a0a;
+  --neutral-970:  #060606;
+  --neutral-1000: #000000;
+
+  --neutral-0-rgb:    255, 255, 255;
+  --neutral-1000-rgb: 0, 0, 0;
+  --neutral-950-rgb:  10, 10, 10;
+  --neutral-900-rgb:  17, 17, 17;
+  --neutral-870-rgb:  28, 28, 28;
+  --neutral-880-rgb:  14, 14, 14;
+  --neutral-940-rgb:  11, 11, 11;
+
+  /* ============================================================
+   * SEMANTIC ACCENTS
+   * Status colors. Theme-stable.
+   * ============================================================ */
+  --color-success:   #34d399;
+  --color-error:     #f87171;
+  --color-warning:   #f0b429;
+
+  --color-success-rgb: 52, 211, 153;
+  --color-error-rgb:   248, 113, 113;
+}

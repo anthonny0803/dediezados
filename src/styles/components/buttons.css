@@ -1,0 +1,186 @@
+/* Base button */
+.btn {
+  display: inline-block;
+  padding: 13px 34px;
+  background: var(--primary);
+  color: var(--on-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-teal);
+  transition: all var(--transition-smooth);
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  color: var(--on-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-teal-hover);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* Outline button */
+.btn-outline {
+  background: rgba(var(--neutral-0-rgb), 0.1);
+  border: 1px solid rgba(var(--neutral-0-rgb), 0.5);
+  color: var(--pure-white);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background var(--transition-smooth), border-color var(--transition-smooth), transform var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: rgba(var(--neutral-0-rgb), 0.2) !important;
+  border-color: rgba(var(--neutral-0-rgb), 0.7);
+  color: var(--pure-white) !important;
+  transform: translateY(-2px);
+}
+
+/* Submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 16px;
+  font-size: 0.95rem;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  box-shadow: var(--shadow-teal);
+}
+
+button[type="submit"]:hover {
+  background: var(--primary-dark);
+  color: var(--on-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-teal-hover);
+}
+
+/* Reviews button */
+.btn-ver-mas-reviews {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 28px;
+  background: transparent;
+  border: 1px solid rgba(var(--brand-teal-500-rgb), 0.4);
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-ver-mas-reviews:hover {
+  background: rgba(var(--brand-teal-500-rgb), 0.1);
+  border-color: var(--primary);
+  color: var(--primary-dark) !important;
+  transform: translateY(-2px);
+}
+
+/* Gallery carousel buttons */
+.gallery-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(var(--neutral-950-rgb), 0.7);
+  border: 1px solid rgba(var(--neutral-0-rgb), 0.15);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transition: all var(--transition-fast);
+}
+
+.gallery-carousel-btn:hover {
+  background: rgba(var(--brand-teal-500-rgb), 0.2);
+  border-color: rgba(var(--brand-teal-500-rgb), 0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-carousel-btn.left {
+  left: 10px;
+}
+
+.gallery-carousel-btn.right {
+  right: 10px;
+}
+
+.gallery-carousel-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--pure-white);
+}
+
+/* Hero carousel dots */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--neutral-0-rgb), 0.3);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.dot.active {
+  background: var(--primary);
+  width: 32px;
+}
+
+.dot:hover {
+  background: rgba(var(--neutral-0-rgb), 0.6);
+}
+
+/* Disabled state */
+.btn:disabled,
+.btn.disabled,
+button[type="submit"]:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .btn {
+    padding: 11px 24px;
+    font-size: 0.85rem;
+  }
+
+  button[type="submit"] {
+    padding: 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,13 +1,22 @@
-import { useState, useEffect } from "react";
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
+import { siteConfig } from '@/config/site.config';
+import { LocaleSwitcher } from '@/components/ui/LocaleSwitcher';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export const Sidenav = () => {
+  const t = useTranslations('nav');
+  const tRoot = useTranslations();
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const [isInHero, setIsInHero] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById("hero");
+      const heroSection = document.getElementById('hero');
       const isMobile = window.innerWidth <= 1024;
       if (heroSection && !isMobile) {
         const heroBottom = heroSection.offsetHeight;
@@ -18,13 +27,13 @@ export const Sidenav = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     handleScroll();
-    window.addEventListener("resize", handleScroll);
+    window.addEventListener('resize', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
     };
   }, []);
 
@@ -33,7 +42,7 @@ export const Sidenav = () => {
       handleClose();
     } else {
       setIsOpen(true);
-      document.body.classList.add("no-scroll");
+      document.body.classList.add('no-scroll');
     }
   };
 
@@ -42,31 +51,63 @@ export const Sidenav = () => {
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
-      document.body.classList.remove("no-scroll");
+      document.body.classList.remove('no-scroll');
     }, 400);
+  };
+
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+    handleClose();
+  };
+
+  const handleSectionClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
+    e.preventDefault();
+    document.getElementById(sectionId)?.scrollIntoView({ block: 'start' });
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+    handleClose();
   };
 
   return (
     <>
       {/* Overlay */}
       <div
-        className={`sidenav-overlay ${isOpen ? "active" : ""}`}
+        className={`sidenav-overlay ${isOpen ? 'active' : ''}`}
         onClick={handleClose}
       />
 
       {/* Sidenav */}
       <div
-        className={`sidenav ${isOpen ? "open" : ""} ${
-          isClosing ? "closing" : ""
+        className={`sidenav ${isOpen ? 'open' : ''} ${
+          isClosing ? 'closing' : ''
         }`}
       >
         {/* Logo mobile - top */}
         <div className="sidenav-logo sidenav-logo-top">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png"
-            alt="De Diez a Dos Logo"
-            width="143"
-            height="95"
+            src={siteConfig.logo.url}
+            alt={tRoot('logoAlt')}
+            data-theme-variant="dark"
+            width={siteConfig.logo.width}
+            height={siteConfig.logo.height}
+            loading="lazy"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={siteConfig.logo.urlLight}
+            alt={tRoot('logoAlt')}
+            data-theme-variant="light"
+            width={siteConfig.logo.width}
+            height={siteConfig.logo.height}
             loading="lazy"
           />
         </div>
@@ -75,60 +116,40 @@ export const Sidenav = () => {
         <div className="sidenav-spacer"></div>
 
         <ul>
-          <li>
-            <a href="#hero" onClick={handleClose}>
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a href="#services" onClick={handleClose}>
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a href="#catering" onClick={handleClose}>
-              Catering
-            </a>
-          </li>
-          <li>
-            <a href="#extras" onClick={handleClose}>
-              Extras
-            </a>
-          </li>
-          <li>
-            <a href="#gallery" onClick={handleClose}>
-              Salas
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={handleClose}>
-              Contacto
-            </a>
-          </li>
-          <li>
-            <a href="#location" onClick={handleClose}>
-              Ubicación
-            </a>
-          </li>
-          <li>
-            <a href="#reviews" onClick={handleClose}>
-              Reseñas
-            </a>
-          </li>
-          <li>
-            <a href="#footer" onClick={handleClose}>
-              Acerca de
-            </a>
-          </li>
+          <li><a href={`/${locale}`} onClick={handleHomeClick}>{t('home')}</a></li>
+          <li><a href="#services" onClick={(e) => handleSectionClick(e, 'services')}>{t('services')}</a></li>
+          <li><a href="#catering" onClick={(e) => handleSectionClick(e, 'catering')}>{t('catering')}</a></li>
+          <li><a href="#extras" onClick={(e) => handleSectionClick(e, 'extras')}>{t('extras')}</a></li>
+          <li><a href="#gallery" onClick={(e) => handleSectionClick(e, 'gallery')}>{t('gallery')}</a></li>
+          <li><a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')}>{t('contact')}</a></li>
+          <li><a href="#location" onClick={(e) => handleSectionClick(e, 'location')}>{t('location')}</a></li>
+          <li><a href="#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>{t('reviews')}</a></li>
+          <li><a href="#footer" onClick={(e) => handleSectionClick(e, 'footer')}>{t('about')}</a></li>
         </ul>
+
+        <div className="sidenav-controls">
+          <ThemeToggle variant="sidenav" />
+          <LocaleSwitcher variant="sidenav" />
+        </div>
 
         {/* Logo desktop - bottom */}
         <div className="sidenav-logo sidenav-logo-bottom">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png"
-            alt="De Diez a Dos Logo"
-            width="143"
-            height="95"
+            src={siteConfig.logo.url}
+            alt={tRoot('logoAlt')}
+            data-theme-variant="dark"
+            width={siteConfig.logo.width}
+            height={siteConfig.logo.height}
+            loading="lazy"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={siteConfig.logo.urlLight}
+            alt={tRoot('logoAlt')}
+            data-theme-variant="light"
+            width={siteConfig.logo.width}
+            height={siteConfig.logo.height}
             loading="lazy"
           />
         </div>
@@ -136,8 +157,8 @@ export const Sidenav = () => {
 
       {/* Toggle button */}
       <div
-        className={`menu-toggle ${isInHero ? "hide" : "show"} ${
-          isOpen ? "open" : ""
+        className={`menu-toggle ${isInHero ? 'hide' : 'show'} ${
+          isOpen ? 'open' : ''
         }`}
         onClick={toggleSidenav}
       >

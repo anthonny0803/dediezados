@@ -1,8 +1,8 @@
-import { lazy, Suspense } from "react";
-import '../../assets/css/sections/reviews.css';
-import { PlaceData } from "../../hooks/useGooglePlace";
+'use client';
 
-const GoogleReviewsLazy = lazy(() => import('../widgets/GoogleReviews').then(m => ({ default: m.GoogleReviews })));
+import { useTranslations } from 'next-intl';
+import { GoogleReviews } from '@/components/widgets/GoogleReviews';
+import type { PlaceData } from '@/hooks/useGooglePlace';
 
 interface ReviewsProps {
   placeData: PlaceData | null;
@@ -10,19 +10,19 @@ interface ReviewsProps {
 }
 
 export const Reviews = ({ placeData, loading }: ReviewsProps) => {
+  const t = useTranslations('reviews');
+
   return (
     <section id="reviews">
       <h2 className="section-title" data-aos="fade-up">
-        Lo que dicen nuestros clientes
+        {t('title')}
       </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-        Experiencias reales de eventos inolvidables
+        {t('subtitle')}
       </p>
-      <Suspense fallback={<div className="reviews-suspense-loader">Cargando reseñas...</div>}>
-        <div data-aos="fade-up" data-aos-delay="200">
-          <GoogleReviewsLazy placeData={placeData} loading={loading} />
-        </div>
-      </Suspense>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <GoogleReviews placeData={placeData} loading={loading} />
+      </div>
     </section>
   );
 };

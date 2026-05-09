@@ -1,23 +1,39 @@
-import { SITE_CONFIG } from "../../config/siteConfig";
+import { useTranslations } from 'next-intl';
+import { siteConfig } from '@/config/site.config';
 
 export const Footer = () => {
+  const t = useTranslations('footer');
+  const tRoot = useTranslations();
+  const year = new Date().getFullYear();
+
   return (
     <footer id="footer">
-      {/* Logo with fade-in animation */}
       <div className="footer-logo" data-aos="fade-up">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png"
-          alt="De Diez a Dos Logo"
+          src={siteConfig.logo.url}
+          alt={tRoot('logoAlt')}
           className="logo-white"
-          width="143"
-          height="95"
+          data-theme-variant="dark"
+          width={siteConfig.logo.width}
+          height={siteConfig.logo.height}
+          loading="lazy"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={siteConfig.logo.urlLight}
+          alt={tRoot('logoAlt')}
+          className="logo-white"
+          data-theme-variant="light"
+          width={siteConfig.logo.width}
+          height={siteConfig.logo.height}
           loading="lazy"
         />
         <div className="logo-underline"></div>
       </div>
 
       <p className="footer-tagline" data-aos="fade-up" data-aos-delay="100">
-        Tu espacio privado en el corazón de Madrid
+        {t('tagline')}
       </p>
 
       <div className="footer-contact" data-aos="fade-up" data-aos-delay="200">
@@ -25,82 +41,71 @@ export const Footer = () => {
           <span className="contact-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" /></svg>
           </span>
-          {SITE_CONFIG.contacto.telefono}<br />{SITE_CONFIG.contacto.telefono2}
+          {siteConfig.contact.phone}<br />{siteConfig.contact.secondaryPhone}
         </div>
         <div className="contact-item">
           <span className="contact-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
           </span>
-          {SITE_CONFIG.contacto.email}<br />{SITE_CONFIG.contacto.email2}
+          {siteConfig.contact.email}<br />{siteConfig.contact.secondaryEmail}
         </div>
         <div className="contact-item">
           <span className="contact-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
           </span>
-          {SITE_CONFIG.contacto.direccion}
+          {siteConfig.contact.address}
         </div>
       </div>
 
       <p className="footer-legal" data-aos="fade-up" data-aos-delay="300">
-        De Diez a Dos Private Event, S.L.U.
+        {t('legal')}
       </p>
 
       <p className="footer-copyright" data-aos="fade-up" data-aos-delay="350">
-        &copy; 2025 De Diez a Dos. Todos los derechos reservados.
+        {t('copyright', { year })}
       </p>
 
       <p className="footer-slogan" data-aos="fade-up" data-aos-delay="400">
-        Más de una década creando eventos que se recuerdan
+        {t('slogan')}
       </p>
 
       {/* SEO Keywords */}
       <p className="footer-keywords" data-aos="fade-up" data-aos-delay="450">
-        Salones para eventos Madrid | Alquiler salón cumpleaños Madrid | Eventos
-        privados económicos | Fiestas cerca Santiago Bernabéu | Salón cumpleaños
-        barato Madrid | Catering eventos económico | Celebraciones baratas
-        Madrid | Alquiler local fiestas Madrid | Eventos junto al Bernabéu |
-        Salones para bodas baratos | Fiestas privadas precio económico |
-        Reservar salón Madrid centro | Espacios para celebraciones Madrid |
-        Eventos cerca estadio Santiago Bernabéu | Alquiler salón con catering
-        barato | Evento de cumpleaños Madrid económico | Fiestas de empresa
-        Madrid | Salón eventos precios competitivos | Celebraciones inolvidables
-        Madrid | Sala para eventos Madrid Centro | De Diez a Dos Madrid
+        {t('keywords')}
       </p>
 
-      <div 
-        className="footer-credits" 
+      <div
+        className="footer-credits"
         style={{ marginTop: '20px', fontSize: '0.8rem', opacity: 0.7 }}
-        data-aos="fade-up" 
+        data-aos="fade-up"
         data-aos-delay="380"
       >
-        {/* Enlace al Socio (Capifix) */}
         <p style={{ marginBottom: '8px' }}>
-          Aliados estratégicos:{" "}
+          {t('partnersIntro')}{' '}
           <a
-            href="https://www.capifixlogistica.com"
+            href={siteConfig.partners.capifix}
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: '#52d5bd', textDecoration: 'none', fontWeight: 'bold' }}
           >
-            Capifix | Logística Integral
+            {t('partnerCapifix')}
           </a>
         </p>
 
-        {/* Tu Firma (Developer) con SVG corregido para JSX */}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px' }}>
-          <span style={{ fontSize: '0.75rem' }}>Dev:</span>
+          <span style={{ fontSize: '0.75rem' }}>{t('devLabel')}</span>
           <a
-            href="https://www.ybanez.dev"
+            href={siteConfig.developer.url}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ 
-              color: '#fff', 
-              textDecoration: 'none', 
-              fontFamily: 'monospace', 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              gap: '6px', 
-              fontWeight: 600 
+            style={{
+              color: '#fff',
+              textDecoration: 'none',
+              fontFamily: 'monospace',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              fontWeight: 600,
             }}
           >
             <svg
@@ -128,7 +133,7 @@ export const Footer = () => {
               <rect x="91" y="86" width="18" height="18" rx="3" fill="url(#footerLogoGrad)" />
               <rect x="67" y="150" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" strokeWidth="2.5" />
             </svg>
-            Anthonny Ybañez
+            {siteConfig.developer.name}
           </a>
         </div>
       </div>

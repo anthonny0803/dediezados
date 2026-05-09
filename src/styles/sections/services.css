@@ -1,0 +1,97 @@
+/* Services grid */
+.services-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+/* Service card */
+.service-card {
+  padding: 36px;
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  border: var(--border-card);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-slow), border-color var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+/* Teal accent line at top */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), rgba(var(--brand-teal-300-rgb), 0.3), transparent);
+  opacity: 0.6;
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-teal);
+  transform: translateY(-6px);
+  border-color: rgba(var(--brand-teal-500-rgb), 0.3);
+}
+
+/* Service icon */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(var(--brand-teal-500-rgb), 0.15), rgba(var(--brand-teal-300-rgb), 0.08));
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(var(--brand-teal-500-rgb), 0.2);
+  transition: background var(--transition-smooth), color var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+  position: relative;
+  z-index: 2;
+}
+
+.service-card:hover .service-icon {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--on-primary);
+  border-color: transparent;
+  box-shadow: var(--shadow-teal);
+}
+
+/* Service text */
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  color: var(--text-primary);
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-weight: 300;
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,125 @@
+.locale-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.locale-switcher-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: transparent;
+  border: var(--border-subtle);
+  border-radius: var(--radius-pill);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.locale-switcher-trigger:hover {
+  background: var(--glass-card-hover);
+  border-color: var(--primary);
+}
+
+.locale-flag {
+  display: block;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.locale-code {
+  letter-spacing: 0.5px;
+}
+
+.locale-chevron {
+  transition: transform var(--transition-fast);
+}
+
+.locale-chevron.open {
+  transform: rotate(180deg);
+}
+
+.locale-switcher-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 170px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--surface-2);
+  border: var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.locale-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.locale-option:hover {
+  background: var(--glass-card-hover);
+}
+
+.locale-option.active {
+  background: var(--primary);
+  color: var(--pure-white);
+  font-weight: 600;
+}
+
+.locale-switcher-navbar {
+  margin-left: 8px;
+}
+
+/* ============================================================
+ * NAVBAR VARIANT
+ * Lives on top of the hero (always-dark zone). Trigger forced
+ * white. The opened menu floats over the body so it keeps
+ * theme-aware colors.
+ * ============================================================ */
+.locale-switcher-navbar .locale-switcher-trigger {
+  color: var(--pure-white);
+  border-color: rgba(var(--neutral-0-rgb), 0.25);
+}
+
+.locale-switcher-navbar .locale-switcher-trigger:hover {
+  background: rgba(var(--neutral-0-rgb), 0.08);
+  border-color: var(--primary);
+}
+
+/* ============================================================
+ * SIDENAV VARIANT
+ * Centered horizontally; menu opens upward to avoid clipping
+ * by the sidenav bottom edge.
+ * ============================================================ */
+.locale-switcher-sidenav {
+  display: flex;
+  justify-content: center;
+}
+
+.locale-switcher-sidenav .locale-switcher-menu {
+  top: auto;
+  bottom: calc(100% + 8px);
+  right: 0;
+  left: auto;
+  transform: none;
+}

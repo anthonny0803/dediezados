@@ -1,0 +1,182 @@
+/*
+ * Semantic layer.
+ * Public API consumed by every component CSS file. Maps semantic names
+ * to primitive tokens from tokens.css. Theme switching swaps the mapping;
+ * variable names remain identical so component CSS does not change.
+ *
+ * Theme resolution is controlled by [data-theme] on <html>, written by
+ * ThemeProvider. "system" mode is resolved in JS at hydration time, so
+ * CSS only deals with explicit dark/light.
+ */
+
+/* ============================================================
+ * THEME-STABLE TOKENS
+ * Identical in light and dark.
+ * ============================================================ */
+:root {
+  /* Brand */
+  --primary:       var(--brand-teal-500);
+  --pure-white:    var(--neutral-0);
+  --pure-black:    var(--neutral-1000);
+
+  /* Radius */
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-pill: 20px;
+
+  /* Transitions */
+  --transition-fast:   0.25s ease;
+  --transition-smooth: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  /* Brand-tinted shadows (relative to teal, theme-stable) */
+  --shadow-teal:       0 4px 20px rgba(var(--brand-teal-500-rgb), 0.2);
+  --shadow-teal-hover: 0 8px 30px rgba(var(--brand-teal-500-rgb), 0.3);
+
+  /* Foreground for content sitting on --primary teal background */
+  --on-primary: var(--neutral-950);
+}
+
+/* ============================================================
+ * DARK THEME (default until ThemeProvider hydrates)
+ * Applies when:
+ *   - <html> has no data-theme (SSR / pre-hydration)
+ *   - <html data-theme="dark">
+ * ============================================================ */
+:root,
+[data-theme='dark'] {
+  /* Brand variants
+   * Note: --primary-dark/-light names predate this refactor and refer to
+   * lighter teals (used on dark backgrounds for contrast). Preserved as-is
+   * to avoid touching components.
+   */
+  --primary-dark:  var(--brand-teal-300);
+  --primary-light: var(--brand-teal-50);
+
+  /* Neutrals (semantic) — names mirror legacy usage, not literal color */
+  --black:      var(--neutral-0);     /* foreground that contrasts the theme */
+  --white:      var(--neutral-920);   /* backdrop fill */
+  --gray-light: var(--neutral-850);
+  --gray:       var(--neutral-400);
+  --gray-dark:  var(--neutral-200);
+
+  /* Surface elevation ramp (darkest base to lightest elevated) */
+  --surface-0: var(--neutral-950);
+  --surface-1: var(--neutral-900);
+  --surface-2: var(--neutral-890);
+  --surface-3: var(--neutral-870);
+  --surface-4: var(--neutral-800);
+
+  /* Glass surfaces over dark background */
+  --glass-card:        rgba(var(--neutral-0-rgb), 0.04);
+  --glass-card-hover:  rgba(var(--neutral-0-rgb), 0.07);
+  --glass-input:       rgba(var(--neutral-0-rgb), 0.03);
+  --glass-input-focus: rgba(var(--neutral-0-rgb), 0.06);
+
+  /* Drop shadows */
+  --shadow-sm:   0 2px 8px  rgba(var(--neutral-1000-rgb), 0.25);
+  --shadow-md:   0 4px 16px rgba(var(--neutral-1000-rgb), 0.3);
+  --shadow-lg:   0 8px 32px rgba(var(--neutral-1000-rgb), 0.35);
+  --shadow-xl:   0 16px 48px rgba(var(--neutral-1000-rgb), 0.4);
+  --shadow-glow: 0 0 20px   rgba(var(--brand-teal-500-rgb), 0.15);
+
+  /* Text shadows (title shimmer) */
+  --text-shadow-glow:       0 0 20px rgba(var(--brand-glow-rgb), 0.3);
+  --text-shadow-glow-hover: 0 0 30px rgba(var(--brand-glow-rgb), 0.5);
+  --text-shadow-subtle:     0 0 15px rgba(var(--brand-glow-rgb), 0.2);
+
+  /* Borders */
+  --border-subtle:      1px solid rgba(var(--neutral-0-rgb), 0.06);
+  --border-input:       1px solid rgba(var(--neutral-0-rgb), 0.1);
+  --border-input-focus: 1px solid var(--primary);
+  --border-card:        1px solid rgba(var(--neutral-0-rgb), 0.08);
+  --border-card-hover:  1px solid rgba(var(--brand-teal-500-rgb), 0.4);
+
+  /* Surface backgrounds */
+  --bg-btn-gallery:       rgba(var(--neutral-940-rgb), 0.25);
+  --bg-btn-gallery-hover: rgba(var(--neutral-0-rgb), 0.3);
+  --bg-sidenav:           rgba(var(--neutral-950-rgb), 0.5);
+  --bg-overlay:           rgba(var(--neutral-1000-rgb), 0.7);
+
+  /* Text scale (semantic, theme-aware) */
+  --text-primary:   var(--neutral-0);
+  --text-secondary: var(--neutral-400);
+  --text-subtle:    rgba(var(--neutral-0-rgb), 0.7);
+  --text-muted:     rgba(var(--neutral-0-rgb), 0.5);
+  --text-faint:     rgba(var(--neutral-0-rgb), 0.3);
+
+  /* Decorative page background (radials + linear). Theme-dual. */
+  --bg-page-gradient:
+    radial-gradient(ellipse 70% 50% at 10% 5%, rgba(var(--brand-teal-500-rgb), 0.12) 0%, transparent 100%),
+    radial-gradient(ellipse 60% 40% at 90% 90%, rgba(var(--brand-teal-500-rgb), 0.08) 0%, transparent 100%),
+    radial-gradient(ellipse 40% 30% at 50% 45%, rgba(var(--brand-teal-500-rgb), 0.05) 0%, transparent 100%),
+    linear-gradient(180deg, var(--neutral-970) 0%, var(--neutral-910) 35%, var(--neutral-940) 65%, var(--neutral-970) 100%);
+}
+
+/* ============================================================
+ * LIGHT THEME
+ * Applies when <html data-theme="light">.
+ * Inverts surface ramp; keeps brand teal stable.
+ * Shadows are softened (dark shadows on light surfaces are louder).
+ * Text-shadow glow shifts from pale-teal halo (only readable on dark)
+ * to a subtle teal tint.
+ * ============================================================ */
+[data-theme='light'] {
+  --primary-dark:  var(--brand-teal-700);
+  --primary-light: var(--brand-teal-50);
+
+  --black:      var(--neutral-1000);
+  --white:      var(--neutral-0);
+  --gray-light: var(--neutral-200);
+  --gray:       var(--neutral-600);
+  --gray-dark:  var(--neutral-700);
+
+  --surface-0: var(--neutral-0);
+  --surface-1: var(--neutral-50);
+  --surface-2: var(--neutral-100);
+  --surface-3: var(--neutral-200);
+  --surface-4: var(--neutral-300);
+
+  --glass-card:        rgba(var(--neutral-1000-rgb), 0.04);
+  --glass-card-hover:  rgba(var(--neutral-1000-rgb), 0.07);
+  --glass-input:       rgba(var(--neutral-1000-rgb), 0.03);
+  --glass-input-focus: rgba(var(--neutral-1000-rgb), 0.06);
+
+  --shadow-sm:   0 2px 8px  rgba(var(--neutral-1000-rgb), 0.06);
+  --shadow-md:   0 4px 16px rgba(var(--neutral-1000-rgb), 0.08);
+  --shadow-lg:   0 8px 32px rgba(var(--neutral-1000-rgb), 0.10);
+  --shadow-xl:   0 16px 48px rgba(var(--neutral-1000-rgb), 0.12);
+  --shadow-glow: 0 0 20px   rgba(var(--brand-teal-500-rgb), 0.2);
+
+  --text-shadow-glow:       0 0 12px rgba(var(--brand-teal-500-rgb), 0.18);
+  --text-shadow-glow-hover: 0 0 18px rgba(var(--brand-teal-500-rgb), 0.28);
+  --text-shadow-subtle:     0 0 10px rgba(var(--brand-teal-500-rgb), 0.12);
+
+  --border-subtle:      1px solid rgba(var(--neutral-1000-rgb), 0.08);
+  --border-input:       1px solid rgba(var(--neutral-1000-rgb), 0.12);
+  --border-input-focus: 1px solid var(--primary);
+  --border-card:        1px solid rgba(var(--neutral-1000-rgb), 0.08);
+  --border-card-hover:  1px solid rgba(var(--brand-teal-500-rgb), 0.5);
+
+  --bg-btn-gallery:       rgba(var(--neutral-1000-rgb), 0.05);
+  --bg-btn-gallery-hover: rgba(var(--neutral-1000-rgb), 0.1);
+  --bg-sidenav:           rgba(var(--neutral-0-rgb), 0.85);
+  --bg-overlay:           rgba(var(--neutral-1000-rgb), 0.5);
+
+  --text-primary:   var(--neutral-1000);
+  --text-secondary: var(--neutral-600);
+  --text-subtle:    rgba(var(--neutral-1000-rgb), 0.7);
+  --text-muted:     rgba(var(--neutral-1000-rgb), 0.55);
+  --text-faint:     rgba(var(--neutral-1000-rgb), 0.4);
+
+  --bg-page-gradient:
+    radial-gradient(ellipse 70% 50% at 10% 5%, rgba(var(--brand-teal-500-rgb), 0.10) 0%, transparent 100%),
+    radial-gradient(ellipse 60% 40% at 90% 90%, rgba(var(--brand-teal-500-rgb), 0.06) 0%, transparent 100%),
+    radial-gradient(ellipse 40% 30% at 50% 45%, rgba(var(--brand-teal-500-rgb), 0.04) 0%, transparent 100%),
+    linear-gradient(180deg, var(--neutral-50) 0%, var(--neutral-100) 35%, var(--neutral-100) 65%, var(--neutral-50) 100%);
+}

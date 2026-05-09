@@ -1,0 +1,271 @@
+{
+  "brand": {
+    "name": "De Diez a Dos",
+    "slogan": "Madrid Events - Event Venues",
+    "description": "Rental of elegant venues and full-service solutions for all kinds of events"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "catering": "Catering",
+    "extras": "Extras",
+    "gallery": "Venues",
+    "contact": "Contact",
+    "location": "Location",
+    "reviews": "Reviews",
+    "about": "About"
+  },
+  "theme": {
+    "toggleLabel": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "hero": {
+    "carouselLabel": "Carousel slides",
+    "slideLabel": "Go to slide {index}",
+    "slides": [
+      {
+        "title": "Your private space in the heart of Madrid",
+        "description": "At De Diez a Dos we turn every celebration into a unique experience. An exclusive venue with crafted catering, open bar, professional sound and a team that takes care of everything. You celebrate. We handle every detail.",
+        "primaryCta": "Request Information",
+        "outlineCta": "View Services"
+      },
+      {
+        "title": "Unforgettable Moments",
+        "description": "The perfect venue for the most important day of your life. Unique spaces with personalized services to make your event a memorable day",
+        "primaryCta": "View Venues",
+        "outlineCta": "View Extras"
+      },
+      {
+        "title": "Corporate Events",
+        "description": "Professional venues for conferences, presentations, team building and corporate celebrations with full catering services",
+        "primaryCta": "Book Venue",
+        "outlineCta": "Learn More"
+      }
+    ]
+  },
+  "services": {
+    "title": "Professional Services",
+    "subtitle": "Complete packages that include everything you need for your event",
+    "items": [
+      {
+        "title": "Exclusive Space",
+        "description": "Venue with two exclusive spaces, private access and a fully reserved atmosphere. Comfortable furniture and adjustable lighting. We work with care and warmth, coordinating every detail so your event runs perfectly."
+      },
+      {
+        "title": "Audio-Visual System",
+        "description": "Professional sound and high-quality screens already installed on site. Our technical team ensures everything works flawlessly during the event. Adjustable lighting and atmospheres tailored to your style: elegant, modern or festive. Quality and comfort, with no setup hassle."
+      },
+      {
+        "title": "Catering De Diez a Dos",
+        "description": "Over 14 years listening to our clients and refining every proposal. The result: balanced, versatile menus designed to fit any occasion. Quality, fine presentation and options that work for every type of event."
+      },
+      {
+        "title": "Open Bar",
+        "description": "Our bar adapts to every event. We offer different options depending on the package, so you can choose the format that best fits your celebration. Flexibility and professional service throughout."
+      },
+      {
+        "title": "Professional Staff",
+        "description": "Bar staff, waiters and access control to ensure safety and comfort. An efficient, discreet team. Faced with any unexpected issue, we provide quick, quality solutions. Simple and resourceful service."
+      },
+      {
+        "title": "Additional Services",
+        "description": "We offer optional extras to round out your event: custom decoration, DJ, dessert table, candy cart and Photomax 360. You choose what to add depending on what you want for the day, always with clear pricing and no surprises."
+      }
+    ]
+  },
+  "catering": {
+    "title": "Catering De Diez a Dos",
+    "subtitle": "Enjoy the wonderful attention and personalized treatment we offer at every event. Our team is dedicated to making your special occasion an unforgettable moment, taking care of every detail so you and your guests feel right at home.",
+    "badge": "Specialty",
+    "items": [
+      {
+        "title": "We adapt to you",
+        "description": "We design every event around your tastes and needs, so the space feels tailor-made for you."
+      },
+      {
+        "title": "Support at every step",
+        "description": "We guide you before, during and after the event, answering questions and handling the details so you only worry about enjoying yourself."
+      },
+      {
+        "title": "Warmth and professionalism",
+        "description": "We serve you with the trust of always and the seriousness your celebration deserves, blending warmth and organization."
+      },
+      {
+        "title": "Details that make the difference",
+        "description": "From welcoming your guests to closing the event, every small gesture is designed to surprise and delight."
+      },
+      {
+        "title": "Comfortable and welcoming atmosphere",
+        "description": "We create an intimate, pleasant atmosphere where your guests feel relaxed, welcome and looked after at all times."
+      },
+      {
+        "title": "Proactive service",
+        "description": "We anticipate the needs of your event so everything flows naturally, with no improvisation or surprises."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Venues",
+    "subtitle": "Discover our elegant venues, designed to create the perfect atmosphere for your special event",
+    "scrollLeftLabel": "Scroll gallery left",
+    "scrollRightLabel": "Scroll gallery right",
+    "expandedAlt": "Expanded image",
+    "rooms": {
+      "olas": "Olas Hall",
+      "amazonias": "Amazonias Hall"
+    },
+    "photos": [
+      { "room": "olas", "alt": "Olas Hall for private events in Madrid - main view" },
+      { "room": "olas", "alt": "Olas Hall - venue for celebrations and parties in Madrid" },
+      { "room": "olas", "alt": "Olas Hall - elegant atmosphere for events near the Bernabeu" },
+      { "room": "olas", "alt": "Olas Hall - decoration and furniture for events in Madrid" },
+      { "room": "amazonias", "alt": "Amazonias Hall for exclusive events in Madrid - main view" },
+      { "room": "amazonias", "alt": "Amazonias Hall - venue for weddings and celebrations in Madrid" },
+      { "room": "amazonias", "alt": "Amazonias Hall - venue rental for birthdays and parties" },
+      { "room": "amazonias", "alt": "Amazonias Hall - premium atmosphere for corporate events" },
+      { "room": "amazonias", "alt": "Amazonias Hall - lighting and decoration for private events" },
+      { "room": "amazonias", "alt": "Amazonias Hall - full venue for celebrations in Madrid" }
+    ]
+  },
+  "extras": {
+    "title": "Available Extras",
+    "subtitle": "Round out your event with additional services that make a difference",
+    "recommendedForLabel": "Recommended for:",
+    "items": [
+      {
+        "title": "Karaoke",
+        "description": "If you want a fun and engaging event, karaoke is perfect for groups of friends, birthdays and family celebrations.",
+        "features": [
+          "Microphones and sound system",
+          "TV / screen connection for lyrics",
+          "\"Concert-style\" atmosphere",
+          "Ideal for all ages"
+        ],
+        "recommendedFor": "Birthdays, teen parties, farewells and mixed celebrations"
+      },
+      {
+        "title": "PhotoMax 360",
+        "description": "PhotoMax 360 is one of the most sought-after extras: you step onto the platform and videos are recorded with a stunning effect, perfect for social media.",
+        "features": [
+          "Eye-catching videos (slow motion / 360 effect)",
+          "Ideal for large groups",
+          "Becomes \"the attraction\" of the event",
+          "Top keepsake for guests"
+        ],
+        "recommendedFor": "Birthdays, private parties, youth events and celebrations where you want top-tier production"
+      },
+      {
+        "title": "Professional DJ",
+        "description": "If you want your event to sound like a club but in your own style, you can add a professional DJ with music tailored to your audience.",
+        "features": [
+          "Music tailored to the type of party",
+          "Volume and atmosphere control",
+          "Hosting options if you wish",
+          "Entrance, build-up and closing of the event with hit tracks"
+        ],
+        "recommendedFor": "Big parties, adult birthdays, farewells and dance events"
+      },
+      {
+        "title": "Dessert Table / Candy Bar",
+        "description": "The dessert table is ideal if you want a beautiful, polished setup ready to enjoy. It adds an elegant touch and looks great in photos.",
+        "features": [
+          "Themed decoration",
+          "Assorted sweets",
+          "Buffet-style presentation",
+          "Options for kids or adults"
+        ],
+        "recommendedFor": "Children's birthdays, communions and family events"
+      },
+      {
+        "title": "Custom Decoration",
+        "description": "Decoration makes the difference. You can make your event more beautiful and more \"yours\" with custom decoration: themes, colors, names, balloons and more.",
+        "features": [
+          "Balloons (arches, columns, garlands)",
+          "Photo backdrop / photocall",
+          "Custom signs",
+          "Themed decoration"
+        ],
+        "recommendedFor": "Birthdays, farewells, baby showers and all kinds of celebrations"
+      }
+    ]
+  },
+  "contact": {
+    "title": "No Commitment - Let's Talk About Your Event",
+    "subtitle": "Tell us your vision and we'll help you make it real",
+    "form": {
+      "sectionTitle": "Contact details",
+      "helperRequired": "Required fields",
+      "optional": "Optional",
+      "fields": {
+        "nombre": { "label": "Name", "placeholder": "John Smith" },
+        "email": { "label": "Email", "placeholder": "john@example.com" },
+        "telefono": { "label": "Phone", "placeholder": "+34 *** *** ***" },
+        "evento": { "label": "Event Type", "placeholder": "Wedding, Corporate, Birthday" },
+        "fechaEvento": { "label": "Event Date", "placeholder": "DD/MM/YYYY" },
+        "numInvitados": { "label": "Number of Guests", "placeholder": "50" },
+        "mediaEdad": { "label": "Average age", "placeholder": "0-75 years" },
+        "observaciones": { "label": "Notes", "placeholder": "Additional details about the event" },
+        "mensaje": { "label": "Message", "placeholder": "Tell us about your event..." }
+      },
+      "charCounter": "Min:10 {current}/200",
+      "submit": "Send Request",
+      "submitting": "Sending...",
+      "success": "Message sent! We'll get in touch with you shortly.",
+      "errorDefault": "Error sending the message.",
+      "errorConnection": "Connection error. Please check your connection and try again."
+    },
+    "validation": {
+      "nombre": "Name must be at least 2 characters",
+      "email": "Invalid email",
+      "telefono": "Phone must be between 9 and 15 digits",
+      "evento": "Event type must be at least 4 characters",
+      "fechaEventoRequired": "You must select a date for the event",
+      "fechaEventoPast": "The event date must be later than today",
+      "numInvitadosRequired": "Number of guests is required",
+      "numInvitadosInvalid": "Number of guests must be a valid number",
+      "numInvitadosLength": "Number of guests must be at least 2 characters",
+      "mediaEdad": "Average age must be at least 2 characters",
+      "mensaje": "Message must be at least 10 characters",
+      "noObservations": "No notes",
+      "responseProcessError": "Error processing server response",
+      "unknownError": "Unknown error sending the form"
+    },
+    "info": {
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "addressLabel": "Location",
+      "scheduleLabel": "Hours",
+      "schedule": "Visits by appointment"
+    }
+  },
+  "location": {
+    "title": "Our Location",
+    "subtitle": "Find us in the heart of Madrid",
+    "map": {
+      "reviewsCount": "({count} reviews)",
+      "directions": "Get directions"
+    }
+  },
+  "reviews": {
+    "title": "What our clients say",
+    "subtitle": "Real experiences from unforgettable events",
+    "loading": "Loading reviews...",
+    "empty": "No reviews available.",
+    "viewAll": "See all reviews on Google",
+    "googleBadgeTitle": "Posted on Google",
+    "defaultUser": "Google User"
+  },
+  "footer": {
+    "tagline": "Your private space in the heart of Madrid",
+    "legal": "De Diez a Dos Private Event, S.L.U.",
+    "copyright": "© {year} De Diez a Dos. All rights reserved.",
+    "slogan": "Over a decade creating events to remember",
+    "keywords": "Event venues Madrid | Birthday hall rental Madrid | Affordable private events | Parties near Santiago Bernabeu | Cheap birthday venue Madrid | Affordable event catering | Affordable celebrations Madrid | Party venue rental Madrid | Events next to the Bernabeu | Affordable wedding halls | Private parties affordable price | Book venue Madrid centre | Spaces for celebrations Madrid | Events near Santiago Bernabeu stadium | Affordable venue with catering | Affordable Madrid birthday event | Company parties Madrid | Event venue competitive prices | Unforgettable celebrations Madrid | Event hall Madrid Centre | De Diez a Dos Madrid",
+    "partnersIntro": "Strategic partners:",
+    "partnerCapifix": "Capifix | Integrated Logistics",
+    "devLabel": "Dev:"
+  },
+  "logoAlt": "De Diez a Dos Logo"
+}
