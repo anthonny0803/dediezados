@@ -1,13 +1,54 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useState, type CSSProperties, type FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 import {
+  ContactError,
   sendContactForm,
   validateForm,
   type ContactFormData,
 } from '@/services/contact.service';
+
+const INITIAL_FORM_DATA: ContactFormData = {
+  nombre: '',
+  email: '',
+  telefono: '',
+  evento: '',
+  fechaEvento: '',
+  numInvitados: '',
+  mediaEdad: '',
+  observaciones: '',
+  mensaje: '',
+};
+
+const HONEYPOT_STYLE: CSSProperties = {
+  position: 'absolute',
+  left: '-10000px',
+  width: 0,
+  height: 0,
+  opacity: 0,
+  overflow: 'hidden',
+};
+
+const NAME_MIN = 2;
+const EMAIL_MAX = 254;
+const EVENT_MIN = 4;
+const GUESTS_MIN = 10;
+const GUESTS_MAX = 100;
+const GUESTS_MIN_DIGITS = 2;
+const GUESTS_MAX_DIGITS = 3;
+const AGE_MIN = 2;
+const MESSAGE_MIN = 10;
+const MESSAGE_MAX = 200;
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_REGEX = /^\+?[0-9]{9,15}$/;
+const PHONE_FILLER_REGEX = /[\s\-()]/g;
+const ISO_DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
+const DIGITS_REGEX = /^\d+$/;
+
+type FormMessage = { type: 'success' | 'error'; text: string } | null;
 
 export const Contact = () => {
   const t = useTranslations('contact');
@@ -16,19 +57,10 @@ export const Contact = () => {
   const tFields = useTranslations('contact.form.fields');
   const tInfo = useTranslations('contact.info');
 
-  const [formData, setFormData] = useState<ContactFormData>({
-    nombre: '',
-    email: '',
-    telefono: '',
-    evento: '',
-    fechaEvento: '',
-    numInvitados: '',
-    mediaEdad: '',
-    observaciones: '',
-    mensaje: '',
-  });
+  const [formData, setFormData] = useState<ContactFormData>(INITIAL_FORM_DATA);
+  const [honeypot, setHoneypot] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState({ type: '', text: '' });
+  const [message, setMessage] = useState<FormMessage>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -37,9 +69,8 @@ export const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
-
-    if (message.text) {
-      setMessage({ type: '', text: '' });
+    if (message) {
+      setMessage(null);
     }
   };
 
@@ -53,86 +84,83 @@ export const Contact = () => {
     }
 
     setIsSubmitting(true);
-    setMessage({ type: '', text: '' });
+    setMessage(null);
+
+    const normalizedData: ContactFormData = {
+      ...formData,
+      nombre: formData.nombre
+        .toLowerCase()
+        .replace(/\b\w/g, (c) => c.toUpperCase()),
+      evento:
+        formData.evento.charAt(0).toUpperCase() +
+        formData.evento.slice(1).toLowerCase(),
+      email: formData.email.toLowerCase(),
+    };
 
     try {
-      const [year, month, day] = formData.fechaEvento.split('-');
-      const fechaFormateada = `${day}/${month}/${year}`;
-
-      const normalizedData: ContactFormData = {
-        ...formData,
-        nombre: formData.nombre
-          .toLowerCase()
-          .replace(/\b\w/g, (c) => c.toUpperCase()),
-        evento:
-          formData.evento.charAt(0).toUpperCase() +
-          formData.evento.slice(1).toLowerCase(),
-        fechaEvento: fechaFormateada,
-        email: formData.email.toLowerCase(),
-      };
-
-      const response = await sendContactForm(
+      await sendContactForm(
         normalizedData,
-        tValidation('noObservations')
+        tValidation('noObservations'),
+        honeypot
       );
-
-      if (response.success) {
-        setMessage({ type: 'success', text: tForm('success') });
-        setFormData({
-          nombre: '',
-          email: '',
-          telefono: '',
-          evento: '',
-          fechaEvento: '',
-          numInvitados: '',
-          mediaEdad: '',
-          observaciones: '',
-          mensaje: '',
-        });
-      } else {
-        setMessage({
-          type: 'error',
-          text: response.message || tForm('errorDefault'),
-        });
-      }
+      setMessage({ type: 'success', text: tForm('success') });
+      setFormData(INITIAL_FORM_DATA);
+      setHoneypot('');
     } catch (error) {
-      console.error('Error al enviar formulario:', error);
-      setMessage({
-        type: 'error',
-        text: error instanceof Error ? error.message : tForm('errorConnection'),
-      });
+      if (error instanceof ContactError && error.message) {
+        setMessage({ type: 'error', text: error.message });
+      } else if (
+        error instanceof ContactError &&
+        (error.code === 'CLIENT_TIMEOUT' || error.code === 'NETWORK_ERROR')
+      ) {
+        setMessage({ type: 'error', text: tForm('errorConnection') });
+      } else {
+        setMessage({ type: 'error', text: tForm('errorDefault') });
+      }
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const isValidNombre = formData.nombre.trim().length >= 2;
-  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
-  const isValidTelefono = /^[+]{0,1}[0-9]{9,15}$/.test(formData.telefono);
-  const isValidEvento = formData.evento.trim().length >= 4;
+  const isValidNombre = formData.nombre.trim().length >= NAME_MIN;
+
+  const trimmedEmail = formData.email.trim();
+  const isValidEmail =
+    trimmedEmail.length > 0 &&
+    trimmedEmail.length <= EMAIL_MAX &&
+    EMAIL_REGEX.test(trimmedEmail);
+
+  const isValidTelefono = PHONE_REGEX.test(
+    formData.telefono.replace(PHONE_FILLER_REGEX, '')
+  );
+
+  const isValidEvento = formData.evento.trim().length >= EVENT_MIN;
 
   let isValidFechaEvento = false;
-  if (formData.fechaEvento) {
+  if (ISO_DATE_REGEX.test(formData.fechaEvento)) {
+    const [year, month, day] = formData.fechaEvento.split('-').map(Number);
+    const fechaEvento = new Date(year, month - 1, day);
     const hoy = new Date();
     hoy.setHours(0, 0, 0, 0);
-    const fechaEvento = new Date(formData.fechaEvento);
-    isValidFechaEvento = fechaEvento > hoy;
+    isValidFechaEvento =
+      !Number.isNaN(fechaEvento.getTime()) && fechaEvento > hoy;
   }
 
-  const isValidMediaEdad = formData.mediaEdad.trim().length >= 2;
+  const isValidMediaEdad = formData.mediaEdad.trim().length >= AGE_MIN;
   const numInvitadosTrimmed = formData.numInvitados.trim();
   const numInvitadosNumber = Number(numInvitadosTrimmed);
 
   const isValidNumInvitados =
-    numInvitadosTrimmed.length >= 2 &&
-    numInvitadosTrimmed.length <= 3 &&
-    /^\d+$/.test(numInvitadosTrimmed) &&
+    numInvitadosTrimmed.length >= GUESTS_MIN_DIGITS &&
+    numInvitadosTrimmed.length <= GUESTS_MAX_DIGITS &&
+    DIGITS_REGEX.test(numInvitadosTrimmed) &&
     !Number.isNaN(numInvitadosNumber) &&
-    numInvitadosNumber >= 10 &&
-    numInvitadosNumber <= 100;
+    numInvitadosNumber >= GUESTS_MIN &&
+    numInvitadosNumber <= GUESTS_MAX;
 
   const isValidMensaje =
-    formData.mensaje.length >= 10 && formData.mensaje.length <= 200;
+    formData.mensaje.length >= MESSAGE_MIN &&
+    formData.mensaje.length <= MESSAGE_MAX;
 
   const getBorderClass = (value: string, isValid: boolean) => {
     if (value === '') return 'neutral';
@@ -155,7 +183,20 @@ export const Contact = () => {
 
       <div className="contact-container">
         <div className="form-card" data-aos="fade-up" data-aos-delay="200">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} noValidate>
+            <div style={HONEYPOT_STYLE} aria-hidden="true">
+              <label htmlFor="website">Website</label>
+              <input
+                type="text"
+                id="website"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
             <div className="input-group">
               <span className="form-section-title">
                 {tForm('sectionTitle')}
@@ -179,6 +220,7 @@ export const Contact = () => {
                   value={formData.nombre}
                   onChange={handleChange}
                   required
+                  autoComplete="name"
                   disabled={isSubmitting}
                   placeholder={tFields('nombre.placeholder')}
                   className={`input-capitalize ${getBorderClass(
@@ -199,7 +241,7 @@ export const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  autoComplete="true"
+                  autoComplete="email"
                   disabled={isSubmitting}
                   placeholder={tFields('email.placeholder')}
                   className={`input-lowercase ${getBorderClass(
@@ -222,9 +264,9 @@ export const Contact = () => {
                   value={formData.telefono}
                   onChange={handleChange}
                   required
+                  autoComplete="tel"
                   disabled={isSubmitting}
                   placeholder={tFields('telefono.placeholder')}
-                  pattern="[+]{0,1}[0-9]{9,15}"
                   className={getBorderClass(formData.telefono, isValidTelefono)}
                 />
               </div>
@@ -282,6 +324,8 @@ export const Contact = () => {
                   value={formData.numInvitados}
                   onChange={handleChange}
                   required
+                  min={GUESTS_MIN}
+                  max={GUESTS_MAX}
                   disabled={isSubmitting}
                   placeholder={tFields('numInvitados.placeholder')}
                   className={getBorderClass(
@@ -338,8 +382,8 @@ export const Contact = () => {
                   value={formData.mensaje}
                   onChange={handleChange}
                   required
-                  minLength={10}
-                  maxLength={200}
+                  minLength={MESSAGE_MIN}
+                  maxLength={MESSAGE_MAX}
                   disabled={isSubmitting}
                   placeholder={tFields('mensaje.placeholder')}
                   className={getBorderClass(formData.mensaje, isValidMensaje)}
@@ -359,8 +403,12 @@ export const Contact = () => {
               {isSubmitting ? tForm('submitting') : tForm('submit')}
             </button>
 
-            {message.text && (
-              <div className={`form-message ${message.type} visible`}>
+            {message && (
+              <div
+                role="alert"
+                aria-live="polite"
+                className={`form-message ${message.type} visible`}
+              >
                 {message.text}
               </div>
             )}
