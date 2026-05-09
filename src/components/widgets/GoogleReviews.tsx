@@ -50,6 +50,7 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
         {reviewsToShow.map((review, index) => (
           <div key={index} className="review-card">
             <div className="review-header">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={review.authorAttribution?.photoUri || AVATAR_PLACEHOLDER}
                 alt={review.authorAttribution?.displayName}
