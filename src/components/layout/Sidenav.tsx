@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 import { LocaleSwitcher } from '@/components/ui/LocaleSwitcher';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
@@ -9,6 +9,7 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle';
 export const Sidenav = () => {
   const t = useTranslations('nav');
   const tRoot = useTranslations();
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const [isInHero, setIsInHero] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
@@ -54,6 +55,27 @@ export const Sidenav = () => {
     }, 400);
   };
 
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+    handleClose();
+  };
+
+  const handleSectionClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
+    e.preventDefault();
+    document.getElementById(sectionId)?.scrollIntoView({ block: 'start' });
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+    handleClose();
+  };
+
   return (
     <>
       {/* Overlay */}
@@ -74,6 +96,16 @@ export const Sidenav = () => {
           <img
             src={siteConfig.logo.url}
             alt={tRoot('logoAlt')}
+            data-theme-variant="dark"
+            width={siteConfig.logo.width}
+            height={siteConfig.logo.height}
+            loading="lazy"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={siteConfig.logo.urlLight}
+            alt={tRoot('logoAlt')}
+            data-theme-variant="light"
             width={siteConfig.logo.width}
             height={siteConfig.logo.height}
             loading="lazy"
@@ -84,15 +116,15 @@ export const Sidenav = () => {
         <div className="sidenav-spacer"></div>
 
         <ul>
-          <li><a href="#hero" onClick={handleClose}>{t('home')}</a></li>
-          <li><a href="#services" onClick={handleClose}>{t('services')}</a></li>
-          <li><a href="#catering" onClick={handleClose}>{t('catering')}</a></li>
-          <li><a href="#extras" onClick={handleClose}>{t('extras')}</a></li>
-          <li><a href="#gallery" onClick={handleClose}>{t('gallery')}</a></li>
-          <li><a href="#contact" onClick={handleClose}>{t('contact')}</a></li>
-          <li><a href="#location" onClick={handleClose}>{t('location')}</a></li>
-          <li><a href="#reviews" onClick={handleClose}>{t('reviews')}</a></li>
-          <li><a href="#footer" onClick={handleClose}>{t('about')}</a></li>
+          <li><a href={`/${locale}`} onClick={handleHomeClick}>{t('home')}</a></li>
+          <li><a href="#services" onClick={(e) => handleSectionClick(e, 'services')}>{t('services')}</a></li>
+          <li><a href="#catering" onClick={(e) => handleSectionClick(e, 'catering')}>{t('catering')}</a></li>
+          <li><a href="#extras" onClick={(e) => handleSectionClick(e, 'extras')}>{t('extras')}</a></li>
+          <li><a href="#gallery" onClick={(e) => handleSectionClick(e, 'gallery')}>{t('gallery')}</a></li>
+          <li><a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')}>{t('contact')}</a></li>
+          <li><a href="#location" onClick={(e) => handleSectionClick(e, 'location')}>{t('location')}</a></li>
+          <li><a href="#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>{t('reviews')}</a></li>
+          <li><a href="#footer" onClick={(e) => handleSectionClick(e, 'footer')}>{t('about')}</a></li>
         </ul>
 
         <div className="sidenav-controls">
@@ -106,6 +138,16 @@ export const Sidenav = () => {
           <img
             src={siteConfig.logo.url}
             alt={tRoot('logoAlt')}
+            data-theme-variant="dark"
+            width={siteConfig.logo.width}
+            height={siteConfig.logo.height}
+            loading="lazy"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={siteConfig.logo.urlLight}
+            alt={tRoot('logoAlt')}
+            data-theme-variant="light"
             width={siteConfig.logo.width}
             height={siteConfig.logo.height}
             loading="lazy"
