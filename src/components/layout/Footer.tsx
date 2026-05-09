@@ -14,6 +14,17 @@ export const Footer = () => {
           src={siteConfig.logo.url}
           alt={tRoot('logoAlt')}
           className="logo-white"
+          data-theme-variant="dark"
+          width={siteConfig.logo.width}
+          height={siteConfig.logo.height}
+          loading="lazy"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={siteConfig.logo.urlLight}
+          alt={tRoot('logoAlt')}
+          className="logo-white"
+          data-theme-variant="light"
           width={siteConfig.logo.width}
           height={siteConfig.logo.height}
           loading="lazy"

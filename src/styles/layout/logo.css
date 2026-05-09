@@ -85,9 +85,19 @@
   transition: all var(--transition-smooth);
 }
 
-[data-theme='light'] .footer-logo .logo-white,
-[data-theme='light'] .sidenav-logo img {
-  filter: invert(1) hue-rotate(180deg);
+.footer-logo [data-theme-variant="light"],
+.sidenav-logo [data-theme-variant="light"] {
+  display: none;
+}
+
+[data-theme="light"] .footer-logo [data-theme-variant="dark"],
+[data-theme="light"] .sidenav-logo [data-theme-variant="dark"] {
+  display: none;
+}
+
+[data-theme="light"] .footer-logo [data-theme-variant="light"],
+[data-theme="light"] .sidenav-logo [data-theme-variant="light"] {
+  display: block;
 }
 
 /* Responsive */

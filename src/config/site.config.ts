@@ -60,6 +60,7 @@ export interface SiteConfig {
   };
   logo: {
     url: string;
+    urlLight: string;
     width: number;
     height: number;
   };
@@ -110,6 +111,7 @@ export const siteConfig: SiteConfig = {
   },
   logo: {
     url: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png',
+    urlLight: 'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1778354211/descarga_ese7xb.png',
     width: 143,
     height: 95,
   },
