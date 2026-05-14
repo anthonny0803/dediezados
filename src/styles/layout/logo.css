@@ -120,8 +120,8 @@
   .sidenav-logo-top {
     display: flex;
     justify-content: center;
-    margin-bottom: 16px;
-    padding-bottom: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
     border-bottom: 2px solid var(--primary);
   }
 

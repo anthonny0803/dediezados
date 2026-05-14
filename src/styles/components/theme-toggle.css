@@ -108,23 +108,57 @@
 
 /* ============================================================
  * SIDENAV VARIANT
- * Opens upward and is centered relative to the trigger so it
- * stays inside the 220px-wide sidenav.
+ * Inline segmented control with 3 always-visible buttons.
+ * Avoids any floating menu so dropdown clipping is impossible.
  * ============================================================ */
-.theme-toggle--sidenav .theme-toggle-menu {
-  top: auto;
-  bottom: calc(100% + 8px);
-  left: 0;
-  right: auto;
-  transform: none;
-  min-width: 150px;
+.theme-toggle--sidenav {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(var(--neutral-0-rgb), 0.06);
+  border: 1px solid rgba(var(--neutral-0-rgb), 0.12);
+  border-radius: var(--radius-pill);
 }
 
-/* Side-by-side layout when theme toggle and locale switcher share a row */
-.sidenav-controls {
-  display: flex;
+[data-theme='light'] .theme-toggle--sidenav {
+  background: rgba(var(--neutral-1000-rgb), 0.04);
+  border-color: rgba(var(--neutral-1000-rgb), 0.14);
+}
+
+.theme-toggle-segment {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.theme-toggle-segment:hover {
+  color: var(--primary);
+}
+
+.theme-toggle-segment.is-active {
+  background: var(--primary);
+  color: var(--pure-white);
+}
+
+.theme-toggle-segment svg {
+  display: block;
+}
+
+/* Stack controls vertically so the locale list can expand full-width */
+.sidenav-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 12px;
   margin: 12px 0;
 }
