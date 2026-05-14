@@ -20,6 +20,7 @@ export const ThemeToggle = ({ variant = 'navbar' }: ThemeToggleProps) => {
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
+    if (variant !== 'navbar') return;
     const handleClickOutside = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
         setOpen(false);
@@ -27,7 +28,42 @@ export const ThemeToggle = ({ variant = 'navbar' }: ThemeToggleProps) => {
     };
     if (open) document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [open]);
+  }, [open, variant]);
+
+  const current: ThemeOption = (theme as ThemeOption) ?? 'system';
+  const displayed = current === 'system' ? resolvedTheme : current;
+
+  const options: { value: ThemeOption; icon: React.ReactNode; label: string }[] = [
+    { value: 'light', icon: <SunIcon />, label: t('light') },
+    { value: 'dark', icon: <MoonIcon />, label: t('dark') },
+    { value: 'system', icon: <MonitorIcon />, label: t('system') },
+  ];
+
+  if (variant === 'sidenav') {
+    return (
+      <div
+        className="theme-toggle theme-toggle--sidenav"
+        role="radiogroup"
+        aria-label={t('toggleLabel')}
+      >
+        {options.map((opt) => {
+          const isActive = mounted && current === opt.value;
+          return (
+            <button
+              key={opt.value}
+              type="button"
+              className={`theme-toggle-segment ${isActive ? 'is-active' : ''}`}
+              onClick={() => setTheme(opt.value)}
+              aria-label={opt.label}
+              aria-pressed={isActive}
+            >
+              {opt.icon}
+            </button>
+          );
+        })}
+      </div>
+    );
+  }
 
   if (!mounted) {
     return (
@@ -40,15 +76,6 @@ export const ThemeToggle = ({ variant = 'navbar' }: ThemeToggleProps) => {
       </button>
     );
   }
-
-  const current: ThemeOption = (theme as ThemeOption) ?? 'system';
-  const displayed = current === 'system' ? resolvedTheme : current;
-
-  const options: { value: ThemeOption; icon: React.ReactNode; label: string }[] = [
-    { value: 'light', icon: <SunIcon />, label: t('light') },
-    { value: 'dark', icon: <MoonIcon />, label: t('dark') },
-    { value: 'system', icon: <MonitorIcon />, label: t('system') },
-  ];
 
   const handleSelect = (value: ThemeOption) => {
     setTheme(value);
