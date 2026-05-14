@@ -6,6 +6,7 @@
   width: 220px;
   max-width: 100%;
   height: 100vh;
+  height: 100dvh;
   background: var(--bg-sidenav);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -180,6 +181,7 @@
 body.no-scroll {
   overflow: hidden;
   height: 100vh;
+  height: 100dvh;
 }
 
 /* Responsive */
@@ -187,6 +189,8 @@ body.no-scroll {
   .sidenav {
     width: 100%;
     height: 100vh;
+    height: 100dvh;
+    padding: 22px 20px;
     background: var(--bg-sidenav);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -214,12 +218,16 @@ body.no-scroll {
 
   .sidenav a {
     text-align: center;
-    padding: 18px;
+    padding: 14px 18px;
     font-size: 1rem;
   }
 
   .sidenav a::after {
-    bottom: 10px;
+    bottom: 4px;
+  }
+
+  .sidenav-controls {
+    margin: 8px 0;
   }
 
   .sidenav a:hover::after {
