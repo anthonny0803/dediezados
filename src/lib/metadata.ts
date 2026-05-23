@@ -37,7 +37,7 @@ export function buildMetadata(locale: string): Metadata {
     metadataBase: new URL(siteUrl),
     title: localeData.title,
     description: localeData.description,
-    keywords: [...seoConfig.keywords],
+    keywords: [...seoConfig.keywords, ...localeData.keywords],
     authors: [{ name: seoConfig.organization.legalName }],
     alternates: {
       canonical,
