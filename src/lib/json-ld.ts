@@ -117,8 +117,23 @@ export function buildJsonLdGraph(locale: string) {
     publisher: { '@id': seoConfig.schemaIds.organization },
   };
 
+  const localeFaq =
+    seoConfig.faq[locale as keyof typeof seoConfig.faq] ?? seoConfig.faq.es;
+  const faqPage = {
+    '@type': 'FAQPage',
+    '@id': `${siteUrl}/${locale}#faq`,
+    mainEntity: localeFaq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+
   return {
     '@context': 'https://schema.org',
-    '@graph': [business, organization, website],
+    '@graph': [business, organization, website, faqPage],
   };
 }
