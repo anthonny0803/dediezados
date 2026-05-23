@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: {
       languages: {
         ...localeAlternates,
-        'x-default': `${siteUrl}/${routing.defaultLocale}`,
+        'x-default': siteUrl,
       },
     },
     images: HOMEPAGE_IMAGES,

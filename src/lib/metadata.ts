@@ -26,7 +26,7 @@ export function buildMetadata(locale: string): Metadata {
   const languages: Record<string, string> = Object.fromEntries(
     routing.locales.map((loc) => [loc, `${siteUrl}/${loc}`])
   );
-  languages['x-default'] = `${siteUrl}/${routing.defaultLocale}`;
+  languages['x-default'] = siteUrl;
 
   const currentOgLocale = localeToOgLocale[locale] ?? locale;
   const alternateOgLocales = routing.locales
