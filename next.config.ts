@@ -21,6 +21,22 @@ const nextConfig: NextConfig = {
         destination: '/es',
         permanent: true,
       },
+      // Legacy WordPress portfolio routes — migrated domain, no equivalent pages
+      {
+        source: '/projects_cat/:slug*',
+        destination: '/es',
+        permanent: true,
+      },
+      {
+        source: '/projects_tag/:slug*',
+        destination: '/es',
+        permanent: true,
+      },
+      {
+        source: '/projects/:slug*',
+        destination: '/es',
+        permanent: true,
+      },
     ];
   },
 };
