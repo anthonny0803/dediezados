@@ -29,19 +29,22 @@
         "title": "Votre espace privé au cœur de Madrid",
         "description": "Chez De Diez a Dos, nous transformons chaque célébration en une expérience unique. Un lieu exclusif avec un traiteur élaboré, un open bar, une sonorisation professionnelle et une équipe qui s'occupe de tout. Vous célébrez. Nous prenons soin de chaque détail.",
         "primaryCta": "Demander des Informations",
-        "outlineCta": "Voir les Services"
+        "outlineCta": "Voir les Services",
+        "alt": "Salle d'evenements privee De Diez a Dos au centre de Madrid"
       },
       {
         "title": "Moments Inoubliables",
         "description": "La salle parfaite pour le jour le plus important de votre vie. Des espaces uniques avec des services personnalisés pour faire de votre événement une journée mémorable",
         "primaryCta": "Voir les Salles",
-        "outlineCta": "Voir les Extras"
+        "outlineCta": "Voir les Extras",
+        "alt": "Salle pour mariages et celebrations inoubliables a Madrid"
       },
       {
         "title": "Événements d'Entreprise",
         "description": "Salles professionnelles pour conférences, présentations, team building et célébrations d'entreprise avec services de traiteur complets",
         "primaryCta": "Réserver une Salle",
-        "outlineCta": "En Savoir Plus"
+        "outlineCta": "En Savoir Plus",
+        "alt": "Salle pour evenements d'entreprise et reunions professionnelles a Madrid"
       }
     ]
   },

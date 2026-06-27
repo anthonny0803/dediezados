@@ -29,19 +29,22 @@
         "title": "O seu espaço privado no coração de Madrid",
         "description": "Em De Diez a Dos transformamos cada celebração numa experiência única. Um lugar exclusivo com catering elaborado, open bar, som profissional e uma equipa que se encarrega de tudo. Você celebra. Nós cuidamos de cada detalhe.",
         "primaryCta": "Solicitar Informação",
-        "outlineCta": "Ver Serviços"
+        "outlineCta": "Ver Serviços",
+        "alt": "Espaco de eventos privado De Diez a Dos no centro de Madrid"
       },
       {
         "title": "Momentos Inesquecíveis",
         "description": "A sala perfeita para o dia mais importante da sua vida. Espaços únicos com serviços personalizados para fazer do seu evento um dia memorável",
         "primaryCta": "Ver Salas",
-        "outlineCta": "Ver Extras"
+        "outlineCta": "Ver Extras",
+        "alt": "Sala para casamentos e celebracoes inesqueciveis em Madrid"
       },
       {
         "title": "Eventos Corporativos",
         "description": "Salas profissionais para conferências, apresentações, team building e celebrações empresariais com serviços completos de catering",
         "primaryCta": "Reservar Sala",
-        "outlineCta": "Saber Mais"
+        "outlineCta": "Saber Mais",
+        "alt": "Sala para eventos corporativos e reunioes de empresa em Madrid"
       }
     ]
   },

@@ -29,19 +29,22 @@
         "title": "Uw privéruimte in het hart van Madrid",
         "description": "Bij De Diez a Dos maken we van elke viering een unieke ervaring. Een exclusieve plek met uitgebreide catering, open bar, professioneel geluid en een team dat alles regelt. U viert. Wij verzorgen elk detail.",
         "primaryCta": "Informatie Aanvragen",
-        "outlineCta": "Bekijk Diensten"
+        "outlineCta": "Bekijk Diensten",
+        "alt": "Private evenementenruimte De Diez a Dos in het centrum van Madrid"
       },
       {
         "title": "Onvergetelijke Momenten",
         "description": "De perfecte zaal voor de belangrijkste dag van uw leven. Unieke ruimtes met persoonlijke diensten om van uw evenement een gedenkwaardige dag te maken",
         "primaryCta": "Bekijk Zalen",
-        "outlineCta": "Bekijk Extra's"
+        "outlineCta": "Bekijk Extra's",
+        "alt": "Zaal voor bruiloften en onvergetelijke vieringen in Madrid"
       },
       {
         "title": "Bedrijfsevenementen",
         "description": "Professionele zalen voor conferenties, presentaties, teambuilding en bedrijfsfeesten met complete cateringdiensten",
         "primaryCta": "Reserveer Zaal",
-        "outlineCta": "Meer Weten"
+        "outlineCta": "Meer Weten",
+        "alt": "Zaal voor bedrijfsevenementen en zakelijke bijeenkomsten in Madrid"
       }
     ]
   },

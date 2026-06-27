@@ -29,19 +29,22 @@
         "title": "Ihr privater Raum im Herzen Madrids",
         "description": "Bei De Diez a Dos verwandeln wir jede Feier in ein einzigartiges Erlebnis. Ein exklusiver Ort mit ausgefeiltem Catering, Open Bar, professioneller Tontechnik und einem Team, das sich um alles kümmert. Sie feiern. Wir kümmern uns um jedes Detail.",
         "primaryCta": "Informationen anfordern",
-        "outlineCta": "Leistungen ansehen"
+        "outlineCta": "Leistungen ansehen",
+        "alt": "Private Eventlocation De Diez a Dos im Zentrum von Madrid"
       },
       {
         "title": "Unvergessliche Momente",
         "description": "Der perfekte Saal für den wichtigsten Tag Ihres Lebens. Einzigartige Räume mit personalisierten Services, um Ihr Event zu einem unvergesslichen Tag zu machen",
         "primaryCta": "Säle ansehen",
-        "outlineCta": "Extras ansehen"
+        "outlineCta": "Extras ansehen",
+        "alt": "Saal fuer Hochzeiten und unvergessliche Feiern in Madrid"
       },
       {
         "title": "Firmenevents",
         "description": "Professionelle Säle für Konferenzen, Präsentationen, Teambuilding und Firmenfeiern mit umfassendem Catering-Service",
         "primaryCta": "Saal reservieren",
-        "outlineCta": "Mehr erfahren"
+        "outlineCta": "Mehr erfahren",
+        "alt": "Saal fuer Firmenevents und Geschaeftstreffen in Madrid"
       }
     ]
   },

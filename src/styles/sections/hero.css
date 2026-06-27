@@ -25,10 +25,10 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 1s ease-in-out 1s;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: var(--bg-image);
+}
+
+.carousel-image {
+  object-fit: cover;
 }
 
 .carousel-item.active {

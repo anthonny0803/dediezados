@@ -29,19 +29,22 @@
         "title": "Twoja prywatna przestrzeń w sercu Madrytu",
         "description": "W De Diez a Dos zmieniamy każde świętowanie w wyjątkowe doświadczenie. Ekskluzywne miejsce z dopracowanym cateringiem, otwartym barem, profesjonalnym nagłośnieniem i zespołem, który zajmie się wszystkim. Ty świętujesz. My dbamy o każdy szczegół.",
         "primaryCta": "Poproś o Informacje",
-        "outlineCta": "Zobacz Usługi"
+        "outlineCta": "Zobacz Usługi",
+        "alt": "Prywatna sala eventowa De Diez a Dos w centrum Madrytu"
       },
       {
         "title": "Niezapomniane Chwile",
         "description": "Idealna sala na najważniejszy dzień Twojego życia. Wyjątkowe przestrzenie z dopasowanymi usługami, aby Twoje wydarzenie było dniem do zapamiętania",
         "primaryCta": "Zobacz Sale",
-        "outlineCta": "Zobacz Dodatki"
+        "outlineCta": "Zobacz Dodatki",
+        "alt": "Sala na wesela i niezapomniane uroczystosci w Madrycie"
       },
       {
         "title": "Wydarzenia Firmowe",
         "description": "Profesjonalne sale na konferencje, prezentacje, team building i firmowe uroczystości z pełną obsługą cateringową",
         "primaryCta": "Zarezerwuj Salę",
-        "outlineCta": "Dowiedz się Więcej"
+        "outlineCta": "Dowiedz się Więcej",
+        "alt": "Sala na wydarzenia firmowe i spotkania biznesowe w Madrycie"
       }
     ]
   },
