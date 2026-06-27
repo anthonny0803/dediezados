@@ -29,19 +29,22 @@
         "title": "Your private space in the heart of Madrid",
         "description": "At De Diez a Dos we turn every celebration into a unique experience. An exclusive venue with crafted catering, open bar, professional sound and a team that takes care of everything. You celebrate. We handle every detail.",
         "primaryCta": "Request Information",
-        "outlineCta": "View Services"
+        "outlineCta": "View Services",
+        "alt": "Private event venue De Diez a Dos in central Madrid"
       },
       {
         "title": "Unforgettable Moments",
         "description": "The perfect venue for the most important day of your life. Unique spaces with personalized services to make your event a memorable day",
         "primaryCta": "View Venues",
-        "outlineCta": "View Extras"
+        "outlineCta": "View Extras",
+        "alt": "Hall for weddings and unforgettable celebrations in Madrid"
       },
       {
         "title": "Corporate Events",
         "description": "Professional venues for conferences, presentations, team building and corporate celebrations with full catering services",
         "primaryCta": "Book Venue",
-        "outlineCta": "Learn More"
+        "outlineCta": "Learn More",
+        "alt": "Venue for corporate events and business meetings in Madrid"
       }
     ]
   },

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 
@@ -141,14 +142,13 @@ export const Gallery = () => {
                 onClick={() => { if (!isDragging) openModal(photo.url); }}
                 onDragStart={(e) => e.preventDefault()}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={photo.url}
                   alt={photo.alt}
-                  width="340"
-                  height="340"
-                  loading="lazy"
-                  draggable="false"
+                  width={340}
+                  height={340}
+                  sizes="340px"
+                  draggable={false}
                 />
                 <div className="gallery-photo-label">{photo.room}</div>
               </div>
@@ -172,8 +172,14 @@ export const Gallery = () => {
           <div className="modal-close" onClick={closeModal}>
             ×
           </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={selectedImage} alt={t('expandedAlt')} />
+          <Image
+            src={selectedImage}
+            alt={t('expandedAlt')}
+            width={0}
+            height={0}
+            sizes="92vw"
+            style={{ width: 'auto', height: 'auto' }}
+          />
         </div>
       )}
     </>

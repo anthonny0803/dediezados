@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 
@@ -9,6 +10,7 @@ interface HeroSlideContent {
   description: string;
   primaryCta: string;
   outlineCta: string;
+  alt: string;
 }
 
 export const Hero = () => {
@@ -43,8 +45,15 @@ export const Hero = () => {
             <div
               key={index}
               className={`carousel-item ${index === currentIndex ? 'active' : ''}`}
-              style={{ '--bg-image': `url('${slide.image}')` } as React.CSSProperties}
             >
+              <Image
+                src={slide.image}
+                alt={slide.alt}
+                fill
+                priority={index === 0}
+                sizes="100vw"
+                className="carousel-image"
+              />
               <div className="carousel-overlay">
                 <div className="hero-content">
                   <h1>{slide.title}</h1>
