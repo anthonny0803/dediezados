@@ -7,11 +7,8 @@ export function loadGoogleMaps(apiKey: string): Promise<void> {
     );
     
     if (existingScript) {
-      if (window.google?.maps) {
-        return resolve();
-      }
-      existingScript.addEventListener("load", () => resolve());
-      existingScript.addEventListener("error", () => reject(new Error("Error cargando Google Maps")));
+      existingScript.addEventListener("load", () => resolve(), { once: true });
+      existingScript.addEventListener("error", () => reject(new Error("Error cargando Google Maps")), { once: true });
       return;
     }
 
