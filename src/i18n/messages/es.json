@@ -24,6 +24,7 @@
   "hero": {
     "carouselLabel": "Slides del carrusel",
     "slideLabel": "Ir al slide {index}",
+    "badge": "A 5 minutos del Santiago Bernabéu",
     "slides": [
       {
         "title": "Tu espacio privado en el corazón de Madrid",
@@ -46,6 +47,10 @@
         "outlineCta": "Conocer Más",
         "alt": "Sala para eventos corporativos y reuniones de empresa en Madrid"
       }
+    ],
+    "stats": [
+      { "label": "Eventos celebrados" },
+      { "label": "Atención personalizada" }
     ]
   },
   "services": {

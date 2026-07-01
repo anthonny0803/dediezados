@@ -8,6 +8,10 @@ export interface HeroSlideConfig {
   buttons: HeroSlideButtonConfig[];
 }
 
+export interface HeroStatConfig {
+  value: string;
+}
+
 export interface CateringItemConfig {
   image: string;
   featured?: boolean;
@@ -65,6 +69,7 @@ export interface SiteConfig {
     height: number;
   };
   heroSlides: HeroSlideConfig[];
+  heroStats: HeroStatConfig[];
   servicesCount: number;
   catering: CateringItemConfig[];
   gallery: {
@@ -141,6 +146,7 @@ export const siteConfig: SiteConfig = {
       ],
     },
   ],
+  heroStats: [{ value: '+500' }, { value: '24/7' }],
   servicesCount: 6,
   catering: [
     {

@@ -24,6 +24,7 @@
   "hero": {
     "carouselLabel": "Karussell-Folien",
     "slideLabel": "Zu Folie {index} gehen",
+    "badge": "5 Minuten vom Santiago Bernabéu entfernt",
     "slides": [
       {
         "title": "Ihr privater Raum im Herzen Madrids",
@@ -46,6 +47,10 @@
         "outlineCta": "Mehr erfahren",
         "alt": "Saal fuer Firmenevents und Geschaeftstreffen in Madrid"
       }
+    ],
+    "stats": [
+      { "label": "Ausgerichtete Events" },
+      { "label": "Persönliche Betreuung" }
     ]
   },
   "services": {

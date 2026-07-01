@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { MapPin } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 
 interface HeroSlideContent {
@@ -13,6 +14,10 @@ interface HeroSlideContent {
   alt: string;
 }
 
+interface HeroStatContent {
+  label: string;
+}
+
 export const Hero = () => {
   const t = useTranslations('hero');
   const slidesContent = t.raw('slides') as HeroSlideContent[];
@@ -20,6 +25,12 @@ export const Hero = () => {
   const slides = slidesConfig.map((config, index) => ({
     ...config,
     ...slidesContent[index],
+  }));
+
+  const statsContent = t.raw('stats') as HeroStatContent[];
+  const stats = siteConfig.heroStats.map((config, index) => ({
+    ...config,
+    ...statsContent[index],
   }));
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,6 +67,10 @@ export const Hero = () => {
               />
               <div className="carousel-overlay">
                 <div className="hero-content">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-medium text-primary mb-6 backdrop-blur">
+                    <MapPin className="h-4 w-4" />
+                    {t('badge')}
+                  </span>
                   <h1>{slide.title}</h1>
                   <p>{slide.description}</p>
                   <div className="hero-buttons">
@@ -67,6 +82,16 @@ export const Hero = () => {
                       >
                         {ctaTexts[btnIndex]}
                       </a>
+                    ))}
+                  </div>
+                  <div className="mt-10 grid grid-cols-2 gap-8 max-w-md mx-auto">
+                    {stats.map((stat) => (
+                      <div key={stat.label} className="text-center">
+                        <div className="text-4xl md:text-5xl leading-tight font-display font-bold text-gradient-primary">
+                          {stat.value}
+                        </div>
+                        <div className="text-sm text-white/80 mt-1">{stat.label}</div>
+                      </div>
                     ))}
                   </div>
                 </div>
