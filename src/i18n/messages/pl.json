@@ -24,6 +24,7 @@
   "hero": {
     "carouselLabel": "Slajdy karuzeli",
     "slideLabel": "Przejdź do slajdu {index}",
+    "badge": "5 minut od Santiago Bernabéu",
     "slides": [
       {
         "title": "Twoja prywatna przestrzeń w sercu Madrytu",
@@ -46,6 +47,10 @@
         "outlineCta": "Dowiedz się Więcej",
         "alt": "Sala na wydarzenia firmowe i spotkania biznesowe w Madrycie"
       }
+    ],
+    "stats": [
+      { "label": "Zorganizowanych wydarzeń" },
+      { "label": "Indywidualna obsługa" }
     ]
   },
   "services": {

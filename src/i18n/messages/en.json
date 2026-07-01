@@ -24,6 +24,7 @@
   "hero": {
     "carouselLabel": "Carousel slides",
     "slideLabel": "Go to slide {index}",
+    "badge": "5 minutes from Santiago Bernabéu",
     "slides": [
       {
         "title": "Your private space in the heart of Madrid",
@@ -46,6 +47,10 @@
         "outlineCta": "Learn More",
         "alt": "Venue for corporate events and business meetings in Madrid"
       }
+    ],
+    "stats": [
+      { "label": "Events hosted" },
+      { "label": "Personalized service" }
     ]
   },
   "services": {

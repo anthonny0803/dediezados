@@ -24,6 +24,7 @@
   "hero": {
     "carouselLabel": "Carrouseldia's",
     "slideLabel": "Ga naar dia {index}",
+    "badge": "Op 5 minuten van het Santiago Bernabéu",
     "slides": [
       {
         "title": "Uw privéruimte in het hart van Madrid",
@@ -46,6 +47,10 @@
         "outlineCta": "Meer Weten",
         "alt": "Zaal voor bedrijfsevenementen en zakelijke bijeenkomsten in Madrid"
       }
+    ],
+    "stats": [
+      { "label": "Georganiseerde evenementen" },
+      { "label": "Persoonlijke aandacht" }
     ]
   },
   "services": {
