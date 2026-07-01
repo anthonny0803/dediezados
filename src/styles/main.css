@@ -1,3 +1,6 @@
+/* TAILWIND (v4 entry + design tokens) */
+@import url('./tailwind.css');
+
 /* BASE */
 @import url('./base/reset.css');
 @import url('./base/tokens.css');

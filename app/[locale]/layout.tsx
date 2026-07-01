@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { Playfair_Display } from 'next/font/google';
+import { Playfair_Display, Inter } from 'next/font/google';
 import Script from 'next/script';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { routing } from '@/i18n/routing';
@@ -19,6 +19,12 @@ const playfair = Playfair_Display({
   weight: ['400', '600', '700'],
   display: 'swap',
   variable: '--font-playfair',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
 });
 
 export function generateStaticParams() {
@@ -55,7 +61,11 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={playfair.variable} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={`${playfair.variable} ${inter.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />

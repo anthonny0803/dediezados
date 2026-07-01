@@ -1,0 +1,152 @@
+/*
+ * Tailwind v4 entry + design tokens (namespaced --dd-*).
+ *
+ * Coexists with the legacy plain CSS in this folder during the redesign.
+ * Preflight is intentionally omitted so Tailwind does not reset the current
+ * styles (no visual regression while both systems live together).
+ *
+ * Tokens use a --dd-* namespace and are exposed to Tailwind through
+ * `@theme inline`, which substitutes their values inline in the generated
+ * utilities instead of emitting :root variables. This avoids clashing with the
+ * legacy semantic layer (variables.css already defines --primary, --radius-*,
+ * --transition-smooth with different values).
+ */
+
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "../../app";
+@source "../";
+
+@custom-variant dark (&:is([data-theme="dark"] *));
+
+@theme inline {
+  --color-background: var(--dd-background);
+  --color-foreground: var(--dd-foreground);
+  --color-card: var(--dd-card);
+  --color-card-foreground: var(--dd-card-foreground);
+  --color-popover: var(--dd-popover);
+  --color-popover-foreground: var(--dd-popover-foreground);
+  --color-primary: var(--dd-primary);
+  --color-primary-foreground: var(--dd-primary-foreground);
+  --color-secondary: var(--dd-secondary);
+  --color-secondary-foreground: var(--dd-secondary-foreground);
+  --color-muted: var(--dd-muted);
+  --color-muted-foreground: var(--dd-muted-foreground);
+  --color-accent: var(--dd-accent);
+  --color-accent-foreground: var(--dd-accent-foreground);
+  --color-destructive: var(--dd-destructive);
+  --color-destructive-foreground: var(--dd-destructive-foreground);
+  --color-border: var(--dd-border);
+  --color-input: var(--dd-input);
+  --color-ring: var(--dd-ring);
+
+  --font-display: var(--font-playfair), "Cormorant Garamond", serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --radius-sm: calc(var(--dd-radius) - 4px);
+  --radius-md: calc(var(--dd-radius) - 2px);
+  --radius-lg: var(--dd-radius);
+  --radius-xl: calc(var(--dd-radius) + 4px);
+}
+
+:root {
+  --dd-radius: 0.75rem;
+
+  --dd-background: oklch(0.99 0.005 200);
+  --dd-foreground: oklch(0.15 0.02 220);
+  --dd-card: oklch(1 0 0);
+  --dd-card-foreground: oklch(0.15 0.02 220);
+  --dd-popover: oklch(1 0 0);
+  --dd-popover-foreground: oklch(0.15 0.02 220);
+  --dd-primary: oklch(0.78 0.08 190);
+  --dd-primary-foreground: oklch(0.15 0.02 220);
+  --dd-primary-glow: oklch(0.88 0.07 190);
+  --dd-secondary: oklch(0.96 0.01 200);
+  --dd-secondary-foreground: oklch(0.15 0.02 220);
+  --dd-muted: oklch(0.96 0.01 200);
+  --dd-muted-foreground: oklch(0.45 0.02 220);
+  --dd-accent: oklch(0.78 0.08 190);
+  --dd-accent-foreground: oklch(0.15 0.02 220);
+  --dd-destructive: oklch(0.6 0.22 25);
+  --dd-destructive-foreground: oklch(0.99 0 0);
+  --dd-border: oklch(0.9 0.01 200);
+  --dd-input: oklch(0.92 0.01 200);
+  --dd-ring: oklch(0.78 0.08 190);
+
+  --dd-gradient-hero:
+    radial-gradient(1200px 600px at 80% 10%, color-mix(in oklab, var(--dd-primary) 25%, transparent), transparent 60%),
+    radial-gradient(900px 500px at 10% 90%, color-mix(in oklab, var(--dd-primary-glow) 22%, transparent), transparent 60%);
+  --dd-gradient-primary: linear-gradient(135deg, var(--dd-primary), var(--dd-primary-glow));
+  --dd-shadow-elegant: 0 30px 80px -30px color-mix(in oklab, var(--dd-primary) 35%, transparent);
+  --dd-shadow-soft: 0 10px 40px -20px color-mix(in oklab, var(--dd-foreground) 25%, transparent);
+  --dd-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --dd-background: oklch(0.13 0.015 220);
+  --dd-foreground: oklch(0.98 0.005 200);
+  --dd-card: oklch(0.17 0.02 220);
+  --dd-card-foreground: oklch(0.98 0.005 200);
+  --dd-popover: oklch(0.17 0.02 220);
+  --dd-popover-foreground: oklch(0.98 0.005 200);
+  --dd-primary: oklch(0.82 0.09 190);
+  --dd-primary-foreground: oklch(0.12 0.02 220);
+  --dd-primary-glow: oklch(0.7 0.11 195);
+  --dd-secondary: oklch(0.22 0.02 220);
+  --dd-secondary-foreground: oklch(0.98 0.005 200);
+  --dd-muted: oklch(0.22 0.02 220);
+  --dd-muted-foreground: oklch(0.7 0.02 200);
+  --dd-accent: oklch(0.82 0.09 190);
+  --dd-accent-foreground: oklch(0.12 0.02 220);
+  --dd-destructive: oklch(0.65 0.22 25);
+  --dd-destructive-foreground: oklch(0.98 0 0);
+  --dd-border: oklch(1 0 0 / 10%);
+  --dd-input: oklch(1 0 0 / 12%);
+  --dd-ring: oklch(0.82 0.09 190);
+
+  --dd-gradient-hero:
+    radial-gradient(1200px 600px at 80% 10%, color-mix(in oklab, var(--dd-primary) 30%, transparent), transparent 60%),
+    radial-gradient(900px 500px at 10% 90%, color-mix(in oklab, var(--dd-primary-glow) 25%, transparent), transparent 60%);
+  --dd-shadow-elegant: 0 30px 80px -30px color-mix(in oklab, var(--dd-primary) 50%, transparent);
+}
+
+@layer utilities {
+  .bg-gradient-hero {
+    background-image: var(--dd-gradient-hero);
+  }
+  .bg-gradient-primary {
+    background-image: var(--dd-gradient-primary);
+  }
+  .text-gradient-primary {
+    background-image: var(--dd-gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-elegant {
+    box-shadow: var(--dd-shadow-elegant);
+  }
+  .shadow-soft {
+    box-shadow: var(--dd-shadow-soft);
+  }
+  .transition-smooth {
+    transition: all 0.4s var(--dd-ease);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
