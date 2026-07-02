@@ -13,7 +13,8 @@
     "contact": "Contact",
     "location": "Location",
     "reviews": "Reviews",
-    "about": "About"
+    "about": "About",
+    "events": "Events"
   },
   "theme": {
     "toggleLabel": "Toggle theme",
@@ -275,5 +276,43 @@
     "partnerCapifix": "Capifix | Integrated Logistics",
     "devLabel": "Dev:"
   },
-  "logoAlt": "De Diez a Dos Logo"
+  "logoAlt": "De Diez a Dos Logo",
+  "events": {
+    "label": "Our Events",
+    "title": "Every celebration,",
+    "titleAccent": "a unique universe",
+    "subtitle": "We adapt our space and service so your event turns out exactly as you imagine it.",
+    "items": [
+      {
+        "title": "Weddings",
+        "description": "An intimate or large-scale celebration, designed down to the last detail.",
+        "alt": "Venue decorated for weddings in Madrid"
+      },
+      {
+        "title": "Birthdays",
+        "description": "DJ, lighting and catering tailored to you for an unforgettable night.",
+        "alt": "Room decorated for a birthday party in Madrid"
+      },
+      {
+        "title": "Sweet 15",
+        "description": "The dream day: waltz, staging and professional production.",
+        "alt": "Room set up for a sweet 15 party in Madrid"
+      },
+      {
+        "title": "Corporate Events",
+        "description": "Launches, galas and conventions with top-tier audiovisual technology.",
+        "alt": "Space for corporate events in Madrid"
+      },
+      {
+        "title": "Post-Match",
+        "description": "Watch every Real Madrid match on a giant screen, 5 minutes from the Bernabéu.",
+        "alt": "Private room to watch matches near the Bernabeu in Madrid"
+      },
+      {
+        "title": "Meetings",
+        "description": "Private spaces for gatherings, presentations and workshops.",
+        "alt": "Room for meetings and presentations in Madrid"
+      }
+    ]
+  }
 }

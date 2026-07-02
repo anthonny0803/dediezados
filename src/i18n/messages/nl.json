@@ -13,7 +13,8 @@
     "contact": "Contact",
     "location": "Locatie",
     "reviews": "Recensies",
-    "about": "Over ons"
+    "about": "Over ons",
+    "events": "Evenementen"
   },
   "theme": {
     "toggleLabel": "Thema wisselen",
@@ -275,5 +276,43 @@
     "partnerCapifix": "Capifix | Integrale Logistiek",
     "devLabel": "Dev:"
   },
-  "logoAlt": "De Diez a Dos Logo"
+  "logoAlt": "De Diez a Dos Logo",
+  "events": {
+    "label": "Onze Evenementen",
+    "title": "Elke viering,",
+    "titleAccent": "een uniek universum",
+    "subtitle": "Wij passen onze ruimte en service aan zodat uw evenement precies wordt zoals u het zich voorstelt.",
+    "items": [
+      {
+        "title": "Bruiloften",
+        "description": "Een intieme of grootschalige viering, tot in het kleinste detail ontworpen.",
+        "alt": "Zaal ingericht voor bruiloften in Madrid"
+      },
+      {
+        "title": "Verjaardagen",
+        "description": "DJ, verlichting en catering op maat voor een onvergetelijke avond.",
+        "alt": "Zaal ingericht voor een verjaardagsfeest in Madrid"
+      },
+      {
+        "title": "15 Jaar",
+        "description": "De droomdag: wals, enscenering en professionele productie.",
+        "alt": "Zaal ingericht voor een feest van 15 jaar in Madrid"
+      },
+      {
+        "title": "Zakelijke evenementen",
+        "description": "Lanceringen, gala's en congressen met audiovisuele technologie van topniveau.",
+        "alt": "Ruimte voor zakelijke evenementen in Madrid"
+      },
+      {
+        "title": "Na de wedstrijd",
+        "description": "Beleef elke wedstrijd van Real Madrid op groot scherm, op 5 minuten van het Bernabéu.",
+        "alt": "Privéruimte om wedstrijden te kijken nabij het Bernabéu in Madrid"
+      },
+      {
+        "title": "Vergaderingen",
+        "description": "Privéruimtes voor bijeenkomsten, presentaties en workshops.",
+        "alt": "Ruimte voor vergaderingen en presentaties in Madrid"
+      }
+    ]
+  }
 }

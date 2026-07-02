@@ -13,7 +13,8 @@
     "contact": "Contact",
     "location": "Localisation",
     "reviews": "Avis",
-    "about": "À propos"
+    "about": "À propos",
+    "events": "Événements"
   },
   "theme": {
     "toggleLabel": "Changer de thème",
@@ -275,5 +276,43 @@
     "partnerCapifix": "Capifix | Logistique Intégrale",
     "devLabel": "Dev :"
   },
-  "logoAlt": "Logo De Diez a Dos"
+  "logoAlt": "Logo De Diez a Dos",
+  "events": {
+    "label": "Nos Événements",
+    "title": "Chaque célébration,",
+    "titleAccent": "un univers unique",
+    "subtitle": "Nous adaptons notre espace et notre service pour que votre événement soit exactement comme vous l'imaginez.",
+    "items": [
+      {
+        "title": "Mariages",
+        "description": "Une célébration intime ou de grande envergure, pensée dans les moindres détails.",
+        "alt": "Salle décorée pour les mariages à Madrid"
+      },
+      {
+        "title": "Anniversaires",
+        "description": "DJ, éclairage et traiteur sur mesure pour une soirée inoubliable.",
+        "alt": "Salle décorée pour une fête d'anniversaire à Madrid"
+      },
+      {
+        "title": "Les 15 ans",
+        "description": "Le jour de rêve : valse, mise en scène et production professionnelle.",
+        "alt": "Salle aménagée pour une fête des 15 ans à Madrid"
+      },
+      {
+        "title": "Événements d'entreprise",
+        "description": "Lancements, galas et conventions avec une technologie audiovisuelle de premier ordre.",
+        "alt": "Espace pour événements d'entreprise à Madrid"
+      },
+      {
+        "title": "Après-match",
+        "description": "Vivez chaque match du Real Madrid sur écran géant, à 5 minutes du Bernabéu.",
+        "alt": "Salle privée pour regarder les matchs près du Bernabéu à Madrid"
+      },
+      {
+        "title": "Réunions",
+        "description": "Des espaces privés pour rencontres, présentations et ateliers.",
+        "alt": "Salle pour réunions et présentations à Madrid"
+      }
+    ]
+  }
 }

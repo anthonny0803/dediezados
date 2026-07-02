@@ -13,7 +13,8 @@
     "contact": "Contacto",
     "location": "Ubicación",
     "reviews": "Reseñas",
-    "about": "Acerca de"
+    "about": "Acerca de",
+    "events": "Eventos"
   },
   "theme": {
     "toggleLabel": "Cambiar tema",
@@ -275,5 +276,43 @@
     "partnerCapifix": "Capifix | Logística Integral",
     "devLabel": "Dev:"
   },
-  "logoAlt": "Logo De Diez a Dos"
+  "logoAlt": "Logo De Diez a Dos",
+  "events": {
+    "label": "Nuestros Eventos",
+    "title": "Cada celebración,",
+    "titleAccent": "un universo único",
+    "subtitle": "Adaptamos nuestro espacio y servicio para que tu evento sea exactamente como lo imaginas.",
+    "items": [
+      {
+        "title": "Bodas",
+        "description": "Una celebración íntima o de gran formato, diseñada hasta el último detalle.",
+        "alt": "Salon decorado para bodas en Madrid"
+      },
+      {
+        "title": "Cumpleaños",
+        "description": "DJ, iluminación y catering a tu medida para una noche inolvidable.",
+        "alt": "Sala decorada para fiesta de cumpleanos en Madrid"
+      },
+      {
+        "title": "15 Años",
+        "description": "El día soñado: vals, escenografía y producción profesional.",
+        "alt": "Sala montada para fiesta de 15 anos en Madrid"
+      },
+      {
+        "title": "Eventos Corporativos",
+        "description": "Lanzamientos, galas y convenciones con tecnología audiovisual de primer nivel.",
+        "alt": "Espacio para eventos corporativos en Madrid"
+      },
+      {
+        "title": "Post-Partido",
+        "description": "Vive cada partido del Real Madrid en pantalla gigante a 5 min del Bernabéu.",
+        "alt": "Sala privada para ver partidos cerca del Bernabeu en Madrid"
+      },
+      {
+        "title": "Reuniones",
+        "description": "Espacios privados para encuentros, presentaciones y workshops.",
+        "alt": "Sala para reuniones y presentaciones en Madrid"
+      }
+    ]
+  }
 }
