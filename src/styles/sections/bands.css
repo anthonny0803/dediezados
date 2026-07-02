@@ -1,0 +1,32 @@
+/*
+ * Alternating background bands (Fase 2 redesign).
+ *
+ * The design reference alternates section backgrounds between the flat page
+ * background and a subtle secondary/30 band. Legacy sections have no inner
+ * container (the <section> itself is capped at 1400px), so instead of
+ * un-capping them (which would stretch their content), the band is painted
+ * full-bleed behind the still-centered content via a 100vw ::before. This is
+ * markup-free, so the legacy sections are left untouched.
+ *
+ * Rhythm: Hero (dark) · Events (base) · Services (band) · Catering (base) ·
+ * Extras (band) · Gallery (base) · Contact (band) · Location (base) ·
+ * Reviews (band). "base" sections simply show the flat body background.
+ *
+ * Safe on these sections: their section element has no overflow:hidden
+ * (only inner cards do), so the 100vw band is not clipped.
+ */
+#services::before,
+#extras::before,
+#contact::before,
+#reviews::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: color-mix(in oklab, var(--dd-secondary) 30%, transparent);
+  z-index: -1;
+  pointer-events: none;
+}

@@ -19,12 +19,13 @@
     position: relative;
   }
 
-  /* Background */
+  /* Page background: flat design-reference base (Fase 2 redesign).
+     Replaces the legacy decorative teal gradient (--bg-page-gradient). */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: var(--bg-page-gradient);
+    background: var(--dd-background);
     z-index: -3;
     pointer-events: none;
     transition: background 0.3s ease;
