@@ -26,6 +26,11 @@ export interface ExtraConfig {
   image: string;
 }
 
+export interface EventConfig {
+  icon: string;
+  image: string;
+}
+
 export interface SiteConfig {
   colors: {
     primary: string;
@@ -76,6 +81,7 @@ export interface SiteConfig {
     photos: GalleryPhotoConfig[];
   };
   extras: ExtraConfig[];
+  events: EventConfig[];
 }
 
 export const siteConfig: SiteConfig = {
@@ -244,6 +250,40 @@ export const siteConfig: SiteConfig = {
     {
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1770884340/Decoraciones8_rrjaho.jpg',
+    },
+  ],
+  // Placeholder images reused from gallery/extras. Replace with dedicated
+  // per-event-type photos once the client provides them.
+  events: [
+    {
+      icon: 'heart',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239541/olas-04_phqoqx.webp',
+    },
+    {
+      icon: 'cake',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1769763102/Decoraciones6_11zon_gju7xg.jpg',
+    },
+    {
+      icon: 'crown',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1770884340/Decoraciones8_rrjaho.jpg',
+    },
+    {
+      icon: 'briefcase',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239537/olas-02_rr6p4s.webp',
+    },
+    {
+      icon: 'trophy',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239530/amazonias-06_mqwezx.webp',
+    },
+    {
+      icon: 'users',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239528/amazonias-01_yadqyg.webp',
     },
   ],
 };

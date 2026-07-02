@@ -3,6 +3,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Sidenav } from '@/components/layout/Sidenav';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
+import { Events } from '@/components/sections/Events';
 import { Services } from '@/components/sections/Services';
 import { Catering } from '@/components/sections/Catering';
 import { Extras } from '@/components/sections/Extras';
@@ -23,6 +24,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <Navbar />
       <Sidenav />
       <Hero />
+      <Events />
       <Services />
       <Catering />
       <Extras />

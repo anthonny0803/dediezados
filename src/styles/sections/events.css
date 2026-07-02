@@ -1,0 +1,24 @@
+/*
+ * Events section.
+ *
+ * The legacy `section {}` rule in common.css (unlayered) forces
+ * max-width: 1400px + margin: 0 auto, which caps this section and lets the
+ * decorative body gradient show through the side gutters. Unlayered rules win
+ * over Tailwind utilities regardless of specificity, so the override lives
+ * here with id specificity (#events beats the element selector `section`).
+ *
+ * Goal: full-bleed background matching the design reference (flat --dd-background),
+ * while the inner content stays capped by the Tailwind `max-w-7xl` container.
+ */
+#events {
+  max-width: none;
+  margin: 0;
+  padding: 6rem 1.5rem;
+  background: var(--dd-background);
+}
+
+@media (max-width: 640px) {
+  #events {
+    padding: 4rem 1.5rem;
+  }
+}

@@ -13,7 +13,8 @@
     "contact": "Contacto",
     "location": "Localização",
     "reviews": "Avaliações",
-    "about": "Sobre"
+    "about": "Sobre",
+    "events": "Eventos"
   },
   "theme": {
     "toggleLabel": "Alterar tema",
@@ -275,5 +276,43 @@
     "partnerCapifix": "Capifix | Logística Integral",
     "devLabel": "Dev:"
   },
-  "logoAlt": "Logótipo De Diez a Dos"
+  "logoAlt": "Logótipo De Diez a Dos",
+  "events": {
+    "label": "Os Nossos Eventos",
+    "title": "Cada celebração,",
+    "titleAccent": "um universo único",
+    "subtitle": "Adaptamos o nosso espaço e serviço para que o seu evento seja exatamente como o imagina.",
+    "items": [
+      {
+        "title": "Casamentos",
+        "description": "Uma celebração íntima ou de grande formato, pensada até ao último detalhe.",
+        "alt": "Sala decorada para casamentos em Madrid"
+      },
+      {
+        "title": "Aniversários",
+        "description": "DJ, iluminação e catering à sua medida para uma noite inesquecível.",
+        "alt": "Sala decorada para uma festa de aniversário em Madrid"
+      },
+      {
+        "title": "15 Anos",
+        "description": "O dia de sonho: valsa, cenografia e produção profissional.",
+        "alt": "Sala montada para uma festa de 15 anos em Madrid"
+      },
+      {
+        "title": "Eventos Corporativos",
+        "description": "Lançamentos, galas e convenções com tecnologia audiovisual de primeiro nível.",
+        "alt": "Espaço para eventos corporativos em Madrid"
+      },
+      {
+        "title": "Pós-Jogo",
+        "description": "Viva cada jogo do Real Madrid em ecrã gigante, a 5 minutos do Bernabéu.",
+        "alt": "Sala privada para ver jogos perto do Bernabéu em Madrid"
+      },
+      {
+        "title": "Reuniões",
+        "description": "Espaços privados para encontros, apresentações e workshops.",
+        "alt": "Sala para reuniões e apresentações em Madrid"
+      }
+    ]
+  }
 }

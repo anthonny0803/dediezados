@@ -13,7 +13,8 @@
     "contact": "Kontakt",
     "location": "Lokalizacja",
     "reviews": "Opinie",
-    "about": "O nas"
+    "about": "O nas",
+    "events": "Wydarzenia"
   },
   "theme": {
     "toggleLabel": "Zmień motyw",
@@ -275,5 +276,43 @@
     "partnerCapifix": "Capifix | Logistyka Integralna",
     "devLabel": "Dev:"
   },
-  "logoAlt": "Logo De Diez a Dos"
+  "logoAlt": "Logo De Diez a Dos",
+  "events": {
+    "label": "Nasze Wydarzenia",
+    "title": "Każda uroczystość,",
+    "titleAccent": "wyjątkowy świat",
+    "subtitle": "Dostosowujemy naszą przestrzeń i obsługę, aby Twoje wydarzenie było dokładnie takie, jak je sobie wyobrażasz.",
+    "items": [
+      {
+        "title": "Wesela",
+        "description": "Kameralna lub wystawna uroczystość, dopracowana w najdrobniejszym szczególe.",
+        "alt": "Sala udekorowana na wesela w Madrycie"
+      },
+      {
+        "title": "Urodziny",
+        "description": "DJ, oświetlenie i catering skrojone na miarę na niezapomnianą noc.",
+        "alt": "Sala udekorowana na przyjęcie urodzinowe w Madrycie"
+      },
+      {
+        "title": "15. urodziny",
+        "description": "Wymarzony dzień: walc, scenografia i profesjonalna produkcja.",
+        "alt": "Sala przygotowana na przyjęcie z okazji 15. urodzin w Madrycie"
+      },
+      {
+        "title": "Wydarzenia firmowe",
+        "description": "Premiery, gale i konferencje z najwyższej klasy technologią audiowizualną.",
+        "alt": "Przestrzeń na wydarzenia firmowe w Madrycie"
+      },
+      {
+        "title": "Po meczu",
+        "description": "Przeżyj każdy mecz Realu Madryt na wielkim ekranie, 5 minut od Bernabéu.",
+        "alt": "Prywatna sala do oglądania meczów w pobliżu Bernabéu w Madrycie"
+      },
+      {
+        "title": "Spotkania",
+        "description": "Prywatne przestrzenie na spotkania, prezentacje i warsztaty.",
+        "alt": "Sala na spotkania i prezentacje w Madrycie"
+      }
+    ]
+  }
 }
