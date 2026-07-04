@@ -14,7 +14,8 @@
     "location": "Location",
     "reviews": "Reviews",
     "about": "About",
-    "events": "Events"
+    "events": "Events",
+    "space": "The Space"
   },
   "theme": {
     "toggleLabel": "Toggle theme",
@@ -201,7 +202,9 @@
     ]
   },
   "contact": {
-    "title": "No Commitment - Let's Talk About Your Event",
+    "label": "No Commitment",
+    "title": "Let's Talk About",
+    "titleAccent": "Your Event",
     "subtitle": "Tell us your vision and we'll help you make it real",
     "form": {
       "sectionTitle": "Contact details",
@@ -250,8 +253,10 @@
     }
   },
   "location": {
-    "title": "Our Location",
-    "subtitle": "Find us in the heart of Madrid",
+    "label": "Location",
+    "title": "In the heart",
+    "titleAccent": "of Madrid",
+    "description": "Steps away from everything, in one of the city's best areas.",
     "map": {
       "reviewsCount": "({count} reviews)",
       "directions": "Get directions"
@@ -312,6 +317,59 @@
         "title": "Meetings",
         "description": "Private spaces for gatherings, presentations and workshops.",
         "alt": "Room for meetings and presentations in Madrid"
+      }
+    ]
+  },
+  "space": {
+    "label": "The Space",
+    "title": "A place designed to",
+    "titleAccent": "shine",
+    "description": "Contemporary design, refined acoustics and smart lighting so every event lives up to your expectations.",
+    "badge": {
+      "value": "600m²",
+      "label": "Modular space"
+    },
+    "images": [
+      {
+        "alt": "Main event hall in Madrid"
+      },
+      {
+        "alt": "Amazonias room decorated for celebrations in Madrid"
+      },
+      {
+        "alt": "Olas room set up for events in Madrid"
+      },
+      {
+        "alt": "Amazonias space for private events in Madrid"
+      },
+      {
+        "alt": "Olas hall with lighting for parties in Madrid"
+      }
+    ],
+    "cards": [
+      {
+        "title": "Professional Sound",
+        "description": "JBL audio system and resident DJ."
+      },
+      {
+        "title": "Bespoke Catering",
+        "description": "Personalized international cuisine menus."
+      },
+      {
+        "title": "Premium Bar",
+        "description": "Signature cocktails and open bar."
+      },
+      {
+        "title": "Lighting",
+        "description": "Adaptable lighting design for every moment."
+      },
+      {
+        "title": "Photo & Video",
+        "description": "High-quality audiovisual service."
+      },
+      {
+        "title": "Parking",
+        "description": "Private parking for your guests."
       }
     ]
   }

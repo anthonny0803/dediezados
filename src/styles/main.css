@@ -11,6 +11,7 @@
 @import url('./components/buttons.css');
 @import url('./components/locale-switcher.css');
 @import url('./components/theme-toggle.css');
+@import url('./components/datepicker.css');
 
 /* LAYOUT */
 @import url('./layout/navbar.css');
@@ -22,6 +23,7 @@
 @import url('./sections/common.css');
 @import url('./sections/hero.css');
 @import url('./sections/events.css');
+@import url('./sections/space.css');
 @import url('./sections/services.css');
 @import url('./sections/catering.css');
 @import url('./sections/extras.css');

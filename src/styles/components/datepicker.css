@@ -1,0 +1,49 @@
+.dd-datepicker .rdp-root {
+  --rdp-accent-color: var(--dd-primary);
+  --rdp-accent-background-color: color-mix(in oklab, var(--dd-primary) 14%, transparent);
+  --rdp-day-width: 2.5rem;
+  --rdp-day-height: 2.5rem;
+  --rdp-day_button-width: 2.25rem;
+  --rdp-day_button-height: 2.25rem;
+  --rdp-day_button-border-radius: 0.6rem;
+  --rdp-today-color: var(--dd-primary);
+  --rdp-disabled-opacity: 0.3;
+  --rdp-outside-opacity: 0.4;
+  --rdp-nav_button-width: 2rem;
+  --rdp-nav_button-height: 2rem;
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  color: var(--dd-foreground);
+}
+
+.dd-datepicker .rdp-caption_label {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.dd-datepicker .rdp-day_button:not(:disabled):hover {
+  background-color: var(--rdp-accent-background-color);
+}
+
+.dd-datepicker .rdp-day_button:focus-visible {
+  outline: 2px solid var(--dd-primary);
+  outline-offset: 1px;
+}
+
+.dd-datepicker .rdp-selected {
+  font-weight: 600;
+  font-size: inherit;
+}
+
+.dd-datepicker .rdp-selected .rdp-day_button {
+  background-color: var(--dd-primary);
+  color: var(--dd-primary-foreground);
+  border: 2px solid transparent;
+}
+
+.dd-datepicker .rdp-button_next:not(:disabled):hover,
+.dd-datepicker .rdp-button_previous:not(:disabled):hover {
+  background-color: var(--rdp-accent-background-color);
+  border-radius: 0.5rem;
+}

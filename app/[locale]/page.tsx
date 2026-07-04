@@ -4,6 +4,7 @@ import { Sidenav } from '@/components/layout/Sidenav';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { Events } from '@/components/sections/Events';
+import { Space } from '@/components/sections/Space';
 import { Services } from '@/components/sections/Services';
 import { Catering } from '@/components/sections/Catering';
 import { Extras } from '@/components/sections/Extras';
@@ -25,6 +26,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <Sidenav />
       <Hero />
       <Events />
+      <Space />
       <Services />
       <Catering />
       <Extras />

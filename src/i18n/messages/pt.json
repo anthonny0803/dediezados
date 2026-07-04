@@ -14,7 +14,8 @@
     "location": "Localização",
     "reviews": "Avaliações",
     "about": "Sobre",
-    "events": "Eventos"
+    "events": "Eventos",
+    "space": "O Espaço"
   },
   "theme": {
     "toggleLabel": "Alterar tema",
@@ -201,7 +202,9 @@
     ]
   },
   "contact": {
-    "title": "Sem Compromisso - Falemos do Seu Evento",
+    "label": "Sem Compromisso",
+    "title": "Falemos do",
+    "titleAccent": "Seu Evento",
     "subtitle": "Conte-nos a sua visão e ajudamo-lo a torná-la realidade",
     "form": {
       "sectionTitle": "Dados de contacto",
@@ -250,8 +253,10 @@
     }
   },
   "location": {
-    "title": "A Nossa Localização",
-    "subtitle": "Encontre-nos no coração de Madrid",
+    "label": "Localização",
+    "title": "No coração",
+    "titleAccent": "de Madrid",
+    "description": "A um passo de tudo, numa das melhores zonas da cidade.",
     "map": {
       "reviewsCount": "({count} avaliações)",
       "directions": "Como chegar"
@@ -312,6 +317,59 @@
         "title": "Reuniões",
         "description": "Espaços privados para encontros, apresentações e workshops.",
         "alt": "Sala para reuniões e apresentações em Madrid"
+      }
+    ]
+  },
+  "space": {
+    "label": "O Espaço",
+    "title": "Um lugar pensado para",
+    "titleAccent": "brilhar",
+    "description": "Design contemporâneo, acústica cuidada e iluminação inteligente para que cada evento esteja à altura das suas expectativas.",
+    "badge": {
+      "value": "600m²",
+      "label": "Espaço modulável"
+    },
+    "images": [
+      {
+        "alt": "Salão principal para eventos em Madrid"
+      },
+      {
+        "alt": "Sala Amazonias decorada para celebrações em Madrid"
+      },
+      {
+        "alt": "Sala Olas montada para eventos em Madrid"
+      },
+      {
+        "alt": "Espaço Amazonias para eventos privados em Madrid"
+      },
+      {
+        "alt": "Salão Olas com iluminação para festas em Madrid"
+      }
+    ],
+    "cards": [
+      {
+        "title": "Som Profissional",
+        "description": "Sistema de áudio JBL e DJ residente."
+      },
+      {
+        "title": "Catering à medida",
+        "description": "Menus personalizados de cozinha internacional."
+      },
+      {
+        "title": "Bar Premium",
+        "description": "Coquetéis de autor e bar aberto."
+      },
+      {
+        "title": "Iluminação",
+        "description": "Design de iluminação adaptável a cada momento."
+      },
+      {
+        "title": "Foto e Vídeo",
+        "description": "Serviço audiovisual de alta qualidade."
+      },
+      {
+        "title": "Estacionamento",
+        "description": "Estacionamento privado para os seus convidados."
       }
     ]
   }
