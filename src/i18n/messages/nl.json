@@ -14,7 +14,8 @@
     "location": "Locatie",
     "reviews": "Recensies",
     "about": "Over ons",
-    "events": "Evenementen"
+    "events": "Evenementen",
+    "space": "De Ruimte"
   },
   "theme": {
     "toggleLabel": "Thema wisselen",
@@ -201,7 +202,9 @@
     ]
   },
   "contact": {
-    "title": "Vrijblijvend - Laten We Praten Over Uw Evenement",
+    "label": "Vrijblijvend",
+    "title": "Laten We Praten Over",
+    "titleAccent": "Uw Evenement",
     "subtitle": "Vertel ons uw visie en wij helpen u die werkelijkheid te maken",
     "form": {
       "sectionTitle": "Contactgegevens",
@@ -250,8 +253,10 @@
     }
   },
   "location": {
-    "title": "Onze Locatie",
-    "subtitle": "Vind ons in het hart van Madrid",
+    "label": "Locatie",
+    "title": "In het hart",
+    "titleAccent": "van Madrid",
+    "description": "Op een steenworp afstand van alles, in een van de beste buurten van de stad.",
     "map": {
       "reviewsCount": "({count} recensies)",
       "directions": "Routebeschrijving"
@@ -312,6 +317,59 @@
         "title": "Vergaderingen",
         "description": "Privéruimtes voor bijeenkomsten, presentaties en workshops.",
         "alt": "Ruimte voor vergaderingen en presentaties in Madrid"
+      }
+    ]
+  },
+  "space": {
+    "label": "De Ruimte",
+    "title": "Een plek gemaakt om te",
+    "titleAccent": "schitteren",
+    "description": "Eigentijds ontwerp, verzorgde akoestiek en slimme verlichting zodat elk evenement aan uw verwachtingen voldoet.",
+    "badge": {
+      "value": "600m²",
+      "label": "Modulaire ruimte"
+    },
+    "images": [
+      {
+        "alt": "Hoofdzaal voor evenementen in Madrid"
+      },
+      {
+        "alt": "Zaal Amazonias versierd voor vieringen in Madrid"
+      },
+      {
+        "alt": "Zaal Olas ingericht voor evenementen in Madrid"
+      },
+      {
+        "alt": "Ruimte Amazonias voor privé-evenementen in Madrid"
+      },
+      {
+        "alt": "Zaal Olas met verlichting voor feesten in Madrid"
+      }
+    ],
+    "cards": [
+      {
+        "title": "Professioneel Geluid",
+        "description": "JBL-audiosysteem en vaste DJ."
+      },
+      {
+        "title": "Catering op maat",
+        "description": "Gepersonaliseerde internationale menu's."
+      },
+      {
+        "title": "Premium Bar",
+        "description": "Signature cocktails en open bar."
+      },
+      {
+        "title": "Verlichting",
+        "description": "Aanpasbaar lichtontwerp voor elk moment."
+      },
+      {
+        "title": "Foto en Video",
+        "description": "Hoogwaardige audiovisuele service."
+      },
+      {
+        "title": "Parkeren",
+        "description": "Privéparkeerplaats voor uw gasten."
       }
     ]
   }

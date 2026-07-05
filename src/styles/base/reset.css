@@ -6,6 +6,16 @@
     box-sizing: border-box;
   }
 
+  /* Tailwind preflight is omitted during the legacy/Tailwind coexistence, so
+     <button> keeps the user-agent grey (ButtonFace). New Tailwind buttons
+     (Events/Space) have no resting background and would show that grey.
+     Reset it so they stay transparent like the design reference; legacy
+     buttons set their own background via classes and are unaffected. */
+  button {
+    background-color: transparent;
+    background-image: none;
+  }
+
   html {
     scroll-behavior: smooth;
   }

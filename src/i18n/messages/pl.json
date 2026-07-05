@@ -14,7 +14,8 @@
     "location": "Lokalizacja",
     "reviews": "Opinie",
     "about": "O nas",
-    "events": "Wydarzenia"
+    "events": "Wydarzenia",
+    "space": "Przestrzeń"
   },
   "theme": {
     "toggleLabel": "Zmień motyw",
@@ -201,7 +202,9 @@
     ]
   },
   "contact": {
-    "title": "Bez Zobowiązań - Porozmawiajmy o Twoim Wydarzeniu",
+    "label": "Bez Zobowiązań",
+    "title": "Porozmawiajmy o",
+    "titleAccent": "Twoim Wydarzeniu",
     "subtitle": "Opowiedz nam o swojej wizji, a pomożemy Ci ją zrealizować",
     "form": {
       "sectionTitle": "Dane kontaktowe",
@@ -250,8 +253,10 @@
     }
   },
   "location": {
-    "title": "Nasza Lokalizacja",
-    "subtitle": "Znajdź nas w sercu Madrytu",
+    "label": "Lokalizacja",
+    "title": "W sercu",
+    "titleAccent": "Madrytu",
+    "description": "O krok od wszystkiego, w jednej z najlepszych części miasta.",
     "map": {
       "reviewsCount": "({count} opinii)",
       "directions": "Trasa dojazdu"
@@ -312,6 +317,59 @@
         "title": "Spotkania",
         "description": "Prywatne przestrzenie na spotkania, prezentacje i warsztaty.",
         "alt": "Sala na spotkania i prezentacje w Madrycie"
+      }
+    ]
+  },
+  "space": {
+    "label": "Przestrzeń",
+    "title": "Miejsce stworzone, by",
+    "titleAccent": "błyszczeć",
+    "description": "Nowoczesny design, dopracowana akustyka i inteligentne oświetlenie, aby każde wydarzenie spełniało Twoje oczekiwania.",
+    "badge": {
+      "value": "600m²",
+      "label": "Przestrzeń modułowa"
+    },
+    "images": [
+      {
+        "alt": "Główna sala na wydarzenia w Madrycie"
+      },
+      {
+        "alt": "Sala Amazonias udekorowana na uroczystości w Madrycie"
+      },
+      {
+        "alt": "Sala Olas przygotowana na wydarzenia w Madrycie"
+      },
+      {
+        "alt": "Przestrzeń Amazonias na prywatne wydarzenia w Madrycie"
+      },
+      {
+        "alt": "Sala Olas z oświetleniem na przyjęcia w Madrycie"
+      }
+    ],
+    "cards": [
+      {
+        "title": "Profesjonalny Dźwięk",
+        "description": "System audio JBL i rezydujący DJ."
+      },
+      {
+        "title": "Catering na miarę",
+        "description": "Spersonalizowane menu kuchni międzynarodowej."
+      },
+      {
+        "title": "Bar Premium",
+        "description": "Autorskie koktajle i open bar."
+      },
+      {
+        "title": "Oświetlenie",
+        "description": "Elastyczna aranżacja świateł na każdą chwilę."
+      },
+      {
+        "title": "Foto i Wideo",
+        "description": "Wysokiej jakości usługi audiowizualne."
+      },
+      {
+        "title": "Parking",
+        "description": "Prywatny parking dla Twoich gości."
       }
     ]
   }

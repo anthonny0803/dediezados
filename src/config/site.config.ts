@@ -31,6 +31,15 @@ export interface EventConfig {
   image: string;
 }
 
+export interface SpaceCardConfig {
+  icon: string;
+}
+
+export interface SpaceConfig {
+  images: string[];
+  cards: SpaceCardConfig[];
+}
+
 export interface SiteConfig {
   colors: {
     primary: string;
@@ -82,6 +91,7 @@ export interface SiteConfig {
   };
   extras: ExtraConfig[];
   events: EventConfig[];
+  space: SpaceConfig;
 }
 
 export const siteConfig: SiteConfig = {
@@ -286,4 +296,23 @@ export const siteConfig: SiteConfig = {
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239528/amazonias-01_yadqyg.webp',
     },
   ],
+  // Carousel reuses real room photos (olas/amazonias) as provisional images.
+  // Card copy lives in i18n; only icon keys are configured here.
+  space: {
+    images: [
+      'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239541/olas-04_phqoqx.webp',
+      'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239528/amazonias-01_yadqyg.webp',
+      'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239537/olas-02_rr6p4s.webp',
+      'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239530/amazonias-06_mqwezx.webp',
+      'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239542/olas-06_bmubuf.webp',
+    ],
+    cards: [
+      { icon: 'music' },
+      { icon: 'utensils' },
+      { icon: 'wine' },
+      { icon: 'lightbulb' },
+      { icon: 'camera' },
+      { icon: 'car' },
+    ],
+  },
 };
