@@ -254,7 +254,7 @@ export const Space = () => {
                   aria-label={slide.alt}
                   aria-current={isActive}
                   onClick={() => setActiveIndex(index)}
-                  className={`h-2 rounded-full transition-smooth ${
+                  className={`h-2 appearance-none rounded-full border-0 p-0 transition-smooth ${
                     isActive
                       ? 'w-8 bg-gradient-primary'
                       : 'w-2 bg-border hover:bg-primary/50'

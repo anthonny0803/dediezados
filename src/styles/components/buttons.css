@@ -72,31 +72,6 @@ button[type="submit"]:hover {
   box-shadow: var(--shadow-teal-hover);
 }
 
-/* Reviews button */
-.btn-ver-mas-reviews {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 12px 28px;
-  background: transparent;
-  border: 1px solid rgba(var(--brand-teal-500-rgb), 0.4);
-  color: var(--primary);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-smooth);
-  cursor: pointer;
-}
-
-.btn-ver-mas-reviews:hover {
-  background: rgba(var(--brand-teal-500-rgb), 0.1);
-  border-color: var(--primary);
-  color: var(--primary-dark) !important;
-  transform: translateY(-2px);
-}
-
 /* Gallery carousel buttons */
 .gallery-carousel-btn {
   position: absolute;

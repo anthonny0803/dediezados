@@ -263,13 +263,18 @@
     }
   },
   "reviews": {
-    "title": "Wat onze klanten zeggen",
-    "subtitle": "Echte ervaringen van onvergetelijke evenementen",
+    "label": "Recensies",
+    "title": "Wat onze",
+    "titleAccent": "klanten zeggen",
+    "ratingSummary": "{rating} / 5 · {count} recensies op Google",
     "loading": "Recensies laden...",
     "empty": "Geen recensies beschikbaar.",
     "viewAll": "Bekijk alle recensies op Google",
     "googleBadgeTitle": "Gepubliceerd op Google",
-    "defaultUser": "Google-gebruiker"
+    "defaultUser": "Google-gebruiker",
+    "prevReview": "Vorige recensie",
+    "nextReview": "Volgende recensie",
+    "goToReview": "Ga naar recensie {number}"
   },
   "footer": {
     "tagline": "Uw privéruimte in het hart van Madrid",

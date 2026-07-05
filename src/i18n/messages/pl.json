@@ -263,13 +263,18 @@
     }
   },
   "reviews": {
-    "title": "Co mówią nasi klienci",
-    "subtitle": "Prawdziwe doświadczenia z niezapomnianych wydarzeń",
+    "label": "Opinie",
+    "title": "Co mówią",
+    "titleAccent": "nasi klienci",
+    "ratingSummary": "{rating} / 5 · {count} opinii w Google",
     "loading": "Ładowanie opinii...",
     "empty": "Brak dostępnych opinii.",
     "viewAll": "Zobacz wszystkie opinie w Google",
     "googleBadgeTitle": "Opublikowane w Google",
-    "defaultUser": "Użytkownik Google"
+    "defaultUser": "Użytkownik Google",
+    "prevReview": "Poprzednia opinia",
+    "nextReview": "Następna opinia",
+    "goToReview": "Przejdź do opinii {number}"
   },
   "footer": {
     "tagline": "Twoja prywatna przestrzeń w sercu Madrytu",

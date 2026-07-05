@@ -263,13 +263,18 @@
     }
   },
   "reviews": {
-    "title": "Was unsere Kunden sagen",
-    "subtitle": "Echte Erfahrungen von unvergesslichen Veranstaltungen",
+    "label": "Bewertungen",
+    "title": "Was unsere",
+    "titleAccent": "Kunden sagen",
+    "ratingSummary": "{rating} / 5 · {count} Bewertungen auf Google",
     "loading": "Bewertungen werden geladen...",
     "empty": "Keine Bewertungen verfügbar.",
     "viewAll": "Alle Bewertungen auf Google ansehen",
     "googleBadgeTitle": "Veröffentlicht auf Google",
-    "defaultUser": "Google-Nutzer"
+    "defaultUser": "Google-Nutzer",
+    "prevReview": "Vorherige Bewertung",
+    "nextReview": "Nächste Bewertung",
+    "goToReview": "Zur Bewertung {number}"
   },
   "footer": {
     "tagline": "Ihr privater Raum im Herzen Madrids",

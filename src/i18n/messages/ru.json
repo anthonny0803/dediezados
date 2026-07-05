@@ -263,13 +263,18 @@
     }
   },
   "reviews": {
-    "title": "Что говорят наши клиенты",
-    "subtitle": "Реальный опыт незабываемых мероприятий",
+    "label": "Отзывы",
+    "title": "Что говорят",
+    "titleAccent": "наши клиенты",
+    "ratingSummary": "{rating} / 5 · {count} отзывов в Google",
     "loading": "Загрузка отзывов...",
     "empty": "Отзывов нет.",
     "viewAll": "Посмотреть все отзывы в Google",
     "googleBadgeTitle": "Опубликовано в Google",
-    "defaultUser": "Пользователь Google"
+    "defaultUser": "Пользователь Google",
+    "prevReview": "Предыдущий отзыв",
+    "nextReview": "Следующий отзыв",
+    "goToReview": "Перейти к отзыву {number}"
   },
   "footer": {
     "tagline": "Ваше частное пространство в сердце Мадрида",
