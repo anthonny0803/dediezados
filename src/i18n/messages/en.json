@@ -270,6 +270,8 @@
     "loading": "Loading reviews...",
     "empty": "No reviews available.",
     "viewAll": "See all reviews on Google",
+    "readMore": "Read more",
+    "close": "Close",
     "googleBadgeTitle": "Posted on Google",
     "defaultUser": "Google User",
     "prevReview": "Previous review",
@@ -284,7 +286,12 @@
     "keywords": "Event venues Madrid | Birthday hall rental Madrid | Affordable private events | Parties near Santiago Bernabeu | Cheap birthday venue Madrid | Affordable event catering | Affordable celebrations Madrid | Party venue rental Madrid | Events next to the Bernabeu | Affordable wedding halls | Private parties affordable price | Book venue Madrid centre | Spaces for celebrations Madrid | Events near Santiago Bernabeu stadium | Affordable venue with catering | Affordable Madrid birthday event | Company parties Madrid | Event venue competitive prices | Unforgettable celebrations Madrid | Event hall Madrid Centre | De Diez a Dos Madrid",
     "partnersIntro": "Strategic partners:",
     "partnerCapifix": "Capifix | Integrated Logistics",
-    "devLabel": "Dev:"
+    "devLabel": "Dev:",
+    "contactTitle": "Contact",
+    "exploreTitle": "Explore",
+    "socialTitle": "Follow us",
+    "instagramAria": "Follow us on Instagram",
+    "facebookAria": "Follow us on Facebook"
   },
   "logoAlt": "De Diez a Dos Logo",
   "events": {

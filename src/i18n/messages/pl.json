@@ -270,6 +270,8 @@
     "loading": "Ładowanie opinii...",
     "empty": "Brak dostępnych opinii.",
     "viewAll": "Zobacz wszystkie opinie w Google",
+    "readMore": "Czytaj więcej",
+    "close": "Zamknij",
     "googleBadgeTitle": "Opublikowane w Google",
     "defaultUser": "Użytkownik Google",
     "prevReview": "Poprzednia opinia",
@@ -284,7 +286,12 @@
     "keywords": "Sale na wydarzenia Madryt | Wynajem sali urodzinowej Madryt | Tanie wydarzenia prywatne | Imprezy w pobliżu Santiago Bernabéu | Tania sala urodzinowa Madryt | Tani catering eventowy | Tanie uroczystości Madryt | Wynajem lokalu na imprezy Madryt | Wydarzenia obok Bernabéu | Tanie sale weselne | Imprezy prywatne tania cena | Zarezerwuj salę centrum Madrytu | Przestrzenie na uroczystości Madryt | Wydarzenia w pobliżu stadionu Santiago Bernabéu | Tanie wynajęcie sali z cateringiem | Tanie urodziny Madryt | Imprezy firmowe Madryt | Sala eventowa konkurencyjne ceny | Niezapomniane uroczystości Madryt | Sala na wydarzenia Centrum Madrytu | De Diez a Dos Madryt",
     "partnersIntro": "Partnerzy strategiczni:",
     "partnerCapifix": "Capifix | Logistyka Integralna",
-    "devLabel": "Dev:"
+    "devLabel": "Dev:",
+    "contactTitle": "Kontakt",
+    "exploreTitle": "Odkryj",
+    "socialTitle": "Obserwuj nas",
+    "instagramAria": "Obserwuj nas na Instagramie",
+    "facebookAria": "Obserwuj nas na Facebooku"
   },
   "logoAlt": "Logo De Diez a Dos",
   "events": {

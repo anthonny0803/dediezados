@@ -80,7 +80,7 @@
 }
 
 .footer-logo .logo-white {
-  height: 120px;
+  height: 64px;
   width: auto;
   transition: all var(--transition-smooth);
 }
@@ -114,7 +114,7 @@
 
 @media (max-width: 768px) {
   .footer-logo .logo-white {
-    height: 100px;
+    height: 56px;
   }
 
   .sidenav-logo-top {
@@ -136,6 +136,6 @@
 
 @media (max-width: 480px) {
   .footer-logo .logo-white {
-    height: 80px;
+    height: 48px;
   }
 }

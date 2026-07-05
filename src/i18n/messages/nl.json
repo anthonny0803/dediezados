@@ -270,6 +270,8 @@
     "loading": "Recensies laden...",
     "empty": "Geen recensies beschikbaar.",
     "viewAll": "Bekijk alle recensies op Google",
+    "readMore": "Meer lezen",
+    "close": "Sluiten",
     "googleBadgeTitle": "Gepubliceerd op Google",
     "defaultUser": "Google-gebruiker",
     "prevReview": "Vorige recensie",
@@ -284,7 +286,12 @@
     "keywords": "Evenementenzalen Madrid | Verjaardagszaal verhuren Madrid | Betaalbare privéevenementen | Feesten nabij Santiago Bernabéu | Goedkope verjaardagszaal Madrid | Betaalbare eventcatering | Goedkope vieringen Madrid | Verhuur feestlocatie Madrid | Evenementen naast Bernabéu | Goedkope bruiloftszalen | Privéfeesten betaalbare prijs | Zaal reserveren Madrid centrum | Ruimtes voor vieringen Madrid | Evenementen nabij Santiago Bernabéu stadion | Goedkope zaalverhuur met catering | Goedkoop verjaardagsevenement Madrid | Bedrijfsfeesten Madrid | Eventzaal concurrerende prijzen | Onvergetelijke vieringen Madrid | Eventruimte Madrid Centrum | De Diez a Dos Madrid",
     "partnersIntro": "Strategische partners:",
     "partnerCapifix": "Capifix | Integrale Logistiek",
-    "devLabel": "Dev:"
+    "devLabel": "Dev:",
+    "contactTitle": "Contact",
+    "exploreTitle": "Ontdek",
+    "socialTitle": "Volg ons",
+    "instagramAria": "Volg ons op Instagram",
+    "facebookAria": "Volg ons op Facebook"
   },
   "logoAlt": "De Diez a Dos Logo",
   "events": {

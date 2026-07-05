@@ -270,6 +270,8 @@
     "loading": "Bewertungen werden geladen...",
     "empty": "Keine Bewertungen verfügbar.",
     "viewAll": "Alle Bewertungen auf Google ansehen",
+    "readMore": "Mehr anzeigen",
+    "close": "Schließen",
     "googleBadgeTitle": "Veröffentlicht auf Google",
     "defaultUser": "Google-Nutzer",
     "prevReview": "Vorherige Bewertung",
@@ -284,7 +286,12 @@
     "keywords": "Eventlocations Madrid | Saalvermietung Geburtstag Madrid | Günstige Privatevents | Partys nahe Santiago Bernabéu | Günstiger Geburtstagssaal Madrid | Günstiges Eventcatering | Günstige Feiern Madrid | Lokalvermietung Partys Madrid | Events am Bernabéu | Günstige Hochzeitssäle | Privatpartys günstiger Preis | Saal reservieren Madrid Zentrum | Räume für Feiern Madrid | Events am Stadion Santiago Bernabéu | Günstige Saalvermietung mit Catering | Günstiges Geburtstagsevent Madrid | Firmenfeiern Madrid | Eventsaal wettbewerbsfähige Preise | Unvergessliche Feiern Madrid | Eventsaal Madrid Zentrum | De Diez a Dos Madrid",
     "partnersIntro": "Strategische Partner:",
     "partnerCapifix": "Capifix | Integrale Logistik",
-    "devLabel": "Dev:"
+    "devLabel": "Dev:",
+    "contactTitle": "Kontakt",
+    "exploreTitle": "Entdecken",
+    "socialTitle": "Folgen Sie uns",
+    "instagramAria": "Folgen Sie uns auf Instagram",
+    "facebookAria": "Folgen Sie uns auf Facebook"
   },
   "logoAlt": "De Diez a Dos Logo",
   "events": {
