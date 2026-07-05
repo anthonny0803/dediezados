@@ -1,9 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslations } from 'next-intl';
-import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import type { PlaceData, Review } from '@/hooks/useGooglePlace';
+
+const MAX_PREVIEW_CHARS = 220;
+
+const truncatePreview = (text: string) => {
+  if (text.length <= MAX_PREVIEW_CHARS) return text;
+  const slice = text.slice(0, MAX_PREVIEW_CHARS);
+  const lastSpace = slice.lastIndexOf(' ');
+  const cut = lastSpace > 0 ? slice.slice(0, lastSpace) : slice;
+  return `${cut.trimEnd()}…`;
+};
 
 const getInitials = (name: string) =>
   name
@@ -59,6 +70,59 @@ const Avatar = ({ photo, name }: { photo?: string; name: string }) => {
   );
 };
 
+interface FeaturedReviewCardProps {
+  review: Review;
+  text: string;
+  authorName: string;
+  badgeTitle: string;
+  readMoreLabel?: string;
+  onReadMore?: () => void;
+}
+
+const FeaturedReviewCard = ({
+  review,
+  text,
+  authorName,
+  badgeTitle,
+  readMoreLabel,
+  onReadMore,
+}: FeaturedReviewCardProps) => (
+  <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-10 shadow-elegant md:p-14">
+    <Quote className="absolute right-8 top-8 h-20 w-20 text-primary/10" />
+    <GoogleBadge title={badgeTitle} className="absolute left-8 top-8 inline-flex" />
+
+    <div className="mb-6 flex gap-1">{renderStars(review.rating || 0, 'h-5 w-5')}</div>
+
+    <p
+      className={`relative z-10 font-display text-xl leading-relaxed md:text-2xl ${
+        onReadMore ? 'mb-4' : 'mb-8'
+      }`}
+    >
+      {`“${text}”`}
+    </p>
+
+    {onReadMore && (
+      <button
+        type="button"
+        onClick={onReadMore}
+        className="relative z-10 mb-8 inline-flex cursor-pointer appearance-none border-0 bg-transparent p-0 text-sm font-medium text-primary transition-smooth hover:underline"
+      >
+        {readMoreLabel}
+      </button>
+    )}
+
+    <div className="flex items-center gap-4">
+      <Avatar photo={review.authorAttribution?.photoUri} name={authorName} />
+      <div>
+        <div className="font-semibold">{authorName}</div>
+        <div className="text-sm text-muted-foreground">
+          {review.relativePublishTimeDescription || ''}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 interface GoogleReviewsProps {
   placeData: PlaceData | null;
   loading: boolean;
@@ -67,6 +131,25 @@ interface GoogleReviewsProps {
 export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
   const t = useTranslations('reviews');
   const [index, setIndex] = useState(0);
+  const [modalReview, setModalReview] = useState<Review | null>(null);
+
+  useEffect(() => {
+    if (!modalReview) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setModalReview(null);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    const root = document.documentElement;
+    const previousRootOverflow = root.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+    root.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      root.style.overflow = previousRootOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+    };
+  }, [modalReview]);
 
   if (loading) {
     return (
@@ -90,29 +173,20 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
 
   const authorName = (review: Review) => review.authorAttribution?.displayName || t('defaultUser');
 
+  const fullText = current.text ?? '';
+  const isLong = fullText.length > MAX_PREVIEW_CHARS;
+
   return (
     <div>
       <div className="relative mx-auto mb-12 max-w-4xl">
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-10 shadow-elegant md:p-14">
-          <Quote className="absolute right-8 top-8 h-20 w-20 text-primary/10" />
-          <GoogleBadge title={t('googleBadgeTitle')} className="absolute left-8 top-8 inline-flex" />
-
-          <div className="mb-6 flex gap-1">{renderStars(current.rating || 0, 'h-5 w-5')}</div>
-
-          <p className="relative z-10 mb-8 font-display text-xl leading-relaxed md:text-2xl">
-            {`“${current.text ?? ''}”`}
-          </p>
-
-          <div className="flex items-center gap-4">
-            <Avatar photo={current.authorAttribution?.photoUri} name={authorName(current)} />
-            <div>
-              <div className="font-semibold">{authorName(current)}</div>
-              <div className="text-sm text-muted-foreground">
-                {current.relativePublishTimeDescription || ''}
-              </div>
-            </div>
-          </div>
-        </div>
+        <FeaturedReviewCard
+          review={current}
+          text={isLong ? truncatePreview(fullText) : fullText}
+          authorName={authorName(current)}
+          badgeTitle={t('googleBadgeTitle')}
+          readMoreLabel={t('readMore')}
+          onReadMore={isLong ? () => setModalReview(current) : undefined}
+        />
 
         <div className="mt-8 flex items-center justify-center gap-3">
           <button
@@ -177,6 +251,38 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
           {t('viewAll')}
         </a>
       </div>
+
+      {modalReview &&
+        createPortal(
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={authorName(modalReview)}
+            onClick={() => setModalReview(null)}
+            className="fixed inset-0 z-[2000] flex items-center justify-center overscroll-contain bg-black/80 p-4 backdrop-blur-sm sm:p-8"
+          >
+            <button
+              type="button"
+              aria-label={t('close')}
+              onClick={() => setModalReview(null)}
+              className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-smooth hover:bg-secondary sm:right-8 sm:top-8"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <div
+              onClick={(event) => event.stopPropagation()}
+              className="max-h-[85vh] w-full max-w-2xl overflow-y-auto overscroll-contain"
+            >
+              <FeaturedReviewCard
+                review={modalReview}
+                text={modalReview.text ?? ''}
+                authorName={authorName(modalReview)}
+                badgeTitle={t('googleBadgeTitle')}
+              />
+            </div>
+          </div>,
+          document.body
+        )}
     </div>
   );
 };

@@ -270,6 +270,8 @@
     "loading": "A carregar avaliações...",
     "empty": "Não há avaliações disponíveis.",
     "viewAll": "Ver todas as avaliações no Google",
+    "readMore": "Ver mais",
+    "close": "Fechar",
     "googleBadgeTitle": "Publicado no Google",
     "defaultUser": "Utilizador do Google",
     "prevReview": "Avaliação anterior",
@@ -284,7 +286,12 @@
     "keywords": "Salas para eventos Madrid | Aluguer de sala aniversário Madrid | Eventos privados económicos | Festas perto do Santiago Bernabéu | Sala aniversário barata Madrid | Catering eventos económico | Celebrações baratas Madrid | Aluguer de local festas Madrid | Eventos junto ao Bernabéu | Salas para casamentos baratas | Festas privadas preço económico | Reservar sala Madrid centro | Espaços para celebrações Madrid | Eventos perto do estádio Santiago Bernabéu | Aluguer sala com catering barato | Evento de aniversário Madrid económico | Festas de empresa Madrid | Sala eventos preços competitivos | Celebrações inesquecíveis Madrid | Sala para eventos Madrid Centro | De Diez a Dos Madrid",
     "partnersIntro": "Parceiros estratégicos:",
     "partnerCapifix": "Capifix | Logística Integral",
-    "devLabel": "Dev:"
+    "devLabel": "Dev:",
+    "contactTitle": "Contacto",
+    "exploreTitle": "Explorar",
+    "socialTitle": "Segue-nos",
+    "instagramAria": "Segue-nos no Instagram",
+    "facebookAria": "Segue-nos no Facebook"
   },
   "logoAlt": "Logótipo De Diez a Dos",
   "events": {

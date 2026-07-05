@@ -16,6 +16,15 @@
     background-image: none;
   }
 
+  /* Same preflight-omission context: without it, <a> keeps the user-agent link
+     styling (blue/purple color and underline). Mirror Tailwind preflight so
+     links inherit their surroundings; color/decoration utility classes still
+     win because they live in the higher `utilities` layer. */
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
   html {
     scroll-behavior: smooth;
   }
