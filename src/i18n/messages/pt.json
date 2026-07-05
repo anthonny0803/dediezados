@@ -263,13 +263,18 @@
     }
   },
   "reviews": {
-    "title": "O que dizem os nossos clientes",
-    "subtitle": "Experiências reais de eventos inesquecíveis",
+    "label": "Avaliações",
+    "title": "O que dizem",
+    "titleAccent": "os nossos clientes",
+    "ratingSummary": "{rating} / 5 · {count} avaliações no Google",
     "loading": "A carregar avaliações...",
     "empty": "Não há avaliações disponíveis.",
     "viewAll": "Ver todas as avaliações no Google",
     "googleBadgeTitle": "Publicado no Google",
-    "defaultUser": "Utilizador do Google"
+    "defaultUser": "Utilizador do Google",
+    "prevReview": "Avaliação anterior",
+    "nextReview": "Avaliação seguinte",
+    "goToReview": "Ir para a avaliação {number}"
   },
   "footer": {
     "tagline": "O seu espaço privado no coração de Madrid",
