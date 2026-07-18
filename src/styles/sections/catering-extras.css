@@ -1,0 +1,26 @@
+/*
+ * Catering + Extras combined section.
+ *
+ * Like #events, this is a new section with its own inner max-w-7xl container,
+ * so it opts out of the legacy `section {}` cap (max-width: 1400px) with id
+ * specificity to go full-bleed. Unlayered rules win over Tailwind utilities
+ * regardless of specificity, so the override lives here (#catering beats
+ * `section`).
+ *
+ * Background: flat --dd-background ("base" stripe). Band rhythm after the
+ * absorption phase: Hero (dark) · Events (base) · Space (band) ·
+ * Catering+Extras (base) · Gallery (band) · Contact (base) · Location (band) ·
+ * Reviews (base).
+ */
+#catering {
+  max-width: none;
+  margin: 0;
+  padding: 6rem 1.5rem;
+  background: var(--dd-background);
+}
+
+@media (max-width: 640px) {
+  #catering {
+    padding: 4rem 1.5rem;
+  }
+}

@@ -25,6 +25,15 @@
     text-decoration: inherit;
   }
 
+  /* Same preflight-omission context: without it, ul/ol keep the user-agent
+     disc/decimal markers. Every list in the app is navigational or decorated
+     with its own icons, so mirror Tailwind preflight and drop the markers. */
+  ol,
+  ul,
+  menu {
+    list-style: none;
+  }
+
   html {
     scroll-behavior: smooth;
   }

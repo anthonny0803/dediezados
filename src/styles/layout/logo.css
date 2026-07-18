@@ -1,28 +1,3 @@
-/* Navbar logo */
-.logo-fixed {
-  position: fixed;
-  top: 5px;
-  left: 32px;
-  z-index: 1100;
-  transition: all var(--transition-slow);
-}
-
-.logo-fixed img {
-  height: 90px;
-  width: auto;
-  transition: transform var(--transition-smooth);
-}
-
-.logo-fixed:hover img {
-  transform: scale(1.05);
-}
-
-.logo-fixed.hide {
-  opacity: 0;
-  transform: translateY(-20px);
-  pointer-events: none;
-}
-
 /* Sidenav logo */
 .sidenav-logo {
   display: flex;
@@ -101,17 +76,6 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .logo-fixed {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .logo-fixed img {
-    height: 80px;
-  }
-}
-
 @media (max-width: 768px) {
   .footer-logo .logo-white {
     height: 56px;

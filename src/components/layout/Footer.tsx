@@ -165,10 +165,6 @@ export const Footer = () => {
           <p className="font-display italic sm:text-right">{t('slogan')}</p>
         </div>
 
-        <p className="mt-6 text-[0.7rem] leading-relaxed text-muted-foreground/60">
-          {t('keywords')}
-        </p>
-
         <div className="mt-4 flex flex-col gap-2 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>
             {t('partnersIntro')}{' '}

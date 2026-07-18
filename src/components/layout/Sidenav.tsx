@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
 import { LocaleSwitcher } from '@/components/ui/LocaleSwitcher';
@@ -11,31 +11,7 @@ export const Sidenav = () => {
   const tRoot = useTranslations();
   const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
-  const [isInHero, setIsInHero] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroSection = document.getElementById('hero');
-      const isMobile = window.innerWidth <= 1024;
-      if (heroSection && !isMobile) {
-        const heroBottom = heroSection.offsetHeight;
-        const scrollPosition = window.scrollY;
-        setIsInHero(scrollPosition < heroBottom - 100);
-      } else {
-        setIsInHero(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    window.addEventListener('resize', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleScroll);
-    };
-  }, []);
 
   const toggleSidenav = () => {
     if (isOpen) {
@@ -82,6 +58,7 @@ export const Sidenav = () => {
       <div
         className={`sidenav-overlay ${isOpen ? 'active' : ''}`}
         onClick={handleClose}
+        aria-hidden="true"
       />
 
       {/* Sidenav */}
@@ -115,19 +92,19 @@ export const Sidenav = () => {
         {/* Spacer only for desktop */}
         <div className="sidenav-spacer"></div>
 
-        <ul>
-          <li><a href={`/${locale}`} onClick={handleHomeClick}>{t('home')}</a></li>
-          <li><a href="#events" onClick={(e) => handleSectionClick(e, 'events')}>{t('events')}</a></li>
-          <li><a href="#space" onClick={(e) => handleSectionClick(e, 'space')}>{t('space')}</a></li>
-          <li><a href="#services" onClick={(e) => handleSectionClick(e, 'services')}>{t('services')}</a></li>
-          <li><a href="#catering" onClick={(e) => handleSectionClick(e, 'catering')}>{t('catering')}</a></li>
-          <li><a href="#extras" onClick={(e) => handleSectionClick(e, 'extras')}>{t('extras')}</a></li>
-          <li><a href="#gallery" onClick={(e) => handleSectionClick(e, 'gallery')}>{t('gallery')}</a></li>
-          <li><a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')}>{t('contact')}</a></li>
-          <li><a href="#location" onClick={(e) => handleSectionClick(e, 'location')}>{t('location')}</a></li>
-          <li><a href="#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>{t('reviews')}</a></li>
-          <li><a href="#footer" onClick={(e) => handleSectionClick(e, 'footer')}>{t('about')}</a></li>
-        </ul>
+        <nav>
+          <ul>
+            <li><a href={`/${locale}`} onClick={handleHomeClick}>{t('home')}</a></li>
+            <li><a href="#events" onClick={(e) => handleSectionClick(e, 'events')}>{t('events')}</a></li>
+            <li><a href="#space" onClick={(e) => handleSectionClick(e, 'space')}>{t('space')}</a></li>
+            <li><a href="#catering" onClick={(e) => handleSectionClick(e, 'catering')}>{t('catering')}</a></li>
+            <li><a href="#gallery" onClick={(e) => handleSectionClick(e, 'gallery')}>{t('gallery')}</a></li>
+            <li><a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')}>{t('contact')}</a></li>
+            <li><a href="#location" onClick={(e) => handleSectionClick(e, 'location')}>{t('location')}</a></li>
+            <li><a href="#reviews" onClick={(e) => handleSectionClick(e, 'reviews')}>{t('reviews')}</a></li>
+            <li><a href="#footer" onClick={(e) => handleSectionClick(e, 'footer')}>{t('about')}</a></li>
+          </ul>
+        </nav>
 
         <div className="sidenav-controls">
           <ThemeToggle variant="sidenav" />
@@ -158,16 +135,17 @@ export const Sidenav = () => {
       </div>
 
       {/* Toggle button */}
-      <div
-        className={`menu-toggle ${isInHero ? 'hide' : 'show'} ${
-          isOpen ? 'open' : ''
-        }`}
+      <button
+        type="button"
+        className={`menu-toggle ${isOpen ? 'open' : ''}`}
         onClick={toggleSidenav}
+        aria-label={t('menuToggle')}
+        aria-expanded={isOpen}
       >
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </>
   );
 };

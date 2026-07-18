@@ -130,6 +130,7 @@ interface GoogleReviewsProps {
 
 export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
   const t = useTranslations('reviews');
+  const tCommon = useTranslations('common');
   const [index, setIndex] = useState(0);
   const [modalReview, setModalReview] = useState<Review | null>(null);
 
@@ -263,7 +264,7 @@ export const GoogleReviews = ({ placeData, loading }: GoogleReviewsProps) => {
           >
             <button
               type="button"
-              aria-label={t('close')}
+              aria-label={tCommon('close')}
               onClick={() => setModalReview(null)}
               className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-smooth hover:bg-secondary sm:right-8 sm:top-8"
             >

@@ -106,6 +106,20 @@
   background: rgba(var(--neutral-0-rgb), 0.08);
 }
 
+/* Once the bar is scrolled it takes the theme background, so in light theme
+   the forced-white trigger vanishes. Follow the theme like the logo swap in
+   navbar.css does. */
+[data-theme='light'] .navbar-scrolled .theme-toggle--navbar .theme-toggle-trigger {
+  color: var(--text-primary);
+  border-color: rgba(var(--neutral-1000-rgb), 0.14);
+}
+
+[data-theme='light'] .navbar-scrolled .theme-toggle--navbar .theme-toggle-trigger:hover {
+  color: var(--primary);
+  background: var(--glass-card-hover);
+  border-color: rgba(var(--brand-teal-500-rgb), 0.4);
+}
+
 /* ============================================================
  * SIDENAV VARIANT
  * Inline segmented control with 3 always-visible buttons.

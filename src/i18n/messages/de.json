@@ -1,14 +1,16 @@
 {
+  "common": {
+    "close": "Schließen"
+  },
   "brand": {
     "name": "De Diez a Dos",
     "slogan": "Madrid Events - Eventlocations",
     "description": "Vermietung eleganter Räumlichkeiten und Komplettservice für jede Art von Veranstaltung"
   },
   "nav": {
+    "menuToggle": "Navigationsmenü",
     "home": "Start",
-    "services": "Leistungen",
-    "catering": "Catering",
-    "extras": "Extras",
+    "catering": "Catering & Extras",
     "gallery": "Säle",
     "contact": "Kontakt",
     "location": "Standort",
@@ -55,37 +57,8 @@
       { "label": "Persönliche Betreuung" }
     ]
   },
-  "services": {
-    "title": "Professionelle Leistungen",
-    "subtitle": "Komplettpakete mit allem, was Sie für Ihre Veranstaltung brauchen",
-    "items": [
-      {
-        "title": "Exklusiver Raum",
-        "description": "Lokal mit zwei exklusiven Räumen, privatem Zugang und einer komplett reservierten Atmosphäre. Bequemes Mobiliar und anpassbare Beleuchtung. Wir arbeiten mit Sorgfalt und Nähe und koordinieren jedes Detail, damit Ihre Veranstaltung perfekt verläuft."
-      },
-      {
-        "title": "Audio-Visual-System",
-        "description": "Professioneller Sound und hochwertige Bildschirme bereits im Raum installiert. Unser technisches Team sorgt dafür, dass während der Veranstaltung alles einwandfrei funktioniert. Anpassbare Beleuchtung und Atmosphären passend zu Ihrem Stil: elegant, modern oder festlich. Qualität und Komfort, ohne Aufbauaufwand."
-      },
-      {
-        "title": "Catering De Diez a Dos",
-        "description": "Über 14 Jahre, in denen wir unseren Kunden zugehört und jedes Angebot verfeinert haben. Das Ergebnis: ausgewogene und vielseitige Menüs, die zu jeder Gelegenheit passen. Qualität, schöne Präsentation und Optionen, die zu jeder Art von Veranstaltung passen."
-      },
-      {
-        "title": "Open Bar",
-        "description": "Unsere Bar passt sich jeder Veranstaltung an. Wir bieten verschiedene Optionen je nach gebuchtem Paket, damit Sie das Format wählen können, das am besten zu Ihrer Feier passt. Flexibilität und professioneller Service zu jeder Zeit."
-      },
-      {
-        "title": "Professionelles Personal",
-        "description": "Bar-, Service- und Einlasspersonal, das für Sicherheit und Komfort sorgt. Ein effizientes und diskretes Team. Bei unerwarteten Situationen liefern wir schnelle und qualitativ hochwertige Lösungen. Einfacher und lösungsorientierter Service."
-      },
-      {
-        "title": "Zusatzleistungen",
-        "description": "Wir bieten optionale Extras, um Ihre Veranstaltung abzurunden: individuelle Dekoration, DJ, Süßigkeitenbuffet, Süßigkeitenwagen und Photomax 360. Sie wählen, was Sie hinzufügen möchten, immer mit klaren Preisen und ohne Überraschungen."
-      }
-    ]
-  },
   "catering": {
+    "label": "Catering & Extras",
     "title": "Catering De Diez a Dos",
     "subtitle": "Genießen Sie die wundervolle Aufmerksamkeit und persönliche Betreuung, die wir bei jeder Veranstaltung bieten. Unser Team setzt alles daran, Ihren besonderen Anlass zu einem unvergesslichen Moment zu machen, indem wir auf jedes Detail achten, damit Sie und Ihre Gäste sich wie zu Hause fühlen.",
     "badge": "Spezialität",
@@ -117,26 +90,24 @@
     ]
   },
   "gallery": {
+    "label": "Galerie",
     "title": "Säle",
     "subtitle": "Entdecken Sie unsere eleganten Säle, gestaltet, um die perfekte Atmosphäre für Ihre besondere Veranstaltung zu schaffen",
-    "scrollLeftLabel": "Galerie nach links scrollen",
-    "scrollRightLabel": "Galerie nach rechts scrollen",
-    "expandedAlt": "Vergrößertes Bild",
     "rooms": {
       "olas": "Saal Olas",
       "amazonias": "Saal Amazonias"
     },
     "photos": [
-      { "room": "olas", "alt": "Saal Olas für private Events in Madrid - Hauptansicht" },
-      { "room": "olas", "alt": "Saal Olas - Raum für Feiern und Partys in Madrid" },
-      { "room": "olas", "alt": "Saal Olas - elegante Atmosphäre für Events in der Nähe des Bernabéu" },
-      { "room": "olas", "alt": "Saal Olas - Dekoration und Mobiliar für Events in Madrid" },
-      { "room": "amazonias", "alt": "Saal Amazonias für exklusive Events in Madrid - Hauptansicht" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Raum für Hochzeiten und Feiern in Madrid" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Saalvermietung für Geburtstage und Partys" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Premium-Atmosphäre für Firmenevents" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Beleuchtung und Dekoration für private Events" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Komplettraum für Feiern in Madrid" }
+      { "alt": "Saal Olas für private Events in Madrid - Hauptansicht" },
+      { "alt": "Saal Olas - Raum für Feiern und Partys in Madrid" },
+      { "alt": "Saal Olas - elegante Atmosphäre für Events in der Nähe des Bernabéu" },
+      { "alt": "Saal Olas - Dekoration und Mobiliar für Events in Madrid" },
+      { "alt": "Saal Amazonias für exklusive Events in Madrid - Hauptansicht" },
+      { "alt": "Saal Amazonias - Raum für Hochzeiten und Feiern in Madrid" },
+      { "alt": "Saal Amazonias - Saalvermietung für Geburtstage und Partys" },
+      { "alt": "Saal Amazonias - Premium-Atmosphäre für Firmenevents" },
+      { "alt": "Saal Amazonias - Beleuchtung und Dekoration für private Events" },
+      { "alt": "Saal Amazonias - Komplettraum für Feiern in Madrid" }
     ]
   },
   "extras": {
@@ -271,7 +242,6 @@
     "empty": "Keine Bewertungen verfügbar.",
     "viewAll": "Alle Bewertungen auf Google ansehen",
     "readMore": "Mehr anzeigen",
-    "close": "Schließen",
     "googleBadgeTitle": "Veröffentlicht auf Google",
     "defaultUser": "Google-Nutzer",
     "prevReview": "Vorherige Bewertung",
@@ -283,7 +253,6 @@
     "legal": "De Diez a Dos Private Event, S.L.U.",
     "copyright": "© {year} De Diez a Dos. Alle Rechte vorbehalten.",
     "slogan": "Über ein Jahrzehnt unvergessliche Events kreieren",
-    "keywords": "Eventlocations Madrid | Saalvermietung Geburtstag Madrid | Günstige Privatevents | Partys nahe Santiago Bernabéu | Günstiger Geburtstagssaal Madrid | Günstiges Eventcatering | Günstige Feiern Madrid | Lokalvermietung Partys Madrid | Events am Bernabéu | Günstige Hochzeitssäle | Privatpartys günstiger Preis | Saal reservieren Madrid Zentrum | Räume für Feiern Madrid | Events am Stadion Santiago Bernabéu | Günstige Saalvermietung mit Catering | Günstiges Geburtstagsevent Madrid | Firmenfeiern Madrid | Eventsaal wettbewerbsfähige Preise | Unvergessliche Feiern Madrid | Eventsaal Madrid Zentrum | De Diez a Dos Madrid",
     "partnersIntro": "Strategische Partner:",
     "partnerCapifix": "Capifix | Integrale Logistik",
     "devLabel": "Dev:",
@@ -360,28 +329,28 @@
     ],
     "cards": [
       {
-        "title": "Professioneller Sound",
-        "description": "JBL-Audiosystem und residenter DJ."
+        "title": "Exklusiver Raum",
+        "description": "Zwei exklusive Räume mit privatem Zugang und ganz privater Atmosphäre."
       },
       {
-        "title": "Catering nach Maß",
-        "description": "Individuelle Menüs internationaler Küche."
+        "title": "Audio-Visual-System",
+        "description": "Professioneller Sound, Bildschirme und anpassbare Beleuchtung bereits vor Ort installiert."
       },
       {
-        "title": "Premium-Bar",
-        "description": "Signature-Cocktails und offene Bar."
+        "title": "Catering De Diez a Dos",
+        "description": "Ausgewogene, vielseitige Menüs mit über 14 Jahren Erfahrung."
       },
       {
-        "title": "Beleuchtung",
-        "description": "Anpassbares Lichtdesign für jeden Moment."
+        "title": "Open Bar",
+        "description": "Flexible Optionen je nach gebuchtem Paket, mit professionellem Service jederzeit."
       },
       {
-        "title": "Foto und Video",
-        "description": "Hochwertiger audiovisueller Service."
+        "title": "Professionelles Personal",
+        "description": "Kellner, Barpersonal und Zugangskontrolle für Ihre Sicherheit und Ihren Komfort."
       },
       {
-        "title": "Parkplatz",
-        "description": "Privater Parkplatz für Ihre Gäste."
+        "title": "Zusatzleistungen",
+        "description": "Optional: individuelle Dekoration, DJ, Candy Bar, Süßigkeitenwagen und Photomax 360."
       }
     ]
   }

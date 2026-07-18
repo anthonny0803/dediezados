@@ -10,16 +10,16 @@ import {
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import {
+  Building2,
   Music,
   Utensils,
   Wine,
-  Lightbulb,
-  Camera,
-  Car,
-  X,
+  Users,
+  Sparkles,
   type LucideIcon,
 } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
+import { Lightbox } from '@/components/ui/Lightbox';
 
 interface CardContent {
   title: string;
@@ -27,12 +27,12 @@ interface CardContent {
 }
 
 const iconMap: Record<string, LucideIcon> = {
+  building: Building2,
   music: Music,
   utensils: Utensils,
   wine: Wine,
-  lightbulb: Lightbulb,
-  camera: Camera,
-  car: Car,
+  users: Users,
+  sparkles: Sparkles,
 };
 
 // Coverflow geometry, in viewport-width fractions. The centered card sits on
@@ -81,24 +81,6 @@ export const Space = () => {
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
-
-  useEffect(() => {
-    if (!lightboxOpen) return;
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setLightboxOpen(false);
-    };
-    document.addEventListener('keydown', onKeyDown);
-    const root = document.documentElement;
-    const previousRootOverflow = root.style.overflow;
-    const previousBodyOverflow = document.body.style.overflow;
-    root.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.removeEventListener('keydown', onKeyDown);
-      root.style.overflow = previousRootOverflow;
-      document.body.style.overflow = previousBodyOverflow;
-    };
-  }, [lightboxOpen]);
 
   useEffect(() => {
     if (isHovered || isDragging || lightboxOpen) return;
@@ -302,32 +284,11 @@ export const Space = () => {
       </div>
 
       {lightboxOpen && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={slides[activeIndex].alt}
-          onClick={() => setLightboxOpen(false)}
-          className="fixed inset-0 z-[100] flex items-center justify-center overscroll-contain bg-black/80 p-4 backdrop-blur-sm sm:p-8"
-        >
-          <button
-            type="button"
-            aria-label="Cerrar"
-            onClick={() => setLightboxOpen(false)}
-            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-smooth hover:bg-muted sm:right-8 sm:top-8"
-          >
-            <X className="h-5 w-5" />
-          </button>
-          <Image
-            src={slides[activeIndex].image}
-            alt={slides[activeIndex].alt}
-            width={0}
-            height={0}
-            sizes="90vw"
-            onClick={(event) => event.stopPropagation()}
-            style={{ width: 'auto', height: 'auto' }}
-            className="max-h-[85vh] max-w-[90vw] rounded-2xl object-contain shadow-elegant"
-          />
-        </div>
+        <Lightbox
+          src={slides[activeIndex].image}
+          alt={slides[activeIndex].alt}
+          onClose={() => setLightboxOpen(false)}
+        />
       )}
     </section>
   );

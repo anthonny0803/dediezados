@@ -47,6 +47,17 @@ export const Hero = () => {
     setCurrentIndex(index);
   };
 
+  const handleButtonClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    link: string,
+  ) => {
+    event.preventDefault();
+    document.getElementById(link.slice(1))?.scrollIntoView({ block: 'start' });
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+  };
+
   return (
     <section id="hero">
       <div className="carousel" id="carousel">
@@ -71,13 +82,18 @@ export const Hero = () => {
                     <MapPin className="h-4 w-4" />
                     {t('badge')}
                   </span>
-                  <h1>{slide.title}</h1>
+                  {index === 0 ? (
+                    <h1 className="hero-title">{slide.title}</h1>
+                  ) : (
+                    <div className="hero-title">{slide.title}</div>
+                  )}
                   <p>{slide.description}</p>
                   <div className="hero-buttons">
                     {slide.buttons.map((btn, btnIndex) => (
                       <a
                         key={btnIndex}
                         href={btn.link}
+                        onClick={(event) => handleButtonClick(event, btn.link)}
                         className={`btn ${btn.variant === 'outline' ? 'btn-outline' : ''}`}
                       >
                         {ctaTexts[btnIndex]}

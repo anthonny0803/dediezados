@@ -1,5 +1,5 @@
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dediezados.com';
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.dediezados.com';
 
 export interface ImageAsset {
   url: string;
@@ -28,13 +28,6 @@ export interface ServiceOffering {
   name: string;
   description: string;
   areaServed: string;
-}
-
-export interface AggregateRating {
-  ratingValue: number;
-  ratingCount: number;
-  bestRating: number;
-  worstRating: number;
 }
 
 export interface FaqItem {
@@ -108,7 +101,7 @@ export const seoConfig = {
       latitude: 40.455601,
       longitude: -3.6878855,
     },
-    googleMapsCid: 'https://www.google.com/maps?cid=dediezados',
+    googleMapsUrl: `https://www.google.com/maps/search/?api=1&query=Google&query_place_id=${process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID ?? ''}`,
   },
 
   areasServed: [
@@ -130,12 +123,6 @@ export const seoConfig = {
       'Efectivo, Tarjeta de crédito, Transferencia bancaria, Bizum',
     maximumAttendeeCapacity: 100,
     yearsOfExperience: 14,
-    aggregateRating: {
-      ratingValue: 5,
-      ratingCount: 200,
-      bestRating: 5,
-      worstRating: 1,
-    } satisfies AggregateRating,
     openingHours: {
       dayOfWeek: [
         'Monday',
@@ -753,18 +740,15 @@ export const seoConfig = {
 
   localeMetadata: {
     es: {
-      title:
-        'De Diez a Dos - Alquiler Salas Eventos Madrid | Precios Económicos Cerca del Santiago Bernabéu',
+      title: 'Alquiler de Salas para Eventos en Madrid | De Diez a Dos',
       description:
-        'Alquiler de salas para eventos en Madrid cerca del Santiago Bernabéu. Cumpleaños, bodas, fiestas privadas y eventos de empresa con catering, barra libre y DJ. Precios económicos y competitivos. +200 reseñas 5 estrellas.',
-      ogTitle:
-        'De Diez a Dos - Salas para Eventos en Madrid | Santiago Bernabéu | Precios Económicos',
+        'Salas privadas junto al Santiago Bernabéu para cumpleaños, bodas y eventos de empresa. Catering propio, barra libre y DJ. +200 reseñas de 5 estrellas.',
+      ogTitle: 'Alquiler de Salas para Eventos en Madrid | De Diez a Dos',
       ogDescription:
-        'Alquiler de salas para eventos en Madrid cerca del Santiago Bernabéu. Fiestas privadas, cumpleaños, bodas y eventos corporativos con catering incluido. Precios económicos y competitivos. +200 reseñas de 5 estrellas.',
-      twitterTitle:
-        'De Diez a Dos - Salas para Eventos en Madrid | Santiago Bernabéu | Precios Económicos',
+        'Salas privadas junto al Santiago Bernabéu para cumpleaños, bodas y eventos de empresa. Catering propio, barra libre y DJ. +200 reseñas de 5 estrellas.',
+      twitterTitle: 'Alquiler de Salas para Eventos en Madrid | De Diez a Dos',
       twitterDescription:
-        'Alquiler de salas para eventos en Madrid cerca del Santiago Bernabéu. Precios económicos y competitivos. +200 reseñas de 5 estrellas.',
+        'Salas privadas junto al Santiago Bernabéu para cumpleaños, bodas y eventos de empresa. Catering propio, barra libre y DJ. +200 reseñas de 5 estrellas.',
       businessDescriptionSchema:
         'Alquiler de salas para eventos privados en Madrid, junto al estadio Santiago Bernabéu, con precios económicos y competitivos. Espacio exclusivo para cumpleaños, bodas, fiestas privadas, despedidas, comuniones, baby showers y eventos de empresa, con catering propio, barra libre, sistema audiovisual y DJ profesional. Más de 14 años de experiencia.',
       keywords: [
@@ -830,18 +814,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     en: {
-      title:
-        'De Diez a Dos - Event Venue Rental Madrid | Affordable Pricing Near Santiago Bernabéu',
+      title: 'Event Venue Rental in Madrid | De Diez a Dos',
       description:
-        'Event venue rental in Madrid near Santiago Bernabéu. Birthdays, weddings, private parties and corporate events with in-house catering, open bar and DJ. Affordable, competitive pricing. 200+ five-star reviews.',
-      ogTitle:
-        'De Diez a Dos - Event Venues in Madrid | Santiago Bernabéu | Affordable Pricing',
+        'Private event venue next to Santiago Bernabéu for birthdays, weddings and corporate events. In-house catering, open bar and DJ. 200+ five-star reviews.',
+      ogTitle: 'Event Venue Rental in Madrid | De Diez a Dos',
       ogDescription:
-        'Event venue rental in Madrid near Santiago Bernabéu. Private parties, birthdays, weddings and corporate events with included catering. Affordable, competitive pricing. 200+ five-star reviews.',
-      twitterTitle:
-        'De Diez a Dos - Event Venues in Madrid | Santiago Bernabéu | Affordable Pricing',
+        'Private event venue next to Santiago Bernabéu for birthdays, weddings and corporate events. In-house catering, open bar and DJ. 200+ five-star reviews.',
+      twitterTitle: 'Event Venue Rental in Madrid | De Diez a Dos',
       twitterDescription:
-        'Event venue rental in Madrid near Santiago Bernabéu. Affordable, competitive pricing. 200+ five-star reviews.',
+        'Private event venue next to Santiago Bernabéu for birthdays, weddings and corporate events. In-house catering, open bar and DJ. 200+ five-star reviews.',
       businessDescriptionSchema:
         'Affordable private event venue for hire in Madrid, next to Santiago Bernabéu stadium, with competitive pricing. Exclusive space for birthdays, weddings, private parties, bachelorette/bachelor parties, communions, baby showers and corporate events, with in-house catering, open bar, professional AV system and DJ. Over 14 years of experience.',
       keywords: [
@@ -879,18 +860,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     fr: {
-      title:
-        "De Diez a Dos - Location de Salles d'Événements Madrid | Tarifs Abordables Près du Santiago Bernabéu",
+      title: 'Location de Salles pour Événements à Madrid | De Diez a Dos',
       description:
-        "Location de salles pour événements à Madrid près du Santiago Bernabéu. Anniversaires, mariages, fêtes privées et événements d'entreprise avec traiteur, bar ouvert et DJ. Tarifs abordables et compétitifs. Plus de 200 avis 5 étoiles.",
-      ogTitle:
-        'De Diez a Dos - Salles pour Événements à Madrid | Santiago Bernabéu | Tarifs Abordables',
+        "Salles privées près du Santiago Bernabéu pour anniversaires, mariages et événements d'entreprise. Traiteur, bar ouvert et DJ. Plus de 200 avis 5 étoiles.",
+      ogTitle: 'Location de Salles pour Événements à Madrid | De Diez a Dos',
       ogDescription:
-        "Location de salles pour événements à Madrid près du Santiago Bernabéu. Fêtes privées, anniversaires, mariages et événements d'entreprise avec traiteur inclus. Tarifs abordables et compétitifs. Plus de 200 avis 5 étoiles.",
-      twitterTitle:
-        'De Diez a Dos - Salles pour Événements à Madrid | Santiago Bernabéu | Tarifs Abordables',
+        "Salles privées près du Santiago Bernabéu pour anniversaires, mariages et événements d'entreprise. Traiteur, bar ouvert et DJ. Plus de 200 avis 5 étoiles.",
+      twitterTitle: 'Location de Salles pour Événements à Madrid | De Diez a Dos',
       twitterDescription:
-        'Location de salles pour événements à Madrid près du Santiago Bernabéu. Tarifs abordables et compétitifs. Plus de 200 avis 5 étoiles.',
+        "Salles privées près du Santiago Bernabéu pour anniversaires, mariages et événements d'entreprise. Traiteur, bar ouvert et DJ. Plus de 200 avis 5 étoiles.",
       businessDescriptionSchema:
         "Location de salles pour événements privés à Madrid, à côté du stade Santiago Bernabéu, avec des tarifs abordables et compétitifs. Espace exclusif pour anniversaires, mariages, fêtes privées, enterrements de vie de garçon/jeune fille, communions, baby showers et événements d'entreprise, avec traiteur propre, bar ouvert, système audiovisuel et DJ professionnel. Plus de 14 ans d'expérience.",
       keywords: [
@@ -918,18 +896,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     de: {
-      title:
-        'De Diez a Dos - Eventlocation Madrid mieten | Günstige Preise nahe Santiago Bernabéu',
+      title: 'Eventlocation in Madrid mieten | De Diez a Dos',
       description:
-        'Vermietung von Eventlocations in Madrid nahe dem Santiago Bernabéu. Geburtstage, Hochzeiten, Privatfeiern und Firmenveranstaltungen mit Catering, Open Bar und DJ. Günstige und wettbewerbsfähige Preise. Über 200 Fünf-Sterne-Bewertungen.',
-      ogTitle:
-        'De Diez a Dos - Eventlocations in Madrid | Santiago Bernabéu | Günstige Preise',
+        'Private Räume neben dem Santiago Bernabéu für Geburtstage, Hochzeiten und Firmenevents. Catering, Open Bar und DJ. Über 200 Fünf-Sterne-Bewertungen.',
+      ogTitle: 'Eventlocation in Madrid mieten | De Diez a Dos',
       ogDescription:
-        'Vermietung von Eventlocations in Madrid nahe dem Santiago Bernabéu. Privatfeiern, Geburtstage, Hochzeiten und Firmenveranstaltungen mit inklusivem Catering. Günstige und wettbewerbsfähige Preise. Über 200 Fünf-Sterne-Bewertungen.',
-      twitterTitle:
-        'De Diez a Dos - Eventlocations in Madrid | Santiago Bernabéu | Günstige Preise',
+        'Private Räume neben dem Santiago Bernabéu für Geburtstage, Hochzeiten und Firmenevents. Catering, Open Bar und DJ. Über 200 Fünf-Sterne-Bewertungen.',
+      twitterTitle: 'Eventlocation in Madrid mieten | De Diez a Dos',
       twitterDescription:
-        'Vermietung von Eventlocations in Madrid nahe dem Santiago Bernabéu. Günstige und wettbewerbsfähige Preise. Über 200 Fünf-Sterne-Bewertungen.',
+        'Private Räume neben dem Santiago Bernabéu für Geburtstage, Hochzeiten und Firmenevents. Catering, Open Bar und DJ. Über 200 Fünf-Sterne-Bewertungen.',
       businessDescriptionSchema:
         'Günstige private Eventlocation zur Miete in Madrid, neben dem Stadion Santiago Bernabéu, mit wettbewerbsfähigen Preisen. Exklusiver Raum für Geburtstage, Hochzeiten, Privatfeiern, Junggesellinnen-/Junggesellenabschiede, Kommunionen, Babypartys und Firmenveranstaltungen, mit eigenem Catering, Open Bar, professionellem AV-System und DJ. Über 14 Jahre Erfahrung.',
       keywords: [
@@ -956,18 +931,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     it: {
-      title:
-        'De Diez a Dos - Affitto Sale Eventi Madrid | Prezzi Convenienti Vicino al Santiago Bernabéu',
+      title: 'Affitto Sale per Eventi a Madrid | De Diez a Dos',
       description:
-        'Affitto di sale per eventi a Madrid vicino al Santiago Bernabéu. Compleanni, matrimoni, feste private ed eventi aziendali con catering, open bar e DJ. Prezzi convenienti e competitivi. Oltre 200 recensioni 5 stelle.',
-      ogTitle:
-        'De Diez a Dos - Sale per Eventi a Madrid | Santiago Bernabéu | Prezzi Convenienti',
+        'Sale private accanto al Santiago Bernabéu per compleanni, matrimoni ed eventi aziendali. Catering proprio, open bar e DJ. Oltre 200 recensioni a 5 stelle.',
+      ogTitle: 'Affitto Sale per Eventi a Madrid | De Diez a Dos',
       ogDescription:
-        'Affitto di sale per eventi a Madrid vicino al Santiago Bernabéu. Feste private, compleanni, matrimoni ed eventi aziendali con catering incluso. Prezzi convenienti e competitivi. Oltre 200 recensioni 5 stelle.',
-      twitterTitle:
-        'De Diez a Dos - Sale per Eventi a Madrid | Santiago Bernabéu | Prezzi Convenienti',
+        'Sale private accanto al Santiago Bernabéu per compleanni, matrimoni ed eventi aziendali. Catering proprio, open bar e DJ. Oltre 200 recensioni a 5 stelle.',
+      twitterTitle: 'Affitto Sale per Eventi a Madrid | De Diez a Dos',
       twitterDescription:
-        'Affitto di sale per eventi a Madrid vicino al Santiago Bernabéu. Prezzi convenienti e competitivi. Oltre 200 recensioni 5 stelle.',
+        'Sale private accanto al Santiago Bernabéu per compleanni, matrimoni ed eventi aziendali. Catering proprio, open bar e DJ. Oltre 200 recensioni a 5 stelle.',
       businessDescriptionSchema:
         "Affitto di sale per eventi privati a Madrid, accanto allo stadio Santiago Bernabéu, con prezzi convenienti e competitivi. Spazio esclusivo per compleanni, matrimoni, feste private, addii al nubilato/celibato, comunioni, baby shower ed eventi aziendali, con catering proprio, open bar, sistema audiovisivo e DJ professionale. Oltre 14 anni di esperienza.",
       keywords: [
@@ -993,18 +965,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     pt: {
-      title:
-        'De Diez a Dos - Aluguer de Salas para Eventos Madrid | Preços Acessíveis Perto do Santiago Bernabéu',
+      title: 'Aluguer de Salas para Eventos em Madrid | De Diez a Dos',
       description:
-        'Aluguer de salas para eventos em Madrid perto do Santiago Bernabéu. Aniversários, casamentos, festas privadas e eventos de empresa com catering, bar aberto e DJ. Preços acessíveis e competitivos. Mais de 200 avaliações 5 estrelas.',
-      ogTitle:
-        'De Diez a Dos - Salas para Eventos em Madrid | Santiago Bernabéu | Preços Acessíveis',
+        'Salas privadas junto ao Santiago Bernabéu para aniversários, casamentos e eventos. Catering próprio, bar aberto e DJ. +200 avaliações de 5 estrelas.',
+      ogTitle: 'Aluguer de Salas para Eventos em Madrid | De Diez a Dos',
       ogDescription:
-        'Aluguer de salas para eventos em Madrid perto do Santiago Bernabéu. Festas privadas, aniversários, casamentos e eventos corporativos com catering incluído. Preços acessíveis e competitivos. Mais de 200 avaliações 5 estrelas.',
-      twitterTitle:
-        'De Diez a Dos - Salas para Eventos em Madrid | Santiago Bernabéu | Preços Acessíveis',
+        'Salas privadas junto ao Santiago Bernabéu para aniversários, casamentos e eventos. Catering próprio, bar aberto e DJ. +200 avaliações de 5 estrelas.',
+      twitterTitle: 'Aluguer de Salas para Eventos em Madrid | De Diez a Dos',
       twitterDescription:
-        'Aluguer de salas para eventos em Madrid perto do Santiago Bernabéu. Preços acessíveis e competitivos. Mais de 200 avaliações 5 estrelas.',
+        'Salas privadas junto ao Santiago Bernabéu para aniversários, casamentos e eventos. Catering próprio, bar aberto e DJ. +200 avaliações de 5 estrelas.',
       businessDescriptionSchema:
         'Aluguer de salas para eventos privados em Madrid, junto ao estádio Santiago Bernabéu, com preços acessíveis e competitivos. Espaço exclusivo para aniversários, casamentos, festas privadas, despedidas de solteiro/solteira, comunhões, baby showers e eventos de empresa, com catering próprio, bar aberto, sistema audiovisual e DJ profissional. Mais de 14 anos de experiência.',
       keywords: [
@@ -1029,18 +998,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     nl: {
-      title:
-        'De Diez a Dos - Evenementenzaal Huren Madrid | Betaalbare Prijzen Nabij Santiago Bernabéu',
+      title: 'Evenementenzaal Huren in Madrid | De Diez a Dos',
       description:
-        'Verhuur van evenementenzalen in Madrid nabij Santiago Bernabéu. Verjaardagen, bruiloften, privéfeesten en bedrijfsevenementen met catering, open bar en DJ. Betaalbare en concurrerende prijzen. Meer dan 200 vijfsterren-beoordelingen.',
-      ogTitle:
-        'De Diez a Dos - Evenementenzalen in Madrid | Santiago Bernabéu | Betaalbare Prijzen',
+        'Privézalen naast Santiago Bernabéu voor verjaardagen, bruiloften en bedrijfsevenementen. Eigen catering, open bar en DJ. Meer dan 200 vijfsterrenreviews.',
+      ogTitle: 'Evenementenzaal Huren in Madrid | De Diez a Dos',
       ogDescription:
-        'Verhuur van evenementenzalen in Madrid nabij Santiago Bernabéu. Privéfeesten, verjaardagen, bruiloften en bedrijfsevenementen met inbegrepen catering. Betaalbare en concurrerende prijzen. Meer dan 200 vijfsterren-beoordelingen.',
-      twitterTitle:
-        'De Diez a Dos - Evenementenzalen in Madrid | Santiago Bernabéu | Betaalbare Prijzen',
+        'Privézalen naast Santiago Bernabéu voor verjaardagen, bruiloften en bedrijfsevenementen. Eigen catering, open bar en DJ. Meer dan 200 vijfsterrenreviews.',
+      twitterTitle: 'Evenementenzaal Huren in Madrid | De Diez a Dos',
       twitterDescription:
-        'Verhuur van evenementenzalen in Madrid nabij Santiago Bernabéu. Betaalbare en concurrerende prijzen. Meer dan 200 vijfsterren-beoordelingen.',
+        'Privézalen naast Santiago Bernabéu voor verjaardagen, bruiloften en bedrijfsevenementen. Eigen catering, open bar en DJ. Meer dan 200 vijfsterrenreviews.',
       businessDescriptionSchema:
         'Betaalbare privé-evenementenlocatie te huur in Madrid, naast het Santiago Bernabéu-stadion, met concurrerende prijzen. Exclusieve ruimte voor verjaardagen, bruiloften, privéfeesten, vrijgezellenfeesten, communies, baby showers en bedrijfsevenementen, met eigen catering, open bar, professioneel AV-systeem en DJ. Meer dan 14 jaar ervaring.',
       keywords: [
@@ -1064,18 +1030,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     pl: {
-      title:
-        'De Diez a Dos - Wynajem Sal na Wydarzenia Madryt | Przystępne Ceny w Pobliżu Santiago Bernabéu',
+      title: 'Wynajem Sali na Imprezy w Madrycie | De Diez a Dos',
       description:
-        'Wynajem sal na wydarzenia w Madrycie w pobliżu Santiago Bernabéu. Urodziny, śluby, prywatne imprezy i wydarzenia firmowe z cateringiem, otwartym barem i DJ-em. Przystępne i konkurencyjne ceny. Ponad 200 pięciogwiazdkowych opinii.',
-      ogTitle:
-        'De Diez a Dos - Sale na Wydarzenia w Madrycie | Santiago Bernabéu | Przystępne Ceny',
+        'Prywatne sale obok Santiago Bernabéu na urodziny, wesela i imprezy firmowe. Własny catering, open bar i DJ. Ponad 200 pięciogwiazdkowych opinii.',
+      ogTitle: 'Wynajem Sali na Imprezy w Madrycie | De Diez a Dos',
       ogDescription:
-        'Wynajem sal na wydarzenia w Madrycie w pobliżu Santiago Bernabéu. Prywatne imprezy, urodziny, śluby i wydarzenia firmowe z wliczonym cateringiem. Przystępne i konkurencyjne ceny. Ponad 200 pięciogwiazdkowych opinii.',
-      twitterTitle:
-        'De Diez a Dos - Sale na Wydarzenia w Madrycie | Santiago Bernabéu | Przystępne Ceny',
+        'Prywatne sale obok Santiago Bernabéu na urodziny, wesela i imprezy firmowe. Własny catering, open bar i DJ. Ponad 200 pięciogwiazdkowych opinii.',
+      twitterTitle: 'Wynajem Sali na Imprezy w Madrycie | De Diez a Dos',
       twitterDescription:
-        'Wynajem sal na wydarzenia w Madrycie w pobliżu Santiago Bernabéu. Przystępne i konkurencyjne ceny. Ponad 200 pięciogwiazdkowych opinii.',
+        'Prywatne sale obok Santiago Bernabéu na urodziny, wesela i imprezy firmowe. Własny catering, open bar i DJ. Ponad 200 pięciogwiazdkowych opinii.',
       businessDescriptionSchema:
         'Przystępna cenowo prywatna sala na wydarzenia do wynajęcia w Madrycie, obok stadionu Santiago Bernabéu, z konkurencyjnymi cenami. Ekskluzywna przestrzeń na urodziny, śluby, prywatne imprezy, wieczory panieńskie/kawalerskie, komunie, baby shower i wydarzenia firmowe, z własnym cateringiem, otwartym barem, profesjonalnym systemem AV i DJ-em. Ponad 14 lat doświadczenia.',
       keywords: [
@@ -1099,18 +1062,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     ru: {
-      title:
-        'De Diez a Dos - Аренда Залов для Мероприятий в Мадриде | Доступные Цены Рядом с Сантьяго Бернабеу',
+      title: 'Аренда Зала для Мероприятий в Мадриде | De Diez a Dos',
       description:
-        'Аренда залов для мероприятий в Мадриде рядом с Сантьяго Бернабеу. Дни рождения, свадьбы, частные вечеринки и корпоративные мероприятия с кейтерингом, открытым баром и DJ. Доступные и конкурентные цены. Более 200 пятизвёздочных отзывов.',
-      ogTitle:
-        'De Diez a Dos - Залы для Мероприятий в Мадриде | Сантьяго Бернабеу | Доступные Цены',
+        'Частные залы рядом с Сантьяго Бернабеу: дни рождения, свадьбы и корпоративы. Собственный кейтеринг, открытый бар и DJ. Более 200 отзывов на 5 звёзд.',
+      ogTitle: 'Аренда Зала для Мероприятий в Мадриде | De Diez a Dos',
       ogDescription:
-        'Аренда залов для мероприятий в Мадриде рядом с Сантьяго Бернабеу. Частные вечеринки, дни рождения, свадьбы и корпоративные мероприятия с включённым кейтерингом. Доступные и конкурентные цены. Более 200 пятизвёздочных отзывов.',
-      twitterTitle:
-        'De Diez a Dos - Залы для Мероприятий в Мадриде | Сантьяго Бернабеу | Доступные Цены',
+        'Частные залы рядом с Сантьяго Бернабеу: дни рождения, свадьбы и корпоративы. Собственный кейтеринг, открытый бар и DJ. Более 200 отзывов на 5 звёзд.',
+      twitterTitle: 'Аренда Зала для Мероприятий в Мадриде | De Diez a Dos',
       twitterDescription:
-        'Аренда залов для мероприятий в Мадриде рядом с Сантьяго Бернабеу. Доступные и конкурентные цены. Более 200 пятизвёздочных отзывов.',
+        'Частные залы рядом с Сантьяго Бернабеу: дни рождения, свадьбы и корпоративы. Собственный кейтеринг, открытый бар и DJ. Более 200 отзывов на 5 звёзд.',
       businessDescriptionSchema:
         'Доступная по цене частная площадка для мероприятий в аренду в Мадриде, рядом со стадионом Сантьяго Бернабеу, с конкурентными ценами. Эксклюзивное пространство для дней рождения, свадеб, частных вечеринок, девичников/мальчишников, причастий, baby shower и корпоративных мероприятий, с собственным кейтерингом, открытым баром, профессиональной AV-системой и DJ. Более 14 лет опыта.',
       keywords: [

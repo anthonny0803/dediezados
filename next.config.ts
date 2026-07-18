@@ -16,6 +16,16 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // The default .vercel.app production alias serves the full site without
+      // noindex: consolidate it into the canonical host so Google never sees
+      // a duplicate. Preview deployments use unique subdomains and are not
+      // matched, so branch previews keep working.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'dediezados.vercel.app' }],
+        destination: 'https://www.dediezados.com/:path*',
+        permanent: true,
+      },
       {
         source: '/',
         destination: '/es',

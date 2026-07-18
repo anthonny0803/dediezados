@@ -106,6 +106,19 @@
   border-color: var(--primary);
 }
 
+/* Once the bar is scrolled it takes the theme background, so in light theme
+   the forced-white trigger vanishes. Follow the theme like the logo swap in
+   navbar.css does. */
+[data-theme='light'] .navbar-scrolled .locale-switcher-navbar .locale-switcher-trigger {
+  color: var(--text-primary);
+  border-color: rgba(var(--neutral-1000-rgb), 0.14);
+}
+
+[data-theme='light'] .navbar-scrolled .locale-switcher-navbar .locale-switcher-trigger:hover {
+  background: var(--glass-card-hover);
+  border-color: var(--primary);
+}
+
 /* ============================================================
  * SIDENAV VARIANT
  * Centered horizontally; menu opens upward to avoid clipping

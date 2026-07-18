@@ -1,187 +1,86 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/config/site.config';
+import { Lightbox } from '@/components/ui/Lightbox';
 
 interface GalleryPhotoContent {
-  room: 'olas' | 'amazonias';
   alt: string;
 }
+
+// Tall tiles (row-span-2) at these indices keep the 10-photo grid balanced on
+// the md 3-column layout: 2 tall + 8 square tiles fill exactly 4 rows.
+const TALL_TILE_INDICES = new Set([0, 4]);
 
 export const Gallery = () => {
   const t = useTranslations('gallery');
   const photosContent = t.raw('photos') as GalleryPhotoContent[];
   const rooms = t.raw('rooms') as Record<string, string>;
 
-  const photosBase = siteConfig.gallery.photos.map((config, index) => ({
+  const photos = siteConfig.gallery.photos.map((config, index) => ({
     url: config.url,
-    room: rooms[photosContent[index].room],
+    room: rooms[config.roomKey],
     alt: photosContent[index].alt,
   }));
 
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  const openModal = (imageUrl: string) => {
-    setSelectedImage(imageUrl);
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-    setSelectedImage('');
-  };
-
-  useEffect(() => {
-    if (modalOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [modalOpen]);
-
-  const photos = [...photosBase, ...photosBase, ...photosBase];
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!trackRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - trackRef.current.offsetLeft);
-    setScrollLeft(trackRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !trackRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - trackRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    trackRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (!trackRef.current) return;
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - trackRef.current.offsetLeft);
-    setScrollLeft(trackRef.current.scrollLeft);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || !trackRef.current) return;
-    const x = e.touches[0].pageX - trackRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    trackRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
-
-  const scrollLeftBy = () => {
-    trackRef.current?.scrollBy({ left: -340, behavior: 'smooth' });
-  };
-
-  const scrollRightBy = () => {
-    trackRef.current?.scrollBy({ left: 340, behavior: 'smooth' });
-  };
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const selectedPhoto = selectedIndex === null ? null : photos[selectedIndex];
 
   return (
-    <>
-      <section id="gallery">
-        <h2 className="section-title" data-aos="fade-up">
-          {t('title')}
-        </h2>
-        <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-          {t('subtitle')}
-        </p>
-      </section>
-
-      <div className="gallery-section">
-        <div
-          className="gallery-carousel"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <button
-            className="gallery-carousel-btn left"
-            onClick={scrollLeftBy}
-            aria-label={t('scrollLeftLabel')}
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-            </svg>
-          </button>
-
-          <div
-            ref={trackRef}
-            className={`gallery-track ${isDragging ? 'dragging' : ''}`}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
-            {photos.map((photo, index) => (
-              <div
-                key={index}
-                className="gallery-photo"
-                onClick={() => { if (!isDragging) openModal(photo.url); }}
-                onDragStart={(e) => e.preventDefault()}
-              >
-                <Image
-                  src={photo.url}
-                  alt={photo.alt}
-                  width={340}
-                  height={340}
-                  sizes="340px"
-                  draggable={false}
-                />
-                <div className="gallery-photo-label">{photo.room}</div>
-              </div>
-            ))}
+    <section id="gallery">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+              — {t('label')}
+            </span>
+            <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
+              {t('title')}
+            </h2>
           </div>
+          <p className="max-w-md text-lg text-muted-foreground">
+            {t('subtitle')}
+          </p>
+        </div>
 
-          <button
-            className="gallery-carousel-btn right"
-            onClick={scrollRightBy}
-            aria-label={t('scrollRightLabel')}
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
-            </svg>
-          </button>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+          {photos.map((photo, index) => (
+            <button
+              key={photo.url}
+              type="button"
+              onClick={() => setSelectedIndex(index)}
+              aria-label={photo.alt}
+              className={`group relative cursor-zoom-in appearance-none overflow-hidden rounded-2xl border border-solid border-border bg-transparent p-0 ${
+                TALL_TILE_INDICES.has(index)
+                  ? 'aspect-[3/4] md:row-span-2 md:aspect-[3/5]'
+                  : 'aspect-square'
+              }`}
+            >
+              <Image
+                src={photo.url}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="object-cover transition-smooth group-hover:scale-110"
+              />
+              <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/90 via-background/0 to-transparent opacity-60 transition-smooth group-hover:opacity-90" />
+              <span className="absolute bottom-4 left-4 translate-y-2 font-display text-sm font-semibold transition-smooth group-hover:translate-y-0">
+                {photo.room}
+              </span>
+            </button>
+          ))}
         </div>
       </div>
 
-      {modalOpen && (
-        <div className="image-modal active" onClick={closeModal}>
-          <div className="modal-close" onClick={closeModal}>
-            ×
-          </div>
-          <Image
-            src={selectedImage}
-            alt={t('expandedAlt')}
-            width={0}
-            height={0}
-            sizes="92vw"
-            style={{ width: 'auto', height: 'auto' }}
-          />
-        </div>
+      {selectedPhoto !== null && (
+        <Lightbox
+          src={selectedPhoto.url}
+          alt={selectedPhoto.alt}
+          onClose={() => setSelectedIndex(null)}
+        />
       )}
-    </>
+    </section>
   );
 };
