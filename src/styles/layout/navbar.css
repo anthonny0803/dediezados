@@ -1,70 +1,31 @@
-/* Navbar centered */
-nav {
-  position: fixed;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: transparent;
-  backdrop-filter: none;
-  padding: 8px 32px;
-  box-shadow: none;
-  z-index: 1000;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  transition: all var(--transition-slow);
-  opacity: 1;
-  border: none;
+/*
+ * Navbar (Lovable-style fixed header: transparent over the hero, blurred
+ * theme-colored bar once scrolled).
+ *
+ * Layout and colors live in Tailwind classes inside Navbar.tsx. This file only
+ * covers what utilities cannot express: the theme-variant logo swap. Over the
+ * hero (transparent bar on a dark image) the dark-background logo is always
+ * shown; once the bar is scrolled (`.navbar-scrolled`) the logo follows the
+ * active theme, mirroring the sidenav/footer logo swap in logo.css.
+ */
+.navbar-logo img {
+  height: 52px;
+  width: auto;
+  transition: transform var(--transition-smooth);
 }
 
-nav.hide {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-50%) translateY(-20px);
+.navbar-logo:hover img {
+  transform: scale(1.05);
 }
 
-/* Nav links */
-nav ul {
-  display: flex;
-  gap: 28px;
-  list-style: none;
+.navbar-logo [data-theme-variant='light'] {
+  display: none;
 }
 
-nav a {
-  color: var(--pure-white);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  position: relative;
-  transition: color var(--transition-fast);
-  white-space: nowrap;
+[data-theme='light'] .navbar-scrolled .navbar-logo [data-theme-variant='dark'] {
+  display: none;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: var(--primary);
-  transition: width var(--transition-smooth);
-}
-
-nav a:hover {
-  color: var(--primary);
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  nav {
-    display: none;
-  }
+[data-theme='light'] .navbar-scrolled .navbar-logo [data-theme-variant='light'] {
+  display: block;
 }

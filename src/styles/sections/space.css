@@ -1,22 +1,25 @@
 /*
  * Space ("El Espacio") section.
  *
- * Like #events, this is a new section with its own inner max-w-7xl container,
- * so it opts out of the legacy `section {}` cap (max-width: 1400px) with id
- * specificity to go full-bleed. Unlayered rules win over Tailwind utilities
- * regardless of specificity, so the override lives here (#space beats `section`).
+ * This is a redesigned section with its own inner max-w-7xl container, styled
+ * with Tailwind utilities; this file holds the section-level frame those
+ * utilities cannot own (full-bleed background band, base padding).
  *
  * Background: secondary/30 band matching the design reference (Lovable uses
- * bg-secondary/30). Same tint as the legacy bands in bands.css, resolved over
- * the flat page background. Temporary note: while Services/Catering/Extras still
- * exist, this band sits next to the Services band; the rhythm is re-tuned once
- * those sections are absorbed in a later phase.
+ * bg-secondary/30), resolved over the flat page background. Band rhythm:
+ * Hero (dark) · Events (base) · Space (band) · Catering+Extras (base) ·
+ * Gallery (band) · Contact (base) · Location (band) · Reviews (base).
  */
 #space {
   max-width: none;
   margin: 0;
   padding: 6rem 1.5rem;
   background: color-mix(in oklab, var(--dd-secondary) 30%, var(--dd-background));
+  /* Own stacking context so the -z-10 blurred glow inside paints above this
+     section's background (the legacy section { z-index: 1 } that used to
+     provide it is gone with common.css). */
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 640px) {

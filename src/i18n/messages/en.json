@@ -1,14 +1,16 @@
 {
+  "common": {
+    "close": "Close"
+  },
   "brand": {
     "name": "De Diez a Dos",
     "slogan": "Madrid Events - Event Venues",
     "description": "Rental of elegant venues and full-service solutions for all kinds of events"
   },
   "nav": {
+    "menuToggle": "Navigation menu",
     "home": "Home",
-    "services": "Services",
-    "catering": "Catering",
-    "extras": "Extras",
+    "catering": "Catering & Extras",
     "gallery": "Venues",
     "contact": "Contact",
     "location": "Location",
@@ -55,37 +57,8 @@
       { "label": "Personalized service" }
     ]
   },
-  "services": {
-    "title": "Professional Services",
-    "subtitle": "Complete packages that include everything you need for your event",
-    "items": [
-      {
-        "title": "Exclusive Space",
-        "description": "Venue with two exclusive spaces, private access and a fully reserved atmosphere. Comfortable furniture and adjustable lighting. We work with care and warmth, coordinating every detail so your event runs perfectly."
-      },
-      {
-        "title": "Audio-Visual System",
-        "description": "Professional sound and high-quality screens already installed on site. Our technical team ensures everything works flawlessly during the event. Adjustable lighting and atmospheres tailored to your style: elegant, modern or festive. Quality and comfort, with no setup hassle."
-      },
-      {
-        "title": "Catering De Diez a Dos",
-        "description": "Over 14 years listening to our clients and refining every proposal. The result: balanced, versatile menus designed to fit any occasion. Quality, fine presentation and options that work for every type of event."
-      },
-      {
-        "title": "Open Bar",
-        "description": "Our bar adapts to every event. We offer different options depending on the package, so you can choose the format that best fits your celebration. Flexibility and professional service throughout."
-      },
-      {
-        "title": "Professional Staff",
-        "description": "Bar staff, waiters and access control to ensure safety and comfort. An efficient, discreet team. Faced with any unexpected issue, we provide quick, quality solutions. Simple and resourceful service."
-      },
-      {
-        "title": "Additional Services",
-        "description": "We offer optional extras to round out your event: custom decoration, DJ, dessert table, candy cart and Photomax 360. You choose what to add depending on what you want for the day, always with clear pricing and no surprises."
-      }
-    ]
-  },
   "catering": {
+    "label": "Catering & Extras",
     "title": "Catering De Diez a Dos",
     "subtitle": "Enjoy the wonderful attention and personalized treatment we offer at every event. Our team is dedicated to making your special occasion an unforgettable moment, taking care of every detail so you and your guests feel right at home.",
     "badge": "Specialty",
@@ -117,26 +90,24 @@
     ]
   },
   "gallery": {
+    "label": "Gallery",
     "title": "Venues",
     "subtitle": "Discover our elegant venues, designed to create the perfect atmosphere for your special event",
-    "scrollLeftLabel": "Scroll gallery left",
-    "scrollRightLabel": "Scroll gallery right",
-    "expandedAlt": "Expanded image",
     "rooms": {
       "olas": "Olas Hall",
       "amazonias": "Amazonias Hall"
     },
     "photos": [
-      { "room": "olas", "alt": "Olas Hall for private events in Madrid - main view" },
-      { "room": "olas", "alt": "Olas Hall - venue for celebrations and parties in Madrid" },
-      { "room": "olas", "alt": "Olas Hall - elegant atmosphere for events near the Bernabeu" },
-      { "room": "olas", "alt": "Olas Hall - decoration and furniture for events in Madrid" },
-      { "room": "amazonias", "alt": "Amazonias Hall for exclusive events in Madrid - main view" },
-      { "room": "amazonias", "alt": "Amazonias Hall - venue for weddings and celebrations in Madrid" },
-      { "room": "amazonias", "alt": "Amazonias Hall - venue rental for birthdays and parties" },
-      { "room": "amazonias", "alt": "Amazonias Hall - premium atmosphere for corporate events" },
-      { "room": "amazonias", "alt": "Amazonias Hall - lighting and decoration for private events" },
-      { "room": "amazonias", "alt": "Amazonias Hall - full venue for celebrations in Madrid" }
+      { "alt": "Olas Hall for private events in Madrid - main view" },
+      { "alt": "Olas Hall - venue for celebrations and parties in Madrid" },
+      { "alt": "Olas Hall - elegant atmosphere for events near the Bernabeu" },
+      { "alt": "Olas Hall - decoration and furniture for events in Madrid" },
+      { "alt": "Amazonias Hall for exclusive events in Madrid - main view" },
+      { "alt": "Amazonias Hall - venue for weddings and celebrations in Madrid" },
+      { "alt": "Amazonias Hall - venue rental for birthdays and parties" },
+      { "alt": "Amazonias Hall - premium atmosphere for corporate events" },
+      { "alt": "Amazonias Hall - lighting and decoration for private events" },
+      { "alt": "Amazonias Hall - full venue for celebrations in Madrid" }
     ]
   },
   "extras": {
@@ -271,7 +242,6 @@
     "empty": "No reviews available.",
     "viewAll": "See all reviews on Google",
     "readMore": "Read more",
-    "close": "Close",
     "googleBadgeTitle": "Posted on Google",
     "defaultUser": "Google User",
     "prevReview": "Previous review",
@@ -283,7 +253,6 @@
     "legal": "De Diez a Dos Private Event, S.L.U.",
     "copyright": "© {year} De Diez a Dos. All rights reserved.",
     "slogan": "Over a decade creating events to remember",
-    "keywords": "Event venues Madrid | Birthday hall rental Madrid | Affordable private events | Parties near Santiago Bernabeu | Cheap birthday venue Madrid | Affordable event catering | Affordable celebrations Madrid | Party venue rental Madrid | Events next to the Bernabeu | Affordable wedding halls | Private parties affordable price | Book venue Madrid centre | Spaces for celebrations Madrid | Events near Santiago Bernabeu stadium | Affordable venue with catering | Affordable Madrid birthday event | Company parties Madrid | Event venue competitive prices | Unforgettable celebrations Madrid | Event hall Madrid Centre | De Diez a Dos Madrid",
     "partnersIntro": "Strategic partners:",
     "partnerCapifix": "Capifix | Integrated Logistics",
     "devLabel": "Dev:",
@@ -360,28 +329,28 @@
     ],
     "cards": [
       {
-        "title": "Professional Sound",
-        "description": "JBL audio system and resident DJ."
+        "title": "Exclusive Space",
+        "description": "Two exclusive rooms with private access and a fully reserved atmosphere."
       },
       {
-        "title": "Bespoke Catering",
-        "description": "Personalized international cuisine menus."
+        "title": "Audio-Visual System",
+        "description": "Professional sound, screens and adaptable lighting already installed on site."
       },
       {
-        "title": "Premium Bar",
-        "description": "Signature cocktails and open bar."
+        "title": "Catering De Diez a Dos",
+        "description": "Balanced, versatile menus backed by over 14 years of experience."
       },
       {
-        "title": "Lighting",
-        "description": "Adaptable lighting design for every moment."
+        "title": "Open Bar",
+        "description": "Flexible options depending on your package, with professional service at all times."
       },
       {
-        "title": "Photo & Video",
-        "description": "High-quality audiovisual service."
+        "title": "Professional Staff",
+        "description": "Waiters, bar staff and access control for your safety and comfort."
       },
       {
-        "title": "Parking",
-        "description": "Private parking for your guests."
+        "title": "Additional Services",
+        "description": "Optional custom decoration, DJ, candy bar, sweets cart and Photomax 360."
       }
     ]
   }

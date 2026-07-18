@@ -23,6 +23,7 @@ export interface GalleryPhotoConfig {
 }
 
 export interface ExtraConfig {
+  icon: string;
   image: string;
 }
 
@@ -84,7 +85,6 @@ export interface SiteConfig {
   };
   heroSlides: HeroSlideConfig[];
   heroStats: HeroStatConfig[];
-  servicesCount: number;
   catering: CateringItemConfig[];
   gallery: {
     photos: GalleryPhotoConfig[];
@@ -142,7 +142,7 @@ export const siteConfig: SiteConfig = {
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763302071/hero-1_yylnej.webp',
       buttons: [
         { link: '#contact', variant: 'primary' },
-        { link: '#services', variant: 'outline' },
+        { link: '#catering', variant: 'outline' },
       ],
     },
     {
@@ -150,7 +150,7 @@ export const siteConfig: SiteConfig = {
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763214977/hero-2_cvdxyg.avif',
       buttons: [
         { link: '#gallery', variant: 'primary' },
-        { link: '#extras', variant: 'outline' },
+        { link: '#catering', variant: 'outline' },
       ],
     },
     {
@@ -162,8 +162,7 @@ export const siteConfig: SiteConfig = {
       ],
     },
   ],
-  heroStats: [{ value: '+500' }, { value: '24/7' }],
-  servicesCount: 6,
+  heroStats: [{ value: '+200' }, { value: '24/7' }],
   catering: [
     {
       image:
@@ -242,58 +241,57 @@ export const siteConfig: SiteConfig = {
   },
   extras: [
     {
+      icon: 'mic',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769767945/Karaoke2_vwfooo.jpg',
     },
     {
+      icon: 'camera',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769763410/PhotoMaster_360_11zon_r4a9c6.jpg',
     },
     {
+      icon: 'headphones',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769766951/Dj1_11zon_vjxw1y.jpg',
     },
     {
+      icon: 'cake',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769763102/Decoraciones6_11zon_gju7xg.jpg',
     },
     {
+      icon: 'palette',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1770884340/Decoraciones8_rrjaho.jpg',
     },
   ],
-  // Placeholder images reused from gallery/extras. Replace with dedicated
-  // per-event-type photos once the client provides them.
+  // Temporary local copies of the Lovable reference art (public/images/events)
+  // until they are uploaded to Cloudinary and these become Cloudinary URLs.
   events: [
     {
       icon: 'heart',
-      image:
-        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239541/olas-04_phqoqx.webp',
+      image: '/images/events/wedding.jpg',
     },
     {
       icon: 'cake',
-      image:
-        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1769763102/Decoraciones6_11zon_gju7xg.jpg',
+      image: '/images/events/birthday.jpg',
     },
     {
       icon: 'crown',
-      image:
-        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1770884340/Decoraciones8_rrjaho.jpg',
+      image: '/images/events/quince.jpg',
     },
     {
       icon: 'briefcase',
-      image:
-        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239537/olas-02_rr6p4s.webp',
+      image: '/images/events/corporate.jpg',
     },
     {
       icon: 'trophy',
-      image:
-        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239530/amazonias-06_mqwezx.webp',
+      image: '/images/events/sports.jpg',
     },
     {
       icon: 'users',
-      image:
-        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239528/amazonias-01_yadqyg.webp',
+      image: '/images/events/meeting.jpg',
     },
   ],
   // Carousel reuses real room photos (olas/amazonias) as provisional images.
@@ -307,12 +305,12 @@ export const siteConfig: SiteConfig = {
       'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239542/olas-06_bmubuf.webp',
     ],
     cards: [
+      { icon: 'building' },
       { icon: 'music' },
       { icon: 'utensils' },
       { icon: 'wine' },
-      { icon: 'lightbulb' },
-      { icon: 'camera' },
-      { icon: 'car' },
+      { icon: 'users' },
+      { icon: 'sparkles' },
     ],
   },
 };

@@ -5,9 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { Events } from '@/components/sections/Events';
 import { Space } from '@/components/sections/Space';
-import { Services } from '@/components/sections/Services';
-import { Catering } from '@/components/sections/Catering';
-import { Extras } from '@/components/sections/Extras';
+import { CateringExtras } from '@/components/sections/CateringExtras';
 import { Gallery } from '@/components/sections/Gallery';
 import { Contact } from '@/components/sections/Contact';
 import { LocationReviewsSection } from '@/components/sections/LocationReviewsSection';
@@ -27,9 +25,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <Hero />
       <Events />
       <Space />
-      <Services />
-      <Catering />
-      <Extras />
+      <CateringExtras />
       <Gallery />
       <Contact />
       <LocationReviewsSection />

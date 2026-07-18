@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 const SECTIONS = [
   { id: 'events', labelKey: 'events' },
   { id: 'space', labelKey: 'space' },
+  { id: 'catering', labelKey: 'catering' },
   { id: 'gallery', labelKey: 'gallery' },
   { id: 'contact', labelKey: 'contact' },
   { id: 'location', labelKey: 'location' },
@@ -26,18 +27,20 @@ export const FooterNav = () => {
   };
 
   return (
-    <ul className="space-y-2 text-sm text-muted-foreground">
-      {SECTIONS.map((section) => (
-        <li key={section.id}>
-          <a
-            href={`#${section.id}`}
-            onClick={(e) => handleSectionClick(e, section.id)}
-            className="transition-smooth hover:text-primary"
-          >
-            {t(section.labelKey)}
-          </a>
-        </li>
-      ))}
-    </ul>
+    <nav>
+      <ul className="space-y-2 text-sm text-muted-foreground">
+        {SECTIONS.map((section) => (
+          <li key={section.id}>
+            <a
+              href={`#${section.id}`}
+              onClick={(e) => handleSectionClick(e, section.id)}
+              className="transition-smooth hover:text-primary"
+            >
+              {t(section.labelKey)}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };

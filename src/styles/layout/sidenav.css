@@ -58,11 +58,14 @@
   flex-shrink: 0;
 }
 
+.sidenav nav {
+  flex: 1;
+}
+
 .sidenav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex: 1;
 }
 
 .sidenav a {
@@ -122,6 +125,9 @@
   right: 24px;
   width: 46px;
   height: 46px;
+  appearance: none;
+  border: none;
+  padding: 0;
   background: transparent;
   display: flex;
   align-items: center;
@@ -130,22 +136,7 @@
   gap: 6px;
   cursor: pointer;
   z-index: 1500;
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-}
-
-.menu-toggle.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-.menu-toggle.hide {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
+  transition: transform var(--transition-fast);
 }
 
 .menu-toggle.open span:nth-child(1) {
@@ -242,8 +233,13 @@ body.no-scroll {
     right: 16px;
     top: 20px;
     gap: 5px;
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
+  }
+}
+
+/* The persistent Lovable navbar covers desktop navigation; the hamburger and
+   its drawer are mobile/tablet-only now. */
+@media (min-width: 1025px) {
+  .menu-toggle {
+    display: none;
   }
 }

@@ -20,15 +20,11 @@
 @import url('./layout/logo.css');
 
 /* SECTIONS */
-@import url('./sections/common.css');
 @import url('./sections/hero.css');
 @import url('./sections/events.css');
 @import url('./sections/space.css');
-@import url('./sections/services.css');
-@import url('./sections/catering.css');
-@import url('./sections/extras.css');
+@import url('./sections/catering-extras.css');
 @import url('./sections/gallery.css');
 @import url('./sections/contact.css');
 @import url('./sections/location.css');
 @import url('./sections/reviews.css');
-@import url('./sections/bands.css');

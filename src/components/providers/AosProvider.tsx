@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import 'aos/dist/aos.css';
 
 const AOS_LOAD_TIMEOUT_MS = 3000;
 
@@ -14,6 +13,7 @@ export const AosProvider = () => {
       loaded = true;
 
       try {
+        await import('aos/dist/aos.css');
         const AOS = await import('aos');
 
         AOS.init({

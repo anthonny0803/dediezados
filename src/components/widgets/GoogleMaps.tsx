@@ -10,6 +10,8 @@ interface GoogleMapsProps {
   placeData: PlaceData | null;
 }
 
+const MAP_ID = process.env.NEXT_PUBLIC_GOOGLE_MAP_ID ?? 'DEMO_MAP_ID';
+
 const isHttpUrl = (url: string): boolean => {
   try {
     const { protocol } = new URL(url);
@@ -56,7 +58,7 @@ export const GoogleMaps = ({ placeData }: GoogleMapsProps) => {
         const map = new Map(mapRef.current, {
           center: location,
           zoom: siteConfig.contact.location.zoom,
-          mapId: 'DEMO_MAP_ID',
+          mapId: MAP_ID,
           disableDefaultUI: false,
           streetViewControl: false,
           mapTypeControl: false,
@@ -80,7 +82,7 @@ export const GoogleMaps = ({ placeData }: GoogleMapsProps) => {
         const directionsUrl = escapeHtml(isHttpUrl(candidateUrl) ? candidateUrl : fallbackUrl);
 
         const contentString = `
-          <div style="padding: 6px; max-width: 210px; font-family: 'Poppins', sans-serif; color: #333;">
+          <div style="padding: 6px; max-width: 210px; color: #333;">
             <h3 style="margin:0 0 4px 0; font-size: 0.9rem; font-weight: 700; color: #000; line-height: 1.2;">
               ${escapeHtml(displayName)}
             </h3>
@@ -103,7 +105,7 @@ export const GoogleMaps = ({ placeData }: GoogleMapsProps) => {
 
             <a href="${directionsUrl}"
                target="_blank"
-               style="display: block; width: 100%; text-align: center; padding: 6px 0; background: #3fb5a1; color: white; text-decoration: none; font-size: 0.8rem; font-weight: 600; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+               style="display: block; width: 100%; text-align: center; padding: 6px 0; background: ${siteConfig.colors.primary}; color: ${siteConfig.colors.black}; text-decoration: none; font-size: 0.8rem; font-weight: 600; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
               ${escapeHtml(directionsLabel)}
             </a>
           </div>

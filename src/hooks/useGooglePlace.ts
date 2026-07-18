@@ -81,7 +81,7 @@ export const useGooglePlace = ({ apiKey, placeId, enabled = true }: UseGooglePla
             const photo = auth.photoURI || auth.photoUri || "";
             return {
                 authorAttribution: {
-                    displayName: auth.displayName || "Usuario",
+                    displayName: auth.displayName || "",
                     photoUri: photo,
                 },
                 rating: r.rating,

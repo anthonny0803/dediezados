@@ -43,6 +43,7 @@ export async function generateMetadata({
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#A8D5D5',
 };
 
 interface LocaleLayoutProps {
@@ -69,12 +70,6 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
-        <link
-          rel="preload"
-          as="image"
-          fetchPriority="high"
-          href="https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_143,h_95,c_fit/v1763054957/ChatGPT_Image_13_nov_2025_17_57_14_1_nutc4q.png"
-        />
         <JsonLd locale={locale} />
       </head>
       <body>
@@ -87,9 +82,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           <SpeedInsights />
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${seoConfig.analytics.gaId}`}
-            strategy="afterInteractive"
+            strategy="lazyOnload"
           />
-          <Script id="ga-init" strategy="afterInteractive">
+          <Script id="ga-init" strategy="lazyOnload">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}

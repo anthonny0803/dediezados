@@ -54,7 +54,7 @@ export function buildJsonLdGraph(locale: string) {
       latitude: seoConfig.geo.coordinates.latitude,
       longitude: seoConfig.geo.coordinates.longitude,
     },
-    hasMap: seoConfig.geo.googleMapsCid,
+    hasMap: seoConfig.geo.googleMapsUrl,
     areaServed: seoConfig.areasServed.map((area) => ({
       '@type': area.type,
       name: area.name,
@@ -69,13 +69,6 @@ export function buildJsonLdGraph(locale: string) {
       description: seoConfig.business.openingHours.description,
     },
     sameAs: [siteConfig.social.instagram.url, siteConfig.social.facebook.url],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: String(seoConfig.business.aggregateRating.ratingValue),
-      ratingCount: String(seoConfig.business.aggregateRating.ratingCount),
-      bestRating: String(seoConfig.business.aggregateRating.bestRating),
-      worstRating: String(seoConfig.business.aggregateRating.worstRating),
-    },
     amenityFeature: seoConfig.amenities.map((amenity) => ({
       '@type': 'LocationFeatureSpecification',
       name: amenity.name,
