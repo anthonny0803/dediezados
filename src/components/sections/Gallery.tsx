@@ -31,18 +31,14 @@ export const Gallery = () => {
   return (
     <section id="gallery">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
-              — {t('label')}
-            </span>
-            <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
-              {t('title')}
-            </h2>
-          </div>
-          <p className="max-w-md text-lg text-muted-foreground">
-            {t('subtitle')}
-          </p>
+        <div className="mb-16 max-w-2xl">
+          <span className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
+            — {t('label')}
+          </span>
+          <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
+            {t('title')}
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">{t('subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">

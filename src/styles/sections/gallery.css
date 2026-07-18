@@ -1,7 +1,7 @@
 /*
  * Gallery ("Salas") section — Lovable asymmetric grid.
  *
- * Like #space, this section has its own inner max-w-7xl container, so it opts
+ * Like #services, this section has its own inner max-w-7xl container, so it opts
  * out of the legacy `section {}` cap (max-width: 1400px) with id specificity
  * to go full-bleed, and paints its own secondary/30 band directly (the last
  * legacy band from bands.css is gone now that every band-carrying section is

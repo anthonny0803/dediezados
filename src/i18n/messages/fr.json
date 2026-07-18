@@ -10,14 +10,14 @@
   "nav": {
     "menuToggle": "Menu de navigation",
     "home": "Accueil",
-    "catering": "Traiteur & Extras",
+    "catering": "Traiteur",
     "gallery": "Salles",
     "contact": "Contact",
     "location": "Localisation",
     "reviews": "Avis",
     "about": "À propos",
     "events": "Événements",
-    "space": "L'Espace"
+    "services": "Nos Services"
   },
   "theme": {
     "toggleLabel": "Changer de thème",
@@ -58,7 +58,7 @@
     ]
   },
   "catering": {
-    "label": "Traiteur & Extras",
+    "label": "Traiteur",
     "title": "Catering De Diez a Dos",
     "subtitle": "Profitez de la merveilleuse attention et du traitement personnalisé que nous offrons à chaque événement. Notre équipe se consacre à faire de votre occasion spéciale un moment inoubliable, en prenant soin de chaque détail pour que vous et vos invités vous sentiez comme chez vous.",
     "badge": "Spécialité",
@@ -112,7 +112,6 @@
   },
   "extras": {
     "title": "Extras Disponibles",
-    "subtitle": "Complétez votre événement avec des services additionnels qui font la différence",
     "recommendedForLabel": "Recommandé pour :",
     "items": [
       {
@@ -301,56 +300,57 @@
       }
     ]
   },
-  "space": {
-    "label": "L'Espace",
+  "services": {
+    "label": "Nos Services",
     "title": "Un lieu pensé pour",
     "titleAccent": "briller",
     "description": "Design contemporain, acoustique soignée et éclairage intelligent pour que chaque événement soit à la hauteur de vos attentes.",
-    "badge": {
-      "value": "600m²",
-      "label": "Espace modulable"
-    },
-    "images": [
-      {
-        "alt": "Salle principale pour événements à Madrid"
-      },
-      {
-        "alt": "Salle Amazonias décorée pour célébrations à Madrid"
-      },
-      {
-        "alt": "Salle Olas aménagée pour événements à Madrid"
-      },
-      {
-        "alt": "Espace Amazonias pour événements privés à Madrid"
-      },
-      {
-        "alt": "Salle Olas avec éclairage pour fêtes à Madrid"
-      }
-    ],
-    "cards": [
+    "includedTitle": "Inclus dans votre événement",
+    "included": [
       {
         "title": "Espace en Exclusivité",
-        "description": "Deux espaces exclusifs avec accès privé et une ambiance totalement réservée."
+        "description": "Deux espaces exclusifs avec accès privé et une ambiance totalement réservée.",
+        "features": [
+          "Deux salles indépendantes",
+          "Accès privé pour votre groupe",
+          "Intimité totale pendant l'événement"
+        ]
       },
       {
         "title": "Système Audiovisuel",
-        "description": "Son professionnel, écrans et éclairage adaptable déjà installés sur place."
+        "description": "Son professionnel, écrans et éclairage adaptable déjà installés sur place.",
+        "features": [
+          "Sonorisation professionnelle installée",
+          "Écrans pour vidéos et matchs",
+          "Éclairage LED adaptable"
+        ]
       },
       {
         "title": "Catering De Diez a Dos",
-        "description": "Des menus équilibrés et polyvalents, forts de plus de 14 ans d'expérience."
+        "description": "Des menus équilibrés et polyvalents, forts de plus de 14 ans d'expérience.",
+        "features": [
+          "Menus sur mesure pour chaque événement",
+          "Plus de 14 ans d'expérience",
+          "Des options pour tous les goûts"
+        ]
       },
       {
         "title": "Open Bar",
-        "description": "Des options flexibles selon la formule choisie, avec un service professionnel à tout moment."
+        "description": "Des options flexibles selon la formule choisie, avec un service professionnel à tout moment.",
+        "features": [
+          "Formules flexibles selon votre plan",
+          "Bière, cocktails et boissons sans alcool",
+          "Service de bar professionnel"
+        ]
       },
       {
         "title": "Personnel Professionnel",
-        "description": "Serveurs, personnel de bar et contrôle d'accès pour votre sécurité et votre confort."
-      },
-      {
-        "title": "Services Additionnels",
-        "description": "Décoration personnalisée, DJ, table sucrée, chariot à bonbons et Photomax 360 en option."
+        "description": "Serveurs, personnel de bar et contrôle d'accès pour votre sécurité et votre confort.",
+        "features": [
+          "Serveurs et personnel de bar",
+          "Contrôle d'accès à l'entrée",
+          "Service pendant tout l'événement"
+        ]
       }
     ]
   }

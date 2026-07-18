@@ -10,14 +10,14 @@
   "nav": {
     "menuToggle": "Navigation menu",
     "home": "Home",
-    "catering": "Catering & Extras",
+    "catering": "Catering",
     "gallery": "Venues",
     "contact": "Contact",
     "location": "Location",
     "reviews": "Reviews",
     "about": "About",
     "events": "Events",
-    "space": "The Space"
+    "services": "Our Services"
   },
   "theme": {
     "toggleLabel": "Toggle theme",
@@ -58,7 +58,7 @@
     ]
   },
   "catering": {
-    "label": "Catering & Extras",
+    "label": "Catering",
     "title": "Catering De Diez a Dos",
     "subtitle": "Enjoy the wonderful attention and personalized treatment we offer at every event. Our team is dedicated to making your special occasion an unforgettable moment, taking care of every detail so you and your guests feel right at home.",
     "badge": "Specialty",
@@ -112,7 +112,6 @@
   },
   "extras": {
     "title": "Available Extras",
-    "subtitle": "Round out your event with additional services that make a difference",
     "recommendedForLabel": "Recommended for:",
     "items": [
       {
@@ -301,56 +300,57 @@
       }
     ]
   },
-  "space": {
-    "label": "The Space",
+  "services": {
+    "label": "Our Services",
     "title": "A place designed to",
     "titleAccent": "shine",
     "description": "Contemporary design, refined acoustics and smart lighting so every event lives up to your expectations.",
-    "badge": {
-      "value": "600m²",
-      "label": "Modular space"
-    },
-    "images": [
-      {
-        "alt": "Main event hall in Madrid"
-      },
-      {
-        "alt": "Amazonias room decorated for celebrations in Madrid"
-      },
-      {
-        "alt": "Olas room set up for events in Madrid"
-      },
-      {
-        "alt": "Amazonias space for private events in Madrid"
-      },
-      {
-        "alt": "Olas hall with lighting for parties in Madrid"
-      }
-    ],
-    "cards": [
+    "includedTitle": "Included in your event",
+    "included": [
       {
         "title": "Exclusive Space",
-        "description": "Two exclusive rooms with private access and a fully reserved atmosphere."
+        "description": "Two exclusive rooms with private access and a fully reserved atmosphere.",
+        "features": [
+          "Two independent rooms",
+          "Private access for your group",
+          "Full privacy during the event"
+        ]
       },
       {
         "title": "Audio-Visual System",
-        "description": "Professional sound, screens and adaptable lighting already installed on site."
+        "description": "Professional sound, screens and adaptable lighting already installed on site.",
+        "features": [
+          "Professional sound system installed",
+          "Screens for video and matches",
+          "Adaptable LED lighting"
+        ]
       },
       {
         "title": "Catering De Diez a Dos",
-        "description": "Balanced, versatile menus backed by over 14 years of experience."
+        "description": "Balanced, versatile menus backed by over 14 years of experience.",
+        "features": [
+          "Menus tailored to each event",
+          "Over 14 years of experience",
+          "Options for every taste"
+        ]
       },
       {
         "title": "Open Bar",
-        "description": "Flexible options depending on your package, with professional service at all times."
+        "description": "Flexible options depending on your package, with professional service at all times.",
+        "features": [
+          "Flexible packages to fit your plan",
+          "Beer, mixed drinks and soft drinks",
+          "Professional bar service"
+        ]
       },
       {
         "title": "Professional Staff",
-        "description": "Waiters, bar staff and access control for your safety and comfort."
-      },
-      {
-        "title": "Additional Services",
-        "description": "Optional custom decoration, DJ, candy bar, sweets cart and Photomax 360."
+        "description": "Waiters, bar staff and access control for your safety and comfort.",
+        "features": [
+          "Waiters and bar staff",
+          "Access control at the entrance",
+          "Service throughout the event"
+        ]
       }
     ]
   }
