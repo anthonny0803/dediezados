@@ -1,7 +1,7 @@
 /*
  * Location ("Ubicación") section — Lovable two-column layout.
  *
- * Like #space, this section has its own inner max-w-7xl container, so it opts
+ * Like #services, this section has its own inner max-w-7xl container, so it opts
  * out of the legacy `section {}` cap (max-width: 1400px) with id specificity
  * to go full-bleed, and paints its own secondary/30 band directly. The band
  * was previously drawn full-bleed via bands.css (#location::before); that hook

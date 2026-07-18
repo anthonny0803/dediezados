@@ -201,7 +201,7 @@ export const Contact = () => {
 
       <div className="relative mx-auto max-w-5xl">
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+          <span className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
             — {t('label')}
           </span>
           <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-6xl">

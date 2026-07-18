@@ -10,14 +10,14 @@
   "nav": {
     "menuToggle": "Navigatiemenu",
     "home": "Home",
-    "catering": "Catering & Extra's",
+    "catering": "Catering",
     "gallery": "Zalen",
     "contact": "Contact",
     "location": "Locatie",
     "reviews": "Recensies",
     "about": "Over ons",
     "events": "Evenementen",
-    "space": "De Ruimte"
+    "services": "Onze Diensten"
   },
   "theme": {
     "toggleLabel": "Thema wisselen",
@@ -58,7 +58,7 @@
     ]
   },
   "catering": {
-    "label": "Catering & Extra's",
+    "label": "Catering",
     "title": "Catering De Diez a Dos",
     "subtitle": "Geniet van de prachtige aandacht en persoonlijke behandeling die wij bij elk evenement bieden. Ons team zet zich in om van uw speciale gelegenheid een onvergetelijk moment te maken, met aandacht voor elk detail zodat u en uw gasten zich thuis voelen.",
     "badge": "Specialiteit",
@@ -112,7 +112,6 @@
   },
   "extras": {
     "title": "Beschikbare Extra's",
-    "subtitle": "Maak uw evenement compleet met aanvullende diensten die het verschil maken",
     "recommendedForLabel": "Aanbevolen voor:",
     "items": [
       {
@@ -301,56 +300,57 @@
       }
     ]
   },
-  "space": {
-    "label": "De Ruimte",
+  "services": {
+    "label": "Onze Diensten",
     "title": "Een plek gemaakt om te",
     "titleAccent": "schitteren",
     "description": "Eigentijds ontwerp, verzorgde akoestiek en slimme verlichting zodat elk evenement aan uw verwachtingen voldoet.",
-    "badge": {
-      "value": "600m²",
-      "label": "Modulaire ruimte"
-    },
-    "images": [
-      {
-        "alt": "Hoofdzaal voor evenementen in Madrid"
-      },
-      {
-        "alt": "Zaal Amazonias versierd voor vieringen in Madrid"
-      },
-      {
-        "alt": "Zaal Olas ingericht voor evenementen in Madrid"
-      },
-      {
-        "alt": "Ruimte Amazonias voor privé-evenementen in Madrid"
-      },
-      {
-        "alt": "Zaal Olas met verlichting voor feesten in Madrid"
-      }
-    ],
-    "cards": [
+    "includedTitle": "Inbegrepen bij uw evenement",
+    "included": [
       {
         "title": "Exclusieve Ruimte",
-        "description": "Twee exclusieve ruimtes met privétoegang en een volledig gereserveerde sfeer."
+        "description": "Twee exclusieve ruimtes met privétoegang en een volledig gereserveerde sfeer.",
+        "features": [
+          "Twee onafhankelijke zalen",
+          "Privétoegang voor uw groep",
+          "Volledige privacy tijdens het evenement"
+        ]
       },
       {
         "title": "Audiovisueel Systeem",
-        "description": "Professioneel geluid, schermen en aanpasbare verlichting al ter plaatse geïnstalleerd."
+        "description": "Professioneel geluid, schermen en aanpasbare verlichting al ter plaatse geïnstalleerd.",
+        "features": [
+          "Professioneel geluidssysteem geïnstalleerd",
+          "Schermen voor video en wedstrijden",
+          "Aanpasbare ledverlichting"
+        ]
       },
       {
         "title": "Catering De Diez a Dos",
-        "description": "Evenwichtige, veelzijdige menu's met meer dan 14 jaar ervaring."
+        "description": "Evenwichtige, veelzijdige menu's met meer dan 14 jaar ervaring.",
+        "features": [
+          "Menu's op maat voor elk evenement",
+          "Meer dan 14 jaar ervaring",
+          "Opties voor elke smaak"
+        ]
       },
       {
         "title": "Open Bar",
-        "description": "Flexibele opties afhankelijk van het gekozen pakket, met professionele service op elk moment."
+        "description": "Flexibele opties afhankelijk van het gekozen pakket, met professionele service op elk moment.",
+        "features": [
+          "Flexibele pakketten naar keuze",
+          "Bier, mixdranken en frisdrank",
+          "Professionele barservice"
+        ]
       },
       {
         "title": "Professioneel Personeel",
-        "description": "Obers, barpersoneel en toegangscontrole voor uw veiligheid en comfort."
-      },
-      {
-        "title": "Aanvullende Diensten",
-        "description": "Optioneel: aangepaste decoratie, DJ, dessertbuffet, snoepkar en Photomax 360."
+        "description": "Obers, barpersoneel en toegangscontrole voor uw veiligheid en comfort.",
+        "features": [
+          "Obers en barpersoneel",
+          "Toegangscontrole bij de ingang",
+          "Service tijdens het hele evenement"
+        ]
       }
     ]
   }

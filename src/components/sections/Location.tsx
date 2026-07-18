@@ -48,7 +48,7 @@ export const Location = ({ placeData }: LocationProps) => {
     <section id="location">
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+          <span className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
             — {t('label')}
           </span>
           <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">

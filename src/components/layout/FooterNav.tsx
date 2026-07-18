@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 
 const SECTIONS = [
   { id: 'events', labelKey: 'events' },
-  { id: 'space', labelKey: 'space' },
+  { id: 'services', labelKey: 'services' },
   { id: 'catering', labelKey: 'catering' },
   { id: 'gallery', labelKey: 'gallery' },
   { id: 'contact', labelKey: 'contact' },

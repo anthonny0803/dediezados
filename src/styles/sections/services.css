@@ -1,5 +1,5 @@
 /*
- * Space ("El Espacio") section.
+ * Services ("Nuestros Servicios") section.
  *
  * This is a redesigned section with its own inner max-w-7xl container, styled
  * with Tailwind utilities; this file holds the section-level frame those
@@ -7,10 +7,10 @@
  *
  * Background: secondary/30 band matching the design reference (Lovable uses
  * bg-secondary/30), resolved over the flat page background. Band rhythm:
- * Hero (dark) · Events (base) · Space (band) · Catering+Extras (base) ·
+ * Hero (dark) · Events (base) · Services (band) · Catering (base) ·
  * Gallery (band) · Contact (base) · Location (band) · Reviews (base).
  */
-#space {
+#services {
   max-width: none;
   margin: 0;
   padding: 6rem 1.5rem;
@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 640px) {
-  #space {
+  #services {
     padding: 4rem 1.5rem;
   }
 }

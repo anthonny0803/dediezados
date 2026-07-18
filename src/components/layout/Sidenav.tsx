@@ -96,7 +96,7 @@ export const Sidenav = () => {
           <ul>
             <li><a href={`/${locale}`} onClick={handleHomeClick}>{t('home')}</a></li>
             <li><a href="#events" onClick={(e) => handleSectionClick(e, 'events')}>{t('events')}</a></li>
-            <li><a href="#space" onClick={(e) => handleSectionClick(e, 'space')}>{t('space')}</a></li>
+            <li><a href="#services" onClick={(e) => handleSectionClick(e, 'services')}>{t('services')}</a></li>
             <li><a href="#catering" onClick={(e) => handleSectionClick(e, 'catering')}>{t('catering')}</a></li>
             <li><a href="#gallery" onClick={(e) => handleSectionClick(e, 'gallery')}>{t('gallery')}</a></li>
             <li><a href="#contact" onClick={(e) => handleSectionClick(e, 'contact')}>{t('contact')}</a></li>

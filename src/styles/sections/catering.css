@@ -1,5 +1,5 @@
 /*
- * Catering + Extras combined section.
+ * Catering section.
  *
  * Like #events, this is a new section with its own inner max-w-7xl container,
  * so it opts out of the legacy `section {}` cap (max-width: 1400px) with id
@@ -8,8 +8,8 @@
  * `section`).
  *
  * Background: flat --dd-background ("base" stripe). Band rhythm after the
- * absorption phase: Hero (dark) · Events (base) · Space (band) ·
- * Catering+Extras (base) · Gallery (band) · Contact (base) · Location (band) ·
+ * absorption phase: Hero (dark) · Events (base) · Services (band) ·
+ * Catering (base) · Gallery (band) · Contact (base) · Location (band) ·
  * Reviews (base).
  */
 #catering {

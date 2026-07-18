@@ -10,14 +10,14 @@
   "nav": {
     "menuToggle": "Menu nawigacji",
     "home": "Start",
-    "catering": "Catering i Dodatki",
+    "catering": "Catering",
     "gallery": "Sale",
     "contact": "Kontakt",
     "location": "Lokalizacja",
     "reviews": "Opinie",
     "about": "O nas",
     "events": "Wydarzenia",
-    "space": "Przestrzeń"
+    "services": "Nasze Usługi"
   },
   "theme": {
     "toggleLabel": "Zmień motyw",
@@ -58,7 +58,7 @@
     ]
   },
   "catering": {
-    "label": "Catering i Dodatki",
+    "label": "Catering",
     "title": "Catering De Diez a Dos",
     "subtitle": "Ciesz się wspaniałą uwagą i indywidualnym traktowaniem, które oferujemy podczas każdego wydarzenia. Nasz zespół poświęca się temu, aby Twoja wyjątkowa okazja była niezapomnianą chwilą, dbając o każdy szczegół, abyś Ty i Twoi goście czuli się jak w domu.",
     "badge": "Specjalność",
@@ -112,7 +112,6 @@
   },
   "extras": {
     "title": "Dostępne Dodatki",
-    "subtitle": "Uzupełnij swoje wydarzenie dodatkowymi usługami, które robią różnicę",
     "recommendedForLabel": "Polecane dla:",
     "items": [
       {
@@ -301,56 +300,57 @@
       }
     ]
   },
-  "space": {
-    "label": "Przestrzeń",
+  "services": {
+    "label": "Nasze Usługi",
     "title": "Miejsce stworzone, by",
     "titleAccent": "błyszczeć",
     "description": "Nowoczesny design, dopracowana akustyka i inteligentne oświetlenie, aby każde wydarzenie spełniało Twoje oczekiwania.",
-    "badge": {
-      "value": "600m²",
-      "label": "Przestrzeń modułowa"
-    },
-    "images": [
-      {
-        "alt": "Główna sala na wydarzenia w Madrycie"
-      },
-      {
-        "alt": "Sala Amazonias udekorowana na uroczystości w Madrycie"
-      },
-      {
-        "alt": "Sala Olas przygotowana na wydarzenia w Madrycie"
-      },
-      {
-        "alt": "Przestrzeń Amazonias na prywatne wydarzenia w Madrycie"
-      },
-      {
-        "alt": "Sala Olas z oświetleniem na przyjęcia w Madrycie"
-      }
-    ],
-    "cards": [
+    "includedTitle": "W ramach Twojego wydarzenia",
+    "included": [
       {
         "title": "Przestrzeń na Wyłączność",
-        "description": "Dwie ekskluzywne przestrzenie z prywatnym wejściem i całkowicie kameralną atmosferą."
+        "description": "Dwie ekskluzywne przestrzenie z prywatnym wejściem i całkowicie kameralną atmosferą.",
+        "features": [
+          "Dwie niezależne sale",
+          "Prywatne wejście dla Twojej grupy",
+          "Pełna prywatność podczas wydarzenia"
+        ]
       },
       {
         "title": "System Audiowizualny",
-        "description": "Profesjonalne nagłośnienie, ekrany i regulowane oświetlenie już zainstalowane w lokalu."
+        "description": "Profesjonalne nagłośnienie, ekrany i regulowane oświetlenie już zainstalowane w lokalu.",
+        "features": [
+          "Profesjonalne nagłośnienie na miejscu",
+          "Ekrany do wideo i meczów",
+          "Regulowane oświetlenie LED"
+        ]
       },
       {
         "title": "Catering De Diez a Dos",
-        "description": "Zbilansowane, uniwersalne menu poparte ponad 14-letnim doświadczeniem."
+        "description": "Zbilansowane, uniwersalne menu poparte ponad 14-letnim doświadczeniem.",
+        "features": [
+          "Menu dopasowane do każdego wydarzenia",
+          "Ponad 14 lat doświadczenia",
+          "Opcje na każdy gust"
+        ]
       },
       {
         "title": "Otwarty Bar",
-        "description": "Elastyczne opcje w zależności od wybranego pakietu, z profesjonalną obsługą w każdej chwili."
+        "description": "Elastyczne opcje w zależności od wybranego pakietu, z profesjonalną obsługą w każdej chwili.",
+        "features": [
+          "Elastyczne pakiety do wyboru",
+          "Piwo, drinki i napoje bezalkoholowe",
+          "Profesjonalna obsługa baru"
+        ]
       },
       {
         "title": "Profesjonalny Personel",
-        "description": "Kelnerzy, obsługa baru i kontrola wstępu dla Twojego bezpieczeństwa i komfortu."
-      },
-      {
-        "title": "Usługi Dodatkowe",
-        "description": "Opcjonalnie: spersonalizowana dekoracja, DJ, słodki stół, wózek ze słodyczami i Photomax 360."
+        "description": "Kelnerzy, obsługa baru i kontrola wstępu dla Twojego bezpieczeństwa i komfortu.",
+        "features": [
+          "Kelnerzy i obsługa baru",
+          "Kontrola dostępu przy wejściu",
+          "Opieka przez całe wydarzenie"
+        ]
       }
     ]
   }

@@ -10,14 +10,14 @@
   "nav": {
     "menuToggle": "Menu di navigazione",
     "home": "Home",
-    "catering": "Catering ed Extra",
+    "catering": "Catering",
     "gallery": "Sale",
     "contact": "Contatti",
     "location": "Posizione",
     "reviews": "Recensioni",
     "about": "Chi siamo",
     "events": "Eventi",
-    "space": "Lo Spazio"
+    "services": "I Nostri Servizi"
   },
   "theme": {
     "toggleLabel": "Cambia tema",
@@ -58,7 +58,7 @@
     ]
   },
   "catering": {
-    "label": "Catering ed Extra",
+    "label": "Catering",
     "title": "Catering De Diez a Dos",
     "subtitle": "Goditi la meravigliosa attenzione e il trattamento personalizzato che offriamo in ogni evento. Il nostro team si dedica a rendere la tua occasione speciale un momento indimenticabile, curando ogni dettaglio affinché tu e i tuoi ospiti vi sentiate come a casa.",
     "badge": "Specialità",
@@ -112,7 +112,6 @@
   },
   "extras": {
     "title": "Extra Disponibili",
-    "subtitle": "Completa il tuo evento con servizi aggiuntivi che fanno la differenza",
     "recommendedForLabel": "Consigliato per:",
     "items": [
       {
@@ -301,56 +300,57 @@
       }
     ]
   },
-  "space": {
-    "label": "Lo Spazio",
+  "services": {
+    "label": "I Nostri Servizi",
     "title": "Un luogo pensato per",
     "titleAccent": "brillare",
     "description": "Design contemporaneo, acustica curata e illuminazione intelligente affinché ogni evento sia all'altezza delle tue aspettative.",
-    "badge": {
-      "value": "600m²",
-      "label": "Spazio modulabile"
-    },
-    "images": [
-      {
-        "alt": "Sala principale per eventi a Madrid"
-      },
-      {
-        "alt": "Sala Amazonias decorata per celebrazioni a Madrid"
-      },
-      {
-        "alt": "Sala Olas allestita per eventi a Madrid"
-      },
-      {
-        "alt": "Spazio Amazonias per eventi privati a Madrid"
-      },
-      {
-        "alt": "Sala Olas con illuminazione per feste a Madrid"
-      }
-    ],
-    "cards": [
+    "includedTitle": "Incluso nel tuo evento",
+    "included": [
       {
         "title": "Spazio in Esclusiva",
-        "description": "Due spazi esclusivi con accesso privato e un ambiente totalmente riservato."
+        "description": "Due spazi esclusivi con accesso privato e un ambiente totalmente riservato.",
+        "features": [
+          "Due sale indipendenti",
+          "Accesso privato per il tuo gruppo",
+          "Privacy totale durante l'evento"
+        ]
       },
       {
         "title": "Sistema Audiovisivo",
-        "description": "Audio professionale, schermi e illuminazione adattabile già installati in loco."
+        "description": "Audio professionale, schermi e illuminazione adattabile già installati in loco.",
+        "features": [
+          "Impianto audio professionale installato",
+          "Schermi per video e partite",
+          "Illuminazione LED adattabile"
+        ]
       },
       {
         "title": "Catering De Diez a Dos",
-        "description": "Menù equilibrati e versatili, con oltre 14 anni di esperienza."
+        "description": "Menù equilibrati e versatili, con oltre 14 anni di esperienza.",
+        "features": [
+          "Menù su misura per ogni evento",
+          "Oltre 14 anni di esperienza",
+          "Opzioni per tutti i gusti"
+        ]
       },
       {
         "title": "Open Bar",
-        "description": "Opzioni flessibili in base al pacchetto scelto, con servizio professionale in ogni momento."
+        "description": "Opzioni flessibili in base al pacchetto scelto, con servizio professionale in ogni momento.",
+        "features": [
+          "Pacchetti flessibili secondo il piano",
+          "Birra, cocktail e bibite",
+          "Servizio bar professionale"
+        ]
       },
       {
         "title": "Personale Professionale",
-        "description": "Camerieri, personale al bar e controllo accessi per la tua sicurezza e comodità."
-      },
-      {
-        "title": "Servizi Aggiuntivi",
-        "description": "Decorazioni personalizzate, DJ, tavolo dolce, carrello di caramelle e Photomax 360 opzionali."
+        "description": "Camerieri, personale al bar e controllo accessi per la tua sicurezza e comodità.",
+        "features": [
+          "Camerieri e personale al banco",
+          "Controllo degli accessi all'ingresso",
+          "Assistenza per tutto l'evento"
+        ]
       }
     ]
   }

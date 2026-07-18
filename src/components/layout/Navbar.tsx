@@ -10,7 +10,7 @@ const SCROLL_THRESHOLD_PX = 20;
 
 const SECTION_LINKS = [
   'events',
-  'space',
+  'services',
   'catering',
   'gallery',
   'contact',

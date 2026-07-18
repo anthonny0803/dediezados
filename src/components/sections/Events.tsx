@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import {
@@ -43,7 +43,7 @@ export const Events = () => {
     <section id="events">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+          <span className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
             — {t('label')}
           </span>
           <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-6xl">
@@ -61,46 +61,65 @@ export const Events = () => {
               const Icon = iconMap[event.icon];
               const isActive = index === activeIndex;
               return (
-                <button
-                  key={event.title}
-                  type="button"
-                  onMouseEnter={() => setActiveIndex(index)}
-                  onClick={() => setActiveIndex(index)}
-                  aria-pressed={isActive}
-                  className={`group flex items-center gap-4 rounded-2xl border p-5 text-left transition-smooth ${
-                    isActive
-                      ? 'border-primary/50 bg-primary/5 shadow-soft'
-                      : 'border-border hover:border-primary/30 hover:bg-card/50'
-                  }`}
-                >
-                  <span
-                    className={`flex h-12 w-12 items-center justify-center rounded-xl transition-smooth ${
+                <Fragment key={event.title}>
+                  <button
+                    type="button"
+                    onMouseEnter={() => setActiveIndex(index)}
+                    onClick={() => setActiveIndex(index)}
+                    aria-pressed={isActive}
+                    className={`group flex items-center gap-4 rounded-2xl border p-5 text-left transition-smooth ${
                       isActive
-                        ? 'bg-gradient-primary text-primary-foreground'
-                        : 'bg-muted text-foreground'
+                        ? 'border-primary/50 bg-primary/5 shadow-soft'
+                        : 'border-border hover:border-primary/30 hover:bg-card/50'
                     }`}
                   >
-                    {Icon ? <Icon className="h-5 w-5" /> : null}
-                  </span>
-                  <span className="flex-1 font-display text-xl font-semibold">
-                    {event.title}
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className={`text-2xl text-primary transition-smooth ${
-                      isActive
-                        ? 'translate-x-0 opacity-100'
-                        : '-translate-x-2 opacity-0'
-                    }`}
-                  >
-                    →
-                  </span>
-                </button>
+                    <span
+                      className={`flex h-12 w-12 items-center justify-center rounded-xl transition-smooth ${
+                        isActive
+                          ? 'bg-gradient-primary text-primary-foreground'
+                          : 'bg-muted text-foreground'
+                      }`}
+                    >
+                      {Icon ? <Icon className="h-5 w-5" /> : null}
+                    </span>
+                    <span className="flex-1 font-display text-xl font-semibold">
+                      {event.title}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className={`text-2xl text-primary transition-smooth ${
+                        isActive
+                          ? 'translate-x-0 opacity-100'
+                          : '-translate-x-2 opacity-0'
+                      }`}
+                    >
+                      →
+                    </span>
+                  </button>
+                  {/* Mobile accordion: the detail unfolds right under the
+                      tapped item, since the desktop pane sits off-screen. */}
+                  {isActive && (
+                    <div className="overflow-hidden rounded-2xl border border-border lg:hidden">
+                      <div className="relative aspect-video">
+                        <Image
+                          src={event.image}
+                          alt={event.alt}
+                          fill
+                          sizes="100vw"
+                          className="object-cover"
+                        />
+                      </div>
+                      <p className="p-4 text-sm text-muted-foreground">
+                        {event.description}
+                      </p>
+                    </div>
+                  )}
+                </Fragment>
               );
             })}
           </div>
 
-          <div className="relative min-h-[420px] overflow-hidden rounded-3xl border border-border shadow-elegant lg:col-span-3 lg:min-h-[500px]">
+          <div className="relative hidden overflow-hidden rounded-3xl border border-border shadow-elegant lg:block lg:col-span-3 lg:min-h-[500px]">
             {events.map((event, index) => {
               const isActive = index === activeIndex;
               return (
