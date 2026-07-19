@@ -353,5 +353,37 @@
         ]
       }
     ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently asked",
+    "titleAccent": "questions",
+    "subtitle": "Everything you need to know before booking your event.",
+    "items": [
+      {
+        "question": "Is catering included in the room rental?",
+        "answer": "Yes. We have our own in-house catering service with over 14 years of experience. Custom menus, open bar and professional serving staff are all included in the rental price, tailored to your celebration."
+      },
+      {
+        "question": "Where is De Diez a Dos located?",
+        "answer": "We are located at Travesía Doctor Fleming 16, Local 12, 28036 Madrid, next to Santiago Bernabéu stadium, in the Chamartín neighbourhood. Excellent connections by metro and car, near Nuevos Ministerios."
+      },
+      {
+        "question": "What types of events can be held at De Diez a Dos?",
+        "answer": "We host all kinds of private events: adult, teen and children's birthdays, weddings and post-wedding celebrations, bachelorette and bachelor parties, 15th birthday parties, communions, baby showers, corporate events, company dinners, business meetings, presentations and team building."
+      },
+      {
+        "question": "What additional services are available?",
+        "answer": "In addition to catering and open bar, we offer a professional DJ, karaoke, PhotoMax 360, candy bar and dessert table, personalised decoration and a professional AV system. Everything managed by our team so you can simply enjoy the event."
+      },
+      {
+        "question": "How can I book the venue?",
+        "answer": "You can contact us by phone at +34 636 433 911 or +34 660 221 267, or through the contact form on our website. We are available every day by appointment."
+      },
+      {
+        "question": "Can I watch live matches at De Diez a Dos?",
+        "answer": "Yes. Our rooms feature a professional AV system with a screen and are a 5-minute walk from Santiago Bernabéu stadium. They are perfect for organising a private viewing party for any match or live event, with catering and open bar."
+      }
+    ]
   }
 }

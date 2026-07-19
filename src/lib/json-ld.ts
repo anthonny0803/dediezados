@@ -1,6 +1,11 @@
 import { seoConfig } from '@/config/seo.config';
 import { siteConfig } from '@/config/site.config';
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 const localeToBcp47: Record<string, string> = {
   es: 'es-ES',
   en: 'en-GB',
@@ -13,7 +18,7 @@ const localeToBcp47: Record<string, string> = {
   ru: 'ru-RU',
 };
 
-export function buildJsonLdGraph(locale: string) {
+export function buildJsonLdGraph(locale: string, faqItems: FaqItem[]) {
   const siteUrl = seoConfig.siteUrl;
   const inLanguage = localeToBcp47[locale] ?? locale;
 
@@ -110,12 +115,10 @@ export function buildJsonLdGraph(locale: string) {
     publisher: { '@id': seoConfig.schemaIds.organization },
   };
 
-  const localeFaq =
-    seoConfig.faq[locale as keyof typeof seoConfig.faq] ?? seoConfig.faq.es;
   const faqPage = {
     '@type': 'FAQPage',
     '@id': `${siteUrl}/${locale}#faq`,
-    mainEntity: localeFaq.map((item) => ({
+    mainEntity: faqItems.map((item) => ({
       '@type': 'Question',
       name: item.question,
       acceptedAnswer: {

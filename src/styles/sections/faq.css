@@ -1,0 +1,19 @@
+/*
+ * FAQ section.
+ *
+ * Band section in the alternating rhythm (Reviews before it is base). Like
+ * #gallery, it opts out of the legacy `section {}` cap with id specificity
+ * and paints its own secondary/30 band.
+ */
+#faq {
+  max-width: none;
+  margin: 0;
+  padding: 6rem 1.5rem;
+  background: color-mix(in oklab, var(--dd-secondary) 30%, var(--dd-background));
+}
+
+@media (max-width: 640px) {
+  #faq {
+    padding: 4rem 1.5rem;
+  }
+}

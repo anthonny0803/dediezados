@@ -41,6 +41,10 @@ export interface ServicesConfig {
   included: ServiceItemConfig[];
 }
 
+export interface FaqItemConfig {
+  icon: string;
+}
+
 export interface SiteConfig {
   colors: {
     primary: string;
@@ -92,6 +96,7 @@ export interface SiteConfig {
   extras: ExtraConfig[];
   events: EventConfig[];
   services: ServicesConfig;
+  faq: FaqItemConfig[];
 }
 
 export const siteConfig: SiteConfig = {
@@ -329,4 +334,12 @@ export const siteConfig: SiteConfig = {
       },
     ],
   },
+  faq: [
+    { icon: 'utensils' },
+    { icon: 'mapPin' },
+    { icon: 'party' },
+    { icon: 'sparkles' },
+    { icon: 'calendar' },
+    { icon: 'tv' },
+  ],
 };

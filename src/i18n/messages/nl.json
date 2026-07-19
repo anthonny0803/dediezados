@@ -353,5 +353,37 @@
         ]
       }
     ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Veelgestelde",
+    "titleAccent": "vragen",
+    "subtitle": "Alles wat u moet weten voordat u uw evenement boekt.",
+    "items": [
+      {
+        "question": "Is catering inbegrepen bij de zaalverhuur?",
+        "answer": "Ja. We hebben onze eigen cateringservice met meer dan 14 jaar ervaring. Op maat gemaakte menu's, open bar en professioneel servicepersoneel zijn inbegrepen in de huurprijs, alles afgestemd op uw viering."
+      },
+      {
+        "question": "Waar bevindt De Diez a Dos zich?",
+        "answer": "We bevinden ons op Travesía Doctor Fleming 16, Local 12, 28036 Madrid, naast het estadio Santiago Bernabéu, in de wijk Chamartín. Uitstekend bereikbaar met metro en auto, dichtbij Nuevos Ministerios."
+      },
+      {
+        "question": "Welke soorten evenementen kunnen worden georganiseerd bij De Diez a Dos?",
+        "answer": "We organiseren alle soorten privé-evenementen: verjaardagen voor volwassenen, jongeren en kinderen, bruiloften en recepties, vrijgezellenfeesten, 15e verjaardagsfeesten, communies, babyshowers, bedrijfsevenementen, bedrijfsdiners, zakelijke vergaderingen, presentaties en teambuilding."
+      },
+      {
+        "question": "Welke aanvullende diensten zijn beschikbaar?",
+        "answer": "Naast catering en open bar bieden we een professionele DJ, karaoke, PhotoMax 360, candy bar en dessertbuffet, gepersonaliseerde decoratie en een professioneel AV-systeem. Alles geregeld door ons team zodat u alleen hoeft te genieten."
+      },
+      {
+        "question": "Hoe kan men de zaal reserveren?",
+        "answer": "U kunt ons bereiken via telefoon op +34 636 433 911 of +34 660 221 267, of via het contactformulier op onze website. We zijn elke dag beschikbaar op afspraak."
+      },
+      {
+        "question": "Kan men in de zalen wedstrijden live bekijken?",
+        "answer": "Ja. Onze zalen zijn uitgerust met een professioneel AV-systeem met scherm en liggen op 5 minuten loopafstand van het estadio Santiago Bernabéu. Ze zijn perfect voor het organiseren van een privé viewing party voor elke wedstrijd of live-evenement, met catering en open bar."
+      }
+    ]
   }
 }
