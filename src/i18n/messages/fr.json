@@ -353,5 +353,37 @@
         ]
       }
     ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions",
+    "titleAccent": "fréquentes",
+    "subtitle": "Tout ce qu'il faut savoir avant de réserver votre événement.",
+    "items": [
+      {
+        "question": "Le traiteur est-il inclus dans la location de la salle ?",
+        "answer": "Oui. Nous disposons de notre propre service traiteur avec plus de 14 ans d'expérience. Des menus personnalisés, un bar ouvert et un personnel de service professionnel sont inclus dans la location, le tout adapté à votre célébration."
+      },
+      {
+        "question": "Où se trouve De Diez a Dos ?",
+        "answer": "Nous sommes situés au Travesía Doctor Fleming 16, Local 12, 28036 Madrid, à côté du stade Santiago Bernabéu, dans le quartier de Chamartín. Très bien desservi en métro et en voiture, près de Nuevos Ministerios."
+      },
+      {
+        "question": "Quels types d'événements peut-on organiser chez De Diez a Dos ?",
+        "answer": "Nous accueillons tout type d'événements privés : anniversaires d'adultes, de jeunes et d'enfants, mariages et fêtes post-mariage, enterrements de vie de garçon et de jeune fille, fêtes de 15 ans, communions, baby showers, événements d'entreprise, dîners d'entreprise, réunions de travail, présentations et team building."
+      },
+      {
+        "question": "Quels services supplémentaires sont disponibles ?",
+        "answer": "En plus du traiteur et du bar ouvert, nous proposons un DJ professionnel, un karaoké, un PhotoMax 360, une table de bonbons et de desserts, une décoration personnalisée et un système audiovisuel professionnel. Tout géré par notre équipe pour que vous puissiez profiter pleinement."
+      },
+      {
+        "question": "Comment réserver la salle ?",
+        "answer": "Vous pouvez nous contacter par téléphone au +34 636 433 911 ou au +34 660 221 267, ou via le formulaire de contact sur notre site web. Nous sommes disponibles tous les jours sur rendez-vous."
+      },
+      {
+        "question": "Peut-on regarder des matchs en direct dans les salles ?",
+        "answer": "Oui. Nos salles sont équipées d'un système audiovisuel professionnel avec écran et se trouvent à 5 minutes à pied du stade Santiago Bernabéu. Elles sont parfaites pour organiser une soirée privée et regarder n'importe quel match ou événement en direct, avec traiteur et bar ouvert."
+      }
+    ]
   }
 }

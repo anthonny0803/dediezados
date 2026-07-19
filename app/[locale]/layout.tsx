@@ -15,15 +15,17 @@ import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import '@/styles/main.css';
 
 const playfair = Playfair_Display({
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
   weight: ['400', '600', '700'],
   display: 'swap',
+  preload: false,
   variable: '--font-playfair',
 });
 
 const inter = Inter({
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
   display: 'swap',
+  preload: false,
   variable: '--font-inter',
 });
 

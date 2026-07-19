@@ -9,6 +9,7 @@ import { Catering } from '@/components/sections/Catering';
 import { Gallery } from '@/components/sections/Gallery';
 import { Contact } from '@/components/sections/Contact';
 import { LocationReviewsSection } from '@/components/sections/LocationReviewsSection';
+import { Faq } from '@/components/sections/Faq';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -29,6 +30,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <Gallery />
       <Contact />
       <LocationReviewsSection />
+      <Faq />
       <Footer />
     </>
   );

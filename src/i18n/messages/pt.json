@@ -353,5 +353,37 @@
         ]
       }
     ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Perguntas",
+    "titleAccent": "frequentes",
+    "subtitle": "Tudo o que precisa de saber antes de reservar o seu evento.",
+    "items": [
+      {
+        "question": "O catering está incluído no aluguer da sala?",
+        "answer": "Sim. Temos o nosso próprio serviço de catering com mais de 14 anos de experiência. Menus personalizados, bar aberto e pessoal de serviço profissional estão incluídos no aluguer, tudo adaptado à sua celebração."
+      },
+      {
+        "question": "Onde fica De Diez a Dos?",
+        "answer": "Estamos localizados na Travesía Doctor Fleming 16, Local 12, 28036 Madrid, ao lado do estádio Santiago Bernabéu, no bairro de Chamartín. Muito bem servido de metro e carro, perto de Nuevos Ministerios."
+      },
+      {
+        "question": "Que tipo de eventos podem ser realizados na De Diez a Dos?",
+        "answer": "Organizamos todo o tipo de eventos privados: aniversários de adultos, jovens e crianças, casamentos e festas pós-casamento, despedidas de solteiro e solteira, festas de 15 anos, comunhões, baby showers, eventos corporativos, jantares de empresa, reuniões de trabalho, apresentações e team building."
+      },
+      {
+        "question": "Que serviços adicionais estão disponíveis?",
+        "answer": "Além do catering e do bar aberto, oferecemos DJ profissional, karaoke, PhotoMax 360, candy bar e mesa de sobremesas, decoração personalizada e um sistema audiovisual profissional. Tudo gerido pela nossa equipa para que apenas tenha de desfrutar."
+      },
+      {
+        "question": "Como se pode reservar a sala?",
+        "answer": "Pode contactar-nos por telefone para o +34 636 433 911 ou +34 660 221 267, ou através do formulário de contacto no nosso site. Estamos disponíveis todos os dias com marcação prévia."
+      },
+      {
+        "question": "É possível ver jogos em direto nas salas?",
+        "answer": "Sim. As nossas salas dispõem de um sistema audiovisual profissional com ecrã e ficam a 5 minutos a pé do estádio Santiago Bernabéu. São perfeitas para organizar um evento privado e ver qualquer jogo ou evento em direto, com catering e bar aberto."
+      }
+    ]
   }
 }

@@ -353,5 +353,37 @@
         ]
       }
     ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Häufige",
+    "titleAccent": "Fragen",
+    "subtitle": "Alles, was Sie vor der Buchung Ihres Events wissen müssen.",
+    "items": [
+      {
+        "question": "Ist Catering im Raumpreis enthalten?",
+        "answer": "Ja. Wir haben unseren eigenen Cateringservice mit über 14 Jahren Erfahrung. Individuelle Menüs, Open Bar und professionelles Servicepersonal sind im Mietpreis enthalten, alles auf Ihre Feier abgestimmt."
+      },
+      {
+        "question": "Wo befindet sich De Diez a Dos?",
+        "answer": "Wir befinden uns in der Travesía Doctor Fleming 16, Local 12, 28036 Madrid, neben dem Stadion Santiago Bernabéu, im Stadtteil Chamartín. Sehr gut mit U-Bahn und Auto erreichbar, in der Nähe von Nuevos Ministerios."
+      },
+      {
+        "question": "Welche Veranstaltungsarten können bei De Diez a Dos abgehalten werden?",
+        "answer": "Wir veranstalten alle Arten von privaten Events: Geburtstage für Erwachsene, Jugendliche und Kinder, Hochzeiten und Empfänge, Junggesellinnen- und Junggesellenabschiede, Quinceañeras, Kommunionen, Babypartys, Firmenveranstaltungen, Firmendinner, Geschäftstreffen, Präsentationen und Teambuilding."
+      },
+      {
+        "question": "Welche zusätzlichen Services stehen zur Verfügung?",
+        "answer": "Neben Catering und Open Bar bieten wir einen professionellen DJ, Karaoke, PhotoMax 360, Candy Bar und Desserttisch, individuelle Dekoration und ein professionelles AV-System. Alles von unserem Team organisiert, damit Sie einfach genießen können."
+      },
+      {
+        "question": "Wie kann man den Raum buchen?",
+        "answer": "Sie können uns telefonisch unter +34 636 433 911 oder +34 660 221 267 erreichen, oder über das Kontaktformular auf unserer Website. Wir sind jeden Tag nach Vereinbarung erreichbar."
+      },
+      {
+        "question": "Kann man in den Räumen Spiele live schauen?",
+        "answer": "Ja. Unsere Räume verfügen über ein professionelles AV-System mit Leinwand und liegen 5 Gehminuten vom Stadion Santiago Bernabéu entfernt. Sie eignen sich perfekt für eine private Viewing-Party für jedes Spiel oder Live-Event, mit Catering und Open Bar."
+      }
+    ]
   }
 }

@@ -353,5 +353,37 @@
         ]
       }
     ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Częste",
+    "titleAccent": "pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć przed rezerwacją swojego wydarzenia.",
+    "items": [
+      {
+        "question": "Czy catering jest wliczony w wynajem sali?",
+        "answer": "Tak. Posiadamy własny catering z ponad 14-letnim doświadczeniem. Spersonalizowane menu, otwarty bar i profesjonalna obsługa są wliczone w cenę wynajmu, wszystko dostosowane do Twojej uroczystości."
+      },
+      {
+        "question": "Gdzie znajduje się De Diez a Dos?",
+        "answer": "Znajdujemy się przy Travesía Doctor Fleming 16, Local 12, 28036 Madryt, obok stadionu Santiago Bernabéu, w dzielnicy Chamartín. Doskonałe połączenia metrem i samochodem, w pobliżu Nuevos Ministerios."
+      },
+      {
+        "question": "Jakie rodzaje imprez można organizować w De Diez a Dos?",
+        "answer": "Organizujemy wszelkie rodzaje prywatnych imprez: urodziny dla dorosłych, młodzieży i dzieci, wesela i przyjęcia weselne, wieczory panieńskie i kawalerskie, imprezy z okazji 15. urodzin, komunie, baby shower, imprezy firmowe, kolacje firmowe, spotkania biznesowe, prezentacje i team building."
+      },
+      {
+        "question": "Jakie dodatkowe usługi są dostępne?",
+        "answer": "Oprócz cateringu i otwartego baru oferujemy profesjonalnego DJ-a, karaoke, PhotoMax 360, candy bar i stół ze słodkościami, spersonalizowaną dekorację i profesjonalny system AV. Wszystko zarządzane przez nasz zespół, abyś mógł po prostu się cieszyć."
+      },
+      {
+        "question": "Jak można zarezerwować salę?",
+        "answer": "Możesz skontaktować się z nami telefonicznie pod numerem +34 636 433 911 lub +34 660 221 267, lub przez formularz kontaktowy na naszej stronie. Jesteśmy dostępni każdego dnia po wcześniejszym umówieniu."
+      },
+      {
+        "question": "Czy w salach można oglądać mecze na żywo?",
+        "answer": "Tak. Nasze sale są wyposażone w profesjonalny system AV z ekranem i znajdują się 5 minut spacerem od stadionu Santiago Bernabéu. Są idealne do organizacji prywatnego seansu dowolnego meczu lub wydarzenia na żywo, z cateringiem i otwartym barem."
+      }
+    ]
   }
 }
