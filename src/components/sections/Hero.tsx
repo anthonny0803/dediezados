@@ -34,14 +34,34 @@ export const Hero = () => {
   }));
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHydrated, setIsHydrated] = useState(false);
+  const [loadedSlides, setLoadedSlides] = useState<boolean[]>(() =>
+    slidesConfig.map(() => false),
+  );
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % slides.length);
+      setCurrentIndex((prev) => {
+        const next = (prev + 1) % slides.length;
+        return loadedSlides[next] ? next : prev;
+      });
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [slides.length, loadedSlides]);
+
+  const markSlideLoaded = (index: number) => {
+    setLoadedSlides((prev) => {
+      if (prev[index]) return prev;
+      const next = [...prev];
+      next[index] = true;
+      return next;
+    });
+  };
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
@@ -68,14 +88,17 @@ export const Hero = () => {
               key={index}
               className={`carousel-item ${index === currentIndex ? 'active' : ''}`}
             >
-              <Image
-                src={slide.image}
-                alt={slide.alt}
-                fill
-                priority={index === 0}
-                sizes="100vw"
-                className="carousel-image"
-              />
+              {(index === 0 || isHydrated) && (
+                <Image
+                  src={slide.image}
+                  alt={slide.alt}
+                  fill
+                  priority={index === 0}
+                  sizes="100vw"
+                  className="carousel-image"
+                  onLoad={() => markSlideLoaded(index)}
+                />
+              )}
               <div className="carousel-overlay">
                 <div className="hero-content">
                   <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-medium text-primary mb-6 backdrop-blur">
