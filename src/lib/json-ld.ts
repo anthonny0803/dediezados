@@ -28,7 +28,7 @@ export function buildJsonLdGraph(locale: string) {
       '@value': entry.value,
     })),
     url: siteUrl,
-    mainEntityOfPage: `${siteUrl}/`,
+    mainEntityOfPage: `${siteUrl}/${locale}`,
     telephone: siteConfig.contact.phone.replace(/\s+/g, ''),
     email: siteConfig.contact.email,
     priceRange: seoConfig.business.priceRange,
