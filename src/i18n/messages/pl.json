@@ -1,19 +1,23 @@
 {
+  "common": {
+    "close": "Zamknij"
+  },
   "brand": {
     "name": "De Diez a Dos",
     "slogan": "Madrid Events - Sale na Wydarzenia",
     "description": "Wynajem eleganckich sal i kompleksowe usługi dla wszelkiego rodzaju wydarzeń"
   },
   "nav": {
+    "menuToggle": "Menu nawigacji",
     "home": "Start",
-    "services": "Usługi",
     "catering": "Catering",
-    "extras": "Dodatki",
     "gallery": "Sale",
     "contact": "Kontakt",
     "location": "Lokalizacja",
     "reviews": "Opinie",
-    "about": "O nas"
+    "about": "O nas",
+    "events": "Wydarzenia",
+    "services": "Nasze Usługi"
   },
   "theme": {
     "toggleLabel": "Zmień motyw",
@@ -24,6 +28,7 @@
   "hero": {
     "carouselLabel": "Slajdy karuzeli",
     "slideLabel": "Przejdź do slajdu {index}",
+    "badge": "5 minut od Santiago Bernabéu",
     "slides": [
       {
         "title": "Twoja prywatna przestrzeń w sercu Madrytu",
@@ -46,39 +51,14 @@
         "outlineCta": "Dowiedz się Więcej",
         "alt": "Sala na wydarzenia firmowe i spotkania biznesowe w Madrycie"
       }
-    ]
-  },
-  "services": {
-    "title": "Profesjonalne Usługi",
-    "subtitle": "Kompleksowe pakiety zawierające wszystko, czego potrzebujesz na swoje wydarzenie",
-    "items": [
-      {
-        "title": "Przestrzeń na Wyłączność",
-        "description": "Lokal z dwiema ekskluzywnymi przestrzeniami, prywatnym wejściem i całkowicie zarezerwowaną atmosferą. Wygodne meble i regulowane oświetlenie. Pracujemy z powagą i bliskością, koordynując każdy szczegół, aby Twoje wydarzenie przebiegło idealnie."
-      },
-      {
-        "title": "System Audiowizualny",
-        "description": "Profesjonalne nagłośnienie i wysokiej jakości ekrany już zainstalowane w lokalu. Nasz zespół techniczny dba o to, aby wszystko działało prawidłowo podczas wydarzenia. Regulowane oświetlenie i atmosfery dopasowane do Twojego stylu: elegancka, nowoczesna lub świąteczna. Jakość i komfort, bez montażu i komplikacji."
-      },
-      {
-        "title": "Catering De Diez a Dos",
-        "description": "Ponad 14 lat słuchania naszych klientów i dopracowywania każdej propozycji. Efekt: zrównoważone i wszechstronne menu, zaprojektowane tak, aby sprawdzało się przy każdej okazji. Jakość, dobra prezentacja i opcje pasujące do każdego rodzaju wydarzenia."
-      },
-      {
-        "title": "Otwarty Bar",
-        "description": "Nasz bar dostosowuje się do każdego wydarzenia. Oferujemy różne opcje w zależności od wybranego pakietu, abyś mógł wybrać format najlepiej pasujący do Twojej uroczystości. Elastyczność i profesjonalna obsługa w każdej chwili."
-      },
-      {
-        "title": "Profesjonalny Personel",
-        "description": "Personel barowy, kelnerzy i kontrola wstępu, którzy zapewniają bezpieczeństwo i komfort. Skuteczny i dyskretny zespół. W obliczu nieprzewidzianych sytuacji oferujemy szybkie i jakościowe rozwiązania. Prosta i sprawcza obsługa."
-      },
-      {
-        "title": "Usługi Dodatkowe",
-        "description": "Mamy opcjonalne dodatki, aby uzupełnić Twoje wydarzenie: spersonalizowana dekoracja, DJ, słodki stół, wózek ze słodyczami i Photomax 360. Sam wybierasz, co dodać zgodnie z tym, czego chcesz na ten dzień, zawsze z jasnymi cenami i bez niespodzianek."
-      }
+    ],
+    "stats": [
+      { "label": "Zorganizowanych wydarzeń" },
+      { "label": "Indywidualna obsługa" }
     ]
   },
   "catering": {
+    "label": "Catering",
     "title": "Catering De Diez a Dos",
     "subtitle": "Ciesz się wspaniałą uwagą i indywidualnym traktowaniem, które oferujemy podczas każdego wydarzenia. Nasz zespół poświęca się temu, aby Twoja wyjątkowa okazja była niezapomnianą chwilą, dbając o każdy szczegół, abyś Ty i Twoi goście czuli się jak w domu.",
     "badge": "Specjalność",
@@ -110,31 +90,28 @@
     ]
   },
   "gallery": {
+    "label": "Galeria",
     "title": "Sale",
     "subtitle": "Odkryj nasze eleganckie sale, zaprojektowane tak, aby tworzyć idealną atmosferę dla Twojego wyjątkowego wydarzenia",
-    "scrollLeftLabel": "Przewiń galerię w lewo",
-    "scrollRightLabel": "Przewiń galerię w prawo",
-    "expandedAlt": "Powiększony obraz",
     "rooms": {
       "olas": "Sala Olas",
       "amazonias": "Sala Amazonias"
     },
     "photos": [
-      { "room": "olas", "alt": "Sala Olas na prywatne wydarzenia w Madrycie - widok główny" },
-      { "room": "olas", "alt": "Sala Olas - przestrzeń na uroczystości i imprezy w Madrycie" },
-      { "room": "olas", "alt": "Sala Olas - elegancka atmosfera dla wydarzeń w pobliżu Bernabéu" },
-      { "room": "olas", "alt": "Sala Olas - dekoracja i meble na wydarzenia w Madrycie" },
-      { "room": "amazonias", "alt": "Sala Amazonias na ekskluzywne wydarzenia w Madrycie - widok główny" },
-      { "room": "amazonias", "alt": "Sala Amazonias - przestrzeń na śluby i uroczystości w Madrycie" },
-      { "room": "amazonias", "alt": "Sala Amazonias - wynajem sali na urodziny i imprezy" },
-      { "room": "amazonias", "alt": "Sala Amazonias - atmosfera premium dla wydarzeń firmowych" },
-      { "room": "amazonias", "alt": "Sala Amazonias - oświetlenie i dekoracja na prywatne wydarzenia" },
-      { "room": "amazonias", "alt": "Sala Amazonias - kompletna przestrzeń na uroczystości w Madrycie" }
+      { "alt": "Sala Olas na prywatne wydarzenia w Madrycie - widok główny" },
+      { "alt": "Sala Olas - przestrzeń na uroczystości i imprezy w Madrycie" },
+      { "alt": "Sala Olas - elegancka atmosfera dla wydarzeń w pobliżu Bernabéu" },
+      { "alt": "Sala Olas - dekoracja i meble na wydarzenia w Madrycie" },
+      { "alt": "Sala Amazonias na ekskluzywne wydarzenia w Madrycie - widok główny" },
+      { "alt": "Sala Amazonias - przestrzeń na śluby i uroczystości w Madrycie" },
+      { "alt": "Sala Amazonias - wynajem sali na urodziny i imprezy" },
+      { "alt": "Sala Amazonias - atmosfera premium dla wydarzeń firmowych" },
+      { "alt": "Sala Amazonias - oświetlenie i dekoracja na prywatne wydarzenia" },
+      { "alt": "Sala Amazonias - kompletna przestrzeń na uroczystości w Madrycie" }
     ]
   },
   "extras": {
     "title": "Dostępne Dodatki",
-    "subtitle": "Uzupełnij swoje wydarzenie dodatkowymi usługami, które robią różnicę",
     "recommendedForLabel": "Polecane dla:",
     "items": [
       {
@@ -195,7 +172,9 @@
     ]
   },
   "contact": {
-    "title": "Bez Zobowiązań - Porozmawiajmy o Twoim Wydarzeniu",
+    "label": "Bez Zobowiązań",
+    "title": "Porozmawiajmy o",
+    "titleAccent": "Twoim Wydarzeniu",
     "subtitle": "Opowiedz nam o swojej wizji, a pomożemy Ci ją zrealizować",
     "form": {
       "sectionTitle": "Dane kontaktowe",
@@ -244,31 +223,167 @@
     }
   },
   "location": {
-    "title": "Nasza Lokalizacja",
-    "subtitle": "Znajdź nas w sercu Madrytu",
+    "label": "Lokalizacja",
+    "title": "W sercu",
+    "titleAccent": "Madrytu",
+    "description": "O krok od wszystkiego, w jednej z najlepszych części miasta.",
     "map": {
       "reviewsCount": "({count} opinii)",
       "directions": "Trasa dojazdu"
     }
   },
   "reviews": {
-    "title": "Co mówią nasi klienci",
-    "subtitle": "Prawdziwe doświadczenia z niezapomnianych wydarzeń",
+    "label": "Opinie",
+    "title": "Co mówią",
+    "titleAccent": "nasi klienci",
+    "ratingSummary": "{rating} / 5 · {count} opinii w Google",
     "loading": "Ładowanie opinii...",
     "empty": "Brak dostępnych opinii.",
     "viewAll": "Zobacz wszystkie opinie w Google",
+    "readMore": "Czytaj więcej",
     "googleBadgeTitle": "Opublikowane w Google",
-    "defaultUser": "Użytkownik Google"
+    "defaultUser": "Użytkownik Google",
+    "prevReview": "Poprzednia opinia",
+    "nextReview": "Następna opinia",
+    "goToReview": "Przejdź do opinii {number}"
   },
   "footer": {
     "tagline": "Twoja prywatna przestrzeń w sercu Madrytu",
     "legal": "De Diez a Dos Private Event, S.L.U.",
     "copyright": "© {year} De Diez a Dos. Wszelkie prawa zastrzeżone.",
     "slogan": "Ponad dekada tworzenia niezapomnianych wydarzeń",
-    "keywords": "Sale na wydarzenia Madryt | Wynajem sali urodzinowej Madryt | Tanie wydarzenia prywatne | Imprezy w pobliżu Santiago Bernabéu | Tania sala urodzinowa Madryt | Tani catering eventowy | Tanie uroczystości Madryt | Wynajem lokalu na imprezy Madryt | Wydarzenia obok Bernabéu | Tanie sale weselne | Imprezy prywatne tania cena | Zarezerwuj salę centrum Madrytu | Przestrzenie na uroczystości Madryt | Wydarzenia w pobliżu stadionu Santiago Bernabéu | Tanie wynajęcie sali z cateringiem | Tanie urodziny Madryt | Imprezy firmowe Madryt | Sala eventowa konkurencyjne ceny | Niezapomniane uroczystości Madryt | Sala na wydarzenia Centrum Madrytu | De Diez a Dos Madryt",
     "partnersIntro": "Partnerzy strategiczni:",
     "partnerCapifix": "Capifix | Logistyka Integralna",
-    "devLabel": "Dev:"
+    "devLabel": "Dev:",
+    "contactTitle": "Kontakt",
+    "exploreTitle": "Odkryj",
+    "socialTitle": "Obserwuj nas",
+    "instagramAria": "Obserwuj nas na Instagramie",
+    "facebookAria": "Obserwuj nas na Facebooku"
   },
-  "logoAlt": "Logo De Diez a Dos"
+  "logoAlt": "Logo De Diez a Dos",
+  "events": {
+    "label": "Nasze Wydarzenia",
+    "title": "Każda uroczystość,",
+    "titleAccent": "wyjątkowy świat",
+    "subtitle": "Dostosowujemy naszą przestrzeń i obsługę, aby Twoje wydarzenie było dokładnie takie, jak je sobie wyobrażasz.",
+    "items": [
+      {
+        "title": "Wesela",
+        "description": "Kameralna lub wystawna uroczystość, dopracowana w najdrobniejszym szczególe.",
+        "alt": "Panna młoda tańcząca z gośćmi na przyjęciu weselnym w Madrycie"
+      },
+      {
+        "title": "Urodziny",
+        "description": "DJ, oświetlenie i catering skrojone na miarę na niezapomnianą noc.",
+        "alt": "Sala udekorowana na przyjęcie urodzinowe w Madrycie"
+      },
+      {
+        "title": "15. urodziny",
+        "description": "Wymarzony dzień: walc, scenografia i profesjonalna produkcja.",
+        "alt": "Dziewczyny tańczące na przyjęciu z okazji 15. urodzin przy fioletowych światłach w Madrycie"
+      },
+      {
+        "title": "Wydarzenia firmowe",
+        "description": "Premiery, gale i konferencje z najwyższej klasy technologią audiowizualną.",
+        "alt": "Toast na wydarzeniu firmowym w niebieskim świetle w Madrycie"
+      },
+      {
+        "title": "Mecze na żywo",
+        "description": "Przeżyj każdy mecz Realu Madryt na wielkim ekranie, 5 minut od Bernabéu.",
+        "alt": "Prywatna sala do oglądania meczów w pobliżu Bernabéu w Madrycie"
+      },
+      {
+        "title": "Spotkania",
+        "description": "Prywatne przestrzenie na spotkania, prezentacje i warsztaty.",
+        "alt": "Profesjonaliści rozmawiający przy barze w Madrycie"
+      }
+    ]
+  },
+  "services": {
+    "label": "Nasze Usługi",
+    "title": "Miejsce stworzone, by",
+    "titleAccent": "błyszczeć",
+    "description": "Nowoczesny design, dopracowana akustyka i inteligentne oświetlenie, aby każde wydarzenie spełniało Twoje oczekiwania.",
+    "includedTitle": "W ramach Twojego wydarzenia",
+    "included": [
+      {
+        "title": "Przestrzeń na Wyłączność",
+        "description": "Dwie ekskluzywne przestrzenie z prywatnym wejściem i całkowicie kameralną atmosferą.",
+        "features": [
+          "Dwie niezależne sale",
+          "Prywatne wejście dla Twojej grupy",
+          "Pełna prywatność podczas wydarzenia"
+        ]
+      },
+      {
+        "title": "System Audiowizualny",
+        "description": "Profesjonalne nagłośnienie, ekrany i regulowane oświetlenie już zainstalowane w lokalu.",
+        "features": [
+          "Profesjonalne nagłośnienie na miejscu",
+          "Ekrany do wideo i meczów",
+          "Regulowane oświetlenie LED"
+        ]
+      },
+      {
+        "title": "Catering De Diez a Dos",
+        "description": "Zbilansowane, uniwersalne menu poparte ponad 14-letnim doświadczeniem.",
+        "features": [
+          "Menu dopasowane do każdego wydarzenia",
+          "Ponad 14 lat doświadczenia",
+          "Opcje na każdy gust"
+        ]
+      },
+      {
+        "title": "Otwarty Bar",
+        "description": "Elastyczne opcje w zależności od wybranego pakietu, z profesjonalną obsługą w każdej chwili.",
+        "features": [
+          "Elastyczne pakiety do wyboru",
+          "Piwo, drinki i napoje bezalkoholowe",
+          "Profesjonalna obsługa baru"
+        ]
+      },
+      {
+        "title": "Profesjonalny Personel",
+        "description": "Kelnerzy, obsługa baru i kontrola wstępu dla Twojego bezpieczeństwa i komfortu.",
+        "features": [
+          "Kelnerzy i obsługa baru",
+          "Kontrola dostępu przy wejściu",
+          "Opieka przez całe wydarzenie"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Częste",
+    "titleAccent": "pytania",
+    "subtitle": "Wszystko, co musisz wiedzieć przed rezerwacją swojego wydarzenia.",
+    "items": [
+      {
+        "question": "Czy catering jest wliczony w wynajem sali?",
+        "answer": "Tak. Posiadamy własny catering z ponad 14-letnim doświadczeniem. Spersonalizowane menu, otwarty bar i profesjonalna obsługa są wliczone w cenę wynajmu, wszystko dostosowane do Twojej uroczystości."
+      },
+      {
+        "question": "Gdzie znajduje się De Diez a Dos?",
+        "answer": "Znajdujemy się przy Travesía Doctor Fleming 16, Local 12, 28036 Madryt, obok stadionu Santiago Bernabéu, w dzielnicy Chamartín. Doskonałe połączenia metrem i samochodem, w pobliżu Nuevos Ministerios."
+      },
+      {
+        "question": "Jakie rodzaje imprez można organizować w De Diez a Dos?",
+        "answer": "Organizujemy wszelkie rodzaje prywatnych imprez: urodziny dla dorosłych, młodzieży i dzieci, wesela i przyjęcia weselne, wieczory panieńskie i kawalerskie, imprezy z okazji 15. urodzin, komunie, baby shower, imprezy firmowe, kolacje firmowe, spotkania biznesowe, prezentacje i team building."
+      },
+      {
+        "question": "Jakie dodatkowe usługi są dostępne?",
+        "answer": "Oprócz cateringu i otwartego baru oferujemy profesjonalnego DJ-a, karaoke, PhotoMax 360, candy bar i stół ze słodkościami, spersonalizowaną dekorację i profesjonalny system AV. Wszystko zarządzane przez nasz zespół, abyś mógł po prostu się cieszyć."
+      },
+      {
+        "question": "Jak można zarezerwować salę?",
+        "answer": "Możesz skontaktować się z nami telefonicznie pod numerem +34 636 433 911 lub +34 660 221 267, lub przez formularz kontaktowy na naszej stronie. Jesteśmy dostępni każdego dnia po wcześniejszym umówieniu."
+      },
+      {
+        "question": "Czy w salach można oglądać mecze na żywo?",
+        "answer": "Tak. Nasze sale są wyposażone w profesjonalny system AV z ekranem i znajdują się 5 minut spacerem od stadionu Santiago Bernabéu. Są idealne do organizacji prywatnego seansu dowolnego meczu lub wydarzenia na żywo, z cateringiem i otwartym barem."
+      }
+    ]
+  }
 }

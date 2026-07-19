@@ -23,6 +23,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${seoConfig.siteUrl}/sitemap.xml`,
-    host: seoConfig.siteUrl.replace(/^https?:\/\//, ''),
   };
 }

@@ -1,6 +1,11 @@
 import { seoConfig } from '@/config/seo.config';
 import { siteConfig } from '@/config/site.config';
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 const localeToBcp47: Record<string, string> = {
   es: 'es-ES',
   en: 'en-GB',
@@ -13,7 +18,7 @@ const localeToBcp47: Record<string, string> = {
   ru: 'ru-RU',
 };
 
-export function buildJsonLdGraph(locale: string) {
+export function buildJsonLdGraph(locale: string, faqItems: FaqItem[]) {
   const siteUrl = seoConfig.siteUrl;
   const inLanguage = localeToBcp47[locale] ?? locale;
 
@@ -28,7 +33,7 @@ export function buildJsonLdGraph(locale: string) {
       '@value': entry.value,
     })),
     url: siteUrl,
-    mainEntityOfPage: `${siteUrl}/`,
+    mainEntityOfPage: `${siteUrl}/${locale}`,
     telephone: siteConfig.contact.phone.replace(/\s+/g, ''),
     email: siteConfig.contact.email,
     priceRange: seoConfig.business.priceRange,
@@ -54,7 +59,7 @@ export function buildJsonLdGraph(locale: string) {
       latitude: seoConfig.geo.coordinates.latitude,
       longitude: seoConfig.geo.coordinates.longitude,
     },
-    hasMap: seoConfig.geo.googleMapsCid,
+    hasMap: seoConfig.geo.googleMapsUrl,
     areaServed: seoConfig.areasServed.map((area) => ({
       '@type': area.type,
       name: area.name,
@@ -69,13 +74,6 @@ export function buildJsonLdGraph(locale: string) {
       description: seoConfig.business.openingHours.description,
     },
     sameAs: [siteConfig.social.instagram.url, siteConfig.social.facebook.url],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: String(seoConfig.business.aggregateRating.ratingValue),
-      ratingCount: String(seoConfig.business.aggregateRating.ratingCount),
-      bestRating: String(seoConfig.business.aggregateRating.bestRating),
-      worstRating: String(seoConfig.business.aggregateRating.worstRating),
-    },
     amenityFeature: seoConfig.amenities.map((amenity) => ({
       '@type': 'LocationFeatureSpecification',
       name: amenity.name,
@@ -117,12 +115,10 @@ export function buildJsonLdGraph(locale: string) {
     publisher: { '@id': seoConfig.schemaIds.organization },
   };
 
-  const localeFaq =
-    seoConfig.faq[locale as keyof typeof seoConfig.faq] ?? seoConfig.faq.es;
   const faqPage = {
     '@type': 'FAQPage',
     '@id': `${siteUrl}/${locale}#faq`,
-    mainEntity: localeFaq.map((item) => ({
+    mainEntity: faqItems.map((item) => ({
       '@type': 'Question',
       name: item.question,
       acceptedAnswer: {

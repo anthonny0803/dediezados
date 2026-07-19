@@ -1,18 +1,28 @@
+/*
+ * Location ("Ubicación") section — Lovable two-column layout.
+ *
+ * Like #services, this section has its own inner max-w-7xl container, so it opts
+ * out of the legacy `section {}` cap (max-width: 1400px) with id specificity
+ * to go full-bleed, and paints its own secondary/30 band directly. The band
+ * was previously drawn full-bleed via bands.css (#location::before); that hook
+ * is removed now that the section is full-bleed and paints its own background.
+ */
 #location {
-  padding: 90px 5%;
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  max-width: none;
+  margin: 0;
+  padding: 6rem 1.5rem;
+  background: color-mix(in oklab, var(--dd-secondary) 30%, var(--dd-background));
 }
 
-/* Map container */
+/*
+ * The Google Maps widget renders this `.map-container`. It sits inside the
+ * Lovable map frame (rounded-3xl + border + shadow-elegant + overflow-hidden),
+ * which owns the border and radius, so the container just fills it.
+ */
 .map-container {
   width: 100%;
-  height: 550px;
+  height: 100%;
   background: var(--surface-2);
-  border-radius: var(--radius-md);
-  border: var(--border-card);
   position: relative;
   overflow: hidden;
 }
@@ -28,33 +38,8 @@
   font-size: 1rem;
 }
 
-/* Suspense fallback */
-.location-loader {
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gray);
-  font-size: 1rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   #location {
-    padding: 70px 5%;
-  }
-
-  .map-container {
-    height: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  #location {
-    padding: 56px 5%;
-  }
-
-  .map-container {
-    height: 350px;
+    padding: 4rem 1.5rem;
   }
 }

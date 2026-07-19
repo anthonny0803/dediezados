@@ -1,19 +1,23 @@
 {
+  "common": {
+    "close": "Schließen"
+  },
   "brand": {
     "name": "De Diez a Dos",
     "slogan": "Madrid Events - Eventlocations",
     "description": "Vermietung eleganter Räumlichkeiten und Komplettservice für jede Art von Veranstaltung"
   },
   "nav": {
+    "menuToggle": "Navigationsmenü",
     "home": "Start",
-    "services": "Leistungen",
     "catering": "Catering",
-    "extras": "Extras",
     "gallery": "Säle",
     "contact": "Kontakt",
     "location": "Standort",
     "reviews": "Bewertungen",
-    "about": "Über uns"
+    "about": "Über uns",
+    "events": "Veranstaltungen",
+    "services": "Unsere Services"
   },
   "theme": {
     "toggleLabel": "Theme wechseln",
@@ -24,6 +28,7 @@
   "hero": {
     "carouselLabel": "Karussell-Folien",
     "slideLabel": "Zu Folie {index} gehen",
+    "badge": "5 Minuten vom Santiago Bernabéu entfernt",
     "slides": [
       {
         "title": "Ihr privater Raum im Herzen Madrids",
@@ -46,39 +51,14 @@
         "outlineCta": "Mehr erfahren",
         "alt": "Saal fuer Firmenevents und Geschaeftstreffen in Madrid"
       }
-    ]
-  },
-  "services": {
-    "title": "Professionelle Leistungen",
-    "subtitle": "Komplettpakete mit allem, was Sie für Ihre Veranstaltung brauchen",
-    "items": [
-      {
-        "title": "Exklusiver Raum",
-        "description": "Lokal mit zwei exklusiven Räumen, privatem Zugang und einer komplett reservierten Atmosphäre. Bequemes Mobiliar und anpassbare Beleuchtung. Wir arbeiten mit Sorgfalt und Nähe und koordinieren jedes Detail, damit Ihre Veranstaltung perfekt verläuft."
-      },
-      {
-        "title": "Audio-Visual-System",
-        "description": "Professioneller Sound und hochwertige Bildschirme bereits im Raum installiert. Unser technisches Team sorgt dafür, dass während der Veranstaltung alles einwandfrei funktioniert. Anpassbare Beleuchtung und Atmosphären passend zu Ihrem Stil: elegant, modern oder festlich. Qualität und Komfort, ohne Aufbauaufwand."
-      },
-      {
-        "title": "Catering De Diez a Dos",
-        "description": "Über 14 Jahre, in denen wir unseren Kunden zugehört und jedes Angebot verfeinert haben. Das Ergebnis: ausgewogene und vielseitige Menüs, die zu jeder Gelegenheit passen. Qualität, schöne Präsentation und Optionen, die zu jeder Art von Veranstaltung passen."
-      },
-      {
-        "title": "Open Bar",
-        "description": "Unsere Bar passt sich jeder Veranstaltung an. Wir bieten verschiedene Optionen je nach gebuchtem Paket, damit Sie das Format wählen können, das am besten zu Ihrer Feier passt. Flexibilität und professioneller Service zu jeder Zeit."
-      },
-      {
-        "title": "Professionelles Personal",
-        "description": "Bar-, Service- und Einlasspersonal, das für Sicherheit und Komfort sorgt. Ein effizientes und diskretes Team. Bei unerwarteten Situationen liefern wir schnelle und qualitativ hochwertige Lösungen. Einfacher und lösungsorientierter Service."
-      },
-      {
-        "title": "Zusatzleistungen",
-        "description": "Wir bieten optionale Extras, um Ihre Veranstaltung abzurunden: individuelle Dekoration, DJ, Süßigkeitenbuffet, Süßigkeitenwagen und Photomax 360. Sie wählen, was Sie hinzufügen möchten, immer mit klaren Preisen und ohne Überraschungen."
-      }
+    ],
+    "stats": [
+      { "label": "Ausgerichtete Events" },
+      { "label": "Persönliche Betreuung" }
     ]
   },
   "catering": {
+    "label": "Catering",
     "title": "Catering De Diez a Dos",
     "subtitle": "Genießen Sie die wundervolle Aufmerksamkeit und persönliche Betreuung, die wir bei jeder Veranstaltung bieten. Unser Team setzt alles daran, Ihren besonderen Anlass zu einem unvergesslichen Moment zu machen, indem wir auf jedes Detail achten, damit Sie und Ihre Gäste sich wie zu Hause fühlen.",
     "badge": "Spezialität",
@@ -110,31 +90,28 @@
     ]
   },
   "gallery": {
+    "label": "Galerie",
     "title": "Säle",
     "subtitle": "Entdecken Sie unsere eleganten Säle, gestaltet, um die perfekte Atmosphäre für Ihre besondere Veranstaltung zu schaffen",
-    "scrollLeftLabel": "Galerie nach links scrollen",
-    "scrollRightLabel": "Galerie nach rechts scrollen",
-    "expandedAlt": "Vergrößertes Bild",
     "rooms": {
       "olas": "Saal Olas",
       "amazonias": "Saal Amazonias"
     },
     "photos": [
-      { "room": "olas", "alt": "Saal Olas für private Events in Madrid - Hauptansicht" },
-      { "room": "olas", "alt": "Saal Olas - Raum für Feiern und Partys in Madrid" },
-      { "room": "olas", "alt": "Saal Olas - elegante Atmosphäre für Events in der Nähe des Bernabéu" },
-      { "room": "olas", "alt": "Saal Olas - Dekoration und Mobiliar für Events in Madrid" },
-      { "room": "amazonias", "alt": "Saal Amazonias für exklusive Events in Madrid - Hauptansicht" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Raum für Hochzeiten und Feiern in Madrid" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Saalvermietung für Geburtstage und Partys" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Premium-Atmosphäre für Firmenevents" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Beleuchtung und Dekoration für private Events" },
-      { "room": "amazonias", "alt": "Saal Amazonias - Komplettraum für Feiern in Madrid" }
+      { "alt": "Saal Olas für private Events in Madrid - Hauptansicht" },
+      { "alt": "Saal Olas - Raum für Feiern und Partys in Madrid" },
+      { "alt": "Saal Olas - elegante Atmosphäre für Events in der Nähe des Bernabéu" },
+      { "alt": "Saal Olas - Dekoration und Mobiliar für Events in Madrid" },
+      { "alt": "Saal Amazonias für exklusive Events in Madrid - Hauptansicht" },
+      { "alt": "Saal Amazonias - Raum für Hochzeiten und Feiern in Madrid" },
+      { "alt": "Saal Amazonias - Saalvermietung für Geburtstage und Partys" },
+      { "alt": "Saal Amazonias - Premium-Atmosphäre für Firmenevents" },
+      { "alt": "Saal Amazonias - Beleuchtung und Dekoration für private Events" },
+      { "alt": "Saal Amazonias - Komplettraum für Feiern in Madrid" }
     ]
   },
   "extras": {
     "title": "Verfügbare Extras",
-    "subtitle": "Runden Sie Ihre Veranstaltung mit zusätzlichen Services ab, die den Unterschied machen",
     "recommendedForLabel": "Empfohlen für:",
     "items": [
       {
@@ -195,7 +172,9 @@
     ]
   },
   "contact": {
-    "title": "Unverbindlich - Sprechen wir über Ihr Event",
+    "label": "Unverbindlich",
+    "title": "Sprechen wir über",
+    "titleAccent": "Ihr Event",
     "subtitle": "Erzählen Sie uns Ihre Vision und wir helfen Ihnen, sie zu verwirklichen",
     "form": {
       "sectionTitle": "Kontaktdaten",
@@ -244,31 +223,167 @@
     }
   },
   "location": {
-    "title": "Unser Standort",
-    "subtitle": "Finden Sie uns im Herzen Madrids",
+    "label": "Standort",
+    "title": "Im Herzen",
+    "titleAccent": "Madrids",
+    "description": "Nur wenige Schritte von allem entfernt, in einer der besten Gegenden der Stadt.",
     "map": {
       "reviewsCount": "({count} Bewertungen)",
       "directions": "Wegbeschreibung"
     }
   },
   "reviews": {
-    "title": "Was unsere Kunden sagen",
-    "subtitle": "Echte Erfahrungen von unvergesslichen Veranstaltungen",
+    "label": "Bewertungen",
+    "title": "Was unsere",
+    "titleAccent": "Kunden sagen",
+    "ratingSummary": "{rating} / 5 · {count} Bewertungen auf Google",
     "loading": "Bewertungen werden geladen...",
     "empty": "Keine Bewertungen verfügbar.",
     "viewAll": "Alle Bewertungen auf Google ansehen",
+    "readMore": "Mehr anzeigen",
     "googleBadgeTitle": "Veröffentlicht auf Google",
-    "defaultUser": "Google-Nutzer"
+    "defaultUser": "Google-Nutzer",
+    "prevReview": "Vorherige Bewertung",
+    "nextReview": "Nächste Bewertung",
+    "goToReview": "Zur Bewertung {number}"
   },
   "footer": {
     "tagline": "Ihr privater Raum im Herzen Madrids",
     "legal": "De Diez a Dos Private Event, S.L.U.",
     "copyright": "© {year} De Diez a Dos. Alle Rechte vorbehalten.",
     "slogan": "Über ein Jahrzehnt unvergessliche Events kreieren",
-    "keywords": "Eventlocations Madrid | Saalvermietung Geburtstag Madrid | Günstige Privatevents | Partys nahe Santiago Bernabéu | Günstiger Geburtstagssaal Madrid | Günstiges Eventcatering | Günstige Feiern Madrid | Lokalvermietung Partys Madrid | Events am Bernabéu | Günstige Hochzeitssäle | Privatpartys günstiger Preis | Saal reservieren Madrid Zentrum | Räume für Feiern Madrid | Events am Stadion Santiago Bernabéu | Günstige Saalvermietung mit Catering | Günstiges Geburtstagsevent Madrid | Firmenfeiern Madrid | Eventsaal wettbewerbsfähige Preise | Unvergessliche Feiern Madrid | Eventsaal Madrid Zentrum | De Diez a Dos Madrid",
     "partnersIntro": "Strategische Partner:",
     "partnerCapifix": "Capifix | Integrale Logistik",
-    "devLabel": "Dev:"
+    "devLabel": "Dev:",
+    "contactTitle": "Kontakt",
+    "exploreTitle": "Entdecken",
+    "socialTitle": "Folgen Sie uns",
+    "instagramAria": "Folgen Sie uns auf Instagram",
+    "facebookAria": "Folgen Sie uns auf Facebook"
   },
-  "logoAlt": "De Diez a Dos Logo"
+  "logoAlt": "De Diez a Dos Logo",
+  "events": {
+    "label": "Unsere Veranstaltungen",
+    "title": "Jede Feier,",
+    "titleAccent": "ein einzigartiges Universum",
+    "subtitle": "Wir passen unseren Raum und Service an, damit Ihre Veranstaltung genau so wird, wie Sie sie sich vorstellen.",
+    "items": [
+      {
+        "title": "Hochzeiten",
+        "description": "Eine intime oder große Feier, bis ins letzte Detail geplant.",
+        "alt": "Braut tanzt mit Gästen auf einer Hochzeitsfeier in Madrid"
+      },
+      {
+        "title": "Geburtstage",
+        "description": "DJ, Beleuchtung und Catering nach Maß für eine unvergessliche Nacht.",
+        "alt": "Dekorierter Saal für eine Geburtstagsfeier in Madrid"
+      },
+      {
+        "title": "15. Geburtstag",
+        "description": "Der Traumtag: Walzer, Inszenierung und professionelle Produktion.",
+        "alt": "Mädchen tanzen auf einer Feier zum 15. Geburtstag mit violettem Licht in Madrid"
+      },
+      {
+        "title": "Firmenevents",
+        "description": "Produktvorstellungen, Galas und Kongresse mit erstklassiger Audiotechnik.",
+        "alt": "Anstoßen bei einem Firmenevent unter blauem Licht in Madrid"
+      },
+      {
+        "title": "Live-Spiele",
+        "description": "Erleben Sie jedes Spiel von Real Madrid auf der Großleinwand, 5 Minuten vom Bernabéu entfernt.",
+        "alt": "Privater Raum zum Fußballschauen in der Nähe des Bernabéu in Madrid"
+      },
+      {
+        "title": "Meetings",
+        "description": "Private Räume für Treffen, Präsentationen und Workshops.",
+        "alt": "Berufstätige im Gespräch an der Bar in Madrid"
+      }
+    ]
+  },
+  "services": {
+    "label": "Unsere Services",
+    "title": "Ein Ort zum",
+    "titleAccent": "Strahlen",
+    "description": "Zeitgemäßes Design, ausgefeilte Akustik und intelligente Beleuchtung, damit jede Veranstaltung Ihren Erwartungen gerecht wird.",
+    "includedTitle": "Bei Ihrer Veranstaltung inklusive",
+    "included": [
+      {
+        "title": "Exklusiver Raum",
+        "description": "Zwei exklusive Räume mit privatem Zugang und ganz privater Atmosphäre.",
+        "features": [
+          "Zwei unabhängige Räume",
+          "Privater Zugang für Ihre Gruppe",
+          "Volle Privatsphäre während des Events"
+        ]
+      },
+      {
+        "title": "Audio-Visual-System",
+        "description": "Professioneller Sound, Bildschirme und anpassbare Beleuchtung bereits vor Ort installiert.",
+        "features": [
+          "Professionelle Tonanlage installiert",
+          "Bildschirme für Videos und Spiele",
+          "Anpassbare LED-Beleuchtung"
+        ]
+      },
+      {
+        "title": "Catering De Diez a Dos",
+        "description": "Ausgewogene, vielseitige Menüs mit über 14 Jahren Erfahrung.",
+        "features": [
+          "Menüs nach Maß für jedes Event",
+          "Über 14 Jahre Erfahrung",
+          "Optionen für jeden Geschmack"
+        ]
+      },
+      {
+        "title": "Open Bar",
+        "description": "Flexible Optionen je nach gebuchtem Paket, mit professionellem Service jederzeit.",
+        "features": [
+          "Flexible Pakete je nach Plan",
+          "Bier, Longdrinks und Softdrinks",
+          "Professioneller Barservice"
+        ]
+      },
+      {
+        "title": "Professionelles Personal",
+        "description": "Kellner, Barpersonal und Zugangskontrolle für Ihre Sicherheit und Ihren Komfort.",
+        "features": [
+          "Kellner und Barpersonal",
+          "Einlasskontrolle am Eingang",
+          "Betreuung während des gesamten Events"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Häufige",
+    "titleAccent": "Fragen",
+    "subtitle": "Alles, was Sie vor der Buchung Ihres Events wissen müssen.",
+    "items": [
+      {
+        "question": "Ist Catering im Raumpreis enthalten?",
+        "answer": "Ja. Wir haben unseren eigenen Cateringservice mit über 14 Jahren Erfahrung. Individuelle Menüs, Open Bar und professionelles Servicepersonal sind im Mietpreis enthalten, alles auf Ihre Feier abgestimmt."
+      },
+      {
+        "question": "Wo befindet sich De Diez a Dos?",
+        "answer": "Wir befinden uns in der Travesía Doctor Fleming 16, Local 12, 28036 Madrid, neben dem Stadion Santiago Bernabéu, im Stadtteil Chamartín. Sehr gut mit U-Bahn und Auto erreichbar, in der Nähe von Nuevos Ministerios."
+      },
+      {
+        "question": "Welche Veranstaltungsarten können bei De Diez a Dos abgehalten werden?",
+        "answer": "Wir veranstalten alle Arten von privaten Events: Geburtstage für Erwachsene, Jugendliche und Kinder, Hochzeiten und Empfänge, Junggesellinnen- und Junggesellenabschiede, Quinceañeras, Kommunionen, Babypartys, Firmenveranstaltungen, Firmendinner, Geschäftstreffen, Präsentationen und Teambuilding."
+      },
+      {
+        "question": "Welche zusätzlichen Services stehen zur Verfügung?",
+        "answer": "Neben Catering und Open Bar bieten wir einen professionellen DJ, Karaoke, PhotoMax 360, Candy Bar und Desserttisch, individuelle Dekoration und ein professionelles AV-System. Alles von unserem Team organisiert, damit Sie einfach genießen können."
+      },
+      {
+        "question": "Wie kann man den Raum buchen?",
+        "answer": "Sie können uns telefonisch unter +34 636 433 911 oder +34 660 221 267 erreichen, oder über das Kontaktformular auf unserer Website. Wir sind jeden Tag nach Vereinbarung erreichbar."
+      },
+      {
+        "question": "Kann man in den Räumen Spiele live schauen?",
+        "answer": "Ja. Unsere Räume verfügen über ein professionelles AV-System mit Leinwand und liegen 5 Gehminuten vom Stadion Santiago Bernabéu entfernt. Sie eignen sich perfekt für eine private Viewing-Party für jedes Spiel oder Live-Event, mit Catering und Open Bar."
+      }
+    ]
+  }
 }

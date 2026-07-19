@@ -1,3 +1,6 @@
+/* TAILWIND (v4 entry + design tokens) */
+@import url('./tailwind.css');
+
 /* BASE */
 @import url('./base/reset.css');
 @import url('./base/tokens.css');
@@ -8,6 +11,7 @@
 @import url('./components/buttons.css');
 @import url('./components/locale-switcher.css');
 @import url('./components/theme-toggle.css');
+@import url('./components/datepicker.css');
 
 /* LAYOUT */
 @import url('./layout/navbar.css');
@@ -16,12 +20,12 @@
 @import url('./layout/logo.css');
 
 /* SECTIONS */
-@import url('./sections/common.css');
 @import url('./sections/hero.css');
+@import url('./sections/events.css');
 @import url('./sections/services.css');
 @import url('./sections/catering.css');
-@import url('./sections/extras.css');
 @import url('./sections/gallery.css');
 @import url('./sections/contact.css');
 @import url('./sections/location.css');
 @import url('./sections/reviews.css');
+@import url('./sections/faq.css');

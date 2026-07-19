@@ -1,46 +1,264 @@
+'use client';
+
+import { Fragment, useState } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import {
+  Building2,
+  Music,
+  Utensils,
+  Wine,
+  Users,
+  Mic,
+  Camera,
+  Headphones,
+  Cake,
+  Palette,
+  Check,
+  type LucideIcon,
+} from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 
-const SERVICE_ICONS = [
-  <svg key="building" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" /><path d="M9 22V12h6v10" /><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01" /></svg>,
-  <svg key="speaker" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg>,
-  <svg key="utensils" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /><path d="M7 2v20" /><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" /></svg>,
-  <svg key="glass" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M8 22h8" /><path d="M12 11v11" /><path d="m19 3-7 8-7-8Z" /></svg>,
-  <svg key="users" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>,
-  <svg key="sparkles" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3Z" /></svg>,
-];
-
-interface ServiceItem {
+interface IncludedContent {
   title: string;
   description: string;
+  features: string[];
 }
+
+interface ExtraContent {
+  title: string;
+  description: string;
+  features: string[];
+  recommendedFor: string;
+}
+
+interface ServiceItem {
+  icon: string;
+  image: string;
+  title: string;
+  description: string;
+  features: string[];
+  recommendedFor?: string;
+}
+
+const iconMap: Record<string, LucideIcon> = {
+  building: Building2,
+  music: Music,
+  utensils: Utensils,
+  wine: Wine,
+  users: Users,
+  mic: Mic,
+  camera: Camera,
+  headphones: Headphones,
+  cake: Cake,
+  palette: Palette,
+};
 
 export const Services = () => {
   const t = useTranslations('services');
-  const items = t.raw('items') as ServiceItem[];
-  const services = items.slice(0, siteConfig.servicesCount);
+  const tExtras = useTranslations('extras');
+
+  const includedContent = t.raw('included') as IncludedContent[];
+  const included: ServiceItem[] = siteConfig.services.included.map(
+    (config, index) => ({ ...config, ...includedContent[index] }),
+  );
+  const extrasContent = tExtras.raw('items') as ExtraContent[];
+  const extras: ServiceItem[] = siteConfig.extras.map((config, index) => ({
+    ...config,
+    ...extrasContent[index],
+  }));
+  const items = [...included, ...extras];
+
+  const [activeItem, setActiveItem] = useState(0);
+  const activeService = items[activeItem];
+
+  const renderItem = (item: ServiceItem, index: number) => {
+    const Icon = iconMap[item.icon];
+    const isActive = index === activeItem;
+    return (
+      <Fragment key={item.title}>
+        <button
+          type="button"
+          onMouseEnter={() => setActiveItem(index)}
+          onClick={() => setActiveItem(index)}
+          aria-pressed={isActive}
+          className={`group flex items-center gap-4 rounded-2xl border p-5 text-left transition-smooth ${
+            isActive
+              ? 'border-primary/50 bg-primary/5 shadow-soft'
+              : 'border-border hover:border-primary/30 hover:bg-card/50'
+          }`}
+        >
+          <span
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl transition-smooth ${
+              isActive
+                ? 'bg-gradient-primary text-primary-foreground'
+                : 'bg-muted text-foreground'
+            }`}
+          >
+            {Icon ? <Icon className="h-5 w-5" /> : null}
+          </span>
+          <span className="flex-1 font-display text-xl font-semibold">
+            {item.title}
+          </span>
+          <span
+            aria-hidden="true"
+            className={`text-2xl text-primary transition-smooth ${
+              isActive ? 'translate-x-0 opacity-100' : '-translate-x-2 opacity-0'
+            }`}
+          >
+            →
+          </span>
+        </button>
+        {/* Mobile accordion: the detail unfolds right under the tapped item,
+            since the desktop pane sits off-screen. */}
+        {isActive && (
+          <div className="overflow-hidden rounded-2xl border border-border bg-card/50 lg:hidden">
+            <div className="relative aspect-video overflow-hidden">
+              <Image
+                src={item.image}
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="100vw"
+                className="scale-110 object-cover blur-lg"
+              />
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="100vw"
+                className="object-contain"
+              />
+            </div>
+            <div className="p-5">
+              <p className="text-sm text-muted-foreground">
+                {item.description}
+              </p>
+              <ul className="mt-4 grid gap-2">
+                {item.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2 text-sm">
+                    <Check
+                      aria-hidden="true"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-primary"
+                    />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              {item.recommendedFor && (
+                <p className="mt-4 text-sm text-muted-foreground">
+                  <strong className="font-semibold text-foreground">
+                    {tExtras('recommendedForLabel')}
+                  </strong>{' '}
+                  {item.recommendedFor}
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+      </Fragment>
+    );
+  };
 
   return (
     <section id="services">
-      <h2 className="section-title" data-aos="fade-up">
-        {t('title')}
-      </h2>
-      <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-        {t('subtitle')}
-      </p>
-      <div className="services-grid">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="card service-card"
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-          >
-            <div className="service-icon">{SERVICE_ICONS[index]}</div>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
+      <div className="mx-auto max-w-7xl">
+        <div className="mx-auto mb-16 max-w-2xl text-center">
+          <span className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
+            — {t('label')}
+          </span>
+          <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-6xl">
+            {t('title')}
+            <span className="block italic leading-tight text-gradient-primary">
+              {t('titleAccent')}
+            </span>
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            {t('description')}
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-5">
+          <div className="flex flex-col gap-2 lg:col-span-2">
+            <h3 className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-primary">
+              {t('includedTitle')}
+            </h3>
+            {included.map((item, index) => renderItem(item, index))}
+            <h3 className="mb-2 mt-6 text-xs font-medium uppercase tracking-[0.2em] text-primary">
+              {tExtras('title')}
+            </h3>
+            {extras.map((item, index) =>
+              renderItem(item, included.length + index),
+            )}
           </div>
-        ))}
+
+          <div className="relative hidden overflow-hidden rounded-3xl border border-border bg-card/50 shadow-elegant lg:block lg:col-span-3 lg:min-h-[520px]">
+            <div className="lg:absolute lg:inset-0">
+              {items.map((item, index) => {
+                const isActive = index === activeItem;
+                return (
+                  <div
+                    key={item.title}
+                    aria-hidden={!isActive}
+                    className={`absolute inset-0 transition-smooth ${
+                      isActive
+                        ? 'scale-100 opacity-100'
+                        : 'pointer-events-none scale-105 opacity-0'
+                    }`}
+                  >
+                    <Image
+                      src={item.image}
+                      alt=""
+                      aria-hidden="true"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="scale-110 object-cover blur-lg"
+                    />
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="object-contain"
+                    />
+                    <div className="absolute inset-0 hidden bg-gradient-to-t from-black/90 via-black/55 via-45% to-transparent to-85% lg:block" />
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="p-6 md:p-8 lg:absolute lg:inset-x-0 lg:bottom-0">
+              <h4 className="font-display text-2xl font-bold md:text-3xl lg:text-white">
+                {activeService.title}
+              </h4>
+              <p className="mt-2 text-muted-foreground lg:text-white/85">
+                {activeService.description}
+              </p>
+              <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                {activeService.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-start gap-2 text-sm lg:text-white/90"
+                  >
+                    <Check
+                      aria-hidden="true"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-primary"
+                    />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              {activeService.recommendedFor && (
+                <p className="mt-5 text-sm text-muted-foreground lg:text-white/80">
+                  <strong className="font-semibold text-foreground lg:text-white">
+                    {tExtras('recommendedForLabel')}
+                  </strong>{' '}
+                  {activeService.recommendedFor}
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

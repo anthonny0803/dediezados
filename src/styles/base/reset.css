@@ -1,30 +1,61 @@
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  /* Tailwind preflight is omitted during the legacy/Tailwind coexistence, so
+     <button> keeps the user-agent grey (ButtonFace). New Tailwind buttons
+     (Events/Space) have no resting background and would show that grey.
+     Reset it so they stay transparent like the design reference; legacy
+     buttons set their own background via classes and are unaffected. */
+  button {
+    background-color: transparent;
+    background-image: none;
+  }
 
-body {
-  font-family: var(--font-primary);
-  background: var(--surface-0);
-  color: var(--black);
-  overflow-x: hidden;
-  line-height: 1.6;
-  position: relative;
-}
+  /* Same preflight-omission context: without it, <a> keeps the user-agent link
+     styling (blue/purple color and underline). Mirror Tailwind preflight so
+     links inherit their surroundings; color/decoration utility classes still
+     win because they live in the higher `utilities` layer. */
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 
-/* Background */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: var(--bg-page-gradient);
-  z-index: -3;
-  pointer-events: none;
-  transition: background 0.3s ease;
+  /* Same preflight-omission context: without it, ul/ol keep the user-agent
+     disc/decimal markers. Every list in the app is navigational or decorated
+     with its own icons, so mirror Tailwind preflight and drop the markers. */
+  ol,
+  ul,
+  menu {
+    list-style: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-primary);
+    background: var(--surface-0);
+    color: var(--black);
+    overflow-x: hidden;
+    line-height: 1.6;
+    position: relative;
+  }
+
+  /* Page background: flat design-reference base (Fase 2 redesign).
+     Replaces the legacy decorative teal gradient (--bg-page-gradient). */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--dd-background);
+    z-index: -3;
+    pointer-events: none;
+    transition: background 0.3s ease;
+  }
 }

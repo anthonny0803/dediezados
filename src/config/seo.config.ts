@@ -1,5 +1,5 @@
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dediezados.com';
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.dediezados.com';
 
 export interface ImageAsset {
   url: string;
@@ -28,18 +28,6 @@ export interface ServiceOffering {
   name: string;
   description: string;
   areaServed: string;
-}
-
-export interface AggregateRating {
-  ratingValue: number;
-  ratingCount: number;
-  bestRating: number;
-  worstRating: number;
-}
-
-export interface FaqItem {
-  question: string;
-  answer: string;
 }
 
 export interface LocaleMetadata {
@@ -108,7 +96,7 @@ export const seoConfig = {
       latitude: 40.455601,
       longitude: -3.6878855,
     },
-    googleMapsCid: 'https://www.google.com/maps?cid=dediezados',
+    googleMapsUrl: `https://www.google.com/maps/search/?api=1&query=Google&query_place_id=${process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID ?? ''}`,
   },
 
   areasServed: [
@@ -130,12 +118,6 @@ export const seoConfig = {
       'Efectivo, Tarjeta de crédito, Transferencia bancaria, Bizum',
     maximumAttendeeCapacity: 100,
     yearsOfExperience: 14,
-    aggregateRating: {
-      ratingValue: 5,
-      ratingCount: 200,
-      bestRating: 5,
-      worstRating: 1,
-    } satisfies AggregateRating,
     openingHours: {
       dayOfWeek: [
         'Monday',
@@ -408,363 +390,20 @@ export const seoConfig = {
   ] satisfies ContactPointSeo[],
 
   // ============================================================
-  // FAQ por locale — FAQPage JSON-LD (People Also Ask en Google)
-  // ============================================================
-
-  faq: {
-    es: [
-      {
-        question: '¿Cuántas personas tienen capacidad las salas de De Diez a Dos?',
-        answer:
-          'Nuestras salas tienen capacidad para hasta 100 personas, perfectas para celebraciones íntimas y grupos medianos. Disponemos de dos salas privadas que pueden adaptarse a distintas configuraciones según el tipo de evento.',
-      },
-      {
-        question: '¿El catering está incluido en el alquiler de la sala?',
-        answer:
-          'Sí. Contamos con catering propio con más de 14 años de experiencia. Ofrecemos menús personalizados, barra libre y servicio de personal profesional incluidos en el alquiler, todo adaptado al tipo de celebración.',
-      },
-      {
-        question: '¿Dónde está ubicado De Diez a Dos?',
-        answer:
-          'Estamos en Travesía Doctor Fleming 16, Local 12, 28036 Madrid, junto al estadio Santiago Bernabéu, en el barrio de Chamartín. Muy bien comunicado en metro y en coche, cerca de Nuevos Ministerios.',
-      },
-      {
-        question: '¿Qué tipos de eventos se pueden celebrar en De Diez a Dos?',
-        answer:
-          'Celebramos todo tipo de eventos privados: cumpleaños de adultos, jóvenes e infantiles, bodas y postbodas, despedidas de soltera y soltero, fiestas de 15 años, comuniones, baby showers, eventos corporativos, cenas de empresa, reuniones de trabajo, presentaciones y team building.',
-      },
-      {
-        question: '¿Qué servicios adicionales están disponibles?',
-        answer:
-          'Además de catering y barra libre, ofrecemos DJ profesional, karaoke, PhotoMax 360, mesa dulce y candy bar, decoración personalizada y sistema audiovisual profesional. Todo gestionado por nuestro equipo para que solo tengas que disfrutar.',
-      },
-      {
-        question: '¿Cómo se puede reservar la sala?',
-        answer:
-          'Puedes contactarnos por teléfono en el +34 636 433 911 o el +34 660 221 267, o a través del formulario de contacto en nuestra web. Atendemos todos los días con cita previa.',
-      },
-      {
-        question: '¿Se puede ver un partido del Real Madrid en las salas?',
-        answer:
-          'Sí. Nuestras salas cuentan con sistema audiovisual profesional con pantalla y están a menos de 10 minutos caminando del estadio Santiago Bernabéu. Son perfectas para organizar una quedada privada para ver el partido con catering y barra libre.',
-      },
-    ],
-    en: [
-      {
-        question: 'How many people can the De Diez a Dos event rooms accommodate?',
-        answer:
-          'Our rooms accommodate up to 100 guests, ideal for intimate celebrations and medium-sized groups. We have two private rooms that can be configured in different layouts depending on your event type.',
-      },
-      {
-        question: 'Is catering included in the room rental?',
-        answer:
-          'Yes. We have our own in-house catering service with over 14 years of experience. Custom menus, open bar and professional serving staff are all included in the rental price, tailored to your celebration.',
-      },
-      {
-        question: 'Where is De Diez a Dos located?',
-        answer:
-          'We are located at Travesía Doctor Fleming 16, Local 12, 28036 Madrid, next to Santiago Bernabéu stadium, in the Chamartín neighbourhood. Excellent connections by metro and car, near Nuevos Ministerios.',
-      },
-      {
-        question: 'What types of events can be held at De Diez a Dos?',
-        answer:
-          'We host all kinds of private events: adult, teen and children\'s birthdays, weddings and post-wedding celebrations, bachelorette and bachelor parties, 15th birthday parties, communions, baby showers, corporate events, company dinners, business meetings, presentations and team building.',
-      },
-      {
-        question: 'What additional services are available?',
-        answer:
-          'In addition to catering and open bar, we offer a professional DJ, karaoke, PhotoMax 360, candy bar and dessert table, personalised decoration and a professional AV system. Everything managed by our team so you can simply enjoy the event.',
-      },
-      {
-        question: 'How can I book the venue?',
-        answer:
-          'You can contact us by phone at +34 636 433 911 or +34 660 221 267, or through the contact form on our website. We are available every day by appointment.',
-      },
-      {
-        question: 'Can I watch a Real Madrid match at De Diez a Dos?',
-        answer:
-          'Yes. Our rooms feature a professional AV system with a screen and are less than a 10-minute walk from Santiago Bernabéu stadium. They are perfect for organising a private viewing party with catering and open bar.',
-      },
-    ],
-    fr: [
-      {
-        question: 'Quelle est la capacité des salles de De Diez a Dos ?',
-        answer:
-          "Nos salles accueillent jusqu'à 100 personnes, idéales pour des célébrations intimes et des groupes de taille moyenne. Nous disposons de deux salles privées pouvant être configurées selon le type d'événement.",
-      },
-      {
-        question: 'Le traiteur est-il inclus dans la location de la salle ?',
-        answer:
-          "Oui. Nous disposons de notre propre service traiteur avec plus de 14 ans d'expérience. Des menus personnalisés, un bar ouvert et un personnel de service professionnel sont inclus dans la location, le tout adapté à votre célébration.",
-      },
-      {
-        question: 'Où se trouve De Diez a Dos ?',
-        answer:
-          "Nous sommes situés au Travesía Doctor Fleming 16, Local 12, 28036 Madrid, à côté du stade Santiago Bernabéu, dans le quartier de Chamartín. Très bien desservi en métro et en voiture, près de Nuevos Ministerios.",
-      },
-      {
-        question: "Quels types d'événements peut-on organiser chez De Diez a Dos ?",
-        answer:
-          "Nous accueillons tout type d'événements privés : anniversaires d'adultes, de jeunes et d'enfants, mariages et fêtes post-mariage, enterrements de vie de garçon et de jeune fille, fêtes de 15 ans, communions, baby showers, événements d'entreprise, dîners d'entreprise, réunions de travail, présentations et team building.",
-      },
-      {
-        question: 'Quels services supplémentaires sont disponibles ?',
-        answer:
-          'En plus du traiteur et du bar ouvert, nous proposons un DJ professionnel, un karaoké, un PhotoMax 360, une table de bonbons et de desserts, une décoration personnalisée et un système audiovisuel professionnel. Tout géré par notre équipe pour que vous puissiez profiter pleinement.',
-      },
-      {
-        question: 'Comment réserver la salle ?',
-        answer:
-          'Vous pouvez nous contacter par téléphone au +34 636 433 911 ou au +34 660 221 267, ou via le formulaire de contact sur notre site web. Nous sommes disponibles tous les jours sur rendez-vous.',
-      },
-      {
-        question: 'Peut-on regarder un match du Real Madrid dans les salles ?',
-        answer:
-          "Oui. Nos salles sont équipées d'un système audiovisuel professionnel avec écran et se trouvent à moins de 10 minutes à pied du stade Santiago Bernabéu. Elles sont parfaites pour organiser une soirée privée pour regarder le match avec traiteur et bar ouvert.",
-      },
-    ],
-    de: [
-      {
-        question: 'Wie viele Personen fassen die Räume von De Diez a Dos?',
-        answer:
-          'Unsere Räume bieten Platz für bis zu 100 Gäste, ideal für intime Feiern und mittelgroße Gruppen. Wir verfügen über zwei Privaträume, die je nach Veranstaltungsart unterschiedlich konfiguriert werden können.',
-      },
-      {
-        question: 'Ist Catering im Raumpreis enthalten?',
-        answer:
-          'Ja. Wir haben unseren eigenen Cateringservice mit über 14 Jahren Erfahrung. Individuelle Menüs, Open Bar und professionelles Servicepersonal sind im Mietpreis enthalten, alles auf Ihre Feier abgestimmt.',
-      },
-      {
-        question: 'Wo befindet sich De Diez a Dos?',
-        answer:
-          'Wir befinden uns in der Travesía Doctor Fleming 16, Local 12, 28036 Madrid, neben dem Stadion Santiago Bernabéu, im Stadtteil Chamartín. Sehr gut mit U-Bahn und Auto erreichbar, in der Nähe von Nuevos Ministerios.',
-      },
-      {
-        question: 'Welche Veranstaltungsarten können bei De Diez a Dos abgehalten werden?',
-        answer:
-          'Wir veranstalten alle Arten von privaten Events: Geburtstage für Erwachsene, Jugendliche und Kinder, Hochzeiten und Empfänge, Junggesellinnen- und Junggesellenabschiede, Quinceañeras, Kommunionen, Babypartys, Firmenveranstaltungen, Firmendinner, Geschäftstreffen, Präsentationen und Teambuilding.',
-      },
-      {
-        question: 'Welche zusätzlichen Services stehen zur Verfügung?',
-        answer:
-          'Neben Catering und Open Bar bieten wir einen professionellen DJ, Karaoke, PhotoMax 360, Candy Bar und Desserttisch, individuelle Dekoration und ein professionelles AV-System. Alles von unserem Team organisiert, damit Sie einfach genießen können.',
-      },
-      {
-        question: 'Wie kann man den Raum buchen?',
-        answer:
-          'Sie können uns telefonisch unter +34 636 433 911 oder +34 660 221 267 erreichen, oder über das Kontaktformular auf unserer Website. Wir sind jeden Tag nach Vereinbarung erreichbar.',
-      },
-      {
-        question: 'Kann man in den Räumen ein Real Madrid Spiel schauen?',
-        answer:
-          'Ja. Unsere Räume verfügen über ein professionelles AV-System mit Leinwand und liegen weniger als 10 Gehminuten vom Stadion Santiago Bernabéu entfernt. Sie eignen sich perfekt für eine private Viewing-Party mit Catering und Open Bar.',
-      },
-    ],
-    it: [
-      {
-        question: 'Quante persone possono ospitare le sale di De Diez a Dos?',
-        answer:
-          'Le nostre sale accolgono fino a 100 persone, ideali per celebrazioni intime e gruppi di medie dimensioni. Disponiamo di due sale private che possono essere configurate in base al tipo di evento.',
-      },
-      {
-        question: 'Il catering è incluso nel noleggio della sala?',
-        answer:
-          'Sì. Disponiamo di un servizio di catering interno con oltre 14 anni di esperienza. Menu personalizzati, open bar e personale di servizio professionale sono inclusi nel noleggio, tutto adattato alla vostra celebrazione.',
-      },
-      {
-        question: 'Dove si trova De Diez a Dos?',
-        answer:
-          'Siamo situati in Travesía Doctor Fleming 16, Local 12, 28036 Madrid, accanto allo stadio Santiago Bernabéu, nel quartiere di Chamartín. Ottimi collegamenti in metropolitana e in auto, vicino a Nuevos Ministerios.',
-      },
-      {
-        question: 'Che tipo di eventi si possono organizzare da De Diez a Dos?',
-        answer:
-          "Ospitiamo ogni tipo di evento privato: compleanni per adulti, giovani e bambini, matrimoni e ricevimenti, addii al nubilato e celibato, feste per i 15 anni, comunioni, baby shower, eventi aziendali, cene aziendali, riunioni di lavoro, presentazioni e team building.",
-      },
-      {
-        question: 'Quali servizi aggiuntivi sono disponibili?',
-        answer:
-          'Oltre al catering e all\'open bar, offriamo un DJ professionista, karaoke, PhotoMax 360, candy bar e tavolo dolci, decorazione personalizzata e un sistema audiovisivo professionale. Tutto gestito dal nostro team perché possiate semplicemente godervi l\'evento.',
-      },
-      {
-        question: 'Come si può prenotare la sala?',
-        answer:
-          'Potete contattarci per telefono al +34 636 433 911 o +34 660 221 267, oppure tramite il modulo di contatto sul nostro sito. Siamo disponibili tutti i giorni su appuntamento.',
-      },
-      {
-        question: 'Si possono vedere le partite del Real Madrid nelle sale?',
-        answer:
-          'Sì. Le nostre sale sono dotate di un sistema audiovisivo professionale con schermo e si trovano a meno di 10 minuti a piedi dallo stadio Santiago Bernabéu. Sono perfette per organizzare una serata privata per vedere la partita con catering e open bar.',
-      },
-    ],
-    pt: [
-      {
-        question: 'Quantas pessoas as salas de De Diez a Dos comportam?',
-        answer:
-          'As nossas salas acomodam até 100 pessoas, ideais para celebrações íntimas e grupos de média dimensão. Dispomos de duas salas privadas que podem ser configuradas de acordo com o tipo de evento.',
-      },
-      {
-        question: 'O catering está incluído no aluguer da sala?',
-        answer:
-          'Sim. Temos o nosso próprio serviço de catering com mais de 14 anos de experiência. Menus personalizados, bar aberto e pessoal de serviço profissional estão incluídos no aluguer, tudo adaptado à sua celebração.',
-      },
-      {
-        question: 'Onde fica De Diez a Dos?',
-        answer:
-          'Estamos localizados na Travesía Doctor Fleming 16, Local 12, 28036 Madrid, ao lado do estádio Santiago Bernabéu, no bairro de Chamartín. Muito bem servido de metro e carro, perto de Nuevos Ministerios.',
-      },
-      {
-        question: 'Que tipo de eventos podem ser realizados na De Diez a Dos?',
-        answer:
-          'Organizamos todo o tipo de eventos privados: aniversários de adultos, jovens e crianças, casamentos e festas pós-casamento, despedidas de solteiro e solteira, festas de 15 anos, comunhões, baby showers, eventos corporativos, jantares de empresa, reuniões de trabalho, apresentações e team building.',
-      },
-      {
-        question: 'Que serviços adicionais estão disponíveis?',
-        answer:
-          'Além do catering e do bar aberto, oferecemos DJ profissional, karaoke, PhotoMax 360, candy bar e mesa de sobremesas, decoração personalizada e um sistema audiovisual profissional. Tudo gerido pela nossa equipa para que apenas tenha de desfrutar.',
-      },
-      {
-        question: 'Como se pode reservar a sala?',
-        answer:
-          'Pode contactar-nos por telefone para o +34 636 433 911 ou +34 660 221 267, ou através do formulário de contacto no nosso site. Estamos disponíveis todos os dias com marcação prévia.',
-      },
-      {
-        question: 'É possível ver um jogo do Real Madrid nas salas?',
-        answer:
-          'Sim. As nossas salas dispõem de um sistema audiovisual profissional com ecrã e ficam a menos de 10 minutos a pé do estádio Santiago Bernabéu. São perfeitas para organizar um evento privado para ver o jogo com catering e bar aberto.',
-      },
-    ],
-    nl: [
-      {
-        question: 'Hoeveel personen kunnen de zalen van De Diez a Dos herbergen?',
-        answer:
-          'Onze zalen bieden ruimte aan tot 100 gasten, ideaal voor intieme vieringen en groepen van gemiddelde omvang. We beschikken over twee privéruimtes die afhankelijk van het type evenement op verschillende manieren kunnen worden ingericht.',
-      },
-      {
-        question: 'Is catering inbegrepen bij de zaalverhuur?',
-        answer:
-          'Ja. We hebben onze eigen cateringservice met meer dan 14 jaar ervaring. Op maat gemaakte menu\'s, open bar en professioneel servicepersoneel zijn inbegrepen in de huurprijs, alles afgestemd op uw viering.',
-      },
-      {
-        question: 'Waar bevindt De Diez a Dos zich?',
-        answer:
-          'We bevinden ons op Travesía Doctor Fleming 16, Local 12, 28036 Madrid, naast het estadio Santiago Bernabéu, in de wijk Chamartín. Uitstekend bereikbaar met metro en auto, dichtbij Nuevos Ministerios.',
-      },
-      {
-        question: 'Welke soorten evenementen kunnen worden georganiseerd bij De Diez a Dos?',
-        answer:
-          'We organiseren alle soorten privé-evenementen: verjaardagen voor volwassenen, jongeren en kinderen, bruiloften en recepties, vrijgezellenfeesten, 15e verjaardagsfeesten, communies, babyshowers, bedrijfsevenementen, bedrijfsdiners, zakelijke vergaderingen, presentaties en teambuilding.',
-      },
-      {
-        question: 'Welke aanvullende diensten zijn beschikbaar?',
-        answer:
-          "Naast catering en open bar bieden we een professionele DJ, karaoke, PhotoMax 360, candy bar en dessertbuffet, gepersonaliseerde decoratie en een professioneel AV-systeem. Alles geregeld door ons team zodat u alleen hoeft te genieten.",
-      },
-      {
-        question: 'Hoe kan men de zaal reserveren?',
-        answer:
-          'U kunt ons bereiken via telefoon op +34 636 433 911 of +34 660 221 267, of via het contactformulier op onze website. We zijn elke dag beschikbaar op afspraak.',
-      },
-      {
-        question: 'Kan men in de zalen een wedstrijd van Real Madrid bekijken?',
-        answer:
-          'Ja. Onze zalen zijn uitgerust met een professioneel AV-systeem met scherm en liggen op minder dan 10 minuten loopafstand van het estadio Santiago Bernabéu. Ze zijn perfect voor het organiseren van een privé viewing party met catering en open bar.',
-      },
-    ],
-    pl: [
-      {
-        question: 'Ile osób mogą pomieścić sale De Diez a Dos?',
-        answer:
-          'Nasze sale mogą pomieścić do 100 gości, idealne na kameralne uroczystości i grupy średniej wielkości. Dysponujemy dwoma prywatnymi salami, które można skonfigurować w zależności od rodzaju imprezy.',
-      },
-      {
-        question: 'Czy catering jest wliczony w wynajem sali?',
-        answer:
-          'Tak. Posiadamy własny catering z ponad 14-letnim doświadczeniem. Spersonalizowane menu, otwarty bar i profesjonalna obsługa są wliczone w cenę wynajmu, wszystko dostosowane do Twojej uroczystości.',
-      },
-      {
-        question: 'Gdzie znajduje się De Diez a Dos?',
-        answer:
-          'Znajdujemy się przy Travesía Doctor Fleming 16, Local 12, 28036 Madryt, obok stadionu Santiago Bernabéu, w dzielnicy Chamartín. Doskonałe połączenia metrem i samochodem, w pobliżu Nuevos Ministerios.',
-      },
-      {
-        question: 'Jakie rodzaje imprez można organizować w De Diez a Dos?',
-        answer:
-          'Organizujemy wszelkie rodzaje prywatnych imprez: urodziny dla dorosłych, młodzieży i dzieci, wesela i przyjęcia weselne, wieczory panieńskie i kawalerskie, imprezy z okazji 15. urodzin, komunie, baby shower, imprezy firmowe, kolacje firmowe, spotkania biznesowe, prezentacje i team building.',
-      },
-      {
-        question: 'Jakie dodatkowe usługi są dostępne?',
-        answer:
-          'Oprócz cateringu i otwartego baru oferujemy profesjonalnego DJ-a, karaoke, PhotoMax 360, candy bar i stół ze słodkościami, spersonalizowaną dekorację i profesjonalny system AV. Wszystko zarządzane przez nasz zespół, abyś mógł po prostu się cieszyć.',
-      },
-      {
-        question: 'Jak można zarezerwować salę?',
-        answer:
-          'Możesz skontaktować się z nami telefonicznie pod numerem +34 636 433 911 lub +34 660 221 267, lub przez formularz kontaktowy na naszej stronie. Jesteśmy dostępni każdego dnia po wcześniejszym umówieniu.',
-      },
-      {
-        question: 'Czy można oglądać mecz Realu Madryt w salach?',
-        answer:
-          'Tak. Nasze sale są wyposażone w profesjonalny system AV z ekranem i znajdują się w odległości mniej niż 10 minut spaceru od stadionu Santiago Bernabéu. Są idealne do organizacji prywatnego seansu meczu z cateringiem i otwartym barem.',
-      },
-    ],
-    ru: [
-      {
-        question: 'Какова вместимость залов De Diez a Dos?',
-        answer:
-          'Наши залы вмещают до 100 гостей — идеально для камерных торжеств и групп среднего размера. В нашем распоряжении два частных зала, которые можно настроить под любой формат мероприятия.',
-      },
-      {
-        question: 'Включён ли кейтеринг в аренду зала?',
-        answer:
-          'Да. У нас собственная служба кейтеринга с более чем 14-летним опытом. Персонализированное меню, открытый бар и профессиональный обслуживающий персонал включены в стоимость аренды, всё адаптируется под ваше торжество.',
-      },
-      {
-        question: 'Где находится De Diez a Dos?',
-        answer:
-          'Мы расположены по адресу Travesía Doctor Fleming 16, Local 12, 28036 Мадрид, рядом со стадионом Сантьяго Бернабеу, в районе Чамартин. Отличная транспортная доступность — метро и автомобиль, рядом с Нуэвос Министериос.',
-      },
-      {
-        question: 'Какие мероприятия можно проводить в De Diez a Dos?',
-        answer:
-          'Мы принимаем все виды частных мероприятий: дни рождения для взрослых, молодёжи и детей, свадьбы и постсвадебные праздники, девичники и мальчишники, праздники 15-летия, причастия, baby shower, корпоративные мероприятия, корпоративные ужины, деловые встречи, презентации и тимбилдинг.',
-      },
-      {
-        question: 'Какие дополнительные услуги доступны?',
-        answer:
-          'Помимо кейтеринга и открытого бара, мы предлагаем профессионального DJ, караоке, PhotoMax 360, candy bar и стол со сладостями, персонализированное оформление и профессиональную аудиовизуальную систему. Всё организует наша команда — вам остаётся только наслаждаться праздником.',
-      },
-      {
-        question: 'Как забронировать зал?',
-        answer:
-          'Вы можете связаться с нами по телефону +34 636 433 911 или +34 660 221 267, либо через форму обратной связи на нашем сайте. Мы принимаем ежедневно по предварительной записи.',
-      },
-      {
-        question: 'Можно ли смотреть матчи Реал Мадрид в залах?',
-        answer:
-          'Да. Наши залы оснащены профессиональной аудиовизуальной системой с экраном и находятся менее чем в 10 минутах ходьбы от стадиона Сантьяго Бернабеу. Они идеально подходят для организации частного просмотра матча с кейтерингом и открытым баром.',
-      },
-    ],
-  } satisfies Record<string, FaqItem[]>,
-
-  // ============================================================
   // Metadata base por locale — Fase 3 añade EN, FR, DE, IT, PT, NL, PL, RU
   // ============================================================
 
   localeMetadata: {
     es: {
-      title:
-        'De Diez a Dos - Alquiler Salas Eventos Madrid | Precios Económicos Cerca del Santiago Bernabéu',
+      title: 'Alquiler de Salas para Eventos en Madrid | De Diez a Dos',
       description:
-        'Alquiler de salas para eventos en Madrid cerca del Santiago Bernabéu. Cumpleaños, bodas, fiestas privadas y eventos de empresa con catering, barra libre y DJ. Precios económicos y competitivos. +200 reseñas 5 estrellas.',
-      ogTitle:
-        'De Diez a Dos - Salas para Eventos en Madrid | Santiago Bernabéu | Precios Económicos',
+        'Salas privadas junto al Santiago Bernabéu para cumpleaños, bodas y eventos de empresa. Catering propio, barra libre y DJ. +200 reseñas de 5 estrellas.',
+      ogTitle: 'Alquiler de Salas para Eventos en Madrid | De Diez a Dos',
       ogDescription:
-        'Alquiler de salas para eventos en Madrid cerca del Santiago Bernabéu. Fiestas privadas, cumpleaños, bodas y eventos corporativos con catering incluido. Precios económicos y competitivos. +200 reseñas de 5 estrellas.',
-      twitterTitle:
-        'De Diez a Dos - Salas para Eventos en Madrid | Santiago Bernabéu | Precios Económicos',
+        'Salas privadas junto al Santiago Bernabéu para cumpleaños, bodas y eventos de empresa. Catering propio, barra libre y DJ. +200 reseñas de 5 estrellas.',
+      twitterTitle: 'Alquiler de Salas para Eventos en Madrid | De Diez a Dos',
       twitterDescription:
-        'Alquiler de salas para eventos en Madrid cerca del Santiago Bernabéu. Precios económicos y competitivos. +200 reseñas de 5 estrellas.',
+        'Salas privadas junto al Santiago Bernabéu para cumpleaños, bodas y eventos de empresa. Catering propio, barra libre y DJ. +200 reseñas de 5 estrellas.',
       businessDescriptionSchema:
         'Alquiler de salas para eventos privados en Madrid, junto al estadio Santiago Bernabéu, con precios económicos y competitivos. Espacio exclusivo para cumpleaños, bodas, fiestas privadas, despedidas, comuniones, baby showers y eventos de empresa, con catering propio, barra libre, sistema audiovisual y DJ profesional. Más de 14 años de experiencia.',
       keywords: [
@@ -830,18 +469,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     en: {
-      title:
-        'De Diez a Dos - Event Venue Rental Madrid | Affordable Pricing Near Santiago Bernabéu',
+      title: 'Event Venue Rental in Madrid | De Diez a Dos',
       description:
-        'Event venue rental in Madrid near Santiago Bernabéu. Birthdays, weddings, private parties and corporate events with in-house catering, open bar and DJ. Affordable, competitive pricing. 200+ five-star reviews.',
-      ogTitle:
-        'De Diez a Dos - Event Venues in Madrid | Santiago Bernabéu | Affordable Pricing',
+        'Private event venue next to Santiago Bernabéu for birthdays, weddings and corporate events. In-house catering, open bar and DJ. 200+ five-star reviews.',
+      ogTitle: 'Event Venue Rental in Madrid | De Diez a Dos',
       ogDescription:
-        'Event venue rental in Madrid near Santiago Bernabéu. Private parties, birthdays, weddings and corporate events with included catering. Affordable, competitive pricing. 200+ five-star reviews.',
-      twitterTitle:
-        'De Diez a Dos - Event Venues in Madrid | Santiago Bernabéu | Affordable Pricing',
+        'Private event venue next to Santiago Bernabéu for birthdays, weddings and corporate events. In-house catering, open bar and DJ. 200+ five-star reviews.',
+      twitterTitle: 'Event Venue Rental in Madrid | De Diez a Dos',
       twitterDescription:
-        'Event venue rental in Madrid near Santiago Bernabéu. Affordable, competitive pricing. 200+ five-star reviews.',
+        'Private event venue next to Santiago Bernabéu for birthdays, weddings and corporate events. In-house catering, open bar and DJ. 200+ five-star reviews.',
       businessDescriptionSchema:
         'Affordable private event venue for hire in Madrid, next to Santiago Bernabéu stadium, with competitive pricing. Exclusive space for birthdays, weddings, private parties, bachelorette/bachelor parties, communions, baby showers and corporate events, with in-house catering, open bar, professional AV system and DJ. Over 14 years of experience.',
       keywords: [
@@ -879,18 +515,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     fr: {
-      title:
-        "De Diez a Dos - Location de Salles d'Événements Madrid | Tarifs Abordables Près du Santiago Bernabéu",
+      title: 'Location de Salles pour Événements à Madrid | De Diez a Dos',
       description:
-        "Location de salles pour événements à Madrid près du Santiago Bernabéu. Anniversaires, mariages, fêtes privées et événements d'entreprise avec traiteur, bar ouvert et DJ. Tarifs abordables et compétitifs. Plus de 200 avis 5 étoiles.",
-      ogTitle:
-        'De Diez a Dos - Salles pour Événements à Madrid | Santiago Bernabéu | Tarifs Abordables',
+        "Salles privées près du Santiago Bernabéu pour anniversaires, mariages et événements d'entreprise. Traiteur, bar ouvert et DJ. Plus de 200 avis 5 étoiles.",
+      ogTitle: 'Location de Salles pour Événements à Madrid | De Diez a Dos',
       ogDescription:
-        "Location de salles pour événements à Madrid près du Santiago Bernabéu. Fêtes privées, anniversaires, mariages et événements d'entreprise avec traiteur inclus. Tarifs abordables et compétitifs. Plus de 200 avis 5 étoiles.",
-      twitterTitle:
-        'De Diez a Dos - Salles pour Événements à Madrid | Santiago Bernabéu | Tarifs Abordables',
+        "Salles privées près du Santiago Bernabéu pour anniversaires, mariages et événements d'entreprise. Traiteur, bar ouvert et DJ. Plus de 200 avis 5 étoiles.",
+      twitterTitle: 'Location de Salles pour Événements à Madrid | De Diez a Dos',
       twitterDescription:
-        'Location de salles pour événements à Madrid près du Santiago Bernabéu. Tarifs abordables et compétitifs. Plus de 200 avis 5 étoiles.',
+        "Salles privées près du Santiago Bernabéu pour anniversaires, mariages et événements d'entreprise. Traiteur, bar ouvert et DJ. Plus de 200 avis 5 étoiles.",
       businessDescriptionSchema:
         "Location de salles pour événements privés à Madrid, à côté du stade Santiago Bernabéu, avec des tarifs abordables et compétitifs. Espace exclusif pour anniversaires, mariages, fêtes privées, enterrements de vie de garçon/jeune fille, communions, baby showers et événements d'entreprise, avec traiteur propre, bar ouvert, système audiovisuel et DJ professionnel. Plus de 14 ans d'expérience.",
       keywords: [
@@ -918,18 +551,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     de: {
-      title:
-        'De Diez a Dos - Eventlocation Madrid mieten | Günstige Preise nahe Santiago Bernabéu',
+      title: 'Eventlocation in Madrid mieten | De Diez a Dos',
       description:
-        'Vermietung von Eventlocations in Madrid nahe dem Santiago Bernabéu. Geburtstage, Hochzeiten, Privatfeiern und Firmenveranstaltungen mit Catering, Open Bar und DJ. Günstige und wettbewerbsfähige Preise. Über 200 Fünf-Sterne-Bewertungen.',
-      ogTitle:
-        'De Diez a Dos - Eventlocations in Madrid | Santiago Bernabéu | Günstige Preise',
+        'Private Räume neben dem Santiago Bernabéu für Geburtstage, Hochzeiten und Firmenevents. Catering, Open Bar und DJ. Über 200 Fünf-Sterne-Bewertungen.',
+      ogTitle: 'Eventlocation in Madrid mieten | De Diez a Dos',
       ogDescription:
-        'Vermietung von Eventlocations in Madrid nahe dem Santiago Bernabéu. Privatfeiern, Geburtstage, Hochzeiten und Firmenveranstaltungen mit inklusivem Catering. Günstige und wettbewerbsfähige Preise. Über 200 Fünf-Sterne-Bewertungen.',
-      twitterTitle:
-        'De Diez a Dos - Eventlocations in Madrid | Santiago Bernabéu | Günstige Preise',
+        'Private Räume neben dem Santiago Bernabéu für Geburtstage, Hochzeiten und Firmenevents. Catering, Open Bar und DJ. Über 200 Fünf-Sterne-Bewertungen.',
+      twitterTitle: 'Eventlocation in Madrid mieten | De Diez a Dos',
       twitterDescription:
-        'Vermietung von Eventlocations in Madrid nahe dem Santiago Bernabéu. Günstige und wettbewerbsfähige Preise. Über 200 Fünf-Sterne-Bewertungen.',
+        'Private Räume neben dem Santiago Bernabéu für Geburtstage, Hochzeiten und Firmenevents. Catering, Open Bar und DJ. Über 200 Fünf-Sterne-Bewertungen.',
       businessDescriptionSchema:
         'Günstige private Eventlocation zur Miete in Madrid, neben dem Stadion Santiago Bernabéu, mit wettbewerbsfähigen Preisen. Exklusiver Raum für Geburtstage, Hochzeiten, Privatfeiern, Junggesellinnen-/Junggesellenabschiede, Kommunionen, Babypartys und Firmenveranstaltungen, mit eigenem Catering, Open Bar, professionellem AV-System und DJ. Über 14 Jahre Erfahrung.',
       keywords: [
@@ -956,18 +586,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     it: {
-      title:
-        'De Diez a Dos - Affitto Sale Eventi Madrid | Prezzi Convenienti Vicino al Santiago Bernabéu',
+      title: 'Affitto Sale per Eventi a Madrid | De Diez a Dos',
       description:
-        'Affitto di sale per eventi a Madrid vicino al Santiago Bernabéu. Compleanni, matrimoni, feste private ed eventi aziendali con catering, open bar e DJ. Prezzi convenienti e competitivi. Oltre 200 recensioni 5 stelle.',
-      ogTitle:
-        'De Diez a Dos - Sale per Eventi a Madrid | Santiago Bernabéu | Prezzi Convenienti',
+        'Sale private accanto al Santiago Bernabéu per compleanni, matrimoni ed eventi aziendali. Catering proprio, open bar e DJ. Oltre 200 recensioni a 5 stelle.',
+      ogTitle: 'Affitto Sale per Eventi a Madrid | De Diez a Dos',
       ogDescription:
-        'Affitto di sale per eventi a Madrid vicino al Santiago Bernabéu. Feste private, compleanni, matrimoni ed eventi aziendali con catering incluso. Prezzi convenienti e competitivi. Oltre 200 recensioni 5 stelle.',
-      twitterTitle:
-        'De Diez a Dos - Sale per Eventi a Madrid | Santiago Bernabéu | Prezzi Convenienti',
+        'Sale private accanto al Santiago Bernabéu per compleanni, matrimoni ed eventi aziendali. Catering proprio, open bar e DJ. Oltre 200 recensioni a 5 stelle.',
+      twitterTitle: 'Affitto Sale per Eventi a Madrid | De Diez a Dos',
       twitterDescription:
-        'Affitto di sale per eventi a Madrid vicino al Santiago Bernabéu. Prezzi convenienti e competitivi. Oltre 200 recensioni 5 stelle.',
+        'Sale private accanto al Santiago Bernabéu per compleanni, matrimoni ed eventi aziendali. Catering proprio, open bar e DJ. Oltre 200 recensioni a 5 stelle.',
       businessDescriptionSchema:
         "Affitto di sale per eventi privati a Madrid, accanto allo stadio Santiago Bernabéu, con prezzi convenienti e competitivi. Spazio esclusivo per compleanni, matrimoni, feste private, addii al nubilato/celibato, comunioni, baby shower ed eventi aziendali, con catering proprio, open bar, sistema audiovisivo e DJ professionale. Oltre 14 anni di esperienza.",
       keywords: [
@@ -993,18 +620,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     pt: {
-      title:
-        'De Diez a Dos - Aluguer de Salas para Eventos Madrid | Preços Acessíveis Perto do Santiago Bernabéu',
+      title: 'Aluguer de Salas para Eventos em Madrid | De Diez a Dos',
       description:
-        'Aluguer de salas para eventos em Madrid perto do Santiago Bernabéu. Aniversários, casamentos, festas privadas e eventos de empresa com catering, bar aberto e DJ. Preços acessíveis e competitivos. Mais de 200 avaliações 5 estrelas.',
-      ogTitle:
-        'De Diez a Dos - Salas para Eventos em Madrid | Santiago Bernabéu | Preços Acessíveis',
+        'Salas privadas junto ao Santiago Bernabéu para aniversários, casamentos e eventos. Catering próprio, bar aberto e DJ. +200 avaliações de 5 estrelas.',
+      ogTitle: 'Aluguer de Salas para Eventos em Madrid | De Diez a Dos',
       ogDescription:
-        'Aluguer de salas para eventos em Madrid perto do Santiago Bernabéu. Festas privadas, aniversários, casamentos e eventos corporativos com catering incluído. Preços acessíveis e competitivos. Mais de 200 avaliações 5 estrelas.',
-      twitterTitle:
-        'De Diez a Dos - Salas para Eventos em Madrid | Santiago Bernabéu | Preços Acessíveis',
+        'Salas privadas junto ao Santiago Bernabéu para aniversários, casamentos e eventos. Catering próprio, bar aberto e DJ. +200 avaliações de 5 estrelas.',
+      twitterTitle: 'Aluguer de Salas para Eventos em Madrid | De Diez a Dos',
       twitterDescription:
-        'Aluguer de salas para eventos em Madrid perto do Santiago Bernabéu. Preços acessíveis e competitivos. Mais de 200 avaliações 5 estrelas.',
+        'Salas privadas junto ao Santiago Bernabéu para aniversários, casamentos e eventos. Catering próprio, bar aberto e DJ. +200 avaliações de 5 estrelas.',
       businessDescriptionSchema:
         'Aluguer de salas para eventos privados em Madrid, junto ao estádio Santiago Bernabéu, com preços acessíveis e competitivos. Espaço exclusivo para aniversários, casamentos, festas privadas, despedidas de solteiro/solteira, comunhões, baby showers e eventos de empresa, com catering próprio, bar aberto, sistema audiovisual e DJ profissional. Mais de 14 anos de experiência.',
       keywords: [
@@ -1029,18 +653,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     nl: {
-      title:
-        'De Diez a Dos - Evenementenzaal Huren Madrid | Betaalbare Prijzen Nabij Santiago Bernabéu',
+      title: 'Evenementenzaal Huren in Madrid | De Diez a Dos',
       description:
-        'Verhuur van evenementenzalen in Madrid nabij Santiago Bernabéu. Verjaardagen, bruiloften, privéfeesten en bedrijfsevenementen met catering, open bar en DJ. Betaalbare en concurrerende prijzen. Meer dan 200 vijfsterren-beoordelingen.',
-      ogTitle:
-        'De Diez a Dos - Evenementenzalen in Madrid | Santiago Bernabéu | Betaalbare Prijzen',
+        'Privézalen naast Santiago Bernabéu voor verjaardagen, bruiloften en bedrijfsevenementen. Eigen catering, open bar en DJ. Meer dan 200 vijfsterrenreviews.',
+      ogTitle: 'Evenementenzaal Huren in Madrid | De Diez a Dos',
       ogDescription:
-        'Verhuur van evenementenzalen in Madrid nabij Santiago Bernabéu. Privéfeesten, verjaardagen, bruiloften en bedrijfsevenementen met inbegrepen catering. Betaalbare en concurrerende prijzen. Meer dan 200 vijfsterren-beoordelingen.',
-      twitterTitle:
-        'De Diez a Dos - Evenementenzalen in Madrid | Santiago Bernabéu | Betaalbare Prijzen',
+        'Privézalen naast Santiago Bernabéu voor verjaardagen, bruiloften en bedrijfsevenementen. Eigen catering, open bar en DJ. Meer dan 200 vijfsterrenreviews.',
+      twitterTitle: 'Evenementenzaal Huren in Madrid | De Diez a Dos',
       twitterDescription:
-        'Verhuur van evenementenzalen in Madrid nabij Santiago Bernabéu. Betaalbare en concurrerende prijzen. Meer dan 200 vijfsterren-beoordelingen.',
+        'Privézalen naast Santiago Bernabéu voor verjaardagen, bruiloften en bedrijfsevenementen. Eigen catering, open bar en DJ. Meer dan 200 vijfsterrenreviews.',
       businessDescriptionSchema:
         'Betaalbare privé-evenementenlocatie te huur in Madrid, naast het Santiago Bernabéu-stadion, met concurrerende prijzen. Exclusieve ruimte voor verjaardagen, bruiloften, privéfeesten, vrijgezellenfeesten, communies, baby showers en bedrijfsevenementen, met eigen catering, open bar, professioneel AV-systeem en DJ. Meer dan 14 jaar ervaring.',
       keywords: [
@@ -1064,18 +685,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     pl: {
-      title:
-        'De Diez a Dos - Wynajem Sal na Wydarzenia Madryt | Przystępne Ceny w Pobliżu Santiago Bernabéu',
+      title: 'Wynajem Sali na Imprezy w Madrycie | De Diez a Dos',
       description:
-        'Wynajem sal na wydarzenia w Madrycie w pobliżu Santiago Bernabéu. Urodziny, śluby, prywatne imprezy i wydarzenia firmowe z cateringiem, otwartym barem i DJ-em. Przystępne i konkurencyjne ceny. Ponad 200 pięciogwiazdkowych opinii.',
-      ogTitle:
-        'De Diez a Dos - Sale na Wydarzenia w Madrycie | Santiago Bernabéu | Przystępne Ceny',
+        'Prywatne sale obok Santiago Bernabéu na urodziny, wesela i imprezy firmowe. Własny catering, open bar i DJ. Ponad 200 pięciogwiazdkowych opinii.',
+      ogTitle: 'Wynajem Sali na Imprezy w Madrycie | De Diez a Dos',
       ogDescription:
-        'Wynajem sal na wydarzenia w Madrycie w pobliżu Santiago Bernabéu. Prywatne imprezy, urodziny, śluby i wydarzenia firmowe z wliczonym cateringiem. Przystępne i konkurencyjne ceny. Ponad 200 pięciogwiazdkowych opinii.',
-      twitterTitle:
-        'De Diez a Dos - Sale na Wydarzenia w Madrycie | Santiago Bernabéu | Przystępne Ceny',
+        'Prywatne sale obok Santiago Bernabéu na urodziny, wesela i imprezy firmowe. Własny catering, open bar i DJ. Ponad 200 pięciogwiazdkowych opinii.',
+      twitterTitle: 'Wynajem Sali na Imprezy w Madrycie | De Diez a Dos',
       twitterDescription:
-        'Wynajem sal na wydarzenia w Madrycie w pobliżu Santiago Bernabéu. Przystępne i konkurencyjne ceny. Ponad 200 pięciogwiazdkowych opinii.',
+        'Prywatne sale obok Santiago Bernabéu na urodziny, wesela i imprezy firmowe. Własny catering, open bar i DJ. Ponad 200 pięciogwiazdkowych opinii.',
       businessDescriptionSchema:
         'Przystępna cenowo prywatna sala na wydarzenia do wynajęcia w Madrycie, obok stadionu Santiago Bernabéu, z konkurencyjnymi cenami. Ekskluzywna przestrzeń na urodziny, śluby, prywatne imprezy, wieczory panieńskie/kawalerskie, komunie, baby shower i wydarzenia firmowe, z własnym cateringiem, otwartym barem, profesjonalnym systemem AV i DJ-em. Ponad 14 lat doświadczenia.',
       keywords: [
@@ -1099,18 +717,15 @@ export const seoConfig = {
       ],
     } satisfies LocaleMetadata,
     ru: {
-      title:
-        'De Diez a Dos - Аренда Залов для Мероприятий в Мадриде | Доступные Цены Рядом с Сантьяго Бернабеу',
+      title: 'Аренда Зала для Мероприятий в Мадриде | De Diez a Dos',
       description:
-        'Аренда залов для мероприятий в Мадриде рядом с Сантьяго Бернабеу. Дни рождения, свадьбы, частные вечеринки и корпоративные мероприятия с кейтерингом, открытым баром и DJ. Доступные и конкурентные цены. Более 200 пятизвёздочных отзывов.',
-      ogTitle:
-        'De Diez a Dos - Залы для Мероприятий в Мадриде | Сантьяго Бернабеу | Доступные Цены',
+        'Частные залы рядом с Сантьяго Бернабеу: дни рождения, свадьбы и корпоративы. Собственный кейтеринг, открытый бар и DJ. Более 200 отзывов на 5 звёзд.',
+      ogTitle: 'Аренда Зала для Мероприятий в Мадриде | De Diez a Dos',
       ogDescription:
-        'Аренда залов для мероприятий в Мадриде рядом с Сантьяго Бернабеу. Частные вечеринки, дни рождения, свадьбы и корпоративные мероприятия с включённым кейтерингом. Доступные и конкурентные цены. Более 200 пятизвёздочных отзывов.',
-      twitterTitle:
-        'De Diez a Dos - Залы для Мероприятий в Мадриде | Сантьяго Бернабеу | Доступные Цены',
+        'Частные залы рядом с Сантьяго Бернабеу: дни рождения, свадьбы и корпоративы. Собственный кейтеринг, открытый бар и DJ. Более 200 отзывов на 5 звёзд.',
+      twitterTitle: 'Аренда Зала для Мероприятий в Мадриде | De Diez a Dos',
       twitterDescription:
-        'Аренда залов для мероприятий в Мадриде рядом с Сантьяго Бернабеу. Доступные и конкурентные цены. Более 200 пятизвёздочных отзывов.',
+        'Частные залы рядом с Сантьяго Бернабеу: дни рождения, свадьбы и корпоративы. Собственный кейтеринг, открытый бар и DJ. Более 200 отзывов на 5 звёзд.',
       businessDescriptionSchema:
         'Доступная по цене частная площадка для мероприятий в аренду в Мадриде, рядом со стадионом Сантьяго Бернабеу, с конкурентными ценами. Эксклюзивное пространство для дней рождения, свадеб, частных вечеринок, девичников/мальчишников, причастий, baby shower и корпоративных мероприятий, с собственным кейтерингом, открытым баром, профессиональной AV-системой и DJ. Более 14 лет опыта.',
       keywords: [

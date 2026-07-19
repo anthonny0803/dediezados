@@ -3,12 +3,13 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Sidenav } from '@/components/layout/Sidenav';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
+import { Events } from '@/components/sections/Events';
 import { Services } from '@/components/sections/Services';
 import { Catering } from '@/components/sections/Catering';
-import { Extras } from '@/components/sections/Extras';
 import { Gallery } from '@/components/sections/Gallery';
 import { Contact } from '@/components/sections/Contact';
 import { LocationReviewsSection } from '@/components/sections/LocationReviewsSection';
+import { Faq } from '@/components/sections/Faq';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -23,12 +24,13 @@ export default async function HomePage({ params }: HomePageProps) {
       <Navbar />
       <Sidenav />
       <Hero />
+      <Events />
       <Services />
       <Catering />
-      <Extras />
       <Gallery />
       <Contact />
       <LocationReviewsSection />
+      <Faq />
       <Footer />
     </>
   );

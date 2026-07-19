@@ -8,6 +8,10 @@ export interface HeroSlideConfig {
   buttons: HeroSlideButtonConfig[];
 }
 
+export interface HeroStatConfig {
+  value: string;
+}
+
 export interface CateringItemConfig {
   image: string;
   featured?: boolean;
@@ -19,7 +23,26 @@ export interface GalleryPhotoConfig {
 }
 
 export interface ExtraConfig {
+  icon: string;
   image: string;
+}
+
+export interface EventConfig {
+  icon: string;
+  image: string;
+}
+
+export interface ServiceItemConfig {
+  icon: string;
+  image: string;
+}
+
+export interface ServicesConfig {
+  included: ServiceItemConfig[];
+}
+
+export interface FaqItemConfig {
+  icon: string;
 }
 
 export interface SiteConfig {
@@ -65,12 +88,15 @@ export interface SiteConfig {
     height: number;
   };
   heroSlides: HeroSlideConfig[];
-  servicesCount: number;
+  heroStats: HeroStatConfig[];
   catering: CateringItemConfig[];
   gallery: {
     photos: GalleryPhotoConfig[];
   };
   extras: ExtraConfig[];
+  events: EventConfig[];
+  services: ServicesConfig;
+  faq: FaqItemConfig[];
 }
 
 export const siteConfig: SiteConfig = {
@@ -129,7 +155,7 @@ export const siteConfig: SiteConfig = {
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763214977/hero-2_cvdxyg.avif',
       buttons: [
         { link: '#gallery', variant: 'primary' },
-        { link: '#extras', variant: 'outline' },
+        { link: '#services', variant: 'outline' },
       ],
     },
     {
@@ -141,7 +167,7 @@ export const siteConfig: SiteConfig = {
       ],
     },
   ],
-  servicesCount: 6,
+  heroStats: [{ value: '+200' }, { value: '24/7' }],
   catering: [
     {
       image:
@@ -220,24 +246,100 @@ export const siteConfig: SiteConfig = {
   },
   extras: [
     {
+      icon: 'mic',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769767945/Karaoke2_vwfooo.jpg',
     },
     {
+      icon: 'camera',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769763410/PhotoMaster_360_11zon_r4a9c6.jpg',
     },
     {
+      icon: 'headphones',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769766951/Dj1_11zon_vjxw1y.jpg',
     },
     {
+      icon: 'cake',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1769763102/Decoraciones6_11zon_gju7xg.jpg',
     },
     {
+      icon: 'palette',
       image:
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1770884340/Decoraciones8_rrjaho.jpg',
     },
+  ],
+  events: [
+    {
+      icon: 'heart',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-wedding_qhpdrp.jpg',
+    },
+    {
+      icon: 'cake',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-birthday_l97b1k.jpg',
+    },
+    {
+      icon: 'crown',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449908/event-quince_kxvsyv.jpg',
+    },
+    {
+      icon: 'briefcase',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-corporate_q0j6rc.jpg',
+    },
+    {
+      icon: 'trophy',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-sports_q54ygr.jpg',
+    },
+    {
+      icon: 'users',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-meeting_zap2hh.jpg',
+    },
+  ],
+  // Detail images reuse real room photos (olas/amazonias) as provisional
+  // assets. Item copy lives in i18n.
+  services: {
+    included: [
+      {
+        icon: 'building',
+        image:
+          'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239528/amazonias-01_yadqyg.webp',
+      },
+      {
+        icon: 'music',
+        image:
+          'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239541/olas-04_phqoqx.webp',
+      },
+      {
+        icon: 'utensils',
+        image:
+          'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763229285/brochetas_ffvlf4.webp',
+      },
+      {
+        icon: 'wine',
+        image:
+          'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1763239530/amazonias-06_mqwezx.webp',
+      },
+      {
+        icon: 'users',
+        image:
+          'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449908/service-staff_fnfito.jpg',
+      },
+    ],
+  },
+  faq: [
+    { icon: 'utensils' },
+    { icon: 'mapPin' },
+    { icon: 'party' },
+    { icon: 'sparkles' },
+    { icon: 'calendar' },
+    { icon: 'tv' },
   ],
 };

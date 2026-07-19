@@ -10,7 +10,6 @@ const HOMEPAGE_IMAGES = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = seoConfig.siteUrl;
-  const lastModified = new Date();
 
   const localeAlternates = Object.fromEntries(
     routing.locales.map((loc) => [loc, `${siteUrl}/${loc}`])
@@ -18,13 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routing.locales.map((locale) => ({
     url: `${siteUrl}/${locale}`,
-    lastModified,
     changeFrequency: 'weekly',
     priority: 1.0,
     alternates: {
       languages: {
         ...localeAlternates,
-        'x-default': siteUrl,
+        'x-default': `${siteUrl}/${routing.defaultLocale}`,
       },
     },
     images: HOMEPAGE_IMAGES,

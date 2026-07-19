@@ -4,6 +4,7 @@
   max-width: none !important;
   margin: 0 !important;
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
   position: relative;
   overflow: hidden;
@@ -24,7 +25,7 @@
   inset: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 1s ease-in-out 1s;
+  transition: opacity 1s ease-in-out;
 }
 
 .carousel-image {
@@ -59,7 +60,7 @@
   pointer-events: auto;
 }
 
-.hero-content h1 {
+.hero-content .hero-title {
   font-family: var(--font-heading);
   font-size: 4.5rem;
   font-weight: 700;
@@ -115,17 +116,17 @@
 
 /* Responsive */
 @media (max-width: 968px) {
-  .hero-content h1 { font-size: 3rem; }
+  .hero-content .hero-title { font-size: 3rem; }
   .hero-content p { font-size: 1.1rem; }
 }
 
 @media (max-width: 640px) {
-  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content .hero-title { font-size: 2.2rem; }
   .hero-content p { font-size: 1.05rem; margin-bottom: 28px; }
   .carousel-dots { bottom: 24px; }
 }
 
 @media (max-width: 480px) {
-  .hero-content h1 { font-size: 1.8rem; }
+  .hero-content .hero-title { font-size: 1.8rem; }
   .hero-content p { font-size: 0.95rem; }
 }
