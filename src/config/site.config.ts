@@ -142,7 +142,7 @@ export const siteConfig: SiteConfig = {
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763302071/hero-1_yylnej.webp',
       buttons: [
         { link: '#contact', variant: 'primary' },
-        { link: '#catering', variant: 'outline' },
+        { link: '#services', variant: 'outline' },
       ],
     },
     {
@@ -150,7 +150,7 @@ export const siteConfig: SiteConfig = {
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763214977/hero-2_cvdxyg.avif',
       buttons: [
         { link: '#gallery', variant: 'primary' },
-        { link: '#catering', variant: 'outline' },
+        { link: '#services', variant: 'outline' },
       ],
     },
     {
@@ -266,37 +266,40 @@ export const siteConfig: SiteConfig = {
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_600/v1770884340/Decoraciones8_rrjaho.jpg',
     },
   ],
-  // Temporary local copies of the Lovable reference art (public/images/events)
-  // until they are uploaded to Cloudinary and these become Cloudinary URLs.
   events: [
     {
       icon: 'heart',
-      image: '/images/events/wedding.jpg',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-wedding_qhpdrp.jpg',
     },
     {
       icon: 'cake',
-      image: '/images/events/birthday.jpg',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-birthday_l97b1k.jpg',
     },
     {
       icon: 'crown',
-      image: '/images/events/quince.jpg',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449908/event-quince_kxvsyv.jpg',
     },
     {
       icon: 'briefcase',
-      image: '/images/events/corporate.jpg',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-corporate_q0j6rc.jpg',
     },
     {
       icon: 'trophy',
-      image: '/images/events/sports.jpg',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-sports_q54ygr.jpg',
     },
     {
       icon: 'users',
-      image: '/images/events/meeting.jpg',
+      image:
+        'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449907/event-meeting_zap2hh.jpg',
     },
   ],
   // Detail images reuse real room photos (olas/amazonias) as provisional
-  // assets. Item copy lives in i18n; staff.jpg is a temporary local stock copy
-  // (public/images/services) until it is uploaded to Cloudinary.
+  // assets. Item copy lives in i18n.
   services: {
     included: [
       {
@@ -321,7 +324,8 @@ export const siteConfig: SiteConfig = {
       },
       {
         icon: 'users',
-        image: '/images/services/staff.jpg',
+        image:
+          'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1200/v1784449908/service-staff_fnfito.jpg',
       },
     ],
   },
