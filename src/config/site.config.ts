@@ -142,7 +142,7 @@ export const siteConfig: SiteConfig = {
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763302071/hero-1_yylnej.webp',
       buttons: [
         { link: '#contact', variant: 'primary' },
-        { link: '#catering', variant: 'outline' },
+        { link: '#services', variant: 'outline' },
       ],
     },
     {
@@ -150,7 +150,7 @@ export const siteConfig: SiteConfig = {
         'https://res.cloudinary.com/dk5kc8pu3/image/upload/f_auto,q_auto,w_1920/v1763214977/hero-2_cvdxyg.avif',
       buttons: [
         { link: '#gallery', variant: 'primary' },
-        { link: '#catering', variant: 'outline' },
+        { link: '#services', variant: 'outline' },
       ],
     },
     {
