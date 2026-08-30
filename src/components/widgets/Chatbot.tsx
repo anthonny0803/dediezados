@@ -12,7 +12,7 @@ const CONTACT_SECTION_ID = 'contact';
 const CHATBOT_PANEL_ID = 'chatbot-panel';
 
 const HEADER_BUTTON_CLASS =
-  'flex h-9 w-9 appearance-none items-center justify-center rounded-full border-0 bg-transparent text-muted-foreground transition-smooth hover:bg-muted hover:text-foreground';
+  'flex h-9 w-9 cursor-pointer appearance-none items-center justify-center rounded-full border-0 bg-transparent text-muted-foreground transition-smooth hover:bg-muted hover:text-foreground';
 
 interface ChatPanelProps {
   onClose: () => void;
@@ -132,7 +132,7 @@ export const Chatbot = () => {
           aria-controls={isOpen ? CHATBOT_PANEL_ID : undefined}
           aria-expanded={isOpen}
           onClick={togglePanel}
-          className="relative flex h-14 w-14 appearance-none items-center justify-center rounded-full border-0 bg-gradient-primary text-primary-foreground shadow-elegant transition-smooth hover:scale-105 sm:h-16 sm:w-16"
+          className="relative flex h-14 w-14 cursor-pointer appearance-none items-center justify-center rounded-full border-0 bg-gradient-primary text-primary-foreground shadow-elegant transition-smooth hover:scale-105 sm:h-16 sm:w-16"
         >
           {isOpen ? (
             <X className="h-6 w-6 sm:h-7 sm:w-7" />

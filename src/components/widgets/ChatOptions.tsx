@@ -30,7 +30,7 @@ export const ChatOptions = ({
           type="button"
           disabled={disabled}
           onClick={onContact}
-          className="flex appearance-none items-center gap-2 rounded-full border-0 bg-gradient-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-smooth hover:opacity-90 disabled:pointer-events-none disabled:opacity-40"
+          className="flex cursor-pointer appearance-none items-center gap-2 rounded-full border-0 bg-gradient-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-smooth hover:opacity-90 disabled:pointer-events-none disabled:opacity-40"
         >
           {t('contactCta')}
           <ArrowRight aria-hidden="true" className="h-4 w-4" />
@@ -43,7 +43,7 @@ export const ChatOptions = ({
           type="button"
           disabled={disabled}
           onClick={() => onSelect(option)}
-          className="appearance-none rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-smooth hover:border-primary hover:bg-secondary disabled:pointer-events-none disabled:opacity-40"
+          className="cursor-pointer appearance-none rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-smooth hover:border-primary hover:bg-secondary disabled:pointer-events-none disabled:opacity-40"
         >
           {t(`options.${option.id}`)}
         </button>
