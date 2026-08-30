@@ -400,12 +400,16 @@
       "events": "Event types",
       "location": "Location",
       "extras": "Extra services",
+      "pricing": "Pricing",
       "booking": "Book the venue",
       "matches": "Live Matches"
     },
     "nodes": {
       "root": {
         "message": "Hi! I am the De Diez a Dos assistant. What would you like to know more about?"
+      },
+      "pricing": {
+        "message": "Every celebration is different, so prices are tailored to your needs: number of guests, duration, menu and extra services. Tell us what you have in mind and we will prepare a personalised quote."
       }
     }
   }

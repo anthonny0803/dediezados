@@ -400,12 +400,16 @@
       "events": "Tipos de evento",
       "location": "Ubicación",
       "extras": "Servicios extra",
+      "pricing": "Precios",
       "booking": "Reservar la sala",
       "matches": "Partidos en Directo"
     },
     "nodes": {
       "root": {
         "message": "¡Hola! Soy el asistente de De Diez a Dos. ¿Sobre qué te gustaría saber más?"
+      },
+      "pricing": {
+        "message": "Cada celebración es diferente, así que los precios se personalizan según tus necesidades: número de invitados, duración, menú y servicios extra. Cuéntanos qué tienes en mente y te preparamos un presupuesto a medida."
       }
     }
   }

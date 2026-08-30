@@ -27,6 +27,7 @@ const TOPIC_OPTIONS: ChatbotOption[] = [
   { id: 'events', next: 'events' },
   { id: 'location', next: 'location' },
   { id: 'extras', next: 'extras' },
+  { id: 'pricing', next: 'pricing' },
   { id: 'booking', next: 'booking' },
 ];
 
@@ -63,6 +64,12 @@ export const chatbotTree: ChatbotTree = {
     id: 'matches',
     source: { kind: 'faq', index: FAQ_ANSWER.liveMatches },
     options: otherTopics('extras'),
+  },
+  pricing: {
+    id: 'pricing',
+    source: { kind: 'message' },
+    action: 'contact',
+    options: otherTopics('pricing'),
   },
   booking: {
     id: 'booking',

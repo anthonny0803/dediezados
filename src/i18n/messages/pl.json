@@ -400,12 +400,16 @@
       "events": "Rodzaje wydarzeń",
       "location": "Lokalizacja",
       "extras": "Usługi dodatkowe",
+      "pricing": "Ceny",
       "booking": "Rezerwacja sali",
       "matches": "Mecze na żywo"
     },
     "nodes": {
       "root": {
         "message": "Cześć! Jestem asystentem De Diez a Dos. O czym chcesz dowiedzieć się więcej?"
+      },
+      "pricing": {
+        "message": "Każda uroczystość jest inna, dlatego ceny dopasowujemy do Twoich potrzeb: liczby gości, czasu trwania, menu i usług dodatkowych. Napisz nam, co masz na myśli, a przygotujemy indywidualną wycenę."
       }
     }
   }

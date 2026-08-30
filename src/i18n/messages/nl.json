@@ -400,12 +400,16 @@
       "events": "Soorten evenementen",
       "location": "Locatie",
       "extras": "Extra diensten",
+      "pricing": "Prijzen",
       "booking": "De zaal reserveren",
       "matches": "Live wedstrijden"
     },
     "nodes": {
       "root": {
         "message": "Hallo! Ik ben de assistent van De Diez a Dos. Waarover wilt u meer weten?"
+      },
+      "pricing": {
+        "message": "Elke viering is anders, daarom worden de prijzen afgestemd op uw wensen: aantal gasten, duur, menu en extra diensten. Vertel ons wat u in gedachten heeft en wij stellen een offerte op maat op."
       }
     }
   }

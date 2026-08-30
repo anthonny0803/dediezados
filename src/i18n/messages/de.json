@@ -400,12 +400,16 @@
       "events": "Veranstaltungsarten",
       "location": "Standort",
       "extras": "Zusatzleistungen",
+      "pricing": "Preise",
       "booking": "Saal reservieren",
       "matches": "Live-Spiele"
     },
     "nodes": {
       "root": {
         "message": "Hallo! Ich bin der Assistent von De Diez a Dos. Worüber möchten Sie mehr erfahren?"
+      },
+      "pricing": {
+        "message": "Jede Feier ist anders, deshalb richten sich die Preise nach Ihren Bedürfnissen: Gästezahl, Dauer, Menü und Zusatzleistungen. Sagen Sie uns, was Sie sich vorstellen, und wir erstellen Ihnen ein individuelles Angebot."
       }
     }
   }

@@ -400,12 +400,16 @@
       "events": "Types d'événement",
       "location": "Localisation",
       "extras": "Services supplémentaires",
+      "pricing": "Tarifs",
       "booking": "Réserver la salle",
       "matches": "Matchs en direct"
     },
     "nodes": {
       "root": {
         "message": "Bonjour ! Je suis l'assistant de De Diez a Dos. Sur quel sujet souhaitez-vous en savoir plus ?"
+      },
+      "pricing": {
+        "message": "Chaque célébration est différente, c'est pourquoi les tarifs sont personnalisés selon vos besoins : nombre d'invités, durée, menu et services supplémentaires. Dites-nous ce que vous avez en tête et nous préparerons un devis sur mesure."
       }
     }
   }

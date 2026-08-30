@@ -400,12 +400,16 @@
       "events": "Tipi di evento",
       "location": "Posizione",
       "extras": "Servizi extra",
+      "pricing": "Prezzi",
       "booking": "Prenotare la sala",
       "matches": "Partite in Diretta"
     },
     "nodes": {
       "root": {
         "message": "Ciao! Sono l'assistente di De Diez a Dos. Di cosa vuoi sapere di più?"
+      },
+      "pricing": {
+        "message": "Ogni celebrazione è diversa, quindi i prezzi si personalizzano in base alle tue esigenze: numero di invitati, durata, menù e servizi extra. Raccontaci cosa hai in mente e ti prepariamo un preventivo su misura."
       }
     }
   }
