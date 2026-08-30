@@ -40,3 +40,36 @@
     transform: rotate(360deg);
   }
 }
+
+/* Chat typing dots */
+@keyframes chatTypingBounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.chat-typing-dot {
+  animation: chatTypingBounce 1.2s infinite ease-in-out;
+}
+
+.chat-typing-dot + .chat-typing-dot {
+  animation-delay: 0.15s;
+}
+
+.chat-typing-dot + .chat-typing-dot + .chat-typing-dot {
+  animation-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-typing-dot {
+    animation: none;
+    opacity: 0.6;
+  }
+}

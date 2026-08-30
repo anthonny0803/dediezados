@@ -10,6 +10,7 @@ import { Gallery } from '@/components/sections/Gallery';
 import { Contact } from '@/components/sections/Contact';
 import { LocationReviewsSection } from '@/components/sections/LocationReviewsSection';
 import { Faq } from '@/components/sections/Faq';
+import { Chatbot } from '@/components/widgets/Chatbot';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -32,6 +33,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <LocationReviewsSection />
       <Faq />
       <Footer />
+      <Chatbot />
     </>
   );
 }
