@@ -89,11 +89,17 @@ export const Chatbot = () => {
   const t = useTranslations('chatbot');
   const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [hasOpened, setHasOpened] = useState(false);
   const launcherRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  const togglePanel = () => {
+    setIsOpen((open) => !open);
+    setHasOpened(true);
+  };
 
   const closePanel = () => {
     setIsOpen(false);
@@ -112,17 +118,35 @@ export const Chatbot = () => {
 
   return (
     <>
-      <button
-        ref={launcherRef}
-        type="button"
-        aria-label={t('launcher')}
-        aria-controls={isOpen ? CHATBOT_PANEL_ID : undefined}
-        aria-expanded={isOpen}
-        onClick={() => setIsOpen((open) => !open)}
-        className="fixed bottom-6 right-6 z-[1500] flex h-14 w-14 appearance-none items-center justify-center rounded-full border-0 bg-gradient-primary text-primary-foreground shadow-elegant transition-smooth hover:scale-105"
-      >
-        {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
-      </button>
+      <div className="fixed bottom-6 right-6 z-[1500]">
+        {hasOpened ? null : (
+          <span
+            aria-hidden="true"
+            className="chat-launcher-halo pointer-events-none absolute inset-0 hidden rounded-full bg-primary sm:block"
+          />
+        )}
+        <button
+          ref={launcherRef}
+          type="button"
+          aria-label={t('launcher')}
+          aria-controls={isOpen ? CHATBOT_PANEL_ID : undefined}
+          aria-expanded={isOpen}
+          onClick={togglePanel}
+          className="relative flex h-14 w-14 appearance-none items-center justify-center rounded-full border-0 bg-gradient-primary text-primary-foreground shadow-elegant transition-smooth hover:scale-105 sm:h-16 sm:w-16"
+        >
+          {isOpen ? (
+            <X className="h-6 w-6 sm:h-7 sm:w-7" />
+          ) : (
+            <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7" />
+          )}
+          {hasOpened ? null : (
+            <span
+              aria-hidden="true"
+              className="absolute right-0.5 top-0.5 hidden h-3.5 w-3.5 rounded-full border-2 border-background bg-destructive sm:block"
+            />
+          )}
+        </button>
+      </div>
 
       {isOpen ? <ChatPanel onClose={closePanel} onContact={goToContact} /> : null}
     </>
