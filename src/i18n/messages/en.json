@@ -385,5 +385,28 @@
         "answer": "Yes. Our rooms feature a professional AV system with a screen and are a 5-minute walk from Santiago Bernabéu stadium. They are perfect for organising a private viewing party for any match or live event, with catering and open bar."
       }
     ]
+  },
+  "chatbot": {
+    "launcher": "Open the frequently asked questions chat",
+    "title": "Assistant",
+    "subtitle": "Quick answers to your questions",
+    "close": "Close the chat",
+    "restart": "Start over",
+    "typing": "The assistant is typing",
+    "optionsLabel": "Reply options",
+    "contactCta": "Go to the form",
+    "options": {
+      "catering": "Catering",
+      "events": "Event types",
+      "location": "Location",
+      "extras": "Extra services",
+      "booking": "Book the venue",
+      "matches": "Live Matches"
+    },
+    "nodes": {
+      "root": {
+        "message": "Hi! I am the De Diez a Dos assistant. What would you like to know more about?"
+      }
+    }
   }
 }

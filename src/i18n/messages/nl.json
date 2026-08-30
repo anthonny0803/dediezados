@@ -385,5 +385,28 @@
         "answer": "Ja. Onze zalen zijn uitgerust met een professioneel AV-systeem met scherm en liggen op 5 minuten loopafstand van het estadio Santiago Bernabéu. Ze zijn perfect voor het organiseren van een privé viewing party voor elke wedstrijd of live-evenement, met catering en open bar."
       }
     ]
+  },
+  "chatbot": {
+    "launcher": "Chat met veelgestelde vragen openen",
+    "title": "Assistent",
+    "subtitle": "Wij beantwoorden uw vragen direct",
+    "close": "Chat sluiten",
+    "restart": "Opnieuw beginnen",
+    "typing": "De assistent is aan het typen",
+    "optionsLabel": "Antwoordopties",
+    "contactCta": "Naar het formulier",
+    "options": {
+      "catering": "Catering",
+      "events": "Soorten evenementen",
+      "location": "Locatie",
+      "extras": "Extra diensten",
+      "booking": "De zaal reserveren",
+      "matches": "Live wedstrijden"
+    },
+    "nodes": {
+      "root": {
+        "message": "Hallo! Ik ben de assistent van De Diez a Dos. Waarover wilt u meer weten?"
+      }
+    }
   }
 }

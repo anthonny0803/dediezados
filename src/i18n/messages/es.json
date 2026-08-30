@@ -385,5 +385,28 @@
         "answer": "Sí. Nuestras salas cuentan con sistema audiovisual profesional con pantalla y están a 5 minutos caminando del estadio Santiago Bernabéu. Son perfectas para organizar una quedada privada y ver cualquier partido o evento en directo con catering y barra libre."
       }
     ]
+  },
+  "chatbot": {
+    "launcher": "Abrir el chat de preguntas frecuentes",
+    "title": "Asistente",
+    "subtitle": "Resolvemos tus dudas al instante",
+    "close": "Cerrar el chat",
+    "restart": "Empezar de nuevo",
+    "typing": "El asistente está escribiendo",
+    "optionsLabel": "Opciones de respuesta",
+    "contactCta": "Ir al formulario",
+    "options": {
+      "catering": "Catering",
+      "events": "Tipos de evento",
+      "location": "Ubicación",
+      "extras": "Servicios extra",
+      "booking": "Reservar la sala",
+      "matches": "Partidos en Directo"
+    },
+    "nodes": {
+      "root": {
+        "message": "¡Hola! Soy el asistente de De Diez a Dos. ¿Sobre qué te gustaría saber más?"
+      }
+    }
   }
 }

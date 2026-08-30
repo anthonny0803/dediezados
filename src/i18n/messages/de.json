@@ -385,5 +385,28 @@
         "answer": "Ja. Unsere Räume verfügen über ein professionelles AV-System mit Leinwand und liegen 5 Gehminuten vom Stadion Santiago Bernabéu entfernt. Sie eignen sich perfekt für eine private Viewing-Party für jedes Spiel oder Live-Event, mit Catering und Open Bar."
       }
     ]
+  },
+  "chatbot": {
+    "launcher": "Chat mit häufigen Fragen öffnen",
+    "title": "Assistent",
+    "subtitle": "Wir beantworten Ihre Fragen sofort",
+    "close": "Chat schließen",
+    "restart": "Neu beginnen",
+    "typing": "Der Assistent schreibt gerade",
+    "optionsLabel": "Antwortoptionen",
+    "contactCta": "Zum Formular",
+    "options": {
+      "catering": "Catering",
+      "events": "Veranstaltungsarten",
+      "location": "Standort",
+      "extras": "Zusatzleistungen",
+      "booking": "Saal reservieren",
+      "matches": "Live-Spiele"
+    },
+    "nodes": {
+      "root": {
+        "message": "Hallo! Ich bin der Assistent von De Diez a Dos. Worüber möchten Sie mehr erfahren?"
+      }
+    }
   }
 }
