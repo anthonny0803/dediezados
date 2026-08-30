@@ -385,5 +385,32 @@
         "answer": "Oui. Nos salles sont équipées d'un système audiovisuel professionnel avec écran et se trouvent à 5 minutes à pied du stade Santiago Bernabéu. Elles sont parfaites pour organiser une soirée privée et regarder n'importe quel match ou événement en direct, avec traiteur et bar ouvert."
       }
     ]
+  },
+  "chatbot": {
+    "launcher": "Ouvrir le chat des questions fréquentes",
+    "title": "Assistant",
+    "subtitle": "Nous répondons à vos questions immédiatement",
+    "close": "Fermer le chat",
+    "restart": "Recommencer",
+    "typing": "L'assistant est en train d'écrire",
+    "optionsLabel": "Options de réponse",
+    "contactCta": "Aller au formulaire",
+    "options": {
+      "catering": "Traiteur",
+      "events": "Types d'événement",
+      "location": "Localisation",
+      "extras": "Services supplémentaires",
+      "pricing": "Tarifs",
+      "booking": "Réserver la salle",
+      "matches": "Matchs en direct"
+    },
+    "nodes": {
+      "root": {
+        "message": "Bonjour ! Je suis l'assistant de De Diez a Dos. Sur quel sujet souhaitez-vous en savoir plus ?"
+      },
+      "pricing": {
+        "message": "Chaque célébration est différente, c'est pourquoi les tarifs sont personnalisés selon vos besoins : nombre d'invités, durée, menu et services supplémentaires. Dites-nous ce que vous avez en tête et nous préparerons un devis sur mesure."
+      }
+    }
   }
 }

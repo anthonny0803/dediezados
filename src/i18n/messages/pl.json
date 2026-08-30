@@ -385,5 +385,32 @@
         "answer": "Tak. Nasze sale są wyposażone w profesjonalny system AV z ekranem i znajdują się 5 minut spacerem od stadionu Santiago Bernabéu. Są idealne do organizacji prywatnego seansu dowolnego meczu lub wydarzenia na żywo, z cateringiem i otwartym barem."
       }
     ]
+  },
+  "chatbot": {
+    "launcher": "Otwórz czat z najczęstszymi pytaniami",
+    "title": "Asystent",
+    "subtitle": "Szybko odpowiemy na Twoje pytania",
+    "close": "Zamknij czat",
+    "restart": "Zacznij od nowa",
+    "typing": "Asystent pisze",
+    "optionsLabel": "Opcje odpowiedzi",
+    "contactCta": "Przejdź do formularza",
+    "options": {
+      "catering": "Catering",
+      "events": "Rodzaje wydarzeń",
+      "location": "Lokalizacja",
+      "extras": "Usługi dodatkowe",
+      "pricing": "Ceny",
+      "booking": "Rezerwacja sali",
+      "matches": "Mecze na żywo"
+    },
+    "nodes": {
+      "root": {
+        "message": "Cześć! Jestem asystentem De Diez a Dos. O czym chcesz dowiedzieć się więcej?"
+      },
+      "pricing": {
+        "message": "Każda uroczystość jest inna, dlatego ceny dopasowujemy do Twoich potrzeb: liczby gości, czasu trwania, menu i usług dodatkowych. Napisz nam, co masz na myśli, a przygotujemy indywidualną wycenę."
+      }
+    }
   }
 }
