@@ -412,5 +412,38 @@
         "message": "Jede Feier ist anders, deshalb richten sich die Preise nach Ihren Bedürfnissen: Gästezahl, Dauer, Menü und Zusatzleistungen. Sagen Sie uns, was Sie sich vorstellen, und wir erstellen Ihnen ein individuelles Angebot."
       }
     }
+  },
+  "news": {
+    "launcher": "Neuigkeiten ansehen",
+    "title": "Neuigkeiten",
+    "close": "Neuigkeiten schließen",
+    "prevItem": "Vorherige Neuigkeit",
+    "nextItem": "Nächste Neuigkeit",
+    "goToItem": "Zu Neuigkeit {number} springen",
+    "slideStatus": "Neuigkeit {current} von {total}",
+    "playVideo": "Video abspielen",
+    "items": {
+      "reapertura": {
+        "title": "Wir sind zurück, voller Energie",
+        "body": "Die Betriebsferien sind vorbei und das Rolltor geht wieder hoch. Der Saal ist bereit, sich erneut mit Feiern zu füllen.",
+        "alt": "Das Rolltor von De Diez a Dos öffnet sich am Tag der Wiedereröffnung"
+      },
+      "puertasAbiertas": {
+        "title": "Unsere Türen sind wieder offen",
+        "body": "Wir empfangen Sie wieder, mit vorbereitetem Saal und unverändertem Elan. Schauen Sie vorbei, wann immer Sie möchten.",
+        "alt": "Eingang von De Diez a Dos mit geöffneten Türen nach den Ferien"
+      },
+      "resena": {
+        "title": "Fünf Sterne in allen vier Kategorien",
+        "body": "Die Höchstbewertung auf einer externen Veranstaltungsplattform erfüllt uns mit Stolz. Herzlichen Dank an alle, die bei uns feiern und sich die Zeit nehmen, davon zu berichten: Das ist der schönste Auftakt in die neue Saison.",
+        "alt": "Fünf-Sterne-Bewertung von De Diez a Dos auf einer Veranstaltungsplattform"
+      },
+      "escenario": {
+        "title": "Eine neue Bühne für Ihre Veranstaltungen",
+        "body": "Wir haben in eine modulare Bühne investiert, die sich für jede Feier passend aufbauen lässt: Live-Auftritte, Reden, Karaoke oder Präsentationen. Eine Verbesserung, damit Sie Ihre Veranstaltung noch mehr genießen.",
+        "alt": "Modulare Bühne im Veranstaltungssaal von De Diez a Dos",
+        "ctaLabel": "Verfügbarkeit anfragen"
+      }
+    }
   }
 }

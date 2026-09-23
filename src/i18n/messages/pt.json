@@ -412,5 +412,38 @@
         "message": "Cada celebração é diferente, por isso os preços são personalizados de acordo com as suas necessidades: número de convidados, duração, menu e serviços extra. Diga-nos o que tem em mente e preparamos um orçamento à medida."
       }
     }
+  },
+  "news": {
+    "launcher": "Ver as novidades",
+    "title": "Novidades",
+    "close": "Fechar as novidades",
+    "prevItem": "Notícia anterior",
+    "nextItem": "Notícia seguinte",
+    "goToItem": "Ir para a notícia {number}",
+    "slideStatus": "Notícia {current} de {total}",
+    "playVideo": "Reproduzir o vídeo",
+    "items": {
+      "reapertura": {
+        "title": "Regressamos com energia renovada",
+        "body": "As férias coletivas terminaram e o estore volta a subir. A sala está pronta para se encher outra vez de celebrações.",
+        "alt": "O estore de De Diez a Dos a subir no dia da reabertura"
+      },
+      "puertasAbiertas": {
+        "title": "Portas novamente abertas",
+        "body": "Voltamos a recebê-lo, com a sala pronta e a mesma vontade de sempre. Passe por cá quando quiser.",
+        "alt": "Entrada de De Diez a Dos com as portas abertas depois das férias"
+      },
+      "resena": {
+        "title": "Cinco estrelas nas quatro categorias",
+        "body": "Receber a pontuação máxima numa plataforma externa de eventos enche-nos de orgulho. Um obrigado sentido a quem celebra connosco e tem a amabilidade de o contar: é o melhor impulso para esta nova temporada.",
+        "alt": "Avaliação de cinco estrelas de De Diez a Dos numa plataforma de eventos"
+      },
+      "escenario": {
+        "title": "Um novo palco para os seus eventos",
+        "body": "Investimos num palco modular que se monta à medida de cada celebração: atuações ao vivo, discursos, karaoke ou apresentações. Uma melhoria pensada para que desfrute ainda mais do seu evento.",
+        "alt": "Palco modular montado na sala de eventos de De Diez a Dos",
+        "ctaLabel": "Consulte a disponibilidade"
+      }
+    }
   }
 }

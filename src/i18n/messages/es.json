@@ -412,5 +412,38 @@
         "message": "Cada celebración es diferente, así que los precios se personalizan según tus necesidades: número de invitados, duración, menú y servicios extra. Cuéntanos qué tienes en mente y te preparamos un presupuesto a medida."
       }
     }
+  },
+  "news": {
+    "launcher": "Ver las novedades",
+    "title": "Novedades",
+    "close": "Cerrar las novedades",
+    "prevItem": "Noticia anterior",
+    "nextItem": "Noticia siguiente",
+    "goToItem": "Ir a la noticia {number}",
+    "slideStatus": "Noticia {current} de {total}",
+    "playVideo": "Reproducir el vídeo",
+    "items": {
+      "reapertura": {
+        "title": "Volvemos con las pilas cargadas",
+        "body": "Se acabaron las vacaciones colectivas y la persiana vuelve a subir. La sala está a punto para llenarse otra vez de celebraciones.",
+        "alt": "La persiana de De Diez a Dos subiendo el dia de la reapertura"
+      },
+      "puertasAbiertas": {
+        "title": "Puertas abiertas otra vez",
+        "body": "Volvemos a recibirte con la sala lista y las mismas ganas de siempre. Pásate a conocerla cuando quieras.",
+        "alt": "Entrada de De Diez a Dos con las puertas abiertas tras las vacaciones"
+      },
+      "resena": {
+        "title": "Cinco estrellas en las cuatro categorías",
+        "body": "Recibir la máxima puntuación en una plataforma externa de eventos nos llena de orgullo. Gracias de corazón a quienes celebran con nosotros y se toman el tiempo de contarlo: es el mejor empujón para esta nueva temporada.",
+        "alt": "Resena de cinco estrellas de De Diez a Dos en una plataforma de eventos"
+      },
+      "escenario": {
+        "title": "Nuevo escenario para tus eventos",
+        "body": "Hemos invertido en un escenario modular que se monta a la medida de cada celebración: actuaciones en directo, discursos, karaoke o presentaciones. Una mejora pensada para que disfrutes más de tu evento.",
+        "alt": "Escenario modular montado en la sala de eventos de De Diez a Dos",
+        "ctaLabel": "Consulta disponibilidad"
+      }
+    }
   }
 }

@@ -412,5 +412,38 @@
         "message": "Ogni celebrazione è diversa, quindi i prezzi si personalizzano in base alle tue esigenze: numero di invitati, durata, menù e servizi extra. Raccontaci cosa hai in mente e ti prepariamo un preventivo su misura."
       }
     }
+  },
+  "news": {
+    "launcher": "Scopri le novità",
+    "title": "Novità",
+    "close": "Chiudi le novità",
+    "prevItem": "Notizia precedente",
+    "nextItem": "Notizia successiva",
+    "goToItem": "Vai alla notizia {number}",
+    "slideStatus": "Notizia {current} di {total}",
+    "playVideo": "Riproduci il video",
+    "items": {
+      "reapertura": {
+        "title": "Torniamo con l'energia al massimo",
+        "body": "Le ferie collettive sono finite e la serranda torna a salire. La sala è pronta per riempirsi di nuovo di feste.",
+        "alt": "La serranda di De Diez a Dos che si alza il giorno della riapertura"
+      },
+      "puertasAbiertas": {
+        "title": "Porte di nuovo aperte",
+        "body": "Torniamo ad accoglierti con la sala pronta e la stessa voglia di sempre. Passa a vederla quando vuoi.",
+        "alt": "Ingresso di De Diez a Dos con le porte aperte dopo le ferie"
+      },
+      "resena": {
+        "title": "Cinque stelle in tutte e quattro le categorie",
+        "body": "Ricevere il punteggio massimo su una piattaforma esterna di eventi ci riempie di orgoglio. Grazie di cuore a chi festeggia con noi e si prende il tempo di raccontarlo: è la spinta migliore per questa nuova stagione.",
+        "alt": "Recensione a cinque stelle di De Diez a Dos su una piattaforma di eventi"
+      },
+      "escenario": {
+        "title": "Un nuovo palco per i tuoi eventi",
+        "body": "Abbiamo investito in un palco modulare che si monta su misura per ogni festa: esibizioni dal vivo, discorsi, karaoke o presentazioni. Un miglioramento pensato per farti godere ancora di più il tuo evento.",
+        "alt": "Palco modulare montato nella sala eventi di De Diez a Dos",
+        "ctaLabel": "Chiedi la disponibilità"
+      }
+    }
   }
 }

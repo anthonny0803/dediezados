@@ -11,6 +11,7 @@ import { Contact } from '@/components/sections/Contact';
 import { LocationReviewsSection } from '@/components/sections/LocationReviewsSection';
 import { Faq } from '@/components/sections/Faq';
 import { Chatbot } from '@/components/widgets/Chatbot';
+import { News } from '@/components/widgets/News';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -34,6 +35,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <Faq />
       <Footer />
       <Chatbot />
+      <News />
     </>
   );
 }
