@@ -412,5 +412,38 @@
         "message": "Every celebration is different, so prices are tailored to your needs: number of guests, duration, menu and extra services. Tell us what you have in mind and we will prepare a personalised quote."
       }
     }
+  },
+  "news": {
+    "launcher": "See the latest news",
+    "title": "What's new",
+    "close": "Close the news",
+    "prevItem": "Previous item",
+    "nextItem": "Next item",
+    "goToItem": "Go to item {number}",
+    "slideStatus": "Item {current} of {total}",
+    "playVideo": "Play the video",
+    "items": {
+      "reapertura": {
+        "title": "Back and ready for you",
+        "body": "The collective holidays are over and the shutter is going up again. The venue is set to fill with celebrations once more.",
+        "alt": "The De Diez a Dos shutter going up on reopening day"
+      },
+      "puertasAbiertas": {
+        "title": "Our doors are open again",
+        "body": "We are back to welcome you, with the venue ready and the same enthusiasm as always. Drop by whenever you like.",
+        "alt": "Entrance of De Diez a Dos with the doors open after the holidays"
+      },
+      "resena": {
+        "title": "Five stars in all four categories",
+        "body": "Receiving top marks on an external events platform fills us with pride. Our heartfelt thanks to everyone who celebrates with us and takes the time to say so: it is the best possible start to this new season.",
+        "alt": "Five-star review of De Diez a Dos on an events platform"
+      },
+      "escenario": {
+        "title": "A new stage for your events",
+        "body": "We have invested in a modular stage that is built to fit each celebration: live performances, speeches, karaoke or presentations. An upgrade made so you enjoy your event even more.",
+        "alt": "Modular stage set up in the De Diez a Dos event hall",
+        "ctaLabel": "Check availability"
+      }
+    }
   }
 }
