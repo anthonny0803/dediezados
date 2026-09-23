@@ -412,5 +412,38 @@
         "message": "Każda uroczystość jest inna, dlatego ceny dopasowujemy do Twoich potrzeb: liczby gości, czasu trwania, menu i usług dodatkowych. Napisz nam, co masz na myśli, a przygotujemy indywidualną wycenę."
       }
     }
+  },
+  "news": {
+    "launcher": "Zobacz nowości",
+    "title": "Nowości",
+    "close": "Zamknij nowości",
+    "prevItem": "Poprzednia wiadomość",
+    "nextItem": "Następna wiadomość",
+    "goToItem": "Przejdź do wiadomości {number}",
+    "slideStatus": "Wiadomość {current} z {total}",
+    "playVideo": "Odtwórz wideo",
+    "items": {
+      "reapertura": {
+        "title": "Wracamy z nową energią",
+        "body": "Urlop zbiorowy dobiegł końca, a roleta znów idzie w górę. Sala jest gotowa, by na nowo wypełnić się przyjęciami.",
+        "alt": "Roleta De Diez a Dos podnosząca się w dniu ponownego otwarcia"
+      },
+      "puertasAbiertas": {
+        "title": "Drzwi znowu otwarte",
+        "body": "Znów na Ciebie czekamy: sala przygotowana, a zapał ten sam co zawsze. Wpadnij ją zobaczyć, kiedy chcesz.",
+        "alt": "Wejście do De Diez a Dos z otwartymi drzwiami po urlopie"
+      },
+      "resena": {
+        "title": "Pięć gwiazdek we wszystkich czterech kategoriach",
+        "body": "Najwyższa ocena na zewnętrznej platformie eventowej napełnia nas dumą. Serdecznie dziękujemy wszystkim, którzy świętują u nas i znajdują chwilę, by o tym napisać: to najlepszy start w nowy sezon.",
+        "alt": "Pięciogwiazdkowa opinia o De Diez a Dos na platformie eventowej"
+      },
+      "escenario": {
+        "title": "Nowa scena na Twoje wydarzenia",
+        "body": "Zainwestowaliśmy w scenę modułową, którą składamy pod wymiar każdego przyjęcia: występy na żywo, przemówienia, karaoke czy prezentacje. Ulepszenie po to, byś jeszcze lepiej bawił się na swoim wydarzeniu.",
+        "alt": "Scena modułowa ustawiona w sali eventowej De Diez a Dos",
+        "ctaLabel": "Sprawdź dostępność"
+      }
+    }
   }
 }

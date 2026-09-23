@@ -412,5 +412,38 @@
         "message": "Elke viering is anders, daarom worden de prijzen afgestemd op uw wensen: aantal gasten, duur, menu en extra diensten. Vertel ons wat u in gedachten heeft en wij stellen een offerte op maat op."
       }
     }
+  },
+  "news": {
+    "launcher": "Het nieuws bekijken",
+    "title": "Nieuws",
+    "close": "Het nieuws sluiten",
+    "prevItem": "Vorig bericht",
+    "nextItem": "Volgend bericht",
+    "goToItem": "Ga naar bericht {number}",
+    "slideStatus": "Bericht {current} van {total}",
+    "playVideo": "De video afspelen",
+    "items": {
+      "reapertura": {
+        "title": "We zijn terug, met nieuwe energie",
+        "body": "De collectieve vakantie is voorbij en het rolluik gaat weer omhoog. De zaal staat klaar om zich opnieuw met feesten te vullen.",
+        "alt": "Het rolluik van De Diez a Dos gaat omhoog op de dag van de heropening"
+      },
+      "puertasAbiertas": {
+        "title": "De deuren staan weer open",
+        "body": "We ontvangen u weer, met de zaal gereed en hetzelfde enthousiasme als altijd. Kom gerust langs wanneer u wilt.",
+        "alt": "Ingang van De Diez a Dos met open deuren na de vakantie"
+      },
+      "resena": {
+        "title": "Vijf sterren in alle vier de categorieën",
+        "body": "De hoogste beoordeling op een extern evenementenplatform vervult ons met trots. Hartelijk dank aan iedereen die bij ons feest viert en de moeite neemt om dat te vertellen: dit is de mooiste start van het nieuwe seizoen.",
+        "alt": "Beoordeling met vijf sterren van De Diez a Dos op een evenementenplatform"
+      },
+      "escenario": {
+        "title": "Een nieuw podium voor uw evenementen",
+        "body": "We hebben geïnvesteerd in een modulair podium dat op maat van elk feest wordt opgebouwd: liveoptredens, toespraken, karaoke of presentaties. Een verbetering zodat u nog meer van uw evenement geniet.",
+        "alt": "Modulair podium opgebouwd in de evenementenzaal van De Diez a Dos",
+        "ctaLabel": "Vraag de beschikbaarheid op"
+      }
+    }
   }
 }

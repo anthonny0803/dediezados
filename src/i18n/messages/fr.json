@@ -412,5 +412,38 @@
         "message": "Chaque célébration est différente, c'est pourquoi les tarifs sont personnalisés selon vos besoins : nombre d'invités, durée, menu et services supplémentaires. Dites-nous ce que vous avez en tête et nous préparerons un devis sur mesure."
       }
     }
+  },
+  "news": {
+    "launcher": "Voir les actualités",
+    "title": "Actualités",
+    "close": "Fermer les actualités",
+    "prevItem": "Actualité précédente",
+    "nextItem": "Actualité suivante",
+    "goToItem": "Aller à l'actualité {number}",
+    "slideStatus": "Actualité {current} sur {total}",
+    "playVideo": "Lire la vidéo",
+    "items": {
+      "reapertura": {
+        "title": "De retour, et pleins d'énergie",
+        "body": "Les congés collectifs sont terminés et le rideau se relève. La salle est prête à se remplir de nouveau de célébrations.",
+        "alt": "Le rideau de De Diez a Dos qui se relève le jour de la réouverture"
+      },
+      "puertasAbiertas": {
+        "title": "Nos portes sont de nouveau ouvertes",
+        "body": "Nous vous accueillons à nouveau, la salle prête et l'envie intacte. Passez la découvrir quand vous le souhaitez.",
+        "alt": "Entrée de De Diez a Dos avec les portes ouvertes après les congés"
+      },
+      "resena": {
+        "title": "Cinq étoiles dans les quatre catégories",
+        "body": "Recevoir la note maximale sur une plateforme d'événements externe nous remplit de fierté. Un grand merci à toutes les personnes qui font la fête chez nous et prennent le temps de le dire : c'est le plus bel élan pour cette nouvelle saison.",
+        "alt": "Avis cinq étoiles de De Diez a Dos sur une plateforme d'événements"
+      },
+      "escenario": {
+        "title": "Une nouvelle scène pour vos événements",
+        "body": "Nous avons investi dans une scène modulable qui se monte sur mesure pour chaque célébration : concerts, discours, karaoké ou présentations. Une amélioration pensée pour que vous profitiez encore plus de votre événement.",
+        "alt": "Scène modulable installée dans la salle de De Diez a Dos",
+        "ctaLabel": "Vérifiez les disponibilités"
+      }
+    }
   }
 }
