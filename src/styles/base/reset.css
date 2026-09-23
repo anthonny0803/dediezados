@@ -10,10 +10,19 @@
      <button> keeps the user-agent grey (ButtonFace). New Tailwind buttons
      (Events/Space) have no resting background and would show that grey.
      Reset it so they stay transparent like the design reference; legacy
-     buttons set their own background via classes and are unaffected. */
+     buttons set their own background via classes and are unaffected.
+
+     `color` is part of the same gap: WebKit draws an unstyled button as a
+     system button and paints its label with the iOS accent blue, which is why
+     Events and Services read blue on iPhone and neutral everywhere else.
+     Mirror preflight so the label follows the theme; buttons that set their
+     own colour still win on specificity. `-webkit-text-fill-color` is there
+     because WebKit lets it override `color` on form controls. */
   button {
     background-color: transparent;
     background-image: none;
+    color: inherit;
+    -webkit-text-fill-color: inherit;
   }
 
   /* Same preflight-omission context: without it, <a> keeps the user-agent link
