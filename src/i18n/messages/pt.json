@@ -423,15 +423,17 @@
     "slideStatus": "Notícia {current} de {total}",
     "playVideo": "Reproduzir o vídeo",
     "items": {
-      "reapertura": {
-        "title": "Regressamos com energia renovada",
-        "body": "As férias coletivas terminaram e o estore volta a subir. A sala está pronta para se encher outra vez de celebrações.",
-        "alt": "O estore de De Diez a Dos a subir no dia da reabertura"
+      "sonido": {
+        "title": "Cabine de DJ e som profissional",
+        "body": "Instalámos uma cabine de DJ com equipamento profissional e um sistema de som que enche a sala com um áudio nítido e envolvente. A sua música, os seus discursos e cada atuação vão ouvir-se como merecem.",
+        "alt": "Cabine de DJ com controlador profissional na sala de eventos De Diez a Dos",
+        "ctaLabel": "Consulte a disponibilidade"
       },
-      "puertasAbiertas": {
-        "title": "Portas novamente abertas",
-        "body": "Voltamos a recebê-lo, com a sala pronta e a mesma vontade de sempre. Passe por cá quando quiser.",
-        "alt": "Entrada de De Diez a Dos com as portas abertas depois das férias"
+      "antonioTomas": {
+        "title": "Antonio Tomás em concerto na nossa sala",
+        "body": "Tivemos a honra de receber o cantor Antonio Tomás no nosso palco. Uma noite de música ao vivo, próxima e emocionante, que mostra tudo aquilo que a sua celebração pode ser.",
+        "alt": "O cantor Antonio Tomás em concerto na sala De Diez a Dos",
+        "ctaLabel": "Reserve a sua data"
       },
       "resena": {
         "title": "Cinco estrelas nas quatro categorias",

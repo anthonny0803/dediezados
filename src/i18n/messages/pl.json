@@ -423,15 +423,17 @@
     "slideStatus": "Wiadomość {current} z {total}",
     "playVideo": "Odtwórz wideo",
     "items": {
-      "reapertura": {
-        "title": "Wracamy z nową energią",
-        "body": "Urlop zbiorowy dobiegł końca, a roleta znów idzie w górę. Sala jest gotowa, by na nowo wypełnić się przyjęciami.",
-        "alt": "Roleta De Diez a Dos podnosząca się w dniu ponownego otwarcia"
+      "sonido": {
+        "title": "Stanowisko DJ-a i profesjonalne nagłośnienie",
+        "body": "Wyposażyliśmy salę w stanowisko DJ-a z profesjonalnym sprzętem i system nagłośnienia, który wypełnia wnętrze czystym, przestrzennym dźwiękiem. Twoja muzyka, przemówienia i każdy występ zabrzmią tak, jak na to zasługują.",
+        "alt": "Stanowisko DJ-a z profesjonalnym kontrolerem w sali De Diez a Dos",
+        "ctaLabel": "Sprawdź dostępność"
       },
-      "puertasAbiertas": {
-        "title": "Drzwi znowu otwarte",
-        "body": "Znów na Ciebie czekamy: sala przygotowana, a zapał ten sam co zawsze. Wpadnij ją zobaczyć, kiedy chcesz.",
-        "alt": "Wejście do De Diez a Dos z otwartymi drzwiami po urlopie"
+      "antonioTomas": {
+        "title": "Antonio Tomás na koncercie w naszej sali",
+        "body": "Mieliśmy zaszczyt gościć na naszej scenie piosenkarza Antonio Tomása. Wieczór muzyki na żywo, kameralny i pełen emocji, który pokazuje, czym może stać się Twoja uroczystość.",
+        "alt": "Piosenkarz Antonio Tomás podczas koncertu na żywo w sali De Diez a Dos",
+        "ctaLabel": "Zarezerwuj swój termin"
       },
       "resena": {
         "title": "Pięć gwiazdek we wszystkich czterech kategoriach",

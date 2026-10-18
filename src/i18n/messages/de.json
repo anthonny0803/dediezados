@@ -423,15 +423,17 @@
     "slideStatus": "Neuigkeit {current} von {total}",
     "playVideo": "Video abspielen",
     "items": {
-      "reapertura": {
-        "title": "Wir sind zurück, voller Energie",
-        "body": "Die Betriebsferien sind vorbei und das Rolltor geht wieder hoch. Der Saal ist bereit, sich erneut mit Feiern zu füllen.",
-        "alt": "Das Rolltor von De Diez a Dos öffnet sich am Tag der Wiedereröffnung"
+      "sonido": {
+        "title": "DJ-Pult und professioneller Sound",
+        "body": "Wir haben ein DJ-Pult mit professioneller Ausstattung und eine Beschallungsanlage installiert, die den Saal mit klarem, raumfüllendem Klang erfüllt. Ihre Musik, Ihre Reden und jeder Auftritt klingen so, wie sie es verdienen.",
+        "alt": "DJ-Pult mit professionellem Controller im Veranstaltungssaal von De Diez a Dos",
+        "ctaLabel": "Verfügbarkeit anfragen"
       },
-      "puertasAbiertas": {
-        "title": "Unsere Türen sind wieder offen",
-        "body": "Wir empfangen Sie wieder, mit vorbereitetem Saal und unverändertem Elan. Schauen Sie vorbei, wann immer Sie möchten.",
-        "alt": "Eingang von De Diez a Dos mit geöffneten Türen nach den Ferien"
+      "antonioTomas": {
+        "title": "Antonio Tomás live in unserem Saal",
+        "body": "Wir hatten die Ehre, den Sänger Antonio Tomás auf unserer Bühne zu begrüßen. Ein Abend mit Livemusik, nah und bewegend, der zeigt, was Ihre Feier alles sein kann.",
+        "alt": "Der Sänger Antonio Tomás live im Konzert im Saal von De Diez a Dos",
+        "ctaLabel": "Ihren Termin reservieren"
       },
       "resena": {
         "title": "Fünf Sterne in allen vier Kategorien",
