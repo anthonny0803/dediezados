@@ -423,15 +423,17 @@
     "slideStatus": "Actualité {current} sur {total}",
     "playVideo": "Lire la vidéo",
     "items": {
-      "reapertura": {
-        "title": "De retour, et pleins d'énergie",
-        "body": "Les congés collectifs sont terminés et le rideau se relève. La salle est prête à se remplir de nouveau de célébrations.",
-        "alt": "Le rideau de De Diez a Dos qui se relève le jour de la réouverture"
+      "sonido": {
+        "title": "Cabine DJ et son professionnel",
+        "body": "Nous avons installé une cabine DJ dotée d'un équipement professionnel et d'un système de sonorisation qui remplit la salle d'un son net et enveloppant. Votre musique, vos discours et chaque prestation seront entendus comme ils le méritent.",
+        "alt": "Cabine DJ avec contrôleur professionnel dans la salle de réception De Diez a Dos",
+        "ctaLabel": "Vérifiez les disponibilités"
       },
-      "puertasAbiertas": {
-        "title": "Nos portes sont de nouveau ouvertes",
-        "body": "Nous vous accueillons à nouveau, la salle prête et l'envie intacte. Passez la découvrir quand vous le souhaitez.",
-        "alt": "Entrée de De Diez a Dos avec les portes ouvertes après les congés"
+      "antonioTomas": {
+        "title": "Antonio Tomás en concert dans notre salle",
+        "body": "Nous avons eu l'honneur d'accueillir le chanteur Antonio Tomás sur notre scène. Une soirée de musique live, intime et émouvante, qui montre tout ce que votre célébration peut devenir.",
+        "alt": "Le chanteur Antonio Tomás en concert dans la salle De Diez a Dos",
+        "ctaLabel": "Réservez votre date"
       },
       "resena": {
         "title": "Cinq étoiles dans les quatre catégories",

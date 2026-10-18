@@ -423,15 +423,17 @@
     "slideStatus": "Bericht {current} van {total}",
     "playVideo": "De video afspelen",
     "items": {
-      "reapertura": {
-        "title": "We zijn terug, met nieuwe energie",
-        "body": "De collectieve vakantie is voorbij en het rolluik gaat weer omhoog. De zaal staat klaar om zich opnieuw met feesten te vullen.",
-        "alt": "Het rolluik van De Diez a Dos gaat omhoog op de dag van de heropening"
+      "sonido": {
+        "title": "DJ-booth en professioneel geluid",
+        "body": "We hebben een DJ-booth met professionele apparatuur en een geluidsinstallatie toegevoegd die de zaal vult met helder, omhullend geluid. Uw muziek, uw speeches en elk optreden klinken zoals ze verdienen.",
+        "alt": "DJ-booth met professionele controller in de evenementenzaal van De Diez a Dos",
+        "ctaLabel": "Vraag de beschikbaarheid op"
       },
-      "puertasAbiertas": {
-        "title": "De deuren staan weer open",
-        "body": "We ontvangen u weer, met de zaal gereed en hetzelfde enthousiasme als altijd. Kom gerust langs wanneer u wilt.",
-        "alt": "Ingang van De Diez a Dos met open deuren na de vakantie"
+      "antonioTomas": {
+        "title": "Antonio Tomás live in onze zaal",
+        "body": "We hadden de eer zanger Antonio Tomás op ons podium te verwelkomen. Een avond vol livemuziek, intiem en ontroerend, die laat zien wat uw feest allemaal kan worden.",
+        "alt": "Zanger Antonio Tomás live in concert in de zaal van De Diez a Dos",
+        "ctaLabel": "Reserveer uw datum"
       },
       "resena": {
         "title": "Vijf sterren in alle vier de categorieën",
