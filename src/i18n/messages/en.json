@@ -423,15 +423,17 @@
     "slideStatus": "Item {current} of {total}",
     "playVideo": "Play the video",
     "items": {
-      "reapertura": {
-        "title": "Back and ready for you",
-        "body": "The collective holidays are over and the shutter is going up again. The venue is set to fill with celebrations once more.",
-        "alt": "The De Diez a Dos shutter going up on reopening day"
+      "sonido": {
+        "title": "DJ booth and professional sound",
+        "body": "We have added a DJ booth with professional equipment and a sound system that fills the hall with crisp, immersive audio. Your music, your speeches and every performance will sound just as they deserve.",
+        "alt": "DJ booth with a professional controller in the De Diez a Dos event hall",
+        "ctaLabel": "Check availability"
       },
-      "puertasAbiertas": {
-        "title": "Our doors are open again",
-        "body": "We are back to welcome you, with the venue ready and the same enthusiasm as always. Drop by whenever you like.",
-        "alt": "Entrance of De Diez a Dos with the doors open after the holidays"
+      "antonioTomas": {
+        "title": "Antonio Tomás, live in concert at our venue",
+        "body": "We had the honour of welcoming singer Antonio Tomás onto our stage. A night of live music, intimate and moving, that shows everything your celebration can become.",
+        "alt": "Singer Antonio Tomás performing live in concert at the De Diez a Dos hall",
+        "ctaLabel": "Book your date"
       },
       "resena": {
         "title": "Five stars in all four categories",

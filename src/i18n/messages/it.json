@@ -423,15 +423,17 @@
     "slideStatus": "Notizia {current} di {total}",
     "playVideo": "Riproduci il video",
     "items": {
-      "reapertura": {
-        "title": "Torniamo con l'energia al massimo",
-        "body": "Le ferie collettive sono finite e la serranda torna a salire. La sala è pronta per riempirsi di nuovo di feste.",
-        "alt": "La serranda di De Diez a Dos che si alza il giorno della riapertura"
+      "sonido": {
+        "title": "Consolle DJ e audio professionale",
+        "body": "Abbiamo aggiunto una consolle DJ con attrezzatura professionale e un impianto audio che riempie la sala con un suono nitido e avvolgente. La tua musica, i tuoi discorsi e ogni esibizione si sentiranno come meritano.",
+        "alt": "Consolle DJ con controller professionale nella sala eventi di De Diez a Dos",
+        "ctaLabel": "Chiedi la disponibilità"
       },
-      "puertasAbiertas": {
-        "title": "Porte di nuovo aperte",
-        "body": "Torniamo ad accoglierti con la sala pronta e la stessa voglia di sempre. Passa a vederla quando vuoi.",
-        "alt": "Ingresso di De Diez a Dos con le porte aperte dopo le ferie"
+      "antonioTomas": {
+        "title": "Antonio Tomás in concerto nella nostra sala",
+        "body": "Abbiamo avuto l'onore di accogliere il cantante Antonio Tomás sul nostro palco. Una serata di musica dal vivo, intima ed emozionante, che mostra tutto ciò che la tua festa può diventare.",
+        "alt": "Il cantante Antonio Tomás in concerto nella sala di De Diez a Dos",
+        "ctaLabel": "Prenota la tua data"
       },
       "resena": {
         "title": "Cinque stelle in tutte e quattro le categorie",
