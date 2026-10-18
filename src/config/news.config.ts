@@ -23,12 +23,12 @@ import type { NewsItemConfig } from '@/types/news';
  * - youtube          `{ kind: 'youtube', videoId: '<id>', poster: '<Cloudinary image URL>' }`
  *
  * Never ask for a width above the source width: Cloudinary upscales and the
- * file grows instead of shrinking. The clips here are 576px wide and the review
- * screenshot 979px, so both are delivered without a `w_` transformation.
+ * file grows instead of shrinking. The review screenshot is 979px wide, so it is
+ * delivered without a `w_` transformation.
  */
 
 /** Bump only for genuinely new content: it reopens the modal for every visitor. */
-export const NEWS_RELEASE_ID = '2026-09-reapertura-escenario';
+export const NEWS_RELEASE_ID = '2026-10-sonido-antonio-tomas';
 
 export const NEWS_STORAGE_KEY = 'dediezados:news:release';
 
@@ -43,38 +43,53 @@ export const NEWS_SWIPE_THRESHOLD_PX = 50;
 
 const CLOUDINARY = 'https://res.cloudinary.com/dk5kc8pu3';
 
-const stagePhoto = (version: string, publicId: string): NewsItemConfig['media'] => ({
+interface PhotoSize {
+  width: number;
+  height: number;
+}
+
+const STAGE_SIZE: PhotoSize = { width: 1200, height: 1600 };
+const SOUND_SIZE: PhotoSize = { width: 1536, height: 2048 };
+
+const photo = (version: string, publicId: string, size: PhotoSize): NewsItemConfig['media'] => ({
   kind: 'image',
   url: `${CLOUDINARY}/image/upload/f_auto,q_auto,w_1080/${version}/${publicId}.jpg`,
-  width: 1200,
-  height: 1600,
+  ...size,
 });
 
 /**
  * Copy is provisional until the client approves it.
  *
- * The two reopening items open the feed, then the stage series. All four stage
- * photos share the `escenario` text: one message, four views of it.
+ * The sound and Antonio Tomás series open the feed, then the review and the
+ * stage series. Each series shares one text: one message, several views of it.
  */
 export const newsItems: NewsItemConfig[] = [
   {
-    id: 'reapertura',
-    media: {
-      kind: 'cloudinaryVideo',
-      src: `${CLOUDINARY}/video/upload/f_auto,q_auto/v1790149330/WhatsApp_Video_2026-09-21_at_13.06.40_owufi9.mp4`,
-      poster: `${CLOUDINARY}/video/upload/so_0,f_auto,q_auto/v1790149330/WhatsApp_Video_2026-09-21_at_13.06.40_owufi9.jpg`,
-      width: 576,
-      height: 1024,
-    },
+    id: 'sonido1',
+    contentKey: 'sonido',
+    media: photo('v1792342028', 'WhatsApp_Image_2026-10-18_at_18.40.05_1_okakp2', SOUND_SIZE),
+    cta: { href: '#contact' },
   },
   {
-    id: 'puertasAbiertas',
-    media: {
-      kind: 'image',
-      url: `${CLOUDINARY}/image/upload/f_auto,q_auto,w_1080/v1790149330/WhatsApp_Image_2026-09-21_at_13.07.25_1_ygrssk.jpg`,
-      width: 1200,
+    id: 'sonido2',
+    contentKey: 'sonido',
+    media: photo('v1792342028', 'WhatsApp_Image_2026-10-18_at_18.40.05_ayvl7y', SOUND_SIZE),
+    cta: { href: '#contact' },
+  },
+  {
+    id: 'antonioTomas1',
+    contentKey: 'antonioTomas',
+    media: photo('v1792342028', 'WhatsApp_Image_2026-10-18_at_18.24.55_ugzz9b', {
+      width: 1108,
       height: 1600,
-    },
+    }),
+    cta: { href: '#contact' },
+  },
+  {
+    id: 'antonioTomas2',
+    contentKey: 'antonioTomas',
+    media: photo('v1792342028', 'WhatsApp_Image_2026-10-18_at_18.24.55_1_unabst', STAGE_SIZE),
+    cta: { href: '#contact' },
   },
   {
     id: 'resena',
@@ -88,25 +103,25 @@ export const newsItems: NewsItemConfig[] = [
   {
     id: 'escenario1',
     contentKey: 'escenario',
-    media: stagePhoto('v1790149746', 'WhatsApp_Image_2026-09-18_at_21.10.58_sktlsr'),
+    media: photo('v1790149746', 'WhatsApp_Image_2026-09-18_at_21.10.58_sktlsr', STAGE_SIZE),
     cta: { href: '#contact' },
   },
   {
     id: 'escenario2',
     contentKey: 'escenario',
-    media: stagePhoto('v1790149746', 'WhatsApp_Image_2026-09-18_at_21.10.59_igzjmv'),
+    media: photo('v1790149746', 'WhatsApp_Image_2026-09-18_at_21.10.59_igzjmv', STAGE_SIZE),
     cta: { href: '#contact' },
   },
   {
     id: 'escenario3',
     contentKey: 'escenario',
-    media: stagePhoto('v1790149747', 'WhatsApp_Image_2026-09-18_at_21.10.59_2_znqbht'),
+    media: photo('v1790149747', 'WhatsApp_Image_2026-09-18_at_21.10.59_2_znqbht', STAGE_SIZE),
     cta: { href: '#contact' },
   },
   {
     id: 'escenario4',
     contentKey: 'escenario',
-    media: stagePhoto('v1790149747', 'WhatsApp_Image_2026-09-18_at_21.10.59_3_pc7wic'),
+    media: photo('v1790149747', 'WhatsApp_Image_2026-09-18_at_21.10.59_3_pc7wic', STAGE_SIZE),
     cta: { href: '#contact' },
   },
 ];
