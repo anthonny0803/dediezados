@@ -447,5 +447,85 @@
         "ctaLabel": "Consulta disponibilidad"
       }
     }
+  },
+  "pages": {
+    "breadcrumbHome": "Inicio",
+    "breadcrumbLabel": "Ruta de navegación",
+    "events": {
+      "metaTitle": "Sala para eventos privados en Madrid | De Diez a Dos",
+      "metaDescription": "Bodas, cumpleaños, fiestas de 15 años, eventos de empresa y partidos en directo en una sala privada junto al Bernabéu. Catering y barra libre incluidos.",
+      "title": "Eventos privados en Madrid",
+      "lead": "Una sala exclusiva junto al Santiago Bernabéu para celebrar cualquier ocasión, con catering, barra libre y un equipo que se ocupa de todo.",
+      "paragraphs": [
+        "En De Diez a Dos organizamos eventos privados en Madrid desde hace más de 14 años. Celebramos bodas y postbodas, cumpleaños de adultos, jóvenes e infantiles, fiestas de 15 años, comuniones, baby showers y despedidas de soltera y soltero.",
+        "Para empresas, el espacio se adapta a cenas de empresa, presentaciones, reuniones de trabajo y team building, con sistema audiovisual profesional y catering. Y si eres de fútbol, a 5 minutos andando del estadio puedes ver los partidos en directo en pantalla, en una sala solo para tu grupo.",
+        "Cada evento es distinto, así que adaptamos el menú, la música, la decoración y los extras (DJ, karaoke, PhotoMax 360 o mesa dulce) a lo que tienes en mente. Las salas tienen capacidad para hasta 100 invitados."
+      ]
+    },
+    "services": {
+      "metaTitle": "Servicios para eventos en Madrid: catering, barra libre y DJ | De Diez a Dos",
+      "metaDescription": "Sala en exclusiva, sonido e iluminación profesional, catering propio, barra libre y personal de servicio. Añade DJ, karaoke, PhotoMax 360 o mesa dulce.",
+      "title": "Servicios para tu evento",
+      "lead": "Todo lo que necesita una celebración en un mismo lugar: espacio en exclusiva, catering, barra libre, sonido profesional y personal atento.",
+      "paragraphs": [
+        "Al reservar De Diez a Dos, el espacio es solo para tu grupo, con acceso privado y total privacidad. El local ya tiene instalado sonido profesional, pantallas para vídeo y partidos, e iluminación LED que se adapta al ambiente de cada momento.",
+        "El catering propio y la barra libre forman parte del alquiler, con paquetes flexibles según el plan que elijas. Camareros, personal de barra y control de acceso se ocupan de que tus invitados estén atendidos de principio a fin.",
+        "Si quieres darle un toque extra, puedes añadir DJ profesional, karaoke, PhotoMax 360, mesa dulce o candy bar y decoración personalizada. Nosotros lo coordinamos todo para que tú solo tengas que disfrutar."
+      ]
+    },
+    "catering": {
+      "metaTitle": "Catering para eventos en Madrid | De Diez a Dos",
+      "metaDescription": "Catering propio con menús a medida para bodas, cumpleaños y eventos de empresa en Madrid. Barra libre y personal profesional incluidos en el alquiler de la sala.",
+      "title": "Catering para eventos en Madrid",
+      "lead": "Menús a medida, barra libre y un servicio cercano, con más de 14 años de experiencia en celebraciones en Madrid.",
+      "paragraphs": [
+        "El catering de De Diez a Dos es propio: no dependes de proveedores externos y el mismo equipo que conoce la sala prepara y sirve tu menú. Diseñamos cada propuesta según el tipo de evento, el número de invitados y tus gustos.",
+        "Ofrecemos menús equilibrados y versátiles, con opciones para todos los gustos. La barra libre se ajusta al paquete contratado, con cerveza, combinados y refrescos servidos por personal profesional.",
+        "Te acompañamos antes, durante y después del evento para que todo fluya sin sobresaltos: desde la recepción de los invitados hasta el cierre, cada detalle está pensado para que te sientas como en casa."
+      ]
+    },
+    "rooms": {
+      "metaTitle": "Alquiler de salas para eventos en Madrid: Olas y Amazonias | De Diez a Dos",
+      "metaDescription": "Dos salas privadas junto al Bernabéu para fiestas, bodas y eventos de empresa de hasta 100 invitados. Mira las fotos de la Sala Olas y la Sala Amazonias.",
+      "title": "Nuestras salas en Madrid",
+      "lead": "Dos espacios con personalidad propia, la Sala Olas y la Sala Amazonias, para celebraciones privadas de hasta 100 invitados.",
+      "paragraphs": [
+        "De Diez a Dos cuenta con dos salas independientes en Chamartín, a 5 minutos del estadio Santiago Bernabéu. Cada una tiene su propio ambiente y se puede reservar en exclusiva, con acceso privado para tu grupo.",
+        "Las dos salas tienen sonido profesional, pantallas e iluminación LED ya instalados, así que funcionan igual de bien para una fiesta con baile que para una cena, una presentación o un partido en directo.",
+        "Las fotos de esta página son de las salas reales. Si quieres verlas en persona, te enseñamos el local con cita previa cualquier día de la semana."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Contacto y presupuesto para tu evento en Madrid | De Diez a Dos",
+      "metaDescription": "Pide presupuesto sin compromiso para tu evento en Madrid. Llámanos al {phone} o escríbenos desde el formulario. Visitas con cita previa todos los días.",
+      "title": "Contacto y presupuesto",
+      "lead": "Cuéntanos qué quieres celebrar y te preparamos una propuesta a medida, sin compromiso.",
+      "paragraphs": [
+        "La forma más rápida de reservar es llamarnos al {phone} o al {secondaryPhone}. También puedes rellenar el formulario de esta página con la fecha, el tipo de evento y el número de invitados, y te respondemos lo antes posible.",
+        "Atendemos todos los días con cita previa. Si quieres conocer las salas antes de decidir, acordamos una visita a la hora que mejor te venga.",
+        "Aceptamos pago en efectivo, tarjeta de crédito, transferencia bancaria y Bizum."
+      ]
+    },
+    "location": {
+      "metaTitle": "Sala de eventos junto al Santiago Bernabéu, Madrid | De Diez a Dos",
+      "metaDescription": "Estamos en Travesía Doctor Fleming 16, Chamartín (28036 Madrid), a 5 minutos andando del Bernabéu y cerca de Nuevos Ministerios. Cómo llegar y opiniones de clientes.",
+      "title": "Cómo llegar a De Diez a Dos",
+      "lead": "En Travesía Doctor Fleming 16, Local 12, en pleno Chamartín y a 5 minutos andando del estadio Santiago Bernabéu.",
+      "paragraphs": [
+        "La sala está en una de las zonas mejor comunicadas de Madrid, entre el Paseo de la Castellana, Concha Espina y Nuevos Ministerios. Tus invitados pueden llegar fácilmente en metro, autobús, taxi o coche.",
+        "Esta ubicación es ideal cuando los invitados vienen de distintos puntos de la ciudad, y para quedadas de fútbol antes o después de un partido en el Bernabéu.",
+        "Debajo tienes el mapa con indicaciones y las opiniones en Google de clientes que ya han celebrado su evento con nosotros."
+      ]
+    },
+    "faq": {
+      "metaTitle": "Preguntas frecuentes sobre el alquiler de sala para eventos | De Diez a Dos",
+      "metaDescription": "Resolvemos tus dudas sobre el alquiler de nuestra sala en Madrid: catering incluido, tipos de eventos, servicios extra, ubicación junto al Bernabéu y cómo reservar.",
+      "title": "Preguntas frecuentes",
+      "lead": "Las dudas más habituales antes de reservar una sala para tu evento en Madrid, respondidas.",
+      "paragraphs": [
+        "Aquí reunimos lo que más nos preguntan: qué incluye el alquiler de la sala, qué tipos de celebraciones organizamos, qué servicios extra puedes añadir y cómo reservar.",
+        "Si tu pregunta no aparece, escríbenos o llámanos. Cada evento es distinto y estaremos encantados de ayudarte a organizar el tuyo."
+      ]
+    }
   }
 }

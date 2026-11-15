@@ -12,6 +12,7 @@ import { LocationReviewsSection } from '@/components/sections/LocationReviewsSec
 import { Faq } from '@/components/sections/Faq';
 import { Chatbot } from '@/components/widgets/Chatbot';
 import { News } from '@/components/widgets/News';
+import { FaqJsonLd } from '@/components/providers/FaqJsonLd';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -36,6 +37,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <Footer />
       <Chatbot />
       <News />
+      <FaqJsonLd locale={locale} href="/" />
     </>
   );
 }

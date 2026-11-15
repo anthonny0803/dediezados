@@ -1,6 +1,11 @@
 import { seoConfig } from '@/config/seo.config';
 import { siteConfig } from '@/config/site.config';
 
+export interface BreadcrumbEntry {
+  name: string;
+  url: string;
+}
+
 export interface FaqItem {
   question: string;
   answer: string;
@@ -18,7 +23,7 @@ const localeToBcp47: Record<string, string> = {
   ru: 'ru-RU',
 };
 
-export function buildJsonLdGraph(locale: string, faqItems: FaqItem[]) {
+export function buildJsonLdGraph(locale: string) {
   const siteUrl = seoConfig.siteUrl;
   const inLanguage = localeToBcp47[locale] ?? locale;
 
@@ -115,9 +120,17 @@ export function buildJsonLdGraph(locale: string, faqItems: FaqItem[]) {
     publisher: { '@id': seoConfig.schemaIds.organization },
   };
 
-  const faqPage = {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [business, organization, website],
+  };
+}
+
+export function buildFaqPageJsonLd(pageUrl: string, faqItems: FaqItem[]) {
+  return {
+    '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    '@id': `${siteUrl}/${locale}#faq`,
+    '@id': `${pageUrl}#faq`,
     mainEntity: faqItems.map((item) => ({
       '@type': 'Question',
       name: item.question,
@@ -127,9 +140,26 @@ export function buildJsonLdGraph(locale: string, faqItems: FaqItem[]) {
       },
     })),
   };
+}
 
+export function buildBreadcrumbJsonLd(entries: BreadcrumbEntry[]) {
   return {
     '@context': 'https://schema.org',
-    '@graph': [business, organization, website, faqPage],
+    '@type': 'BreadcrumbList',
+    itemListElement: entries.map((entry, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: entry.name,
+      item: entry.url,
+    })),
   };
 }
+
+const LINE_SEPARATORS = new RegExp('[\\u2028\\u2029]', 'g');
+
+export const serializeJsonLd = (data: object) =>
+  JSON.stringify(data)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e')
+    .replace(/&/g, '\\u0026')
+    .replace(LINE_SEPARATORS, (char) => `\\u${char.charCodeAt(0).toString(16).padStart(4, '0')}`);

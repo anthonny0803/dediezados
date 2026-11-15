@@ -447,5 +447,85 @@
         "ctaLabel": "Vraag de beschikbaarheid op"
       }
     }
+  },
+  "pages": {
+    "breadcrumbHome": "Home",
+    "breadcrumbLabel": "Kruimelpad",
+    "events": {
+      "metaTitle": "Zaal voor privé-evenementen in Madrid | De Diez a Dos",
+      "metaDescription": "Bruiloften, verjaardagen, quinceañera-feesten, bedrijfsevenementen en live wedstrijden in een privézaal naast het Bernabéu. Catering en open bar inbegrepen.",
+      "title": "Privé-evenementen in Madrid",
+      "lead": "Een exclusieve zaal naast het Santiago Bernabéu voor elke gelegenheid, met catering, open bar en een team dat alles regelt.",
+      "paragraphs": [
+        "Bij De Diez a Dos organiseren we al meer dan 14 jaar privé-evenementen in Madrid. We vieren bruiloften en afterparty's, verjaardagen voor volwassenen, tieners en kinderen, quinceañera-feesten, communies, babyshowers en vrijgezellenfeesten.",
+        "Voor bedrijven past de ruimte zich aan bedrijfsdiners, presentaties, vergaderingen en teambuilding aan, met een professioneel audiovisueel systeem en catering. En ben je voetbalfan? Op 5 minuten lopen van het stadion kijk je wedstrijden live op groot scherm, in een zaal alleen voor jouw groep.",
+        "Elk evenement is anders, dus stemmen we het menu, de muziek, de decoratie en de extra's (dj, karaoke, PhotoMax 360 of desserttafel) af op wat jij wilt. De zalen bieden plaats aan maximaal 100 gasten."
+      ]
+    },
+    "services": {
+      "metaTitle": "Diensten voor evenementen in Madrid: catering, open bar en dj | De Diez a Dos",
+      "metaDescription": "Exclusieve zaal, professioneel geluid en licht, eigen catering, open bar en bedieningspersoneel. Voeg een dj, karaoke, PhotoMax 360 of desserttafel toe.",
+      "title": "Diensten voor je evenement",
+      "lead": "Alles wat een feest nodig heeft op één plek: een exclusieve ruimte, catering, open bar, professioneel geluid en attent personeel.",
+      "paragraphs": [
+        "Als je De Diez a Dos boekt, is de ruimte alleen voor jouw groep, met een eigen ingang en volledige privacy. Professioneel geluid, schermen voor video en wedstrijden en ledverlichting die zich aan elk moment aanpast, zijn al geïnstalleerd.",
+        "Eigen catering en open bar zijn bij de huur inbegrepen, met flexibele pakketten afhankelijk van het gekozen arrangement. Obers, barpersoneel en toegangscontrole zorgen dat je gasten van begin tot eind goed verzorgd worden.",
+        "Voor een extra touch voeg je een professionele dj, karaoke, PhotoMax 360, een desserttafel of candybar en persoonlijke decoratie toe. Wij coördineren alles, zodat jij alleen hoeft te genieten."
+      ]
+    },
+    "catering": {
+      "metaTitle": "Catering voor evenementen in Madrid | De Diez a Dos",
+      "metaDescription": "Eigen catering met menu's op maat voor bruiloften, verjaardagen en bedrijfsevenementen in Madrid. Open bar en professioneel personeel inbegrepen bij de zaalhuur.",
+      "title": "Catering voor evenementen in Madrid",
+      "lead": "Menu's op maat, open bar en persoonlijke service, met meer dan 14 jaar ervaring met feesten in Madrid.",
+      "paragraphs": [
+        "De catering van De Diez a Dos is van onszelf: je bent niet afhankelijk van externe leveranciers, en hetzelfde team dat de zaal kent, bereidt en serveert je menu. We stellen elk voorstel samen op basis van het soort evenement, het aantal gasten en jouw smaak.",
+        "We bieden evenwichtige, gevarieerde menu's met opties voor iedere smaak. De open bar volgt het gekozen pakket, met bier, mixdrankjes en frisdrank, geserveerd door professioneel personeel.",
+        "We begeleiden je voor, tijdens en na het evenement, zodat alles soepel verloopt: van de ontvangst van de gasten tot de afsluiting is elk detail erop gericht dat je je thuis voelt."
+      ]
+    },
+    "rooms": {
+      "metaTitle": "Zalen huren voor evenementen in Madrid: Olas en Amazonias | De Diez a Dos",
+      "metaDescription": "Twee privézalen naast het Bernabéu voor feesten, bruiloften en bedrijfsevenementen tot 100 gasten. Bekijk de foto's van zaal Olas en zaal Amazonias.",
+      "title": "Onze zalen in Madrid",
+      "lead": "Twee ruimtes met een eigen karakter, zaal Olas en zaal Amazonias, voor privéfeesten tot 100 gasten.",
+      "paragraphs": [
+        "De Diez a Dos heeft twee afzonderlijke zalen in Chamartín, op 5 minuten van het Santiago Bernabéu-stadion. Elke zaal heeft een eigen sfeer en kan exclusief worden geboekt, met een eigen ingang voor jouw groep.",
+        "Beide zalen hebben professioneel geluid, schermen en ledverlichting al geïnstalleerd. Ze zijn dus net zo geschikt voor een dansfeest als voor een diner, een presentatie of een live wedstrijd.",
+        "De foto's op deze pagina tonen de echte zalen. Wil je ze in het echt zien? We laten je de locatie zien op afspraak, elke dag van de week."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Contact en offerte voor je evenement in Madrid | De Diez a Dos",
+      "metaDescription": "Vraag een vrijblijvende offerte aan voor je evenement in Madrid. Bel {phone} of schrijf ons via het formulier. Bezichtiging elke dag op afspraak.",
+      "title": "Contact en offerte",
+      "lead": "Vertel ons wat je wilt vieren en we maken een voorstel op maat, vrijblijvend.",
+      "paragraphs": [
+        "De snelste manier om te reserveren is ons te bellen op {phone} of {secondaryPhone}. Je kunt ook het formulier op deze pagina invullen met de datum, het soort evenement en het aantal gasten; we reageren zo snel mogelijk.",
+        "We zijn elke dag bereikbaar op afspraak. Wil je de zalen zien voordat je beslist? Dan plannen we een bezoek op het moment dat jou het beste uitkomt.",
+        "We accepteren contant, creditcard, bankoverschrijving en Bizum."
+      ]
+    },
+    "location": {
+      "metaTitle": "Evenementenzaal naast het Santiago Bernabéu, Madrid | De Diez a Dos",
+      "metaDescription": "We zitten aan de Travesía Doctor Fleming 16, Chamartín (28036 Madrid), op 5 minuten lopen van het Bernabéu en vlak bij Nuevos Ministerios. Route en klantbeoordelingen.",
+      "title": "Zo kom je bij De Diez a Dos",
+      "lead": "Aan de Travesía Doctor Fleming 16, Unit 12, midden in Chamartín en op 5 minuten lopen van het Santiago Bernabéu-stadion.",
+      "paragraphs": [
+        "De zaal ligt in een van de best bereikbare wijken van Madrid, tussen de Paseo de la Castellana, Concha Espina en Nuevos Ministerios. Je gasten komen gemakkelijk met de metro, bus, taxi of auto.",
+        "Deze ligging is ideaal als gasten uit verschillende delen van de stad komen, en voor voetbalafspraken voor of na een wedstrijd in het Bernabéu.",
+        "Hieronder vind je de kaart met routebeschrijving en de Google-beoordelingen van klanten die hun evenement al bij ons hebben gevierd."
+      ]
+    },
+    "faq": {
+      "metaTitle": "Veelgestelde vragen over het huren van een evenementenzaal | De Diez a Dos",
+      "metaDescription": "Antwoorden over het huren van onze zaal in Madrid: catering inbegrepen, soorten evenementen, extra diensten, ligging naast het Bernabéu en reserveren.",
+      "title": "Veelgestelde vragen",
+      "lead": "De meest gestelde vragen voordat je een zaal voor je evenement in Madrid boekt, beantwoord.",
+      "paragraphs": [
+        "Hier hebben we verzameld wat ons het vaakst gevraagd wordt: wat de zaalhuur inhoudt, welke feesten we organiseren, welke extra diensten je kunt toevoegen en hoe je reserveert.",
+        "Staat je vraag er niet bij? Schrijf of bel ons. Elk evenement is anders en we helpen je graag het jouwe te organiseren."
+      ]
+    }
   }
 }

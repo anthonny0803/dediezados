@@ -2,8 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/routing';
-import { routing } from '@/i18n/routing';
+import { useRouter } from 'next/navigation';
+import { getPathname, routing, usePathname } from '@/i18n/routing';
 
 const LOCALE_LABELS: Record<string, string> = {
   es: 'Español',
@@ -41,8 +41,7 @@ export const LocaleSwitcher = ({ variant = 'navbar' }: LocaleSwitcherProps) => {
   const handleSelect = (locale: string) => {
     setIsOpen(false);
     if (locale === currentLocale) return;
-    const hash = typeof window !== 'undefined' ? window.location.hash : '';
-    router.replace(`${pathname}${hash}`, { locale });
+    router.replace(`${getPathname({ locale, href: pathname })}${window.location.hash}`);
   };
 
   return (

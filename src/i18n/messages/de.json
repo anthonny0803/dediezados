@@ -447,5 +447,85 @@
         "ctaLabel": "Verfügbarkeit anfragen"
       }
     }
+  },
+  "pages": {
+    "breadcrumbHome": "Startseite",
+    "breadcrumbLabel": "Brotkrümelnavigation",
+    "events": {
+      "metaTitle": "Location für private Veranstaltungen in Madrid | De Diez a Dos",
+      "metaDescription": "Hochzeiten, Geburtstage, Quinceañera-Feiern, Firmenevents und Live-Spiele in einer privaten Location am Bernabéu. Catering und Open Bar inklusive.",
+      "title": "Private Veranstaltungen in Madrid",
+      "lead": "Eine exklusive Location direkt am Santiago Bernabéu für jeden Anlass, mit Catering, Open Bar und einem Team, das sich um alles kümmert.",
+      "paragraphs": [
+        "Bei De Diez a Dos richten wir seit mehr als 14 Jahren private Veranstaltungen in Madrid aus. Wir feiern Hochzeiten und After-Wedding-Partys, Geburtstage für Erwachsene, Jugendliche und Kinder, Quinceañera-Feiern, Kommunionen, Babypartys sowie Junggesellinnen- und Junggesellenabschiede.",
+        "Für Unternehmen passt sich der Raum an Firmenessen, Präsentationen, Meetings und Teambuilding an, mit professioneller Audio- und Videotechnik und Catering. Und für Fußballfans: Nur 5 Gehminuten vom Stadion entfernt sehen Sie die Spiele live auf der Leinwand, in einem Raum nur für Ihre Gruppe.",
+        "Jede Feier ist anders. Deshalb stimmen wir Menü, Musik, Dekoration und Extras (DJ, Karaoke, PhotoMax 360 oder Dessertbuffet) auf Ihre Wünsche ab. Die Räume bieten Platz für bis zu 100 Gäste."
+      ]
+    },
+    "services": {
+      "metaTitle": "Eventservice in Madrid: Catering, Open Bar und DJ | De Diez a Dos",
+      "metaDescription": "Exklusive Location, professioneller Sound und Licht, eigenes Catering, Open Bar und Servicepersonal. Dazu DJ, Karaoke, PhotoMax 360 oder Dessertbuffet.",
+      "title": "Leistungen für Ihre Veranstaltung",
+      "lead": "Alles, was eine Feier braucht, an einem Ort: exklusiver Raum, Catering, Open Bar, professioneller Sound und aufmerksames Personal.",
+      "paragraphs": [
+        "Wenn Sie De Diez a Dos buchen, gehört der Raum nur Ihrer Gruppe, mit eigenem Zugang und voller Privatsphäre. Professioneller Sound, Bildschirme für Videos und Spiele sowie LED-Beleuchtung, die sich jeder Stimmung anpasst, sind bereits installiert.",
+        "Eigenes Catering und Open Bar sind in der Miete enthalten, mit flexiblen Paketen je nach gewähltem Angebot. Kellner, Barpersonal und Einlasskontrolle sorgen dafür, dass Ihre Gäste von Anfang bis Ende gut betreut sind.",
+        "Für das gewisse Extra buchen Sie einen professionellen DJ, Karaoke, PhotoMax 360, ein Dessertbuffet oder eine Candybar und individuelle Dekoration dazu. Wir koordinieren alles, damit Sie nur noch genießen müssen."
+      ]
+    },
+    "catering": {
+      "metaTitle": "Catering für Veranstaltungen in Madrid | De Diez a Dos",
+      "metaDescription": "Eigenes Catering mit individuellen Menüs für Hochzeiten, Geburtstage und Firmenevents in Madrid. Open Bar und Fachpersonal in der Raummiete enthalten.",
+      "title": "Catering für Veranstaltungen in Madrid",
+      "lead": "Individuelle Menüs, Open Bar und herzlicher Service, mit mehr als 14 Jahren Erfahrung bei Feiern in Madrid.",
+      "paragraphs": [
+        "Das Catering von De Diez a Dos ist unser eigenes: Sie sind nicht auf externe Anbieter angewiesen, und dasselbe Team, das die Räume kennt, bereitet Ihr Menü zu und serviert es. Jedes Angebot gestalten wir nach Art der Feier, Gästezahl und Ihrem Geschmack.",
+        "Wir bieten ausgewogene, vielseitige Menüs mit Optionen für jeden Geschmack. Die Open Bar richtet sich nach dem gebuchten Paket, mit Bier, Longdrinks und Softdrinks, serviert von Fachpersonal.",
+        "Wir begleiten Sie vor, während und nach der Veranstaltung, damit alles reibungslos läuft: vom Empfang der Gäste bis zum Ende ist jedes Detail darauf ausgelegt, dass Sie sich wie zu Hause fühlen."
+      ]
+    },
+    "rooms": {
+      "metaTitle": "Eventräume mieten in Madrid: Olas und Amazonias | De Diez a Dos",
+      "metaDescription": "Zwei private Räume am Bernabéu für Partys, Hochzeiten und Firmenevents mit bis zu 100 Gästen. Sehen Sie die Fotos der Räume Olas und Amazonias.",
+      "title": "Unsere Räume in Madrid",
+      "lead": "Zwei Räume mit eigenem Charakter, der Raum Olas und der Raum Amazonias, für private Feiern mit bis zu 100 Gästen.",
+      "paragraphs": [
+        "De Diez a Dos verfügt über zwei separate Räume in Chamartín, 5 Minuten vom Santiago-Bernabéu-Stadion entfernt. Jeder hat seine eigene Atmosphäre und kann exklusiv gebucht werden, mit eigenem Zugang für Ihre Gruppe.",
+        "Beide Räume sind bereits mit professionellem Sound, Bildschirmen und LED-Beleuchtung ausgestattet. Sie eignen sich daher genauso für eine Tanzparty wie für ein Abendessen, eine Präsentation oder ein Live-Spiel.",
+        "Die Fotos auf dieser Seite zeigen die echten Räume. Wenn Sie sie persönlich sehen möchten, zeigen wir Ihnen die Location nach Terminvereinbarung an jedem Wochentag."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Kontakt und Angebot für Ihre Veranstaltung in Madrid | De Diez a Dos",
+      "metaDescription": "Fordern Sie ein unverbindliches Angebot für Ihre Veranstaltung in Madrid an. Rufen Sie {phone} an oder nutzen Sie das Formular. Besichtigung täglich nach Termin.",
+      "title": "Kontakt und Angebot",
+      "lead": "Erzählen Sie uns, was Sie feiern möchten, und wir erstellen Ihnen ein individuelles, unverbindliches Angebot.",
+      "paragraphs": [
+        "Am schnellsten buchen Sie telefonisch unter {phone} oder {secondaryPhone}. Sie können auch das Formular auf dieser Seite mit Datum, Art der Veranstaltung und Gästezahl ausfüllen, und wir melden uns so schnell wie möglich.",
+        "Wir sind jeden Tag nach Terminvereinbarung für Sie da. Wenn Sie die Räume vor Ihrer Entscheidung sehen möchten, vereinbaren wir einen Besichtigungstermin zu der Zeit, die Ihnen am besten passt.",
+        "Wir akzeptieren Barzahlung, Kreditkarte, Banküberweisung und Bizum."
+      ]
+    },
+    "location": {
+      "metaTitle": "Eventlocation am Santiago Bernabéu, Madrid | De Diez a Dos",
+      "metaDescription": "Sie finden uns in der Travesía Doctor Fleming 16, Chamartín (28036 Madrid), 5 Gehminuten vom Bernabéu und nahe Nuevos Ministerios. Anfahrt und Kundenbewertungen.",
+      "title": "Anfahrt zu De Diez a Dos",
+      "lead": "In der Travesía Doctor Fleming 16, Lokal 12, mitten in Chamartín und 5 Gehminuten vom Santiago-Bernabéu-Stadion entfernt.",
+      "paragraphs": [
+        "Die Location liegt in einem der am besten angebundenen Viertel Madrids, zwischen Paseo de la Castellana, Concha Espina und Nuevos Ministerios. Ihre Gäste erreichen uns bequem mit Metro, Bus, Taxi oder Auto.",
+        "Die Lage ist ideal, wenn Gäste aus verschiedenen Teilen der Stadt kommen, und für Fußballtreffen vor oder nach einem Spiel im Bernabéu.",
+        "Unten finden Sie die Karte mit Wegbeschreibung und die Google-Bewertungen von Kunden, die ihre Feier bereits bei uns gefeiert haben."
+      ]
+    },
+    "faq": {
+      "metaTitle": "Häufige Fragen zur Miete einer Eventlocation | De Diez a Dos",
+      "metaDescription": "Antworten zur Miete unserer Location in Madrid: inklusive Catering, Arten von Veranstaltungen, Zusatzleistungen, Lage am Bernabéu und Buchung.",
+      "title": "Häufige Fragen",
+      "lead": "Die häufigsten Fragen vor der Buchung einer Location für Ihre Veranstaltung in Madrid, beantwortet.",
+      "paragraphs": [
+        "Hier haben wir gesammelt, was uns am häufigsten gefragt wird: was in der Raummiete enthalten ist, welche Feiern wir ausrichten, welche Zusatzleistungen Sie buchen können und wie die Reservierung funktioniert.",
+        "Ist Ihre Frage nicht dabei? Schreiben Sie uns oder rufen Sie an. Jede Veranstaltung ist anders, und wir helfen Ihnen gerne bei der Planung Ihrer."
+      ]
+    }
   }
 }

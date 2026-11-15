@@ -1,42 +1,25 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-
-const SECTIONS = [
-  { id: 'events', labelKey: 'events' },
-  { id: 'services', labelKey: 'services' },
-  { id: 'catering', labelKey: 'catering' },
-  { id: 'gallery', labelKey: 'gallery' },
-  { id: 'contact', labelKey: 'contact' },
-  { id: 'location', labelKey: 'location' },
-  { id: 'reviews', labelKey: 'reviews' },
-] as const;
+import { useSectionNavigation } from '@/hooks/useSectionNavigation';
+import { MENU_SECTIONS } from '@/config/navigation.config';
 
 export const FooterNav = () => {
   const t = useTranslations('nav');
 
-  const handleSectionClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string,
-  ) => {
-    e.preventDefault();
-    document.getElementById(sectionId)?.scrollIntoView({ block: 'start' });
-    if (window.location.hash) {
-      history.replaceState(null, '', window.location.pathname);
-    }
-  };
+  const { goToSection, sectionHref } = useSectionNavigation();
 
   return (
     <nav>
       <ul className="space-y-2 text-sm text-muted-foreground">
-        {SECTIONS.map((section) => (
-          <li key={section.id}>
+        {MENU_SECTIONS.map((section) => (
+          <li key={section}>
             <a
-              href={`#${section.id}`}
-              onClick={(e) => handleSectionClick(e, section.id)}
+              href={sectionHref(section)}
+              onClick={(e) => goToSection(e, section)}
               className="transition-smooth hover:text-primary"
             >
-              {t(section.labelKey)}
+              {t(section)}
             </a>
           </li>
         ))}
