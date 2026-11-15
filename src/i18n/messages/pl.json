@@ -447,5 +447,85 @@
         "ctaLabel": "Sprawdź dostępność"
       }
     }
+  },
+  "pages": {
+    "breadcrumbHome": "Strona główna",
+    "breadcrumbLabel": "Ścieżka nawigacji",
+    "events": {
+      "metaTitle": "Sala na prywatne wydarzenia w Madrycie | De Diez a Dos",
+      "metaDescription": "Wesela, urodziny, przyjęcia z okazji 15. urodzin, imprezy firmowe i mecze na żywo w prywatnej sali obok Bernabéu. Catering i open bar w cenie.",
+      "title": "Prywatne wydarzenia w Madrycie",
+      "lead": "Ekskluzywna sala obok Santiago Bernabéu na każdą okazję, z cateringiem, open barem i zespołem, który zajmie się wszystkim.",
+      "paragraphs": [
+        "W De Diez a Dos organizujemy prywatne wydarzenia w Madrycie od ponad 14 lat. Świętujemy wesela i poprawiny, urodziny dorosłych, młodzieży i dzieci, przyjęcia z okazji 15. urodzin, komunie, baby shower oraz wieczory panieńskie i kawalerskie.",
+        "Dla firm przestrzeń dostosowuje się do kolacji firmowych, prezentacji, spotkań biznesowych i team buildingu, z profesjonalnym sprzętem audiowizualnym i cateringiem. A jeśli kochasz piłkę nożną, 5 minut pieszo od stadionu obejrzysz mecze na żywo na ekranie, w sali tylko dla Twojej grupy.",
+        "Każde wydarzenie jest inne, dlatego dopasowujemy menu, muzykę, dekoracje i dodatki (DJ, karaoke, PhotoMax 360 lub słodki stół) do Twoich oczekiwań. Sale mieszczą do 100 gości."
+      ]
+    },
+    "services": {
+      "metaTitle": "Usługi eventowe w Madrycie: catering, open bar i DJ | De Diez a Dos",
+      "metaDescription": "Sala na wyłączność, profesjonalne nagłośnienie i oświetlenie, własny catering, open bar i obsługa. Dodaj DJ-a, karaoke, PhotoMax 360 lub słodki stół.",
+      "title": "Usługi na Twoje wydarzenie",
+      "lead": "Wszystko, czego potrzebuje impreza, w jednym miejscu: przestrzeń na wyłączność, catering, open bar, profesjonalny dźwięk i uważna obsługa.",
+      "paragraphs": [
+        "Rezerwując De Diez a Dos, przestrzeń należy tylko do Twojej grupy, z prywatnym wejściem i pełną prywatnością. Lokal ma już zainstalowane profesjonalne nagłośnienie, ekrany do filmów i meczów oraz oświetlenie LED dopasowane do każdej chwili.",
+        "Własny catering i open bar są wliczone w wynajem, z elastycznymi pakietami zależnie od wybranej oferty. Kelnerzy, barmani i kontrola wejścia dbają o to, by Twoi goście byli obsłużeni od początku do końca.",
+        "Dla dodatkowego efektu możesz zamówić profesjonalnego DJ-a, karaoke, PhotoMax 360, słodki stół lub candy bar oraz indywidualne dekoracje. Wszystko koordynujemy my, a Ty możesz po prostu się bawić."
+      ]
+    },
+    "catering": {
+      "metaTitle": "Catering na wydarzenia w Madrycie | De Diez a Dos",
+      "metaDescription": "Własny catering z menu na zamówienie na wesela, urodziny i imprezy firmowe w Madrycie. Open bar i profesjonalna obsługa w cenie wynajmu sali.",
+      "title": "Catering na wydarzenia w Madrycie",
+      "lead": "Menu na zamówienie, open bar i serdeczna obsługa, z ponad 14-letnim doświadczeniem w organizacji przyjęć w Madrycie.",
+      "paragraphs": [
+        "Catering De Diez a Dos jest nasz własny: nie zależysz od zewnętrznych dostawców, a ten sam zespół, który zna salę, przygotowuje i podaje Twoje menu. Każdą propozycję tworzymy według rodzaju wydarzenia, liczby gości i Twoich upodobań.",
+        "Oferujemy zbilansowane, różnorodne menu z opcjami na każdy gust. Open bar odpowiada wybranemu pakietowi: piwo, drinki i napoje podawane przez profesjonalną obsługę.",
+        "Towarzyszymy Ci przed wydarzeniem, w jego trakcie i po nim, aby wszystko przebiegło bez niespodzianek: od powitania gości aż po zakończenie każdy szczegół jest pomyślany tak, byś czuł się jak w domu."
+      ]
+    },
+    "rooms": {
+      "metaTitle": "Wynajem sal na wydarzenia w Madrycie: Olas i Amazonias | De Diez a Dos",
+      "metaDescription": "Dwie prywatne sale obok Bernabéu na imprezy, wesela i wydarzenia firmowe do 100 gości. Zobacz zdjęcia Sali Olas i Sali Amazonias.",
+      "title": "Nasze sale w Madrycie",
+      "lead": "Dwie przestrzenie o własnym charakterze, Sala Olas i Sala Amazonias, na prywatne przyjęcia do 100 gości.",
+      "paragraphs": [
+        "De Diez a Dos ma dwie niezależne sale w dzielnicy Chamartín, 5 minut od stadionu Santiago Bernabéu. Każda ma własny klimat i można ją zarezerwować na wyłączność, z prywatnym wejściem dla Twojej grupy.",
+        "Obie sale mają już zainstalowane profesjonalne nagłośnienie, ekrany i oświetlenie LED, więc sprawdzą się zarówno na imprezie z tańcami, jak i na kolacji, prezentacji czy meczu na żywo.",
+        "Zdjęcia na tej stronie przedstawiają prawdziwe sale. Jeśli chcesz zobaczyć je osobiście, pokażemy Ci lokal po wcześniejszym umówieniu, w każdy dzień tygodnia."
+      ]
+    },
+    "contact": {
+      "metaTitle": "Kontakt i wycena Twojego wydarzenia w Madrycie | De Diez a Dos",
+      "metaDescription": "Poproś o bezpłatną wycenę wydarzenia w Madrycie. Zadzwoń pod {phone} lub napisz przez formularz. Wizyty po umówieniu każdego dnia.",
+      "title": "Kontakt i wycena",
+      "lead": "Powiedz nam, co chcesz świętować, a przygotujemy indywidualną ofertę, bez zobowiązań.",
+      "paragraphs": [
+        "Najszybciej zarezerwujesz, dzwoniąc pod numer {phone} lub {secondaryPhone}. Możesz też wypełnić formularz na tej stronie, podając datę, rodzaj wydarzenia i liczbę gości, a odpowiemy jak najszybciej.",
+        "Przyjmujemy codziennie po wcześniejszym umówieniu. Jeśli chcesz zobaczyć sale przed podjęciem decyzji, umówimy wizytę w dogodnym dla Ciebie terminie.",
+        "Akceptujemy gotówkę, kartę kredytową, przelew bankowy i Bizum."
+      ]
+    },
+    "location": {
+      "metaTitle": "Sala eventowa obok Santiago Bernabéu w Madrycie | De Diez a Dos",
+      "metaDescription": "Jesteśmy przy Travesía Doctor Fleming 16, Chamartín (28036 Madryt), 5 minut pieszo od Bernabéu i blisko Nuevos Ministerios. Dojazd i opinie klientów.",
+      "title": "Jak dojechać do De Diez a Dos",
+      "lead": "Travesía Doctor Fleming 16, lokal 12, w samym sercu dzielnicy Chamartín, 5 minut pieszo od stadionu Santiago Bernabéu.",
+      "paragraphs": [
+        "Sala znajduje się w jednej z najlepiej skomunikowanych okolic Madrytu, między Paseo de la Castellana, Concha Espina a Nuevos Ministerios. Goście łatwo dotrą metrem, autobusem, taksówką lub samochodem.",
+        "Ta lokalizacja jest idealna, gdy goście przyjeżdżają z różnych części miasta, a także na spotkania kibiców przed meczem na Bernabéu lub po nim.",
+        "Poniżej znajdziesz mapę z dojazdem oraz opinie Google klientów, którzy już świętowali u nas swoje wydarzenie."
+      ]
+    },
+    "faq": {
+      "metaTitle": "Najczęstsze pytania o wynajem sali na wydarzenia | De Diez a Dos",
+      "metaDescription": "Odpowiedzi na pytania o wynajem naszej sali w Madrycie: catering w cenie, rodzaje wydarzeń, usługi dodatkowe, lokalizacja obok Bernabéu i rezerwacja.",
+      "title": "Najczęstsze pytania",
+      "lead": "Najczęstsze wątpliwości przed rezerwacją sali na wydarzenie w Madrycie, wraz z odpowiedziami.",
+      "paragraphs": [
+        "Zebraliśmy tu to, o co pytacie najczęściej: co obejmuje wynajem sali, jakie przyjęcia organizujemy, jakie usługi dodatkowe można zamówić i jak zarezerwować termin.",
+        "Jeśli nie ma tu Twojego pytania, napisz lub zadzwoń. Każde wydarzenie jest inne i chętnie pomożemy Ci zorganizować Twoje."
+      ]
+    }
   }
 }

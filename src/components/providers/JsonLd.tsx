@@ -1,28 +1,12 @@
-import { getTranslations } from 'next-intl/server';
-import { buildJsonLdGraph, type FaqItem } from '@/lib/json-ld';
+import { buildJsonLdGraph, serializeJsonLd } from '@/lib/json-ld';
 
 interface JsonLdProps {
   locale: string;
 }
 
-const LINE_SEPARATORS = new RegExp('[\\u2028\\u2029]', 'g');
-
-const escapeJsonLd = (json: string) =>
-  json
-    .replace(/</g, '\\u003c')
-    .replace(/>/g, '\\u003e')
-    .replace(/&/g, '\\u0026')
-    .replace(LINE_SEPARATORS, (char) => `\\u${char.charCodeAt(0).toString(16).padStart(4, '0')}`);
-
-export const JsonLd = async ({ locale }: JsonLdProps) => {
-  const t = await getTranslations({ locale, namespace: 'faq' });
-  const faqItems = t.raw('items') as FaqItem[];
-  const graph = buildJsonLdGraph(locale, faqItems);
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: escapeJsonLd(JSON.stringify(graph)) }}
-    />
-  );
-};
+export const JsonLd = ({ locale }: JsonLdProps) => (
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildJsonLdGraph(locale)) }}
+  />
+);

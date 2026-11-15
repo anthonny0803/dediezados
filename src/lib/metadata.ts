@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { seoConfig } from '@/config/seo.config';
 import { siteConfig } from '@/config/site.config';
 import { routing } from '@/i18n/routing';
+import { sectionPages, type SectionPageKey } from '@/config/pages.config';
+import { absoluteUrl, buildLanguageAlternates } from '@/lib/urls';
 
 const localeToOgLocale: Record<string, string> = {
   es: 'es_ES',
@@ -21,12 +23,8 @@ export function buildMetadata(locale: string): Metadata {
     seoConfig.localeMetadata.es;
 
   const siteUrl = seoConfig.siteUrl;
-  const canonical = `${siteUrl}/${locale}`;
-
-  const languages: Record<string, string> = Object.fromEntries(
-    routing.locales.map((loc) => [loc, `${siteUrl}/${loc}`])
-  );
-  languages['x-default'] = `${siteUrl}/${routing.defaultLocale}`;
+  const canonical = absoluteUrl(locale, '/');
+  const languages = buildLanguageAlternates('/');
 
   const currentOgLocale = localeToOgLocale[locale] ?? locale;
   const alternateOgLocales = routing.locales
@@ -96,5 +94,40 @@ export function buildMetadata(locale: string): Metadata {
       apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
     },
     manifest: '/site.webmanifest',
+  };
+}
+
+export interface SectionPageMetaCopy {
+  title: string;
+  description: string;
+}
+
+export function buildSectionPageMetadata(
+  locale: string,
+  page: SectionPageKey,
+  copy: SectionPageMetaCopy,
+): Metadata {
+  const base = buildMetadata(locale);
+  const { pathname, coverImage } = sectionPages[page];
+  const canonical = absoluteUrl(locale, pathname);
+
+  return {
+    ...base,
+    title: copy.title,
+    description: copy.description,
+    alternates: { canonical, languages: buildLanguageAlternates(pathname) },
+    openGraph: {
+      ...base.openGraph,
+      url: canonical,
+      title: copy.title,
+      description: copy.description,
+      images: [{ url: coverImage }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: copy.title,
+      description: copy.description,
+      images: [coverImage],
+    },
   };
 }
