@@ -2,27 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { useSectionNavigation } from '@/hooks/useSectionNavigation';
+import { ABOUT_SECTION, MENU_SECTIONS } from '@/config/navigation.config';
 import { siteConfig } from '@/config/site.config';
 import { LocaleSwitcher } from '@/components/ui/LocaleSwitcher';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 const SCROLL_THRESHOLD_PX = 20;
 
-const SECTION_LINKS = [
-  'events',
-  'services',
-  'catering',
-  'gallery',
-  'contact',
-  'location',
-  'reviews',
-] as const;
-
 export const Navbar = () => {
   const t = useTranslations('nav');
   const tLogo = useTranslations();
   const locale = useLocale();
   const [isScrolled, setIsScrolled] = useState(false);
+  const { goToSection, goToTop, sectionHref } = useSectionNavigation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,25 +25,6 @@ export const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (window.location.hash) {
-      history.replaceState(null, '', window.location.pathname);
-    }
-  };
-
-  const handleSectionClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string,
-  ) => {
-    e.preventDefault();
-    document.getElementById(sectionId)?.scrollIntoView({ block: 'start' });
-    if (window.location.hash) {
-      history.replaceState(null, '', window.location.pathname);
-    }
-  };
 
   const linkClass = `group relative text-sm font-medium transition-smooth hover:text-primary ${
     isScrolled ? 'text-muted-foreground' : 'text-white/90'
@@ -74,7 +48,7 @@ export const Navbar = () => {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-6">
         <a
           href={`/${locale}`}
-          onClick={handleHomeClick}
+          onClick={goToTop}
           className="navbar-logo shrink-0"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -100,16 +74,16 @@ export const Navbar = () => {
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-6">
           <li>
-            <a href={`/${locale}`} onClick={handleHomeClick} className={linkClass}>
+            <a href={`/${locale}`} onClick={goToTop} className={linkClass}>
               {t('home')}
               {linkUnderline}
             </a>
           </li>
-          {SECTION_LINKS.map((section) => (
+          {MENU_SECTIONS.map((section) => (
             <li key={section}>
               <a
-                href={`#${section}`}
-                onClick={(e) => handleSectionClick(e, section)}
+                href={sectionHref(section)}
+                onClick={(e) => goToSection(e, section)}
                 className={linkClass}
               >
                 {t(section)}
@@ -119,8 +93,8 @@ export const Navbar = () => {
           ))}
           <li>
             <a
-              href="#footer"
-              onClick={(e) => handleSectionClick(e, 'footer')}
+              href={sectionHref(ABOUT_SECTION)}
+              onClick={(e) => goToSection(e, ABOUT_SECTION)}
               className={linkClass}
             >
               {t('about')}
